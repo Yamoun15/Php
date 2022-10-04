@@ -87,6 +87,7 @@
 
         .vision {
             width: 262px;
+            font-size: 15px;
         }
 
 
@@ -315,8 +316,8 @@
     <!-- footer -->
     <nav class="navbar navbar-expand-lg  footer">
         <div class="container-fluid">
-            <img src="logo.png" id="logo" alt="">
-            <span class="vision text-light ms-4">To be a trusted health care provider that provides reliable health information to make healthier and happier decisions. </span>
+            <img src="logo2.1.png" id="logo" alt="">
+            <span class="vision text-light ms-3">To be a trusted health care provider that provides reliable health information to make healthier and happier decisions. </span>
 
             <div class="collapse navbar-collapse fs-6  fw-bold" id="navbarNav">
                 <ul class="navbar-nav nav1">
