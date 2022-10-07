@@ -26,10 +26,9 @@
 
         }
 
-        #accicon {
+        .accIcon{
             position: absolute;
-            top: 5px;
-            width: 30px;
+            top:5px;
         }
 
         #nav2 {
@@ -80,7 +79,7 @@
 
         /* footer */
         .footer {
-            background-color: #43A391;
+            background-color:  #43A391;
             position: relative;
             top: 610px;
         }
@@ -146,7 +145,7 @@
                         <a class="nav-link text-light">Contact Us</a>
                     </li>
                     <li class="nav-item me-5">
-                        <img src="Accicon.png" id="accicon" alt="">
+                        <i class='far fa-user-circle accIcon' style='font-size:27px;color:white'></i>
                     </li>
                 </ul>
             </div>
