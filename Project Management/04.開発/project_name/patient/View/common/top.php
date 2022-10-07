@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,36 +17,54 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
-<body>
-    <!-- footer -->
-    <nav class="navbar navbar-expand-lg  footer">
-        <div class="container-fluid">
-            <img src="../storages/logo2.1.png" id="logo" alt="">
-            <span class="vision text-light ms-3">To be a trusted health care provider that provides reliable health information to make healthier and happier decisions. </span>
 
-            <div class="collapse navbar-collapse fs-6  fw-bold" id="navbarNav">
+<body>
+    <nav class="navbar navbar-expand-lg fs-6 fw-bold text-light" id="nav1">
+        <div class="container-fluid">
+
+            <div class="collapse navbar-collapse">
                 <ul class="navbar-nav nav1">
-                    <li class="nav-item  ms-5">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Privacy&Policy</a>
+                    <li class="nav-item  me-5 ">
+                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
                     </li>
-                    <li class="nav-item  ms-5">
-                        <a class="nav-link text-light" href="#">About US</a>
+                    <li class="nav-item me-5 ">
+                        <a class="nav-link text-light" href="#">Login/SignUp</a>
                     </li>
-                    <li class="nav-item  ms-5">
-                        <i class='fab fa-facebook-f' style='font-size:27px;color:white'></i>
+                    <li class="nav-item me-5">
+                        <a class="nav-link text-light" href="#">Appointment</a>
                     </li>
-                    <li class="nav-item  ms-5">
-                        <i class='fab fa-twitter' style='font-size:27px;color:white'></i>
+                    <li class="nav-item me-5">
+                        <a class="nav-link text-light">Contact Us</a>
                     </li>
-                    <li class="nav-item  ms-5">
-                        <i class='fab fa-instagram' style='font-size:27px;color:white'></i>
-                    </li>
-                    <li class="nav-item  ms-5">
-                        <i class='fab fa-linkedin' style='font-size:27px;color:white'></i>
+                    <li class="nav-item me-5">
+                        <img src="Accicon.png" id="accicon" alt="">
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Headernav2 -->
+    <nav class="navbar navbar-expand-lg fs-5 fw-bold text-light" id="nav2">
+        <div class="container-fluid">
+            <img src="../storages/logo.png" id="logo" alt="">
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item  ms-5">
+                        <a class="nav-link text-light" href="#">Condition & Service</a>
+                    </li>
+                    <li class="nav-item  ms-5">
+                        <a class="nav-link text-light" href="#">Health Knowledge</a>
+                    </li>
+                    <li class="nav-item  ms-5">
+                        <a class="nav-link text-light">Mental Health</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
 </body>
+
 </html>
