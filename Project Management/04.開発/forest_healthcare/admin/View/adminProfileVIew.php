@@ -65,12 +65,13 @@
         }
 
         .box {
-            font-size: 18px;
+            font-size: 16px;
             border: 1px solid rgb(185, 184, 184);
             padding: 2rem;
             max-width: 50rem;
             min-width: 25rem;
-            height: 30rem;
+            height: 35rem;
+            min-height: 30rem;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgb(197, 189, 189);
         }
@@ -87,7 +88,7 @@
 
         .buttons button {
             font-size: 20px;
-            padding: 6px
+            padding: 6px;
         }
     </style>
 </head>
@@ -104,8 +105,8 @@
         <div class="box mt-3 ">
             <table>
                 <tr>
-                    <td class="left_text">E-mail Address</td>
-                    <td class="right_text">admin@gmail.com</td>
+                    <td class="left_text">E-mail</td>
+                    <td class="right_text ">admin@gmail.com</td>
                 </tr>
                 <tr>
                     <td class="left_text">Password</td>
