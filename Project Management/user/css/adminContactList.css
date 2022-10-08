@@ -1,0 +1,45 @@
+.contactListTitle {
+    font-family: "Poly";
+    font-size: 1.2em;
+    color: white;
+}
+
+.adminContactListCardText{
+    font-family: "Poly";
+    font-size: 1em;
+    color: white;
+    height: 100px; 
+    overflow-y: scroll; 
+    width: 100%;
+}
+
+.adminContactListCardBg {
+    background-color: #188067;
+    height: 250px;
+    /* width: 400px; */
+}
+
+.adminContactListbtn {
+    color: white;
+    background-color: #FFC652;
+    font-family: "Poppins";
+    font-size: 1rem;
+    border: none;
+    padding: 4px;
+    border-radius: 8px;
+    width: 5em;
+}
+.adminContactListCard{
+    margin-bottom: 20px;
+    width: 350px;
+}
+.mailList{
+    background-color: #188067;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 2em;
+    font-style: "Poly";
+    color: white;
+    text-align: center;
+    
+}

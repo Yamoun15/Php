@@ -1,0 +1,53 @@
+@media only screen and (max-width:800px){
+    .no-more-table tbody,
+    .no-more-table tr,
+    .no-more-table td{
+        display: block;
+    }
+    .no-more-table thead tr{
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    .adminhospitallistheaderbg {
+        background-color: transparent !important;
+    }
+    
+    .no-more-table td{
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+    .no-more-table td:before{
+        content: attr(data-title);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+    }
+    .no-more-table tr{
+        border-bottom: 1px solid black;
+    }
+}
+
+img{
+    width: 30%;
+}
+
+
+.nandar{
+    display: block;
+        width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+}
+
+.adminhospitallistheaderbg {
+    background-color: #188067;
+    color: white;
+    height: 70px;
+}
+
+
+
