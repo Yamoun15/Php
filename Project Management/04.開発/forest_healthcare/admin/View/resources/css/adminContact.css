@@ -30,13 +30,13 @@
 .adminContactbtn{
     color: white ;
     background-color: #188067 ;
-    font-family: poppin !important;
-    font-size: 1rem ;
+    font-family: "Poppins";
+    font-size: 1.5rem ;
     /* border: none; */
     padding: 4px ;
     border-radius: 8px ;
     border: none;
-    width: 5em ;
+    width: 5em;
     margin-left: 20px;
 }
 
@@ -62,7 +62,7 @@
 
 .adminHospitaladdTitle{
     color: #188067;
-    font-size: 2.5vw;
+    font-size: 1.5em;
     margin-top: 20px;
     margin-left: 20%;
     font-style: italic;
