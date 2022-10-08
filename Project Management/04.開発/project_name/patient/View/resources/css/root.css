@@ -72,7 +72,7 @@
 }
 
 .useraccMenubox {
-    position: absolute;
+    /* position: absolute; */
     width: 327px;
     height: 330px;
     left: 89px;
@@ -89,6 +89,7 @@
     justify-content: flex-start;
     margin-left: 40px;
     font-size: 1.3 em;
+    float: left;
 }
 
 .apptHistory {
@@ -107,16 +108,15 @@
 }
 
 /* footer */
-/* .footer {
+.footer {
     background-color: #43A391;
-    position: relative;
-    top: 610px;
-    position: absolute;
+    /* position: relative; */
+    /* top: 610px; */
+    /* position: absolute; */
   bottom: 0;
   width: 100%;
-  height: 2.5rem;            
-
-} */
+  /* height: 2.5rem;             */
+}
 
 #page-container {
     position: relative;
@@ -127,12 +127,12 @@
     padding-bottom: 2.5rem;    /* Footer height */
   }
   
-  #footer {
+  /* #footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 2.5rem;            /* Footer height */
-  }
+    height: 2.5rem;            
+  } */
   
 
 .vision {
@@ -148,8 +148,8 @@
 
 /* table */
 .table {
-    position: absolute;
-    width: 846px;
+    /* position: absolute; */
+    /* width: 846px; */
     height: 62px;
     left: 477px;
     top: 200px;
