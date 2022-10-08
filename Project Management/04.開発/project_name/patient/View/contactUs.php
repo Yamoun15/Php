@@ -114,12 +114,12 @@
             </div>
         </div>
     </div> -->
-    <footer id="footer">
-    <?php include("./common/footer.php"); ?>
-    </footer>
+    
+    
+    
  </div>
     <!-- Footer -->
-    
+    <?php include("./common/footer.php"); ?>
 </body>
 
 </html>
