@@ -30,10 +30,10 @@
                                 <!-- User image -->
                                 <li class="user-header">
                                     <img src="./image/user2-160x160.jpg" class="img-circle" alt="User Image" />
-                                    <p>
+                                    <!-- <p>
                                         Alexander Pierce - Web Developer
                                         <small>Member since Nov. 2012</small>
-                                    </p>
+                                    </p> -->
                                 </li>
                                 <!-- Menu Body -->
 
@@ -74,6 +74,17 @@
                         <ul class="treeview-menu">
                             <li><a href="Hospitaladddoctor.html"><i class="fa fa-circle-o"></i> Doctor List</a></li>
                             <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Schedule list</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-pie-chart"></i>
+                            <span>Hospital</span>
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="Hospitaladddoctor.html"><i class="fa fa-circle-o"></i>Add Hospital</a></li>
+                            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>Hospital list</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
