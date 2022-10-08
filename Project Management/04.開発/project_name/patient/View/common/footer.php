@@ -38,7 +38,10 @@
 </head>
 
 <body>
-
+    <div class="float-sm-start">Float start on viewports sized SM (small) or wider</div><br>
+    <div class="float-md-start">Float start on viewports sized MD (medium) or wider</div><br>
+    <div class="float-lg-start">Float start on viewports sized LG (large) or wider</div><br>
+    <div class="float-xl-start">Float start on viewports sized XL (extra-large) or wider</div><br>
     <nav class="navbar navbar-expand-lg  footer">
         <div class="container-fluid">
             <img src="logo2.1.png" id="logo" alt="">

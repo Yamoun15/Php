@@ -15,7 +15,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
     <style>
-        #nav1 {
+        /* #nav1 {
             background-color: #43A391;
             height: 60px;
         }
@@ -76,7 +76,7 @@
         .useraccicon {
             margin-top: 35px;
         }
-    </style>
+    </style> */
 
 
 </head>
@@ -84,7 +84,7 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg fs-6 fw-bold " id="nav1">
+<!-- <nav class="navbar navbar-expand-lg fs-6 fw-bold " id="nav1">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="logo.png" id="logo" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,15 +113,15 @@
                         <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Contact Us
                         </a>
-                        <!-- <ul class="dropdown-menu">
+                        <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">About Us</a></li>
                             <li><a class="dropdown-item" href="#">Contact Us</a></li>
                             <li><a class="dropdown-item" href="#">Privacy & Policy</a></li>
-                        </ul> -->
+                        </ul>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </nav>
 
     <!-- <nav class="navbar navbar-expand-lg fs-6 fw-bold text-light" id="nav1">
