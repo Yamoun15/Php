@@ -3,7 +3,7 @@
 
         <header class="main-header">
             <!-- Logo -->
-            <a href="index2.html" class="logo"><img src="./image/logoAdmin.png" id="logo" alt=""><b>ADMIN</b></a>
+            <a href="index2.html" class="logo"><img src="./image/punhlainglogo .png" id="logo" alt=""><b>HOSPITAL</b></a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
                 <!-- Sidebar toggle button-->
@@ -23,16 +23,15 @@
                         <!-- User Account: style can be found in dropdown -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="./image/user2-160x160.jpg" class="user-image" alt="User Image" />
+                                <img src="./image/Hospitalphoto.png" class="user-image" alt="User Image" />
 
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="./image/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                                    <img src="./image/Hospitalphoto.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        Alexander Pierce - Web Developer
-                                        <small>Member since Nov. 2012</small>
+
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
@@ -52,12 +51,12 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="./image/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                        <img src="./image/Hospitalphoto.png" class="img-circle" alt="User Image" />
                     </div>
                     <div class="pull-left info">
                         <p>Welcome</p>
 
-                        <p>Alexander Pierce</p>
+                        <p>Pun Hlaing Hospital</p>
                     </div>
                 </div>
                 <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -72,54 +71,14 @@
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="Hospitaladddoctor.html"><i class="fa fa-circle-o"></i> Doctor List</a></li>
-                            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Schedule list</a></li>
+                            <li><a href="Hospitaladddoctor.html"><i class="fa fa-circle-o"></i>Add Doctor List</a></li>
+                            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>Doctor list</a></li>
+                            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>Schedule list</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
                     <li><a href=""><i class="fa fa-book"></i> Appointment</a></li>
 
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-edit"></i> <span>Post</span>
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                        <ul class="treeview-menu">
-                            <li>
-                                <a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i>
-                                    Condition&Service</a>
-                                <ul class="treeview-menu">
-                                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Add
-                                            Disease</a></li>
-                                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Disease
-                                            List</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="pages/examples/login.html"><i class="fa fa-circle-o"></i>Health Knowledge</a>
-                                <ul class="treeview-menu">
-                                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Add
-                                            Article</a></li>sale
-                                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Article
-                                            List</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Mental Health</a>
-                                <ul class="treeview-menu">
-                                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Add Viedo</a>
-                                    </li>
-                                    <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Viedo List</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-
-                    </li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-table"></i> <span>User</span></a>
                     </li>
                     <li>
                         <a href="pages/mailbox/mailbox.html">
@@ -132,13 +91,6 @@
                             <i class="fa fa-folder"></i> <span>Account Setting</span>
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
-                        <ul class="treeview-menu">
-                            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i>Privacy&Policy</a></li>
-                            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Contact Us</a></li>
-                            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i>About US</a></li>
-                            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i>Account Setting</a></li>
-
-                        </ul>
                     </li>
                 </ul>
             </section>

@@ -1,0 +1,23 @@
+/* .adminPPlistheaderbg {
+    background-color: #188067;
+    color: white;
+    height: 70px;
+}
+
+.adminPPeditIcon {
+    color: #188067;
+    font-size: 1.5vw;
+} */
+.table {
+    margin-top: 50px;;
+}
+.title {
+    background: #188067;
+    color: white;
+}
+table tr{
+    font-size: 1.3vw;
+}
+
+
+

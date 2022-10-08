@@ -2,7 +2,7 @@
     text-align: center;
     color: #188067;
     font-style: italic;
-    font-size: 2.3vw;
+    font-size: 2em;
     background-color: white;
     padding: 10px;
 }
@@ -10,7 +10,7 @@
     border: none !important;
     border-bottom: 1px solid gray !important;
     outline: none;
-    margin-bottom: 20px ;
+    margin-bottom: 15px ;
     margin-top: 20px;
     box-sizing: border-box;
     padding: 8px;
@@ -22,21 +22,20 @@
     border-radius: 10px;
     border: 1px solid gray;
     background-color: white;
+    margin-bottom: 20px;
 }
 
 .adminContactReplybtn{
     color: white ;
     background-color: #188067 ;
     font-family: poppin !important;
-    font-size: 1rem ;
+    font-size: 2rem ;
     padding: 4px ;
     border-radius: 8px ;
     border: none;
     width: 5em ;
     margin-bottom: 20px;
 }
-
-.mainContactReplybgcolor{
-    background-color: #64D3A5;
+.replyTitle{
+    margin-top: 20px;
 }
-
