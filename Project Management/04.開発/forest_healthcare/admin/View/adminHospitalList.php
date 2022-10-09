@@ -48,7 +48,7 @@
                         <tr>
                             <th scope="col">No</th>
                             <th scope="col">Name</th>
-                            <th scope="col"Email Address</th>
+                            <th scope="col">Email Address</th>
                             <th scope="col">Ph.No</th>
                             <th scope="col">Logo</th>
                             <th scope="col">Delete</th>

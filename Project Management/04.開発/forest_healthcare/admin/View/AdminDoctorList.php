@@ -34,7 +34,18 @@
 
     <!-- Header -->
     <?php include("common/header.php"); ?>
-
+    <section class="content-header">
+        <i class="fa fa-dashboard icon"></i>
+        <span>
+            <span class="content-header-text1">Dashboard</span>
+            <p class="content-header-text2"><small>Dashboard Features</small></p>
+        </span>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+    </section>
+    <!-- Header -->
 
 
     <div class="container">
@@ -56,10 +67,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="tablebottom">
                             <th scope="row">1</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -70,7 +81,7 @@
                         <tr>
                             <th scope="row">2</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -80,7 +91,7 @@
                         <tr>
                             <th scope="row">3</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -90,7 +101,7 @@
                         <tr>
                             <th scope="row">4</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -100,7 +111,7 @@
                         <tr>
                             <th scope="row">5</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -110,7 +121,7 @@
                         <tr>
                             <th scope="row">6</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
