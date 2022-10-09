@@ -25,12 +25,26 @@
     <!-- Theme style -->
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./resources/css/root.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/5053738b7f.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="skin-blue">
 
     <!-- Header -->
     <?php include("common/header.php"); ?>
+    <section class="content-header">
+        <i class="fa fa-dashboard icon"></i>
+        <span>
+            <span class="content-header-text1">Dashboard</span>
+            <p class="content-header-text2"><small>Dashboard Features</small></p>
+        </span>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+    </section>
+    <!-- Header -->
 
     <div class="container">
         <div class="row">
