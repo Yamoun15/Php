@@ -1,4 +1,4 @@
-</section>
+
         </div><!-- /.row (main row) -->
 
         </section><!-- /.content -->

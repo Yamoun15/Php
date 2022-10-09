@@ -22,7 +22,7 @@
                     <!-- User Account: style can be found in dropdown -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="./image/Hospitalphoto.png" class="user-image" alt="User Image" />
+                        <i class="fa-solid fa-user"></i>
 
                         </a>
                         <ul class="dropdown-menu">
@@ -69,12 +69,12 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="Hospitaladddoctor.html"><i class="fa fa-circle-o"></i>Add Doctor List</a></li>
-                        <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>Doctor list</a></li>
-                        <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>Schedule list</a></li>
+                        <li><a href=""><i class="fa fa-circle-o"></i>Add Doctor List</a></li>
+                        <li><a href=""><i class="fa fa-circle-o"></i>Doctor list</a></li>
+                        <li><a href=""><i class="fa fa-circle-o"></i>Schedule list</a></li>
                     </ul>
                 </li>
-                <li class="treeview">
+                <li class="treeview text-default">
                 <li><a href=""><i class="fa fa-book"></i> Appointment</a></li>
 
                 </li>

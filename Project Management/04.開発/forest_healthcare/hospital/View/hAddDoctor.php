@@ -27,7 +27,7 @@
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body class="skin-blue">
+<body>
 
     <!-- Header -->
     <?php include("common/header.php"); ?>
