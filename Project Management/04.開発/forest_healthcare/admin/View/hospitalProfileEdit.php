@@ -60,6 +60,12 @@
                         </div>
                     </div>
                     <div class="form-group">
+                    <label for="username" class="hospitalcontrol-label col-md-5">Address</label>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="address">
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div class="row">
                             <div class="col-md-6 col-5"></div>
                             <div class="col-md-3 col-3">

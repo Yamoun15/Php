@@ -55,6 +55,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
                             <input type="file" class="form-control adminContactInput" id="usernaem" placeholder="Choose File">
                         </div>
                     </div>
