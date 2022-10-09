@@ -9,23 +9,22 @@
 }
 .adminContactInput {
     margin-bottom: 20px ;
-    border: 1px solid #2535A1 ;
-    border-radius: 5px;
-    outline: none ;
-    box-sizing: border-box;
-    padding: 8px;
-    font-size: 0.8em;
-    font-family: 'Poppins' !important;
+    border: 1px solid #2535A1 !important;
+    border-radius: 5px !important;
+    box-sizing: border-box !important;
+    padding: 8px !important;
+    font-size: 0.8em !important;
+    font-family: var(--fontfamily-poppins) !important;
 }
 .adminContactTextarea{
     margin-bottom: 20px ;
-    border: 1px solid #2535A1 ;
+    border: 1px solid #2535A1 !important;
     border-radius: 5px;
     outline: none;
     box-sizing: border-box;
     padding: 5px;
-    font-size: 0.8em;
-    font-family: 'Poppins' !important;
+    font-size: 0.8em !important;
+    font-family: var(--fontfamily-poppins) !important;
 }
 .adminContactbtn{
     color: white ;
@@ -47,32 +46,30 @@
     background-color: #F9C56B !important;
 }
 .adminPPaddTitle{
-    color: white;
+    color: #188067;
     font-size: 1.5em;
     margin-top: 20px;
     margin-left: 50px;
     
 }
-.mainPPbgcolor{
-    background-color: #64D3A5;
-}
+
 .mainPPbgeditcolor{
     background-image: linear-gradient(to right, #A6E1F3,#64d3a5db,#188068);
 }
 
 .adminHospitaladdTitle{
     color: #188067;
-    font-size: 1.5em;
+    font-size: 2em;
     margin-top: 20px;
-    margin-left: 20%;
+    margin-left: 10%;
     font-style: italic;
-    font-family: "Poly";
+    font-family: var(--fontfamily-poly);
 }
 
 .adminProfileUpdate{
-    margin-left: 33%;
-    width: 15vw;
-    height: 15vw;
+    margin-left: 35%;
+    width: 12vw;
+    height: 12vw;
     border-radius: 50%;
     margin-bottom: 10px;
 }
@@ -98,7 +95,7 @@
     margin-left: 32%;
     margin-bottom: 10px;
     font-size: 1.5vw;
-    font-family: "Poly";
+    font-family: var(--fontfamily-poly);
 }
 .adminProfileUpdatebtn{
     background-color: #FC4D36 !important;
