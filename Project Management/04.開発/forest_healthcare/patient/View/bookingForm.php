@@ -9,12 +9,9 @@
 
 
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
     <style>
         body {
@@ -30,6 +27,16 @@
 
         .btnBook {
             background-color: #43A391;
+            max-width: 200px;
+            transition: all 1s;
+        }
+        .btnBook:hover{
+            background-color: #43A391;
+            max-width: 200px;
+            transform: scale(1.1);
+        }
+
+        .btnCancel {
             max-width: 200px;
         }
 
@@ -69,8 +76,7 @@
                             <div class="row ">
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="recipient-name" class="col-form-label"></label>
-                                    <input type="text" class="form-control" id="recipient-name"
-                                        placeholder="Patient Name" required>
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="Patient Name" required>
                                 </div>
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="message-text" class="col-form-label"></label>
@@ -88,28 +94,24 @@
                                 </div> -->
                                 <span class="form-check form-check-inline">
                                     <label for="birthday">Date Of Birth:</label>
-                                    <input type="date" id="birthday" name="birthday"
-                                        class="col-md-12 mb-3 col-sm-12 col-12 "></span>
+                                    <input type="date" id="birthday" name="birthday" class="col-md-12 mb-3 col-sm-12 col-12 "></span>
                             </div>
-                            
+
                             <span>Select Gender</span>
                             <span class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1">
                                     Male
                                 </label>
                             </span>
                             <span class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" checked>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     Female
                                 </label>
                             </span>
                             <span class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" checked>
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     Other
                                 </label>
@@ -117,8 +119,7 @@
 
                             <div class="row mt-3 mt-sm-3 mt-md-3 ">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Brief description of your symptoms"
-                                        id="floatingTextarea" required></textarea>
+                                    <textarea class="form-control" placeholder="Brief description of your symptoms" id="floatingTextarea" required></textarea>
                                     <label for="floatingTextarea">Address
                                     </label>
                                 </div>
@@ -126,8 +127,7 @@
 
                             <div class="row mt-3 mt-sm-3 mt-md-3">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Brief description of your symptoms"
-                                        id="floatingTextarea"></textarea>
+                                    <textarea class="form-control" placeholder="Brief description of your symptoms" id="floatingTextarea"></textarea>
                                     <label for="floatingTextarea">Brief description of your symptoms
                                     </label>
                                 </div>
@@ -155,7 +155,8 @@
                                 I have read and accept <a href="#"><u>the terms and conditions.</u></a>
                             </label>
                         </div>
-                        <a class="btn btnBook ms-5 text-white" href="#" role="button">Book Now</a>
+                        <a class="btn btnBook ms-5 text-white" href="#" role="button" type="submit">Book Now</a>
+                        <a class="btn btn-danger btnCancel  ms-5 text-white" href="#" role="button" type="submit">Cancel</a>
                 </form>
             </div>
 

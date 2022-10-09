@@ -28,7 +28,6 @@
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
-
     <style>
         body {
             background-color: #64D3A5;
@@ -98,13 +97,13 @@
 
         /* footer */
         .pagination {
-            /* position: relative; */
+            position: relative;
             top: 670px;
         }
 
         .footer {
             background-color: #43A391;
-            /* position: relative; */
+            position: relative;
             top: 610px;
         }
 
@@ -120,10 +119,11 @@
         .diseaseListTitle {
             font-weight: 600;
             background-color: white;
-            border-radius: 10px;
+            border-radius: 20px;
             padding: 15px;
-            /* min-width: 250px; */
-            max-width: 600px;
+            min-width: 300px;
+            max-width: 500px;
+            margin: 1rem 0 0 25rem;
         }
 
         /* table */
@@ -135,16 +135,21 @@
             padding: 10px !important;
             background: #188067;
             color: white;
-            text-align: center;
+            text-align: center !important;
+        }
+
+        th {
+            text-align: center !important;
         }
 
         tr {
             background-color: white;
             color: black;
+            text-align: center !important;
         }
 
         td {
-            text-align: center;
+            text-align: center !important;
         }
 
         .editBtn {
@@ -165,106 +170,99 @@
     <section class="content-header">
         <i class="fa fa-dashboard icon"></i>
         <span>
-            <span class="content-header-text1">Mental Health</span>
-            <p class="content-header-text2"><small>Video List for mental health</small></p>
+            <span class="content-header-text1">Health Knowledge</span>
+            <p class="content-header-text2"><small>List of Health article</small></p>
         </span>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Dashboard</li>
         </ol>
     </section>
-    <!-- Header -->
 
-    <!-- <div class=" diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3">
-        <b> Admin >> Post >> Mental Health</b>
-    </div>
+    <body>
 
 
-    <div class="diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3"><b>
-            Video List for mental health
-        </b></div> -->
+        <!-- <div class="diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3">
+            Admin >> Post >> Conditions & Services
+        </div>
+        <div class="diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3">
+            List of Conditions
+        </div> -->
+        <table class="table-responsive table mt-3">
+            <thead>
+                <tr class="title">
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Content</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Eat healthy Stay healthy</td>
+                    <td>Dr.John.png</td>
+                    <td>The Definitive Guide to Healthy
+                        Eating in Real Life...</td>
+                    <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Barrhet's oesophagus</td>
+                    <td>Dr.John.png</td>
+                    <td>Its about aphaxia...</td>
+                    <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Barrhet's oesophagus</td>
+                    <td>Dr.John.png</td>
+                    <td>Its about aphaxia...</td>
+                    <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Barrhet's oesophagus</td>
+                    <td>Dr.John.png</td>
+                    <td>Its about aphaxia...</td>
+                    <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
+                </tr>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Barrhet's oesophagus</td>
+                    <td>Dr.John.png</td>
+                    <td>Its about aphaxia...</td>
+                    <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
+                </tr>
+            </tbody>
+        </table>
 
-    <!-- VIdeo List -->
-    <table class="table-responsive table mt-3">
-        <thead>
-            <tr class="title ">
-                <th scope="col">No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Photo</th>
-                <th scope="col">Content</th>
-                <th scope="col">Edit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example" class="mb-5 d-flex justify-content-lg-center">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
-        </tbody>
-    </table>
+        <!-- Footer -->
+        <?php include("common/footer.php"); ?>
 
-
-    <!-- Pagination -->
-    <nav aria-label="Page navigation example" class="mb-5 d-flex justify-content-lg-center">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <div class="col-md-1 col-sm-1 col-2"></div>
-
-
-
-    <!-- Footer -->
-    <?php include("common/footer.php"); ?>
-
-    <script src="./resources/js/adminAboutUs.js"></script>
-
-</body>
+        <script src="./resources/js/adminAboutUs.js"></script>
+    </body>
 
 </html>
