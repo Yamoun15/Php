@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,7 +18,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
-<body>
+<body> -->
     <nav class="navbar navbar-expand-lg fs-6 fw-bold text-light" id="nav1">
         <div class="container-fluid">
 
@@ -63,8 +63,6 @@
             </div>
         </div>
     </nav>
-    
-    
-</body>
+<!-- </body>
 
-</html>
+</html> -->
