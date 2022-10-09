@@ -17,8 +17,8 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body> -->
-    <!-- footer -->
-    <nav class="navbar navbar-expand-lg  footer">
+<!-- footer -->
+<!-- <nav class="navbar navbar-expand-lg  footer">
         <div class="container-fluid">
             <img src="./storages/logo2.1.png" id="logo" alt="">
             <span class="vision text-light ms-3">To be a trusted health care provider that provides reliable health information to make healthier and happier decisions. </span>
@@ -46,6 +46,48 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> -->
 <!-- </body>
 </html> -->
+<section class="pb-4">
+    <div class="bg-white border rounded-5">
+
+        <section class="p-4 text-center">
+            <footer class="bg-light text-center text-lg-start">
+                <!-- Grid container -->
+                <div class="container p-4">
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 logowithText">
+                            <img src="./storages/logo2.1.png" class="footerlogo">
+                            <span>
+                                To be a trusted health care provider that provides reliable health information to make healthier and happier decisions.   
+                            </span>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                            <h5 class="text-uppercase">Footer text</h5>
+
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                                molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
+                                voluptatem veniam, est atque cumque eum delectus sint!
+                            </p>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+                </div>
+                <!-- Grid container -->
+
+            </footer>
+        </section>
+
+
+
+
+    </div>
+</section>

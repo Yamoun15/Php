@@ -20,17 +20,32 @@
     <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- FontAwesome 4.3.0 -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/5053738b7f.js" crossorigin="anonymous"></script>
     <!-- Ionicons 2.0.0 -->
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
+    <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body class="skin-blue">
 
     <!-- Header -->
     <?php include("common/header.php"); ?>
-
+    <section class="content-header">
+        <i class="fa fa-dashboard icon"></i>
+        <span>
+            <span class="content-header-text1">Dashboard</span>
+            <p class="content-header-text2"><small>Dashboard Features</small></p>
+        </span>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Dashboard</li>
+        </ol>
+    </section>
+    <!-- Header -->
 
 
     <div class="container">
@@ -52,10 +67,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr class="tablebottom">
                             <th scope="row">1</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -66,7 +81,7 @@
                         <tr>
                             <th scope="row">2</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -76,7 +91,7 @@
                         <tr>
                             <th scope="row">3</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -86,7 +101,7 @@
                         <tr>
                             <th scope="row">4</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -96,7 +111,7 @@
                         <tr>
                             <th scope="row">5</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>
@@ -106,7 +121,7 @@
                         <tr>
                             <th scope="row">6</th>
                             <td>Dr.John</td>
-                            <td<img src="./image/user2-160x160.jpg">
+                            <td><img src="./image/user2-160x160.jpg">
                                 <td>
                                 <td>Neurology</td>
                                 <td>neurologist</td>

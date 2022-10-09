@@ -2,43 +2,58 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo main-header1"><img src="./image/punhlainglogo .png" id="logo" alt=""><b>HOSPITAL</b></a>
+        <a href="" class="logo"><img src="./image/punhlainglogo .png" id="logo" alt=""><b>HOSPITAL</b></a>
         <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top main-header2" role="navigation">
+        <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle navigation</span>
             </a>
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown-->
+                    <!-- Messages: style can be found in dropdown.less-->
                     <li class="dropdown messages-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa fa-envelope-o"></i>
+                            <i class="fa fa-envelope-o"></i>
                             <span class="label label-success">4</span>
                         </a>
-
                     </li>
-                    <!-- User Account: style can be found in dropdown -->
+                    <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="./image/Hospitalphoto.png" class="user-image" alt="User Image" />
-
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
                                 <img src="./image/Hospitalphoto.png" class="img-circle" alt="User Image" />
                                 <p>
-
+                                    Alexander Pierce
                                 </p>
                             </li>
                             <!-- Menu Body -->
-
+                            <li class="user-body">
+                                <div class="col-xs-4 text-center">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#"></a>
+                                </div>
+                                <div class="col-xs-4 text-center">
+                                    <a href="#">Friends</a>
+                                </div>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
                     </li>
-
-                </ul>
-                </li>
                 </ul>
             </div>
         </nav>
@@ -57,39 +72,45 @@
                     <p>Pun Hlaing Hospital</p>
                 </div>
             </div>
+            <!-- /.search form -->
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="active treeview">
-                    <a href="#">Dashboard</a>
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                    </a>
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-pie-chart"></i>
+                        <i class="fa fa-user-md" aria-hidden="true"></i>
                         <span>Doctor</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="Hospitaladddoctor.html"><i class="fa fa-circle-o"></i>Add Doctor List</a></li>
-                        <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>Doctor list</a></li>
-                        <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>Schedule list</a></li>
+                        <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Add Doctor</a></li>
+                        <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Doctor List</a></li>
+                        <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Schedule List</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                <li><a href=""><i class="fa fa-book"></i> Appointment</a></li>
-
+                    <a href="#">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                        <span>Appointment</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="pages/mailbox/mailbox.html">
+                    <a href="">
                         <i class="fa fa-envelope"></i> <span>Mail</span>
                         <small class="label pull-right bg-yellow">12</small>
                     </a>
                 </li>
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa fa-folder"></i> <span>Account Setting</span>
+                        <i class="fa fa-cog" aria-hidden="true"></i><span>Account Setting</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                 </li>
+
             </ul>
         </section>
         <!-- /.sidebar -->
@@ -98,10 +119,14 @@
     <!-- Right side column. Contains the navbar and content of the page -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1><i class="fa fa-dashboard"></i>&nbsp;&nbsp;Dashboard</h1>
-            <div><small>Dashboard Features</small></div>
+        <!-- <section class="content-header">
+            <i class="fa fa-dashboard icon"></i>
+            <span>
+                <span class="content-header-text1">Dashboard</span>
+                <p class="content-header-text2"><small>Dashboard Features</small></p>
+            </span>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
                 <li class="active">Dashboard</li>
             </ol>
+        </section> -->

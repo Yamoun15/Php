@@ -1,11 +1,13 @@
-
+*{
+    color:whire
+}
 .main-header1{
     background-color:#19332E;
     color: white;
 }
 
 .main-header2{
-    background-color:#188067;
+    background-color:#084c3f;
     color: white;
 }
 
@@ -16,3 +18,6 @@
 .user-panel{
     background-color:white;
 }
+/* .sidebar-menu{
+    color:white !important;
+} */
