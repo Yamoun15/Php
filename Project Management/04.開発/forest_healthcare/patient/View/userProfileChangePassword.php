@@ -54,14 +54,14 @@
                             <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="Confirm new Password">
                         </div>
                     </div>
-                    <div class="form-group">
                         <div class="btn col-md-12  passwordsendButton">Confirm</div>
-                    </div>
                 </form>
             </div>
         </div>
     </div>
     
+
+
     <!-- Footer -->
     <?php include("./common/footer.php"); ?>
 </body>

@@ -51,13 +51,19 @@
                         <input id="userfile-upload" type="file" />
                     </span>
                     <span>
-                        <input type="button" value="Confirm" class="adminContactbtn">
+                        <input type="button" value="Update" class="adminContactbtn">
                     </span>
 
                     <div class="form-group userProfileInputfloat">
                         <label for="username" class="userProfileLabel col-md-5">Username</label>
                         <div class="col-md-12">
                             <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="John">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username" class="userProfileLabel col-md-5">Password</label>
+                        <div class="col-md-12">
+                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="password">
                         </div>
                     </div>
                     <div class="form-group">

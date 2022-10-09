@@ -12,18 +12,18 @@
     border: 1px solid #2535A1 !important;
     border-radius: 5px !important;
     box-sizing: border-box !important;
-    padding: 8px !important;
+    padding: 8px ;
     font-size: 0.8em !important;
     font-family: var(--fontfamily-poppins) !important;
 }
 .adminContactTextarea{
     margin-bottom: 20px ;
     border: 1px solid #2535A1 !important;
-    border-radius: 5px;
+    border-radius: 8px ;
     outline: none;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     padding: 5px;
-    font-size: 0.8em !important;
+    font-size: 2em !important;
     font-family: var(--fontfamily-poppins) !important;
 }
 .adminContactbtn{
@@ -36,7 +36,7 @@
     border-radius: 8px ;
     border: none;
     width: 5em;
-    margin-left: 20px;
+    /* margin-left: 10px; */
 }
 
 .adminPPadd{

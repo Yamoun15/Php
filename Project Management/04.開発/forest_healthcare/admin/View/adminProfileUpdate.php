@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<link>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poly&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="./resources/css/inputBox.css">
 <!-- Bootstrap -->
 <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- FontAwesome 4.3.0 -->
@@ -21,7 +21,7 @@
     <!-- Ionicons 2.0.0 -->
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
-    <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" /></head>
+    <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" /></link>
 
 <body class="skin-blue">
    <!-- Header -->
@@ -59,7 +59,7 @@
                         <div class="col-md-12">
                             <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Profile Name">
                         </div>
-                    </div>
+                    </div> 
                     <div class="form-group">
                         <div class="col-md-12">
                             <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Phone Number">

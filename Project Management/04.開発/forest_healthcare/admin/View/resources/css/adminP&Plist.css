@@ -2,6 +2,7 @@
     background-color: #188067;
     color: white;
     height: 70px;
+    font-size: 1.2em;
 }
 
 .adminPPeditIcon {
@@ -28,9 +29,9 @@
 .mainadminPPaddtitle {
     margin-bottom: 20px;
     margin-top: 20px;
+    font-family: var(--fontfamily-poly) !important;
 }
 
 .adminPPaddtitle {
     font-size: 2em;
 }
-
