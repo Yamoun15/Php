@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/root.css" />
     <link rel="stylesheet" href="./resources/css/all.css" />
+    <link rel="stylesheet" href="./resources/css/apptHistory.css" />
 
     <!-- logouticon2 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,127 +27,117 @@
 <body>
     <!-- Header -->
     <?php include("./common/top.php"); ?>
-
-
     <!-- Header -->
-    <div class="useraccMenubox">
-        <div class="useraccMenu fw-bold">
-            <div class="useraccMenuboxIcon">
-                <ul class="nav flex-column ">
-                    <li class="1">
-                        <i class='fas fa-user-alt' style='font-size:30px'></i>
-                    </li>
-                    <li class="1">
-                        <i class='far fa-calendar-check' style='font-size:30px;color:#188067'></i>
 
-                    </li>
-                    <li class="1">
-                        <i class='fas fa-bookmark' style='font-size:30px'></i>
-                    </li>
-                    <li class="1">
-                        <i class='fas fa-user-cog' style='font-size:30px'></i>
+    <div class="row">
+        <div>
+            <div class="col-lg-6 menubox">
+                <div class="row">
+                    <div class="col-2 ">
+                        <div><i class="fa-solid fa-user"></i></div>
+                        <div><i class="fa-regular fa-calendar-check"></i></div>
+                        <div><i class="fa-regular fa-user-gear"></i></div>
+                        <div><i class="fa-solid fa-right-from-bracket"></i></div>
+                    </div>
+                    <div class="col-10">
+                        <div>My Profile</div>
+                        <div>Appointment History</div>
+                        <div>Account Setting</div>
+                        <div>Logout</div>
+                    </div>
 
-                    </li>
-                    <li class="1">
-                        <i class="material-icons" style="font-size:30px">exit_to_app</i>
+                </div>
+                    <!-- <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    </li>
-                </ul>
+                <div class="alert alert-info d-none d-lg-block">Resize your browser to show the responsive offcanvas toggle.</div>
+                <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">Responsive offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <p class="mb-0">This is content within an <code>.offcanvas-lg</code>.</p>
+                    </div>
+                </div> -->
+                </div>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr class="title">
+                                <th scope="col">No</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Doctor</th>
+                                <th scope="col">Date&Time</th>
+                                <th scope="col">Details</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">QR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Dr.John</td>
+                                <td>9AM-11AM(SUN)</td>
+                                <td><button class="btnview">View</button></td>
+                                <td>Approved</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Mark</td>
+                                <td>Dr.John</td>
+                                <td>9AM-11AM(SUN)</td>
+                                <td><button class="btnview">View</button></td>
+                                <td>Approved</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Mark</td>
+                                <td>Dr.John</td>
+                                <td>9AM-11AM(SUN)</td>
+                                <td><button class="btnview">View</button></td>
+                                <td>Canceled</td>
+                                <td>---</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Dr.John</td>
+                                <td>9AM-11AM(SUN)</td>
+                                <td><button class="btnview">View</button></td>
+                                <td>Canceled</td>
+                                <td>---</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Mark</td>
+                                <td>Dr.John</td>
+                                <td>9AM-11AM(SUN)</td>
+                                <td><button class="btnview">View</button></td>
+                                <td>Pending</td>
+                                <td>---</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Mark</td>
+                                <td>Dr.John</td>
+                                <td>9AM-11AM(SUN)</td>
+                                <td><button class="btnview">View</button></td>
+                                <td>Pending</td>
+                                <td>---</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
-            <div class="useraccMenuText">
-                <ul class="nav flex-column ">
-                    <li class="accitem">
-                        <a class="nav-link active text-dark" aria-current="page" href="#">My Profile</a>
-                    </li>
-                    <li class="accitem">
-                        <a class="nav-link apptHistory" href="#">Appointment Hitory</a>
-                    </li>
-                    <li class="accitem">
-                        <a class="nav-link text-dark" href="#">Saved</a>
-                    </li>
-                    <li class="accitem">
-                        <a class="nav-link text-dark">Account Setting</a>
-                    </li>
-                    <li class="accitem">
-                        <a class="nav-link text-dark">Logout</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-
-    <table class="table">
-        <thead>
-            <tr class="title">
-                <th scope="col">No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Doctor</th>
-                <th scope="col">Date&Time</th>
-                <th scope="col">Details</th>
-                <th scope="col">Status</th>
-                <th scope="col">QR</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Dr.John</td>
-                <td>9AM-11AM(SUN)</td>
-                <td><button class="btnview">View</button></td>
-                <td>Approved</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Mark</td>
-                <td>Dr.John</td>
-                <td>9AM-11AM(SUN)</td>
-                <td><button class="btnview">View</button></td>
-                <td>Approved</td>
-                <td></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Mark</td>
-                <td>Dr.John</td>
-                <td>9AM-11AM(SUN)</td>
-                <td><button class="btnview">View</button></td>
-                <td>Canceled</td>
-                <td>---</td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Dr.John</td>
-                <td>9AM-11AM(SUN)</td>
-                <td><button class="btnview">View</button></td>
-                <td>Canceled</td>
-                <td>---</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Mark</td>
-                <td>Dr.John</td>
-                <td>9AM-11AM(SUN)</td>
-                <td><button class="btnview">View</button></td>
-                <td>Pending</td>
-                <td>---</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Mark</td>
-                <td>Dr.John</td>
-                <td>9AM-11AM(SUN)</td>
-                <td><button class="btnview">View</button></td>
-                <td>Pending</td>
-                <td>---</td>
-            </tr>
-        </tbody>
-    </table>
-    <?php include("./common/footer.php"); ?>
+            <!-- footer -->
+            <?php include("./common/footer.php"); ?>
+            <!-- footer -->
 
 </body>
 

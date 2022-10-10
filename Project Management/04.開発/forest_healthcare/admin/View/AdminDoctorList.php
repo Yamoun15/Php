@@ -69,63 +69,69 @@
                         <tr class="tablebottom">
                             <th scope="row">1</th>
                             <td>Dr.John</td>
-                            <td><img src="./image/user2-160x160.jpg">
-                                <td>
-                                <td>Neurology</td>
-                                <td>neurologist</td>
-                                <td>johnwick@gmail.com</td>
-                                <td>091234567</td>
+                            <td>
+                                <img src="./image/user2-160x160.jpg">
+                            <td>
+                            <td>Neurology</td>
+                            <td>neurologist</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>091234567</td>
 
                         </tr>
                         <tr>
                             <th scope="row">2</th>
                             <td>Dr.John</td>
-                            <td><img src="./image/user2-160x160.jpg">
-                                <td>
-                                <td>Neurology</td>
-                                <td>neurologist</td>
-                                <td>johnwick@gmail.com</td>
-                                <td>091234567</td>
+                            <td>
+                                <img src="./image/user2-160x160.jpg">
+                            <td>
+                            <td>Neurology</td>
+                            <td>neurologist</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>091234567</td>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
                             <td>Dr.John</td>
-                            <td><img src="./image/user2-160x160.jpg">
-                                <td>
-                                <td>Neurology</td>
-                                <td>neurologist</td>
-                                <td>johnwick@gmail.com</td>
-                                <td>091234567</td>
+                            <td>
+                                <img src="./image/user2-160x160.jpg">
+                            <td>
+                            <td>Neurology</td>
+                            <td>neurologist</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>091234567</td>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
                             <td>Dr.John</td>
-                            <td><img src="./image/user2-160x160.jpg">
-                                <td>
-                                <td>Neurology</td>
-                                <td>neurologist</td>
-                                <td>johnwick@gmail.com</td>
-                                <td>091234567</td>
+                            <td>
+                                <img src="./image/user2-160x160.jpg">
+                            <td>
+                            <td>Neurology</td>
+                            <td>neurologist</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>091234567</td>
                         </tr>
                         <tr>
                             <th scope="row">5</th>
                             <td>Dr.John</td>
-                            <td><img src="./image/user2-160x160.jpg">
-                                <td>
-                                <td>Neurology</td>
-                                <td>neurologist</td>
-                                <td>johnwick@gmail.com</td>
-                                <td>091234567</td>
+                            <td>
+                                <img src="./image/user2-160x160.jpg">
+                            <td>
+                            <td>Neurology</td>
+                            <td>neurologist</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>091234567</td>
                         </tr>
                         <tr>
                             <th scope="row">6</th>
                             <td>Dr.John</td>
-                            <td><img src="./image/user2-160x160.jpg">
-                                <td>
-                                <td>Neurology</td>
-                                <td>neurologist</td>
-                                <td>johnwick@gmail.com</td>
-                                <td>091234567</td>
+                            <td>
+                                <img src="./image/user2-160x160.jpg">
+                            <td>
+                            <td>Neurology</td>
+                            <td>neurologist</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>091234567</td>
                         </tr>
                     </tbody>
                 </table>

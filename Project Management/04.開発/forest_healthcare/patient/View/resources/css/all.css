@@ -1,8 +1,8 @@
-.header1{
+#header{
     background-color:#43A391;
 }
 
-.header2{
+#headernav{
     background-color:#64D3A5;
 }
 
@@ -15,7 +15,13 @@
 /* .logowithText span{
     wi
 } */
+.footer{
+    background-color:#43A391;
+}
 .footerlogo{
     width:100px;
     float:left !important;
+}
+.footerRightSide{
+    margin-bottom: 20px !important ;
 }
