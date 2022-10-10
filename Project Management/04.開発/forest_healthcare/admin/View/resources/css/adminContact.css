@@ -3,17 +3,19 @@
     border-radius: 10px;
     border: 1px solid gray;
     padding: 15px;
+    background-color: var(--white);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .adminContact-form{
     margin: 20px ;
 }
 .adminContactInput {
-    margin-bottom: 20px ;
+    margin-bottom: 10px ;
     border: 1px solid #2535A1 !important;
-    border-radius: 5px !important;
+    border-radius: 5px ;
     box-sizing: border-box !important;
-    padding: 8px ;
-    font-size: 0.8em !important;
+    padding: 5px ;
+    font-size: 0.8em ;
     font-family: var(--fontfamily-poppins) !important;
 }
 .adminContactTextarea{
@@ -23,13 +25,13 @@
     outline: none;
     /* box-sizing: border-box; */
     padding: 5px;
-    font-size: 2em !important;
+    font-size: 0.8em ;
     font-family: var(--fontfamily-poppins) !important;
 }
 .adminContactbtn{
-    color: white ;
-    background-color: #188067 ;
-    font-family: "Poppins";
+    color: var(--white);
+    background-color: var(--green) ;
+    font-family: var(--fontfamily-poppins);
     font-size: 1.5rem ;
     /* border: none; */
     padding: 4px ;
@@ -38,15 +40,18 @@
     width: 5em;
     /* margin-left: 10px; */
 }
+.hospitalBtn{
+    margin-left: 22px;
+}
 
 .adminPPadd{
     height: 80% !important;
 }
 .adminPPbtn{
-    background-color: #F9C56B !important;
+    background-color: var(--orange)!important;
 }
 .adminPPaddTitle{
-    color: #188067;
+    color: var(--green);
     font-size: 1.5em;
     margin-top: 20px;
     margin-left: 50px;
@@ -58,7 +63,7 @@
 }
 
 .adminHospitaladdTitle{
-    color: #188067;
+    color: var(--green);
     font-size: 2em;
     margin-top: 20px;
     margin-left: 10%;
@@ -86,9 +91,9 @@
     margin-bottom: 15px;
     width: 30%;
     text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.879);
-    font-family: "Poppins";
+    color: var(--white);
+    background-color: var( --lightBlack);
+    font-family: var(--fontfamily-poppins);
     font-size: 1vw;
 }
 .adminProfileUpdateChoose{
@@ -98,5 +103,5 @@
     font-family: var(--fontfamily-poly);
 }
 .adminProfileUpdatebtn{
-    background-color: #FC4D36 !important;
+    background-color: var(--btncolorred) !important;
 }
