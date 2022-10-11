@@ -18,25 +18,27 @@
         <div class="row  g-0 ">
             <div class="col-12 col-md-8">
                 <div class="row">
-                <div class="login_logo me-3">
-                    <img src="./storages/loginLogo.png" alt="" srcset="">
-                    <label for="" class="mx-3"><a href="http://" class="acolor">Home</a></label>
-                    <label for="" class="mx-3"><a href="http://" class="acolor">About Us</a></label>
-                    <label for="" class=""><a href="http://" class="acolor">Contact Us</a></label>
+                    <div class="login_logo me-3">
+                        <img src="./storages/loginLogo.png" alt="" srcset="">
+                        <label for="" class="mx-3"><a href="http://" class="acolor">Home</a></label>
+                        <label for="" class="mx-3"><a href="http://" class="acolor">About Us</a></label>
+                        <label for="" class=""><a href="http://" class="acolor">Contact Us</a></label>
+                    </div>
                 </div>
-                </div>
-                
+
                 <div class="row  g-0 mt-5">
                     <div class="col-0 col-md-2 "></div>
-                    <div class="col-md-8 col-sm-8">                        
+                    <div class="col-md-8 col-sm-8">
                         <div class="simple-login-container text-center">
+                        <form action="" method="">
                             <div class="row  g-0 ms-3 mb-3 ">
+
                                 <div class="col-md-1 col-sm-1"></div>
                                 <div class="col-6 col-md-5 col-sm-5 ">
                                     <button class="dbtnlogin" disabled>Login</button>
                                 </div>
                                 <div class="col-6 col-md-6 col-sm-5 mb-4">
-                                    <button class="btnsignup" >Sign Up</button>
+                                    <button class="btnsignup">Sign Up</button>
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
@@ -51,14 +53,14 @@
                             <div class="row ">
                                 <div class="col-0 col-md-1 col-sm-1"></div>
                                 <div class="col-5 col-md-5 col-sm-5">
-                                    
+
                                 </div>
-                                
+
                                 <div class="col-5 col-md-5 col-sm-5 ms-3">
                                     <button class="btnsignup">Signup</button>
                                 </div>
                             </div>
-
+                        </form>
                         </div>
                     </div>
                     <!-- <div class="col-0 col-md-2 "></div> -->
