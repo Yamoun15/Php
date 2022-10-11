@@ -45,11 +45,6 @@
 
 
     <div class="container">
-        <!-- <div class="row mailList">
-            <div class="col-md-2 col-sm-2 col-2"></div>
-            <div class="col-md-6 col-sm-6 col-6">Contact Us Mail List</div>
-            <div class="col-md-2 col-sm-2 col-2"></div>
-        </div> -->
         <div class="row">
             <!-- <div class="col-md-1 col-sm-3 col-2"></div> -->
             <div class="card adminContactListCardBg">
@@ -61,7 +56,7 @@
                             <div class="">09-2150776</div>
                         </div>
                         <div class="col-sm-4">
-                            <a href="#" class="btn adminContactListbtn">Reply</a>
+                            <a href="./adminContactUsReply.php" class="btn adminContactListbtn">Reply</a>
                         </div>
                     </div>
                     <p class="adminContactListCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quaerat earum dolor cumque, a ipsam modi iste veritatis assumenda harum totam, animi rerum omnis nam alias minus? A, cum sint.</p>

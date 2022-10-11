@@ -3,6 +3,10 @@
     color: var(--white);
     height: 70px;
     font-size: 1.2em;
+    
+}
+tr{
+    font-family: var(--fontfamily-poly) !important;
 }
 
 .adminPPeditIcon {
@@ -34,4 +38,12 @@
 
 .adminPPaddtitle {
     font-size: 2em;
+}
+td{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.721) ;
+}
+.tableBodyBg{
+    background-color: var(--white);
+    margin-top: 2em;
+    
 }

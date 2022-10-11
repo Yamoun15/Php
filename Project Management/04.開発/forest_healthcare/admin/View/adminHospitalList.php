@@ -15,8 +15,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poly&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-<!-- Bootstrap -->
-<link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap -->
+    <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- FontAwesome 4.3.0 -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
@@ -28,7 +28,7 @@
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body  class="skin-blue">
+<body class="skin-blue">
     <!-- Header -->
     <?php include("common/header.php"); ?>
     <section class="content-header">
@@ -50,15 +50,16 @@
                 <div class="row">
                     <div class="col-md-8"></div>
                     <div class="col-md-3">
-                        <button class="btn adminppaddbtn">Add</button>
+                        <a href="./adminHospitalAdd.php"><button class="btn adminppaddbtn">Add</button></a>
+                        
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-1 col-sm-1 "></div>
-            <div class="col-md-8 col-sm-10 table-responsive">
-                <table class="table">
+            <div class="col-md-8 col-sm-10 table-responsive ">
+                <table class="table tableBodyBg">
                     <thead class="adminPPlistheaderbg">
                         <tr>
                             <th scope="col">No</th>
@@ -82,8 +83,9 @@
                                 <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
                             </td>
                         </tr>
+                        
                         <tr>
-                            <td scope="row">1</td>
+                            <td scope="row">2</td>
                             <td>Pan Hlaing</td>
                             <td>panhlaing@gmail.com</td>
                             <td>01-2150776</td>
@@ -95,7 +97,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td scope="row">1</td>
+                            <td scope="row">3</td>
                             <td>Pan Hlaing</td>
                             <td>panhlaing@gmail.com</td>
                             <td>01-2150776</td>
@@ -110,7 +112,7 @@
                 </table>
             </div>
             <div class="row">
-                <div class="col-md-10 col-sm-5"></div>
+                <div class="col-md-7 col-sm-5"></div>
                 <div class="col-md-2 col-sm-5">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
@@ -133,8 +135,8 @@
                     </nav>
                 </div>
             </div>
-<!-- Footer -->
-<?php include("common/footer.php"); ?>
+            <!-- Footer -->
+            <?php include("common/footer.php"); ?>
 </body>
 
 </html>

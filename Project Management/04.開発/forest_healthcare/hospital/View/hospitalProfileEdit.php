@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poly&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./resources/css/hospitalProfileEdit.css?v=" <?= time() ?>>
+    <link rel="stylesheet" href="./resources/css/hospitalProfileEdit.css?v="<?=time()?>>
 
     <!-- Bootstrap -->
     <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -39,7 +39,9 @@
         </span>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Account Setting</li>
+            <li class="active">Account Setting
+
+            </li>
         </ol>
     </section>
     <!-- Header -->
@@ -56,13 +58,10 @@
                 </label>
                 <input id="Adminfile-upload" type="file" />
             </div>
-
             <div class="col-1">
                 <div class="hospitalVerticalLine"></div>
             </div>
-
-            <div class="col-sm-8 col-md-4">
-            
+            <div class="col-sm-8 col-md-4">       
                     <div class="form-group">
                     <label for="username" class="hospitalcontrol-label col-md-5">Hospital Name</label>
                         <div class="col-md-12">
