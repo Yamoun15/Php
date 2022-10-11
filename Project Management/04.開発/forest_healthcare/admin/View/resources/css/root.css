@@ -8,7 +8,9 @@
     --lightblue        :#A6E1F3;
     --orange           :#F9C56B;
     --white            :#FFFFFF;
+    --lightOrange      :#FFC652;
     --black            :#000000;
+    --lightBlack       :rgba(0, 0, 0, 0.879);
     --blue             :#2535A1;
     
     --fontfamily-poly     : 'Poly', serif;

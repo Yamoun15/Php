@@ -4,8 +4,8 @@ img{
 }
 
 .adminhospitallistheaderbg {
-    background-color: #188067;
-    color: white;
+    background-color: var(--green);
+    color: var(--white);
     height: 70px;
 }
 

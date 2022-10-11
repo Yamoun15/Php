@@ -1,17 +1,17 @@
 .contactListTitle {
     font-family: "Poly";
     font-size: 1.2em;
-    color: white;
+    color: var(--white);
 }
 
 .adminContactListCardText{
-    font-family: "Poly";
+    font-family: var(--fontfamily-poly);
     font-size: 1em;
-    color: white;
+    color: var(--white);
 }
 
 .adminContactListCardBg {
-    background-color: #188067;
+    background-color: var(--green);
     height: 230px;
     float: left;
     width: 40%;
@@ -20,9 +20,9 @@
 }
 
 .adminContactListbtn {
-    color: white;
-    background-color: #FFC652;
-    font-family: "Poppins";
+    color: var(--white);
+    background-color: var(--lightOrange);
+    font-family: var(--fontfamily-poppins);
     font-size: 1vw;
     border: none;
     padding: 1vw;
@@ -32,15 +32,14 @@
 }
 .adminContactListCard{
     margin-bottom: 20px;
-    
 }
 .mailList{
-    background-color: #188067;
+    background-color: var(--green);
     height: 60px;
     border-radius: 10px;
     font-size: 2em;
-    font-style: "Poly";
-    color: white;
+    font-family: var(--fontfamily-poly);
+    color: var(--white);
     text-align: center;
     margin-bottom: 20px;
     

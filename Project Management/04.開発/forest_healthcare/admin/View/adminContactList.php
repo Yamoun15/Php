@@ -13,26 +13,43 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poly&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/adminContactList.css?v=" <?= time() ?>>
+    <link rel="stylesheet" href="./resources/css/root.css">
     <!-- Bootstrap -->
     <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- FontAwesome 4.3.0 -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/5053738b7f.js" crossorigin="anonymous"></script>
     <!-- Ionicons 2.0.0 -->
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
+    <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="skin-blue">
     <!-- Header -->
     <?php include("common/header.php"); ?>
+    <section class="content-header">
+        <i class="fa fa-dashboard icon"></i>
+        <span>
+            <span class="content-header-text1">Mail</span>
+            <p class="content-header-text2"><small>Mail Features</small></p>
+        </span>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Mail</li>
+        </ol>
+    </section>
+    <!-- Header -->
+
 
     <div class="container">
-        <div class="row mailList">
+        <!-- <div class="row mailList">
             <div class="col-md-2 col-sm-2 col-2"></div>
             <div class="col-md-6 col-sm-6 col-6">Contact Us Mail List</div>
             <div class="col-md-2 col-sm-2 col-2"></div>
-        </div>
+        </div> -->
         <div class="row">
             <!-- <div class="col-md-1 col-sm-3 col-2"></div> -->
             <div class="card adminContactListCardBg">

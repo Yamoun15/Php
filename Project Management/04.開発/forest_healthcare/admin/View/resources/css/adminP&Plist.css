@@ -1,24 +1,24 @@
 .adminPPlistheaderbg {
-    background-color: #188067;
-    color: white;
+    background-color: var(--green);
+    color: var(--white);
     height: 70px;
     font-size: 1.2em;
 }
 
 .adminPPeditIcon {
-    color: #188067;
+    color: var(--green);
     font-size: 1.5vw;
 }
 
 .adminPPdeleteIcon {
-    color: red;
+    color: var(--btncolorred);
     font-size: 1.5vw;
 }
 
 .adminppaddbtn {
-    color: white;
-    background-color: #F9C56B;
-    font-family: "Poppins" !important;
+    color: var(--white);
+    background-color: var(--orange   );
+    font-family: var(--fontfamily-poppins) !important;
     font-size: 1rem;
     border: none;
     padding: 4px;

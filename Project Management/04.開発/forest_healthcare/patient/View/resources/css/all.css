@@ -1,0 +1,27 @@
+#header{
+    background-color:#43A391;
+}
+
+#headernav{
+    background-color:#64D3A5;
+}
+
+.headerlogo{
+    width:100px;
+}
+.logotext{
+    font-size: 1.1em;
+}
+/* .logowithText span{
+    wi
+} */
+.footer{
+    background-color:#43A391;
+}
+.footerlogo{
+    width:100px;
+    float:left !important;
+}
+.footerRightSide{
+    margin-bottom: 20px !important ;
+}

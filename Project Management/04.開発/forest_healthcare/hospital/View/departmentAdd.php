@@ -8,7 +8,7 @@
     <title>Document</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="./resources/css/adminContactReply.css">
+    <link rel="stylesheet" href="./resources/css/departmentAdd.css">
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,48 +28,40 @@
 </head>
 
 <body class="skin-blue">
-    <!-- Header -->
-    <?php include("common/header.php"); ?>
+<!-- Header -->
+<?php include("common/header.php"); ?>
     <section class="content-header">
         <i class="fa fa-dashboard icon"></i>
         <span>
-            <span class="content-header-text1">Mail Reply</span>
-            <p class="content-header-text2"><small>Mail Reply Features</small></p>
+            <span class="content-header-text1">Department Add</span>
+            <p class="content-header-text2"><small>Department Add Features</small></p>
         </span>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Mail Reply</li>
+            <li class="active">Department Add</li>
         </ol>
     </section>
     <!-- Header -->
 
     <div class="container">
+        <br>
+        <br>
         <div class="row">
-            <p></p>
-            <br>
-        </div>
-        <div class="row">
-            <div class="col-md-2 col-sm-2 col-2"></div>
-            <div class="col-md-6  col-sm-8 col-8 adminContactReply-col">
-                <form action="" class="form-horizontal hr">
+            <div class="col-md-3 col-sm-2 col-2"></div>
+            <div class="col-md-6  col-sm-8 col-8 adminContact-col">
+                <form action="" class="form-horizontal hr adminContact-form">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactReplyinput" id="usernaem" placeholder="To">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Department Name">
                         </div>
                     </div>
+                    
                     <div class="form-group">
-                        <div class="col-md-12">
-                            <input type="text" class="form-control adminContactReplyinput" id="usernaem" placeholder="Subject">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <textarea rows="9" type="text" class="form-control adminContactReplyinput" id="usernaem" placeholder="Message"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <input type="button" value="Send" class="adminContactReplybtn">
+                        <div class="row">
+                            <div class="col-md-9"></div>
+                            <div class="col-md-3">
+                                <input type="button" value="Submit" class="adminContactbtn hospitalBtn">
+                            </div>
                         </div>
                     </div>
                 </form>
