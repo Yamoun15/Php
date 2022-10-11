@@ -2,7 +2,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="" class="logo"><img src="./image/punhlainglogo .png" id="logo" alt=""><b>HOSPITAL</b></a>
+        <a href="" class="logo"><img src="./image/punhlainglogo .png" id="hospitalLogo" alt=""><b>HOSPITAL</b></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
@@ -28,8 +28,7 @@
                             <li class="user-header">
                                 <img src="./image/Hospitalphoto.png" class="img-circle" alt="User Image" />
                                 <p>
-                                    Alexander Pierce
-                                </p>
+                                    Pun Hlaing Hospital
                             </li>
                             <!-- Menu Body -->
                             <li class="user-body">
@@ -40,7 +39,7 @@
                                     <a href="#"></a>
                                 </div>
                                 <div class="col-xs-4 text-center">
-                                    <a href="#">Friends</a>
+                                    <a href="#"></a>
                                 </div>
                             </li>
                             <!-- Menu Footer-->

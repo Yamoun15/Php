@@ -1,5 +1,5 @@
 
-.table {
+/* .table {
     margin-top: 50px;;
 }
 .title {               
@@ -8,16 +8,19 @@
 }
 table tr{
     font-size: 1.3vw;
-}
+} */
 
 /* table .tablebottom{
     border-bottom: 2px solid black;
 } */
 
 img{
-    width:50px ;
+    width: 40%;
 }
 
-
-
+/* .adminDoctorList {
+    background-color: var(--green);
+    color: var(--white);
+    height: 70px;
+} */
 

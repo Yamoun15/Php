@@ -21,7 +21,7 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            <i class="fa fa-user-circle-o  fs-5" aria-hidden="true"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
