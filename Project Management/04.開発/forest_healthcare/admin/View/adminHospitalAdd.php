@@ -49,42 +49,43 @@
         <div class="row">
             <div class="col-md-3 col-sm-2 col-2"></div>
             <div class="col-md-6  col-sm-8 col-8">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/hospital/hospitalAddController.php" method="POST" class="form-horizontal hr adminContact-form">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Hospital Name">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Hospital Name" name="name">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="Email Address">
+                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="Email Address" name="emailAddress">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="Password">
+                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="Password" name="password">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Phone Number">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Phone Number" name="phoneNumber">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Address">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Address" name="address">
                         </div>
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <div class="col-md-12">
                             <input type="file" class="form-control adminContactInput" id="usernaem" placeholder="Choose File">
                         </div>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Submit" class="adminContactbtn hospitalBtn">
+                            <button class="btn adminContactbtn hospitalBtn" name="hospitalAddBtn" type="submit">Submit</button>
+                                <!-- <input type="button" value="Submit" class="adminContactbtn hospitalBtn" name="hospitalAddBtn"> -->
                             </div>
                         </div>
                     </div>
