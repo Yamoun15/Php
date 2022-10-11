@@ -38,17 +38,18 @@
     max-width: 10%;
 }
 
-.input-icons i {
-    position: absolute;
+.loginimg{
+    width: 100%;     
+}
+@media (max-width: 768px){
+    .small{
+        background-color: #99e3d2 ;
+    }
+    .loginimg{
+        display: none;
+    }
 }
 
-/* body{
-    position: relative !important;
-    height: 100vh;
-} */
-.login_image{
-    position: absolute !important;
-    right: 0;
-    bottom: 0;   
-     
+.acolor{
+    color: black;
 }

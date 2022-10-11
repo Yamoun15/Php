@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Signup</title>
+    <title>User Login</title>
     <link rel="stylesheet" href="./resources/css/signupLogin.css?v=<?= time() ?>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
@@ -33,14 +33,11 @@
                             <div class="row  g-0 ms-3 mb-3 ">
                                 <div class="col-md-1 col-sm-1"></div>
                                 <div class="col-6 col-md-5 col-sm-5 ">
-                                    <button class="dbtnlogin" disabled>Login</button>
+                                    <button class="btnlogin">Login</button>
                                 </div>
                                 <div class="col-6 col-md-6 col-sm-5 mb-4">
-                                    <button class="btnsignup" >Sign Up</button>
+                                    <button class="dbtnsignup" disabled>Sign Up</button>
                                 </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                <input type="text" class="form-control" placeholder="Username">
                             </div>
                             <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
                                 <input type="text" class="form-control" placeholder="Email Address">
@@ -51,11 +48,11 @@
                             <div class="row ">
                                 <div class="col-0 col-md-1 col-sm-1"></div>
                                 <div class="col-5 col-md-5 col-sm-5">
-                                    
+                                    <a href="https://">Forget your Password</a>
                                 </div>
                                 
                                 <div class="col-5 col-md-5 col-sm-5 ms-3">
-                                    <button class="btnsignup">Signup</button>
+                                    <button class="btnlogin ">Login</button>
                                 </div>
                             </div>
 
