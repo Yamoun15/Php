@@ -22,6 +22,7 @@
     <link href="http://code.ionicframework.com/ionicons/2.0.0/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
+    <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body  class="skin-blue">
@@ -48,7 +49,7 @@
                         <tr>
                             <th scope="col">No</th>
                             <th scope="col">Name</th>
-                            <th scope="col"Email Address</th>
+                            <th scope="col">Email Address</th>
                             <th scope="col">Ph.No</th>
                             <th scope="col">Logo</th>
                             <th scope="col">Delete</th>
