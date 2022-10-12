@@ -6,8 +6,6 @@ unset($_SESSION["email_address"]);
 ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,15 +37,16 @@ unset($_SESSION["email_address"]);
                 <div class="row  g-0 mt-5">
                     <div class="col-0 col-md-2 "></div>
                     <div class="col-md-8 col-sm-8">
-                        <form action="../Controller/loginController.php" method="post">
-                            <div class="simple-login-container text-center">
+                        <!-- <form action="../Controller/loginController.php" method="post"> -->
+                        <div class="simple-login-container text-center">
+                            <form action="../Controller/loginController.php" method="post">
                                 <div class="row  g-0 ms-3 mb-3 ">
                                     <div class="col-md-1 col-sm-1"></div>
                                     <div class="col-6 col-md-5 col-sm-5 ">
                                         <button class="btnlogin">Login</button>
                                     </div>
                                     <div class="col-6 col-md-6 col-sm-5 mb-4">
-                                        <a href="./signUp.php"><button class="dbtnsignup">Sign Up</button></a>
+                                        <a href="signUp.php"><button class="dbtnsignup">Sign Up</button></a>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
@@ -65,8 +64,9 @@ unset($_SESSION["email_address"]);
                                         <button class="btnlogin" type="submit">Login</button>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
+
                     </div>
 
                     <!-- <div class="col-0 col-md-2 "></div> -->
