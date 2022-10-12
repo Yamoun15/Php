@@ -1,0 +1,17 @@
+.healthKtitle{
+    font-family: var(--fontfamily-poppins);
+    font-size: 2vw;
+}
+.back{
+    font-size: 2em;
+    font-weight: 10em;
+}
+p{
+    text-indent: 2%;
+    font-family: var(--fontfamily-poly );
+}
+.articaldetail::first-letter{
+    font-size: 2em;
+    font-weight: 20em;
+    color: aqua;
+}
