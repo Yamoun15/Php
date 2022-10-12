@@ -1,0 +1,26 @@
+.healthKtitle{
+    font-family: var(--fontfamily-poppins);
+    font-size: 5vw;
+}
+.para{
+    text-indent: 2%;
+    font-family: var(--fontfamily-poly );
+}
+.articaldetail::first-letter{
+    font-size: 2em;
+    font-weight: 20em;
+    color: aqua;
+}
+.card{
+    max-width: 600px;   
+    background-color: #D8F1E7 !important;
+    border: 5px solid 188067 !important;
+    border-radius: 20px !important;
+}
+
+.btn-readmore{
+    width: 100px !important;
+    height: 35px !important;
+    border-radius: 0px !important;
+    background-color: #1c51d5;
+}
