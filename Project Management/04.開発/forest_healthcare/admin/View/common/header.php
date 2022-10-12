@@ -99,7 +99,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Add Hospital</a></li>
-                        <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Hospital List</a></li>
+                        <li><a href="adminHospitalList.php"><i class="fa fa-circle" aria-hidden="true"></i>Hospital List</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
