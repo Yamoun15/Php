@@ -51,7 +51,11 @@
         <canvas id="myChart"></canvas>
     </div> -->
         <div class="row">
-            <div class="col-lg-2 col col-xs-6"></div>
+            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
+            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
+            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
+            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
+            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
         </div>
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
