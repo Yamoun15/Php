@@ -1,3 +1,26 @@
+<?php
+
+session_start();
+
+if (isset($_POST["email_address"]) && isset($_POST["password"])) {
+    $username = $_POST["email_address"];
+    $password = $_POST["password"];
+    $_SESSION["email_address"] = $email;
+}
+
+
+if (!isset($_SESSION["email_address"])) {
+    // go to login
+    header("Location: ./login.php");
+} else {
+    $name = $_SESSION["email_address"];
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -174,9 +174,6 @@
         </ol>
     </section>
 
-    <body>
-
-
         <!-- <div class="diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3">
             Admin >> Post >> Conditions & Services
         </div>
@@ -233,62 +230,7 @@
         </table>
 
         <!-- Pagination -->
-        <nav aria-label="Page navigation example" class="mb-5 d-flex justify-content-lg-center">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
 
-        <!-- footer -->
-        <nav class="navbar navbar-expand-lg  footer">
-            <div class="container-fluid">
-                <img src="logo2.1.png" id="logo" alt="">
-                <span class="vision text-light ms-3">To be a trusted health care provider that provides reliable health
-                    information to make healthier and happier decisions. </span>
-
-                <div class="collapse navbar-collapse fs-6  fw-bold" id="navbarNav">
-                    <ul class="navbar-nav nav1">
-                        <li class="nav-item  ms-5">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Privacy&Policy</a>
-                        </li>
-                        <li class="nav-item  ms-5">
-                            <a class="nav-link text-light" href="#">About US</a>
-                        </li>
-                        <li class="nav-item  ms-5">
-                            <i class='fab fa-facebook-f' style='font-size:27px;color:white'></i>
-                        </li>
-                        <li class="nav-item  ms-5">
-                            <i class='fab fa-twitter' style='font-size:27px;color:white'></i>
-                        </li>
-                        <li class="nav-item  ms-5">
-                            <i class='fab fa-instagram' style='font-size:27px;color:white'></i>
-                        </li>
-                        <li class="nav-item  ms-5">
-                            <i class='fab fa-linkedin' style='font-size:27px;color:white'></i>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Pagination -->
-        <div class="row">
-            <div class="col-md-9 col-sm-5"></div>
-            <div class="col-md-3 col-sm-5">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
                         <li class="page-item">
@@ -308,11 +250,6 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
-        </div>
-        <div class="col-md-1 col-sm-1 col-2"></div>
-
-
 
         <!-- Footer -->
         <?php include("common/footer.php"); ?>

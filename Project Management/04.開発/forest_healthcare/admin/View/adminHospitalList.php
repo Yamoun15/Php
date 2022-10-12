@@ -1,3 +1,6 @@
+<?php
+include "../Controller/hospital/hospitalListController.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,20 +74,29 @@
                         </tr>
                     </thead>
                     <tbody>
+                    <?php $count = 1; ?>
+                    <?php foreach ($hospitalList as $key => $hospital) { ?>
                         <tr>
-                            <td scope="row">1</td>
-                            <td>Pan Hlaing</td>
-                            <td>panhlaing@gmail.com</td>
-                            <td>01-2150776</td>
+                            <td scope="row"><?= $count++; ?>.</td>
+                            <td><?= $hospital["name"] ?></td>
+                            <td><?= $hospital["email_address"] ?></td>
+                            <td><?= $hospital["phone_no"] ?></td>
+                            <td><?= $hospital["address"] ?></td>
                             <td>
-                                <img src="./image/download.jpg" alt="">
+                                <img src="<?= $hospital["photo"] ?>" alt="">
                             </td>
                             <td>
                                 <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
                             </td>
                         </tr>
+                        <?php }  ?>
                         
-                        <tr>
+                        
+
+
+
+                        
+                        <!-- <tr>
                             <td scope="row">2</td>
                             <td>Pan Hlaing</td>
                             <td>panhlaing@gmail.com</td>
@@ -107,7 +119,7 @@
                             <td>
                                 <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>

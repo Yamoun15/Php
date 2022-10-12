@@ -179,9 +179,6 @@
         </ol>
     </section>
 
-    <body>
-
-
         <!-- <div class="diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3">
             Admin >> Post >> Conditions & Services
         </div>
