@@ -1,0 +1,13 @@
+.title {
+    background: #188067 !important;
+    color: white;
+    height: 8vh;
+    font-family: var(--fontfamily-poppins);
+    font-size: 2vw;
+}
+.pdBodybgcolor{
+    background-color: #A6E1F3;
+    font-family: var(--fontfamily-poppins);
+    font-size: 20px;
+    font-weight: 1vw;
+}
