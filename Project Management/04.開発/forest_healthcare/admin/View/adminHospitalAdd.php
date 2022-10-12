@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +50,7 @@
         <div class="row">
             <div class="col-md-3 col-sm-2 col-2"></div>
             <div class="col-md-6  col-sm-8 col-8">
-                <form action="../Controller/hospital/hospitalAddController.php" method="POST" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/hospitalAddController.php" method="POST" class="form-horizontal hr adminContact-form">
                     <div class="form-group">
                         <div class="col-md-12">
                             <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Hospital Name" name="name">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../../Model/dbConnection.php";
+include "../Model/dbConnection.php";
 
 if(isset($_POST["hospitalAddBtn"])){
     $name =  $_POST["name"];
@@ -39,15 +39,10 @@ if(isset($_POST["hospitalAddBtn"])){
 
     $sql->execute();
     $_SESSION["hospitalEmail"] = $email;
-    header("Location: ../../View/adminHospitalList.php");
+    header("Location: ../View/adminHospitalList.php");
 
 }else{
     echo "Error";
 }
-
-
-
-
- 
 
 ?>

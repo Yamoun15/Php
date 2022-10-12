@@ -25,7 +25,7 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
 
     if (password_verify($pwd, $result[0]['password'])) {
         $_SESSION["email_address"] = $email;
-        header("Location: ../View/hospital.php");
+        header("Location: ../View/hospitalProfileEdit.php");
     } else {
         header("Location: ../View/hospitalLogin.php");
     }
