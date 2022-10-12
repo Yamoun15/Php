@@ -10,6 +10,7 @@
     --white            :#FFFFFF;
     --black            :#000000;
     --gray             :#545353;
+    --lightBlack       :rgba(0, 0, 0, 0.879);
     
     --fontfamily-poly     : 'Poly', serif;
     --fontfamily-poppins  :  'Poppins', sans-serif;

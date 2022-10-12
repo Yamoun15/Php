@@ -3,7 +3,11 @@
 
 /* C&S css  Nandar*/
 
-
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--fontfamily-poly);
+}
 .CSbrowseA_Z{
     padding: 0.5rem;
     font-size: 1.2rem;
@@ -14,11 +18,11 @@
      width: 90%;
      margin-left: 5%;
      /* margin-top: 5%; */
-     background-color: #43A391;
+     background-color: var(--btncolorteal);
  }
  
  .alpha{
-     color: white;
+     color: var(--white);
      text-decoration: none;
  }
  .list-inline li{
@@ -29,7 +33,7 @@
  .CStitle{
      margin-top: 2rem;
      margin-bottom: 2rem;
-     color: #43A391 ;
+     color: var(--btncolorteal);
      font-size: 2rem;
  }
  
@@ -56,11 +60,7 @@
      margin-left: 10%;
  }
  .diseaseli li a{
-     color: #43A391;
- 
-     /* color: var(--green); */
-     
- 
+     color: var(--btncolorteal);
  }
  .list span{
      font-size: 1.5rem;
@@ -73,7 +73,6 @@
  
  .detailbg {
      height: 100%;
-     /* background: radial-gradient(circle,#188067,#64D3A5,#D1F1E9); */
      background-image: linear-gradient(to top right, #A6E1F3,#64d3a5db,#188068);
  }
  
@@ -89,7 +88,7 @@
      text-align: center;
      font-size: 1.5vw;
      margin: 1.5em 2em 2.5em 2em;
-     font-family: "Poppins" !important;
+     font-family: var(--fontfamily-poppins) !important;
  }
  
  .CSdetailimg {
@@ -111,7 +110,7 @@
  }
  .CSdetailTitle{
      font-style: italic;
-     color: black;
+     color: var(--black);
      font-size: 20px;
  }
  .CSLocation span,i{
@@ -122,7 +121,7 @@
  }
  
  .detailbg2{
-     background-color: #a6e1f3e2;
+     background-color: var(--ice-blue );
      
  }
  .anxeity{
@@ -137,7 +136,7 @@
      margin: auto;
      text-align: center;
      font-size: 15px;
-     font-family: poppin !important;
+     font-family: var(--fontfamily-poppins) !important;
  }
  .healing{
      margin-top: 6em;
@@ -150,7 +149,7 @@
      width: 250px;
      text-align: center;
      font-size: 15px;
-     font-family: poppin !important;
+     font-family: var(--fontfamily-poppins) !important;
  }
  
  /* C&S detail end */
@@ -184,12 +183,12 @@
      background-color: hwb(166 9% 50%);
  }
  .iconColor{
-     color: white !important;
+     color: var(--white) !important;
      margin-left: 5%;
      margin-right: 5%;
  }
  .infoDetail{
-     color: white;
+     color: var(--white);
      opacity: 0.5;
      font-size: 15px;
      margin-left: 15%;
@@ -203,12 +202,12 @@
      box-sizing: border-box;
      padding: 5px;
      font-size: 15px;
-     font-family: poppin !important;
+     font-family: var(--fontfamily-poppins) !important;
  }
  
  .contactsendButton {
-     background-color: #F9C56B !important;
-     color: white;
+     background-color: var(--orange ) !important;
+     color: var(--white);
      border: none !important;
      margin-top: 5% !important;
  }
