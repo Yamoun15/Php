@@ -15,7 +15,7 @@
     box-sizing: border-box;
     padding: 8px;
     font-size: 0.8em;
-    font-family: 'Poppins' !important;
+    font-family: var(--fontfamily-poppins) !important;
 }
 .adminContactTextarea{
     margin-bottom: 20px ;
@@ -25,12 +25,12 @@
     box-sizing: border-box;
     padding: 5px;
     font-size: 0.8em;
-    font-family: 'Poppins' !important;
+    font-family: var(--fontfamily-poppins) !important;
 }
 .adminContactbtn{
-    color: white ;
-    background-color: #188067 ;
-    font-family: poppin !important;
+    color: var(--white);
+    background-color: var(--green);
+    font-family: var(--fontfamily-poppins) !important;
     font-size: 1rem ;
     /* border: none; */
     padding: 4px ;
@@ -41,12 +41,12 @@
 }
 
 .adminHospitaladdTitle{
-    color: #188067;
+    color: var(--green);
     font-size: 2.5vw;
     margin-top: 20px;
     margin-left: 5%;
     font-style: italic;
-    font-family: "Poly";
+    font-family: var(--fontfamily-poly);
 }
 
 .hospitalProfileUpdate{
@@ -69,19 +69,19 @@
     margin-bottom: 15px;
     width: 100px;
     text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.879);
-    font-family: "Poppins";
+    color: var(--white);
+    background-color: var(--lightBlack);
+    font-family: var(--fontfamily-poppins) !important;
     font-size: 1vw;
 }
 .hospitalProfileUpdateChoose{
     margin-left: 35%;
     margin-bottom: 10px;
     font-size: 1em;
-    font-family: "Poly";
+    font-family: var(--fontfamily-poly);
 }
 .hospitalProfileUpdatebtn{
-    background-color: #FC4D36;
+    background-color: var(--btncolorred);
 }
 .hospitalVerticalLine {
     border-left: 2px solid black;
@@ -93,5 +93,5 @@
     margin-top: 50px;
 }
 .hospitalcontrol-label{
-    font-family: "Poly";
+    font-family: var(--fontfamily-poly);
 }
