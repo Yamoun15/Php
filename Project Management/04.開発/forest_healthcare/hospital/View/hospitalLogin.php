@@ -1,3 +1,9 @@
+<?php
+ session_start();
+
+ unset($_SESSION["email_address"]);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +27,7 @@
                     <div class="col-0 col-md-2 "></div>
                     <div class="col-md-8 col-sm-8">
                         <div class="simple-login-container text-center">
-                            <form action="" method="">
+                            <form action="../Controller/loginController.php" method="post">
                                 <div class="row  g-0 ms-3 mb-3 ">
                                     <div class="row">
                                         <h3 class="text-center text-white mb-5">Hospital Login</h3>

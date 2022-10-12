@@ -1,3 +1,9 @@
+<?php
+ session_start();
+
+ unset($_SESSION["email_address"]);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
