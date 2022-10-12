@@ -1,6 +1,6 @@
 
 <section class="pb-4">
-    <div class="border rounded-5 footer">
+    <div class="border footer">
 
         <section class="p-4 text-center">
             <footer class=" text-center text-lg-start">

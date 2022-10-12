@@ -10,13 +10,10 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
 
     $sql = $pdo->prepare("
     SELECT * FROM tbl_hospital
-    WHERE email_address = :email AND 
-    password = :pwd
+    WHERE email_address = :email
 ");
 
-
     $sql->bindValue(":email", $email);
-    $sql->bindValue(":pwd", $pwd);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 

@@ -49,7 +49,6 @@
                                 <div class="row ">
                                     <div class="col-0 col-md-1 col-sm-1"></div>
                                     <div class="col-5 col-md-5 col-sm-5">
-
                                     </div>
                                     <div class="col-5 col-md-5 col-sm-5 ms-3">
                                         <button class="btnlogin" type="submit">Login</button>

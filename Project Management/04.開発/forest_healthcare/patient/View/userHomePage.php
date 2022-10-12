@@ -49,12 +49,31 @@
     align-items: center;
     width: 300px;
     margin: 2rem;
-    position: relative;
+
   }
 
-  .article .overlay {
+  /* .articleImg {
     width: 100%;
     height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  } */
+
+  .hovereffect {
+    width: 75%;
+    height: 10rem;
+    /* overflow: hidden; */
+    position: relative;
+    /* text-align: center; */
+    /* cursor: default; */
+  }
+
+  .hovereffect .overlay {
+    width: 100%;
+    height: 50%;
     position: absolute;
     overflow: hidden;
     top: 0;
@@ -64,8 +83,13 @@
     transition: all 0.4s ease-in-out;
   }
 
-  .article:hover .overlay {
+  .hovereffect:hover .overlay {
     background-color: rgba(48, 152, 157, 0.4);
+  }
+
+  .hovereffect img {
+    display: block;
+    /* position: relative; */
   }
 
   .hovereffect a.info {
@@ -84,11 +108,11 @@
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     font-weight: normal;
-    margin: -52px 0 0 0;
-    padding: 62px 100px;
+    /* margin: 2px 0 0 0; */
+    /* padding: 62px 50px; */
   }
 
-  .article:hover a.info {
+  .hovereffect:hover a.info {
     opacity: 1;
     filter: alpha(opacity=100);
     -webkit-transform: scale(1);
@@ -96,7 +120,7 @@
     transform: scale(1);
   }
 
-  .article a.info:hover {
+  .hovereffect a.info:hover {
     box-shadow: 0 0 5px #fff;
   }
 
@@ -128,13 +152,14 @@
   }
 
   .article:hover .overlay {
-  background-color: rgba(48, 152, 157, 0.4);
-}
+    background-color: rgba(48, 152, 157, 0.4);
+  }
 
-/* .article img {
+  /* .article img {
   display: block;
   position: relative;
 } */
+
   .articleTitle::before {
     content: "";
     position: absolute;
@@ -234,10 +259,14 @@
 
   <div class="mentalHealthArticle">
     <div class="article">
-      <a class="articleImg overlay" href=""><img src="./storages/Mental_Health1.png" alt=""></a>
+      <div class="hovereffect">
+        <a class="articleImg" href=""><img src="./storages/Mental_Health1.png" alt=""></a>
+        <div class="overlay">
+          <a class="info" href="#">Click to read</a>
+        </div>
+      </div>
       <a href="" class="articleTitle">ANXEITY</a>
       <a href="" class="description">“No need to hurry. No need to sparkle. No need to be anybody but oneself.”</a>
-      <a class="info">Click to read</a>
     </div>
     <div class="article" href="">
       <a class="articleImg overlay"><img src="./storages/Mental_Health2.png" alt=""></a>
