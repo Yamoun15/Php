@@ -85,9 +85,9 @@ include "../Controller/hospital/hospitalListController.php";
                             <td>
                                 <img src="<?= $hospital["photo"] ?>" alt="">
                             </td>
-                            <!-- <td>
+                            <td>
                                 <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
-                            </td> -->
+                            </td>
                         </tr>
                         <?php }  ?>
                         
