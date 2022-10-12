@@ -1,26 +1,3 @@
-<?php
-
-session_start();
-
-if (isset($_POST["email_address"]) && isset($_POST["password"])) {
-    $username = $_POST["email_address"];
-    $password = $_POST["password"];
-    $_SESSION["email_address"] = $email;
-}
-
-
-if (!isset($_SESSION["email_address"])) {
-    // go to login
-    header("Location: ./login.php");
-} else {
-    $name = $_SESSION["email_address"];
-}
-
-
-?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,6 +49,55 @@ if (!isset($_SESSION["email_address"])) {
     align-items: center;
     width: 300px;
     margin: 2rem;
+    position: relative;
+  }
+
+  .article .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: rgba(75, 75, 75, 0.7);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .article:hover .overlay {
+    background-color: rgba(48, 152, 157, 0.4);
+  }
+
+  .hovereffect a.info {
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    font-weight: normal;
+    margin: -52px 0 0 0;
+    padding: 62px 100px;
+  }
+
+  .article:hover a.info {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .article a.info:hover {
+    box-shadow: 0 0 5px #fff;
   }
 
   .article a {
@@ -101,6 +127,14 @@ if (!isset($_SESSION["email_address"])) {
     transition: color 0.3s ease-in-out;
   }
 
+  .article:hover .overlay {
+  background-color: rgba(48, 152, 157, 0.4);
+}
+
+/* .article img {
+  display: block;
+  position: relative;
+} */
   .articleTitle::before {
     content: "";
     position: absolute;
@@ -200,18 +234,19 @@ if (!isset($_SESSION["email_address"])) {
 
   <div class="mentalHealthArticle">
     <div class="article">
-      <a class="articleImg" href=""><img src="./storages/Mental_Health1.png" alt=""></a>
+      <a class="articleImg overlay" href=""><img src="./storages/Mental_Health1.png" alt=""></a>
       <a href="" class="articleTitle">ANXEITY</a>
       <a href="" class="description">“No need to hurry. No need to sparkle. No need to be anybody but oneself.”</a>
+      <a class="info">Click to read</a>
     </div>
     <div class="article" href="">
-      <a class="articleImg"><img src="./storages/Mental_Health2.png" alt=""></a>
+      <a class="articleImg overlay"><img src="./storages/Mental_Health2.png" alt=""></a>
       <a href="" class="articleTitle">SElF-LOVE</a>
       <a href="" class="description">“Unconditional self love is all the really matters in life. It’s where real life
         begins.”</a>
     </div>
     <div class="article" href="">
-      <a class="articleImg"><img src="./storages/Mental_Health3.png" alt=""></a>
+      <a class="articleImg overlay"><img src="./storages/Mental_Health3.png" alt=""></a>
       <a href="" class="articleTitle">HEALING</a>
       <a href="" class="description">“Healing requires from us to stop struggling, but to enjoy life more and endure it
         less.”</a>

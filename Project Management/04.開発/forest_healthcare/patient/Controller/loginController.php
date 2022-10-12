@@ -28,5 +28,6 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
         header("Location: ../View/userHomePage.php");
     } else {
         header("Location: ../View/userLogin.php");
+        echo "You need to register first!"
     }
 }

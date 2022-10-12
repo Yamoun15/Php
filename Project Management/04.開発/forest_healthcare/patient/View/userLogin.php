@@ -34,12 +34,12 @@ unset($_SESSION["email_address"]);
                     </div>
                 </div>
 
-                <div class="row  g-0 mt-5">
-                    <div class="col-0 col-md-2 "></div>
-                    <div class="col-md-8 col-sm-8">
-                        <!-- <form action="../Controller/loginController.php" method="post"> -->
-                        <div class="simple-login-container text-center">
-                            <form action="../Controller/loginController.php" method="post">
+                <form action="../Controller/loginController.php" method="post">
+                    <div class="row  g-0 mt-5">
+                        <div class="col-0 col-md-2 "></div>
+                        <div class="col-md-8 col-sm-8">
+                            <div class="simple-login-container text-center">
+
                                 <div class="row  g-0 ms-3 mb-3 ">
                                     <div class="col-md-1 col-sm-1"></div>
                                     <div class="col-6 col-md-5 col-sm-5 ">
@@ -64,14 +64,10 @@ unset($_SESSION["email_address"]);
                                         <button class="btnlogin" type="submit">Login</button>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-
                     </div>
-
-                    <!-- <div class="col-0 col-md-2 "></div> -->
-                </div>
-
+                </form>
             </div>
             <div class="col-0 col-md-4  login_image text-end">
                 <img class="loginimg" src="./storages/loginPhoto.png" alt="Login Photo" srcset="">
