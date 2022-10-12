@@ -1,5 +1,5 @@
 <?php
-include "../Controller/hospital/hospitalListController.php";
+include "../Controller/hospitalListController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,6 +69,7 @@ include "../Controller/hospital/hospitalListController.php";
                             <th scope="col">Name</th>
                             <th scope="col">Email Address</th>
                             <th scope="col">Ph.No</th>
+                            <th scope="col">Address</th>
                             <th scope="col">Logo</th>
                             <th scope="col">Delete</th>
                         </tr>
@@ -89,12 +90,9 @@ include "../Controller/hospital/hospitalListController.php";
                                 <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
                             </td>
                         </tr>
-                        <?php }  ?>
+                        <?php } ?>
                         
                         
-
-
-
                         
                         <!-- <tr>
                             <td scope="row">2</td>
