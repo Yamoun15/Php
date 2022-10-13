@@ -1,10 +1,6 @@
 
 <section class="pb-4">
-<<<<<<< HEAD
-    <div class="border footer">
-=======
     <div class="footer">
->>>>>>> eb7e9ae8f60aa5c167eec1ba0ad346a9cdbdea27
 
         <section class="p-4 text-center">
             <footer class=" text-center text-lg-start">
