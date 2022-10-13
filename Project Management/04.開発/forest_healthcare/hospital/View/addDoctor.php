@@ -1,3 +1,8 @@
+<?php
+
+include "../Controller/departmentListController.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,20 +72,28 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <div class="col-md-12">
+                            <select class="form-select" aria-label="Default select example" name="department">
+                                <?php foreach ($departmentList as $key => $department) { ?>
+                                    <option value="<?= $department["id"] ?>"><?= $department["name"] ?></option>
+                                <?php } ?>
+                                <!-- <option selected>Department</option>
+                                <option value="1">Neurology</option>
+                                <option value="2">Neurology</option>
+                                <option value="3">Neurology</option> -->
+                            </select>
+                        </div>
+                    </div>
 
+                    <!-- <div class="form-group">
                         <div class="col-md-12">
                             <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
                                     Department
                                     <span class="caret"></span>
                                 </button>
-                                <select name="doctor" class="dropdown-menu" id="" role="menu" aria-labelledby="dropdownMenu1">
                                 
-                                        <option value="1">Dr.h</option>
-                                        <option value="1">Dr.h</option>
-                                        <option value="1">Dr.h</option>
-                                    
-                                </select>
+
                                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
@@ -89,7 +102,7 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <div class="col-md-12">
                             <input type="date" class="form-control adminContactInput" id="date" placeholder="Day" name="day">
@@ -123,10 +136,16 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <div class="col-md-12">
+                            <textarea type="text" rows="3" class="form-control adminContactTextarea" id="address" placeholder="Degree" name="degree"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Submit" class="adminContactbtn" name="addDoctoreBtn">
+                            <button class="btn adminContactbtn" name="addDoctoreBtn" type="submit">Submit</button>
+                                <!-- <input type="button" value="Submit" class="adminContactbtn" name="addDoctoreBtn"> -->
                             </div>
                         </div>
                     </div>

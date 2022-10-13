@@ -49,7 +49,7 @@
         <div class="row">
             <div class="col-md-3 col-sm-2 col-2"></div>
             <div class="col-md-6  col-sm-8 col-8 adminContact-col">
-                <form action="../Controller/department/departmentAddController.php" class="form-horizontal hr adminContact-form" method="POST">
+                <form action="../Controller/departmentAddController.php" class="form-horizontal hr adminContact-form" method="POST">
                     <div class="form-group">
                         <div class="col-md-12">
                             <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Department Name" name="name">
@@ -60,7 +60,8 @@
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Submit" class="adminContactbtn hospitalBtn" name="departmentBtn">
+                            <button class="btn adminContactbtn hospitalBtn" name="departmentBtn" type="submit" name="departmentBtn">Submit</button>
+                                <!-- <input type="button" value="Submit" class="adminContactbtn hospitalBtn" name="departmentBtn"> -->
                             </div>
                         </div>
                     </div>
