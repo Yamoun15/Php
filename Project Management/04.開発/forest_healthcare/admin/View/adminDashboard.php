@@ -50,13 +50,123 @@
     <!-- <div>
         <canvas id="myChart"></canvas>
     </div> -->
+    <!-- <div class="row dashboard_box_all">
+        <span class="col-lg-2 col col-xs-6 bg-aqua">
+            <div></div>
+            <div>2000</div>
+            <div>Users</div>
+        </span>
+        <span class="col-lg-2 col col-xs-6 dashboard_box">
+            <div></div>
+            <div>2000</div>
+            <div>Visitors</div>
+        </span>
+        <span class="col-lg-2 col col-xs-6 dashboard_box">
+            <div></div>
+            <div>2000</div>
+            <div>Appointment</div>
+        </span>
+        <span class="col-lg-2 col col-xs-6 dashboard_box">
+            <div></div>
+            <div>2000</div>
+            <div>Users</div>
+        </span>
+        <span class="col-lg-2 col col-xs-6 dashboard_box">
+            <div></div>
+            <div>2000</div>
+            <div>Users</div>
+        </span>
+    </div> -->
+    <section class="content">
+        <!-- Small boxes (Stat box) -->
         <div class="row">
-            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
-            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
-            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
-            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
-            <div class="col-lg-2 col col-xs-6 dashboard_box"></div>
+            <div class=col-lg-1></div>
+            <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <div class="small-box">
+                    <div class="inner">
+                        <h3>65</h3>
+                        <p>Users</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <!--col -->
+            <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <div class="small-box">
+                    <div class="inner">
+                        <h3>150</h3>
+                        <p>Visitors</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div><!-- ./col -->
+            <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <div class="small-box">
+                    <div class="inner">
+                        <h3>53<sup style="font-size: 20px">%</sup></h3>
+                        <p>Appointments</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    </div>
+
+                </div>
+            </div><!-- ./col -->
+            <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <div class="small-box">
+                    <div class="inner">
+                        <h3>44</h3>
+                        <p>Hospitals</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-hospital-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div><!-- ./col -->
+            <div class="col-lg-2 col-xs-6">
+                <!-- small box -->
+                <div class="small-box">
+                    <div class="inner">
+                        <h3>65</h3>
+                        <p>Doctors</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fa fa-user-md" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <!--col -->
         </div>
+        <!--.row -->
+        <!-- Main row -->
+        <div class="row">
+            <!-- Left col -->
+            <section class="col-lg-7 connectedSortable">
+                <!-- Custom tabs (Charts with tabs)-->
+                <div class="nav-tabs-custom">
+
+                </div>
+            </section><!-- Left col -->
+
+            <section class="col-lg-5 connectedSortable">
+
+
+            </section><!-- right col -->
+        </div>
+
+    </section><!-- content -->
+    </div>
+
+
+
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
 

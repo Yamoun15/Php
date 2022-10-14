@@ -67,20 +67,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-
                         <div class="col-md-12">
-                            <div class="dropdown">
-                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                                    Department
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
-                                </ul>
-                            </div>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Department</option>
+                                <option value="1">Neurology</option>
+                                <option value="2">Neurology</option>
+                                <option value="3">Neurology</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">
@@ -90,8 +83,8 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                        Start Time<input type="time" class="form-control adminContactInput" id="startTime">
-                        End Time   <input type="time" class="form-control adminContactInput" id="endTime">
+                            Start Time<input type="time" class="form-control adminContactInput" id="startTime">
+                            End Time <input type="time" class="form-control adminContactInput" id="endTime">
                         </div>
                     </div>
                     <div class="form-group">
