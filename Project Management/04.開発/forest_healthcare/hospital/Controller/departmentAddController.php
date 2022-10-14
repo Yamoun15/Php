@@ -1,11 +1,11 @@
 <?php
 session_start();
-include "../../Model/dbConnection.php";
+include "../Model/dbConnection.php";
 
 if(isset($_POST["departmentBtn"])){
     $name =  $_POST["name"];
 
-    $email = $_SESSION["hospitalEmail"];
+    $email = $_SESSION["email_address"];
     $sql= $pdo->prepare("SELECT id FROM tbl_hospital WHERE email_address = :email");
     $sql->bindValue(":email",$email);
     $sql->execute();
@@ -33,7 +33,7 @@ if(isset($_POST["departmentBtn"])){
     $sql->bindValue(":created_date", date("Y/m/d"));
 
     $sql->execute();
-    header("Location: ../../View/adminHospitalList.php");
+    header("Location: ../View/hospitalDoctorList.php");
 
 }else{
     echo "Error";

@@ -1,0 +1,12 @@
+.ppBcolor{
+    background-image: linear-gradient(to right,#d2d7d6 ,#56b18b ,#60b18f,#c1ded1 )
+}
+.ppTitle{
+    font-family: var(--fontfamily-poppins);
+    font-size: 2em;
+}
+
+.ppDescription{
+    font-family: var(--fontfamily-poppins);
+    font-size: 1em;
+}

@@ -1,3 +1,7 @@
+<?php
+include "../Controller/hospitalDoctorListController.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor List</title>
+    <title>Hospital Doctor List</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="./resources/css/hospitalDoctorList.css?v=" <?= time() ?>>
@@ -69,71 +73,92 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>Neurologist</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>johnwick@gmail.com</td>
-                            <td>09-1234567</td>
-                            <td>nNo(11),(9) Street..</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>Neurologist</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>johnwick@gmail.com</td>
-                            <td>09-1234567</td>
-                            <td>nNo(11),(9) Street..</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>Neurologist</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>johnwick@gmail.com</td>
-                            <td>09-1234567</td>
-                            <td>nNo(11),(9) Street..</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>Neurologist</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>johnwick@gmail.com</td>
-                            <td>09-1234567</td>
-                            <td>nNo(11),(9) Street..</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
+                        <?php $count = 1; ?>
+                        <?php foreach ($doctorList as $key => $doctor) { ?>
+                            <tr>
+                                <td scope="row"><?= $count++; ?>.</td>
+                                <td><?= $doctor["name"] ?></td>
+                                <td><?= $doctor["department_id"] ?></td>
+                                <td><?= $doctor["dr_expert_in"] ?></td>
+                                <td><?= $doctor["duty_day"] ?></td>
+                                <td><?= $doctor["duty_start_time"] ?></td>
+                                <td><?= $doctor["duty_end_time"] ?></td>
+                                <td><?= $doctor["email_address"] ?></td>
+                                <td><?= $doctor["phone_no"] ?></td>
+                                <td><?= $doctor["address"] ?></td>
+                                <td>
+                                    <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
+                                    <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
+                    <!-- <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Dr.John</td>
+                            <td>Neurology</td>
+                            <td>Neurologist</td>
+                            <td>SUNDAY</td>
+                            <td>10AM</td>
+                            <td>12PM</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>09-1234567</td>
+                            <td>nNo(11),(9) Street..</td>
+                            <td>
+                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
+                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Dr.John</td>
+                            <td>Neurology</td>
+                            <td>Neurologist</td>
+                            <td>SUNDAY</td>
+                            <td>10AM</td>
+                            <td>12PM</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>09-1234567</td>
+                            <td>nNo(11),(9) Street..</td>
+                            <td>
+                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
+                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Dr.John</td>
+                            <td>Neurology</td>
+                            <td>Neurologist</td>
+                            <td>SUNDAY</td>
+                            <td>10AM</td>
+                            <td>12PM</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>09-1234567</td>
+                            <td>nNo(11),(9) Street..</td>
+                            <td>
+                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
+                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Dr.John</td>
+                            <td>Neurology</td>
+                            <td>Neurologist</td>
+                            <td>SUNDAY</td>
+                            <td>10AM</td>
+                            <td>12PM</td>
+                            <td>johnwick@gmail.com</td>
+                            <td>09-1234567</td>
+                            <td>nNo(11),(9) Street..</td>
+                            <td>
+                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
+                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
+                            </td>
+                        </tr>
+                    </tbody> -->
                 </table>
 
             </div>

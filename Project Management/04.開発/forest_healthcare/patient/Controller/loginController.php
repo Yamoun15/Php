@@ -10,13 +10,10 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
 
     $sql = $pdo->prepare("
     SELECT * FROM tbl_user
-    WHERE email_address = :email AND 
-    password = :pwd
+    WHERE email_address = :email 
 ");
 
-
     $sql->bindValue(":email", $email);
-    $sql->bindValue(":pwd", $pwd);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 
@@ -28,6 +25,5 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
         header("Location: ../View/userHomePage.php");
     } else {
         header("Location: ../View/userLogin.php");
-        echo "You need to register first!"
     }
 }

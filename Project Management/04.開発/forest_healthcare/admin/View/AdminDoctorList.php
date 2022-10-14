@@ -1,3 +1,11 @@
+<?php
+include "../Controller/adminDoctorListController.php";
+// echo "<pre>";
+// print_r($doctorList);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Doctor List</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="./resources/css/AdminDoctorList.css">
@@ -15,8 +23,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poly&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-<!-- Bootstrap -->
-<link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Bootstrap -->
+    <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- FontAwesome 4.3.0 -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
@@ -28,7 +36,7 @@
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body  class="skin-blue">
+<body class="skin-blue">
     <!-- Header -->
     <?php include("common/header.php"); ?>
     <section class="content-header">
@@ -51,16 +59,34 @@
             <div class="col-md-8 col-sm-10 table-responsive">
                 <table class="table">
                     <thead class="adminPPlistheaderbg">
-                        <tr >
+                        <tr>
                             <th scope="col">No</th>
                             <th scope="col">Name</th>
                             <th scope="col">Department</th>
-                            <th scope="col" >Expert In</th>
+                            <th scope="col">Expert In</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Logo</th>
+                            <th scope="col">Photo</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php $count = 1; ?>
+                        <?php foreach ($doctorList as $key => $doctor) { ?>
+                            <tr>
+                                <td scope="row"><?= $count++; ?>.</td>
+                                <td><?= $doctor["name"] ?></td>
+                                <td><?= $doctor["department_id"] ?></td>
+                                <td><?= $doctor["dr_expert_in"] ?></td>
+                                <td><?= $doctor["email_address"] ?></td>
+                                <td>
+                                    <img src="<?= $doctor["doctor_photo"] ?>" alt="doctor Photo">
+                                </td>
+                                <td>
+                                    <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
+                                </td>
+                            </tr>
+                        <?php } ?>
+                    </tbody>
+                    <!-- <tbody>
                         <tr class="fw-bold">
                             <td scope="row">1</td>
                             <td>Pan Hlaing</td>
@@ -73,7 +99,7 @@
 
                         </tr>
                         <tr>
-                        <td scope="row">1</td>
+                            <td scope="row">1</td>
                             <td>Pan Hlaing</td>
                             <td>Neurology</td>
                             <td>Neurolog</td>
@@ -83,16 +109,7 @@
                             </td>
                         </tr>
                         <tr>
-                        <td scope="row">1</td>
-                            <td>Pan Hlaing</td>
-                            <td>Neurology</td>
-                            <td>Neurolog</td>
-                            <td>panhlaing@gmail.com</td>
-                            <td>
-                                <img src="./image/download.jpg" alt="">
-                            </td>
-                        </tr>
-                    </tbody>
+                    </tbody> -->
                 </table>
             </div>
             <div class="row">
@@ -119,8 +136,8 @@
                     </nav>
                 </div>
             </div>
-<!-- Footer -->
-<?php include("common/footer.php"); ?>
+            <!-- Footer -->
+            <?php include("common/footer.php"); ?>
 </body>
 
 </html>

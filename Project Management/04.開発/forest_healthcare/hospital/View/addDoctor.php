@@ -1,3 +1,8 @@
+<?php
+
+include "../Controller/departmentListController.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,11 +55,11 @@
         <div class="row">
             <div class="col-md-2 col-sm-2"></div>
             <div class="col-md-6  col-sm-8 adminContact-col">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/addDoctorController.php" class="form-horizontal hr adminContact-form" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
 
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="Name" placeholder="Name">
+                            <input type="text" class="form-control adminContactInput" id="Name" placeholder="Name" name="name">
                         </div>
                     </div>
                     <div class="form-group">
@@ -63,56 +68,84 @@
                                 <i class="fa-solid fa-arrow-up-from-bracket"></i>
                                 Upload Image
                             </label>
-                            <input id="file-upload" type="file" />
+                            <input id="file-upload" type="file" name="photo" />
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>Department</option>
+                            <select class="form-select" aria-label="Default select example" name="department">
+                                <?php foreach ($departmentList as $key => $department) { ?>
+                                    <option value="<?= $department["id"] ?>"><?= $department["name"] ?></option>
+                                <?php } ?>
+                                <!-- <option selected>Department</option>
                                 <option value="1">Neurology</option>
                                 <option value="2">Neurology</option>
-                                <option value="3">Neurology</option>
+                                <option value="3">Neurology</option> -->
                             </select>
                         </div>
                     </div>
+
+                    <!-- <div class="form-group">
+                        <div class="col-md-12">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                                    Department
+                                    <span class="caret"></span>
+                                </button>
+                                
+
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Neurology</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="date" class="form-control adminContactInput" id="date" placeholder="Day">
+                            <input type="text" class="form-control adminContactInput" id="date" placeholder="Day" name="day">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            Start Time<input type="time" class="form-control adminContactInput" id="startTime">
-                            End Time <input type="time" class="form-control adminContactInput" id="endTime">
+                            Start Time<input type="time" class="form-control adminContactInput" id="startTime" name="startTime">
+                            End Time <input type="time" class="form-control adminContactInput" id="endTime" name="endTime">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="expertIn" placeholder="Expert In">
+                            <input type="text" class="form-control adminContactInput" id="expertIn" placeholder="Expert In" name="expertIn">
                         </div>
                     </div>
                     <div class="form-group">
 
                         <div class="col-md-12">
-                            <input type="email" class="form-control adminContactInput" id="Email" placeholder="Email">
+                            <input type="email" class="form-control adminContactInput" id="Email" placeholder="Email" name="email">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="phNo" placeholder="Pn No">
+                            <input type="text" class="form-control adminContactInput" id="phNo" placeholder="Pn No" name="phone">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <textarea type="text" rows="3" class="form-control adminContactTextarea" id="address" placeholder="Address"></textarea>
+                            <textarea type="text" rows="3" class="form-control adminContactTextarea" id="address" placeholder="Address" name="address"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <textarea type="text" rows="3" class="form-control adminContactTextarea" id="address" placeholder="Degree" name="degree"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Submit" class="adminContactbtn">
+                            <button class="btn adminContactbtn" name="addDoctoreBtn" type="submit">Submit</button>
+                                <!-- <input type="button" value="Submit" class="adminContactbtn" name="addDoctoreBtn"> -->
                             </div>
                         </div>
                     </div>

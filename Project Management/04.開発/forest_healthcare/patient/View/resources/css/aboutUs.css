@@ -1,0 +1,24 @@
+.aboutUs{
+   background-image: linear-gradient(to right,#188067 ,#56b18b ,#60b18f,#cbebdd )
+}
+
+.aboutUstitle{
+    font-family: var(--fontfamily-poppins);
+    font-size: 2em;
+}
+.description{
+    font-family: var(--fontfamily-poppins);
+    font-size: 1em;
+}
+
+.larnmorebtn{
+    width: 8pc;
+    height: 36px;
+    background-color: #43A391;
+    font-family: var(--fontfamily-poppins);
+    
+    font-weight: 1em;     
+    border-radius: 12px;
+    border: none;   
+    
+}
