@@ -1,9 +1,9 @@
 <?php
 
 session_start();
-
+$doctorInfos = $_SESSION["doctorInfos"];
 $patientInfo = $_SESSION["patientInfo"];
-print_r($patientInfo);
+
 ?>
 
 <!DOCTYPE html>
@@ -84,28 +84,22 @@ print_r($patientInfo);
                             <div class="row ">
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="recipient-name" class="col-form-label"></label>
-                                    <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["name"] ?>" required name="" readonly>
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["name"] ?>" required readonly name="name">
                                 </div>
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="message-text" class="col-form-label"></label>
-                                    <input class="form-control" id="message-text" placeholder="Phone" value="<?= $patientInfo[0]["phone_no"] ?>" required></input>
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["phone_no"] ?>" required readonly name="phone">
+                                    <!-- <input type="text" class="form-control" id="message-text" placeholder="Phone" value="<?= $patientInfo[0]["phone_no"] ?>" required></input> -->
                                 </div>
                             </div>
                             <div class="row">
-                                <!-- <div class="col-md-6 mb-3 col-sm-12">
-                                    <label for="message-text" class="col-form-label"></label>
-                                    <input class="form-control" id="message-text" placeholder="Age(Year)"></input>
-                                </div>
-                                <div class="col-md-6 mb-3 col-sm-12">
-                                    <label for="message-text" class="col-form-label"></label>
-                                    <input class="form-control" id="message-text" placeholder="Age(Month)"></input>
-                                </div> -->
                                 <span class="form-check form-check-inline">
                                     <label for="birthday">Date Of Birth:</label>
-                                    <input type="date" id="birthday" name="birthday" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $patientInfo[0]["date_of_birth"] ?>"></span>
+                                    <input type="text" id="birthday" name="birthday" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $patientInfo[0]["date_of_birth"] ?>"></span>
+                                    <input type="hidden" id="birthday" name="id" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $doctorInfos[0]["id"] ?>"></span>
                             </div>
 
-                            <span>Select Gender</span>
+                            <!-- <span>Select Gender</span>
                             <span class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                                 <label class="form-check-label" for="flexRadioDefault1">
@@ -123,11 +117,12 @@ print_r($patientInfo);
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     Other
                                 </label>
-                            </span>
+                            </span> -->
 
                             <div class="row mt-3 mt-sm-3 mt-md-3 ">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Brief description of your symptoms" id="floatingTextarea" required value="<?= $patientInfo[0]["address"] ?>"></textarea>
+                                <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["address"] ?>" required readonly>
+                                    <!-- <textarea class="form-control" placeholder="Brief description of your symptoms" id="floatingTextarea" required value="<?= $patientInfo[0]["address"] ?>"></textarea> -->
                                     <label for="floatingTextarea">Address
                                     </label>
                                 </div>
@@ -135,7 +130,7 @@ print_r($patientInfo);
 
                             <div class="row mt-3 mt-sm-3 mt-md-3">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Brief description of your symptoms" id="floatingTextarea"></textarea>
+                                    <textarea class="form-control" placeholder="Brief description of your symptoms" id="floatingTextarea" name="description"></textarea>
                                     <label for="floatingTextarea">Brief description of your symptoms
                                     </label>
                                 </div>
@@ -145,25 +140,27 @@ print_r($patientInfo);
                             <div class="card text-center p-2" style="width: 18rem;">
                                 <div class="card-body">
                                     <h5 class="card-title booking-summary">Booking Summary</h5>
-                                    <img src="doctor3.png" alt="" width="100px">
-                                    <p class="card-text"><b>Prof. Aung Kyaw Kyaw</b></p>
-                                    <p class="card-text"><b>Cardiologist</b></p>
+                                    <img src="./storages/doctor1.png" alt="" width="100px">
+                                    <p class="card-text"><b><?= $doctorInfos[0]["name"] ?></b></p>
+                                    <p class="card-text"><b><?= $doctorInfos[0]["department_id"] ?></b></p>
                                     <div class="text-start">
-                                        <div class="date"><b>Date </b>- 29 Sep, 2022</div>
-                                        <div class="time"><b>Time</b> - 7:00 AM - 9:00 AM</div>
-                                        <div class="place"><b>Place</b> - Pan Hlaing Hospital</div>
+                                        <div class="date"><b>Date </b><?= $doctorInfos[0]["duty_day"] ?></div>
+                                        <div class="time"><b>Time</b> <?= $doctorInfos[0]["duty_start_time"] ?> <span>to <?= $doctorInfos[0]["duty_end_time"] ?></span></div>
+                                        <div class="place"><b>Place</b> <?= $doctorInfos[0]["hospital_id"] ?></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class=" form-check m-3 ms-3 ms-sm-3">
+                        <!-- <div class=" form-check m-3 ms-3 ms-sm-3">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
                                 I have read and accept <a href="#"><u>the terms and conditions.</u></a>
                             </label>
-                        </div>
-                        <a class="btn btnBook ms-5 text-white" href="#" role="button" type="submit">Book Now</a>
+                        </div> -->
+        
+                        <button class="btn btnBook" name="btn" type="submit">Submit</button>
+                        <!-- <a class="btn btnBook ms-5 text-white" href="#" role="button" type="submit" name="btn">Book Now</a> -->
                         <a class="btn btn-danger btnCancel  ms-5 text-white" href="#" role="button" type="submit">Cancel</a>
                 </form>
             </div>

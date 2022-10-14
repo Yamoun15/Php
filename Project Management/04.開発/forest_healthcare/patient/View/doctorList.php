@@ -42,72 +42,18 @@ include "../Controller/hospitalListController.php";
   <?php include("./common/top.php"); ?>
 
   <div class="container-fluid">
-    <!-- <img src="undraw_medicine_b-1-ol.svg" alt="" class="bgImg"> -->
-    <!-- <ul class="nav d-flex align-content-center justify-content-end"
-      style="background-color: #43A391 ; height: 80px; width: 100%; ">
-      <li class="nav-item">
-        <a class="nav-link active text-white text-decoration-underline" aria-current="page" href="#">Home </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white ">|</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white text-decoration-underline" href="#">Log In/Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white ">|</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white text-decoration-underline" href="#"> Appointment</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white ">|</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white text-decoration-underline" href="#"> Contact Us</a>
-      </li>
-      <li class="nav-item">
-        <a href="#"><i class="fa-regular fa-user p-1"
-            style="border: 3px solid white; border-radius: 50px; color: white;"></i></a>
-      </li>
-    </ul>
-
-    <ul class="nav d-flex justify-content-around  align-content-center color-white fs-5"
-      style="background-color: #64D3A5 ; height: 105px; width: 100%">
-      <li class="nav-item" style="width: 100px; height: 100px;">
-        <a class="nav-link " aria-current="page"><img src="./storages/Forest logo.png" alt=""></a>
-      </li>
-      <li class="nav-item ">
-        <a class="nav-link  text-white text-decoration-underline mt-4" aria-current="page" href="#">Doctors</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link  text-white text-decoration-underline mt-4" href="#">Conditons & Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link  text-white text-decoration-underline mt-4" href="#">Health Knowledge</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link  text-white text-decoration-underline mt-4" href="#">Mental Health</a>
-      </li>
-    </ul> -->
+    
 
     <div class="body-content position-relative  ">
       <div class="p1 fs-5 fw-bold ">Let’s get started for booking.</div>
       <div class="p1 fs-5 fw-bold  ">You can find doctors and hospital here.</div>
       <div class="dropdown">
-        <!-- <a class="btn dropdown-toggle" href="#" style="color: #188067" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Choose Hospital
-        </a> -->
+        
         <select class="form-select hospitalDropDown" aria-label="Default select example" name="hospital">
           <?php foreach ($hospitalList as $key => $hospital) { ?>
             <option value="<?= $hospital["id"] ?>"><?= $hospital["name"] ?></option>
           <?php } ?>
         </select>
-        <!-- <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Pan Hlaing</a></li>
-          <li><a class="dropdown-item" href="#">Royal Asia</a></li>
-          <li><a class="dropdown-item" href="#">Thuka Gabar</a></li>
-        </ul> -->
       </div>
 
       <div class="hospitalCards">
@@ -139,9 +85,6 @@ include "../Controller/hospitalListController.php";
                   <span class="card-title">(<?= $doctor["duty_day"] ?>) </span>
                   <span class="card-title"><?= $doctor["duty_start_time"] ?> to </span>
                   <span class="card-title"><?= $doctor["duty_end_time"] ?></span>
-                  <!-- <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                 </div>
               </div>
               <div class="col-md-4">
@@ -153,7 +96,7 @@ include "../Controller/hospitalListController.php";
                 </div>
               </div>
               <div class="col-md-2">
-                <a href="#" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
+                <a href="../Controller/doctorlistC.php?doctorID=<?=$doctor['id']?>" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
                   <img src="booking.png" alt="">
                   Book</a>
               </div>
