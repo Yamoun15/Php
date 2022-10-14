@@ -49,7 +49,7 @@ include "../Controller/hospitalListController.php";
       <div class="p1 fs-5 fw-bold  ">You can find doctors and hospital here.</div>
       <div class="dropdown">
         
-        <select class="form-select hospitalDropDown" aria-label="Default select example" name="hospital">
+        <select class="form-select hospitalDropDown" aria-label="Default select example" name="hospital" id="hospitalChoose">
           <?php foreach ($hospitalList as $key => $hospital) { ?>
             <option value="<?= $hospital["id"] ?>"><?= $hospital["name"] ?></option>
           <?php } ?>
@@ -70,6 +70,7 @@ include "../Controller/hospitalListController.php";
         </div>
 
         <!-- cards -->
+        <div id="cardResult">
         <?php foreach ($doctorList as $key => $doctor) { ?>
           <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
             <div class="row g-3 ">
@@ -103,6 +104,7 @@ include "../Controller/hospitalListController.php";
             </div>
           </div>
         <?php } ?>
+        </div>
 
         <!-- <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
           <div class="row g-3 ">
