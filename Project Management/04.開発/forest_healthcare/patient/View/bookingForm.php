@@ -31,7 +31,7 @@ $patientInfo = $_SESSION["patientInfo"];
             background-attachment: fixed;
         }
 
-        .modal-content {}
+        /* .modal-content {} */
 
         .btnBook {
             background-color: #43A391;
