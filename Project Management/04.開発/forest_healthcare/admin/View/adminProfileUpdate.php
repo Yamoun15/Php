@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+$adminInfo = $_SESSION["adminInfo"];
+
+echo "<pre>";
+print_r($adminInfo);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +66,7 @@
                 <label for="Adminfile-upload" class="Admincustom-file-upload">
                     Choose File
                 </label>
-                <input id="Adminfile-upload" type="file" />
+                <input id="Adminfile-upload" type="file" name="photo"/>
             </div>
             <div class="col-md-3 col-sm-2 col-2"></div>
         </div>
@@ -62,40 +74,40 @@
         <div class="row">
             <div class="col-md-2 col-sm-2 col-2"></div>
             <div class="col-md-6  col-sm-8 col-8">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/profileUpdateController.php" class="form-horizontal hr adminContact-form">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="Email Address">
+                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="Email Address" name="admin_email">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="Password">
+                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="Password" name="password">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Profile Name">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Profile Name" name="name">
                         </div>
                     </div> 
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Phone Number">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Phone Number" name="phone_no">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Address">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Address" name="address">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Update" class="adminContactbtn">
+                                <input type="submit" value="Update" class="adminContactbtn" name="updateProfile">
                             </div>
                             <div class="col-md-3">
-                                <input type="button" value="Cancel" class="adminContactbtn adminProfileUpdatebtn">
+                                <input type="submit" value="Cancel" class="adminContactbtn adminProfileUpdatebtn">
                             </div>
                         </div>
                     </div>

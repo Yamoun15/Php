@@ -21,7 +21,7 @@
                     <div class="col-0 col-md-2 "></div>
                     <div class="col-md-8 col-sm-8">
                         <div class="simple-login-container text-center">
-                            <form action="" method="">
+                            <form action="../Controller/loginController.php" method="post" enctype="multipart/form-data">
                                 <div class="row  g-0 ms-3 mb-3 ">
                                     <div class="row">
                                         <h3 class="text-center text-white mb-5">Admin Login</h3>
@@ -35,10 +35,10 @@
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                    <input type="text" class="form-control" placeholder="Email Address">
+                                    <input type="text" class="form-control" placeholder="Email Address" name="email">
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2">
-                                    <input type="password" placeholder="Password" class="form-control">
+                                    <input type="password" placeholder="Password" class="form-control" name="password">
                                 </div>
                                 <div class="row ">
                                     <div class="col-0 col-md-1 col-sm-1"></div>
@@ -46,7 +46,7 @@
 
                                     </div>
                                     <div class="col-5 col-md-5 col-sm-5 ms-3">
-                                        <button class="btnlogin ">Login</button>
+                                        <button class="btnlogin" type="submit">Login</button>
                                     </div>
                                 </div>
                             </form>

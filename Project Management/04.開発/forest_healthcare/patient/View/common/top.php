@@ -52,7 +52,7 @@
                         <a class="text-light me-4"  href="#">ContactUs</a>
                     </span>
                     <span>
-                        <a class="text-light"  href="#"><i class="fa-regular fa-user"></i></a>
+                        <a class="text-light"  href="../Controller/userProfileEditController.php"><i class="fa-regular fa-user"></i></a>
                     </span>
                 </div>
             </div>

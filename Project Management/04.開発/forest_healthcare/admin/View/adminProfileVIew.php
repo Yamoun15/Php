@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+$adminInfo = $_SESSION["adminInfo"];
+
+// echo "<pre>";
+// print_r($adminInfo);
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,7 +140,7 @@
             </table>
         </div>
         <div class="buttons d-flex">
-            <button type="button" class="btn btnUpdate">Update</button>
+            <a href="../Controller/profileEditController.php"><button type="button" class="btn btnUpdate">Update</button></a>
             <button type="button" class="btn btn-danger">Cancel</button>
         </div>
     </div>

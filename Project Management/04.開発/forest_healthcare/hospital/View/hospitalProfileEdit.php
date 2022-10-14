@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+$hospitalInfo = $_SESSION["hospitalInfo"];
+
+// echo "<pre>";
+// print_r($hospitalInfo);
+// session_destroy();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +37,7 @@
     <!-- Theme style -->
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
+<script src="./resources/js/hospitalProfileUpdate.js" defer></script>i
 </head>
 
 <body class="skin-blue">
@@ -48,15 +61,15 @@
 
     <div class="container">
         <div class="row hospitalEditProfile">
-        <form action="" class="form-horizontal hr adminContact-form">
+        <form action="../Controller/profileUpdateController.php" class="form-horizontal hr adminContact-form" method="POST" enctype="multipart/form-data">
             <!-- <div class="col-md-3 col-sm-2 col-2"></div> -->
             <div class="col-md-3 col-sm-12 information">
-            <img src="./image/hospital1Logo.png" alt="" class="hospitalProfileUpdate">
+            <img src="./image/<?= $hospitalInfo[0]["photo"]?>" alt="" class="hospitalProfileUpdate" id="profileImg" name="photo" >
                 <div class="hospitalProfileUpdateChoose">Upload a different photo</div>
                 <label for="Adminfile-upload" class="Admincustom-file-upload">
                     Choose File
                 </label>
-                <input id="Adminfile-upload" type="file" />
+                <input id="Adminfile-upload" type="file" onchange="setImage()" name="uploadFile"/>
             </div>
             <div class="col-1">
                 <div class="hospitalVerticalLine"></div>
@@ -65,44 +78,45 @@
                     <div class="form-group">
                     <label for="username" class="hospitalcontrol-label col-md-5">Hospital Name</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Pang Hlaing">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Pang Hlaing" name="name" value="<?= $hospitalInfo[0]["name"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="hospitalcontrol-label col-md-5">Password</label>
                         <div class="col-md-12">
-                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="Password">
+                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="Password" name="password" value="<?= $hospitalInfo[0]["password"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                     <label for="username" class="hospitalcontrol-label col-md-5">Email Address</label>
                         <div class="col-md-12">
-                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="panghlaing@gmail.com">
+                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="panghlaing@gmail.com" name="hospital_email" value="<?= $hospitalInfo[0]["email_address"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                     <label for="username" class="hospitalcontrol-label col-md-5">Phone Number</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="01-2150776">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="01-2150776" name="phone_no" value="<?= $hospitalInfo[0]["phone_no"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                     <label for="username" class="hospitalcontrol-label col-md-5">Address</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="address">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="address" name="address" value="<?= $hospitalInfo[0]["address"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6 col-5"></div>
                             <div class="col-md-3 col-3">
-                                <input type="button" value="Update" class="adminContactbtn">
+                                <input type="submit" value="Update" class="adminContactbtn" name="updateProfile">
                             </div>
                             <div class="col-md-3 col-3">
-                                <input type="button" value="Cancel" class="adminContactbtn hospitalProfileUpdatebtn">
+                                <input type="submit" value="Cancel" class="adminContactbtn hospitalProfileUpdatebtn">
                             </div>
                         </div>
                     </div>
+                    <input type="hidden" name="id" value="<?= $hospitalInfo[0]["id"] ?>" >
                 </form>
             </div>
             <div class="col-2"></div>
