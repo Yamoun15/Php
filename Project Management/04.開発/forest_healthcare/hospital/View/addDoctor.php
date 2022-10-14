@@ -105,7 +105,7 @@ include "../Controller/departmentListController.php";
                     </div> -->
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="date" class="form-control adminContactInput" id="date" placeholder="Day" name="day">
+                            <input type="text" class="form-control adminContactInput" id="date" placeholder="Day" name="day">
                         </div>
                     </div>
                     <div class="form-group">

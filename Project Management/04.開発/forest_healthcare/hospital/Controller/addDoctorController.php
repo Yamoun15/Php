@@ -18,18 +18,23 @@ if(isset($_POST["addDoctoreBtn"])){
 
     $file = $_FILES['photo']['name'];
     $location = $_FILES['photo']['tmp_name'];
-    // $extension = pathinfo($file)['extension'];
+    $extension = pathinfo($file)['extension'];
     // $path = $file ;
 
     $email = $_SESSION["email_address"];
     $sql= $pdo->prepare("SELECT id FROM tbl_hospital WHERE email_address = :email");
     $sql->bindValue(":email",$email);
     $sql->execute();
-
     $hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
     $hospitalID =  $hospitalInfo[0]['id'];
 
-    if (move_uploaded_file($location, "../View/image". $file)) {
+
+    $sql= $pdo->prepare("SELECT id FROM tbl_doctor ORDER BY id DESC LIMIT 1");
+    $sql->execute();
+    $doctorInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+   
+    if (move_uploaded_file($location, "../View/image/". ($doctorInfo[0]['id']+1).".".$extension)) {
         $sql = $pdo->prepare("
         INSERT INTO tbl_doctor
         (
@@ -66,7 +71,7 @@ if(isset($_POST["addDoctoreBtn"])){
     ");
     $sql->bindValue(":name", $name);
     $sql->bindValue(":email", $email);
-    $sql->bindValue(":photo", $file);
+    $sql->bindValue(":photo", ($doctorInfo[0]['id']+1).".".$extension);
     $sql->bindValue(":phone", $phone);
     $sql->bindValue(":address", $address);
     $sql->bindValue(":departmentID", $department);
