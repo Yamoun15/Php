@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+$patientInfo = $_SESSION["patientInfo"];
+print_r($patientInfo);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,17 +78,17 @@
 
 
             <div class="modal-body">
-                <form>
+                <form action="../Controller/addBookingController.php">
                     <div class="row ms-3 me-3">
                         <div class="col-7 ms-5 col-sm-12 col-md-6">
                             <div class="row ">
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="recipient-name" class="col-form-label"></label>
-                                    <input type="text" class="form-control" id="recipient-name" placeholder="Patient Name" required>
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["name"] ?>" required name="" readonly>
                                 </div>
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="message-text" class="col-form-label"></label>
-                                    <input class="form-control" id="message-text" placeholder="Phone" required></input>
+                                    <input class="form-control" id="message-text" placeholder="Phone" value="<?= $patientInfo[0]["phone_no"] ?>" required></input>
                                 </div>
                             </div>
                             <div class="row">
@@ -94,7 +102,7 @@
                                 </div> -->
                                 <span class="form-check form-check-inline">
                                     <label for="birthday">Date Of Birth:</label>
-                                    <input type="date" id="birthday" name="birthday" class="col-md-12 mb-3 col-sm-12 col-12 "></span>
+                                    <input type="date" id="birthday" name="birthday" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $patientInfo[0]["date_of_birth"] ?>"></span>
                             </div>
 
                             <span>Select Gender</span>
@@ -119,7 +127,7 @@
 
                             <div class="row mt-3 mt-sm-3 mt-md-3 ">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Brief description of your symptoms" id="floatingTextarea" required></textarea>
+                                    <textarea class="form-control" placeholder="Brief description of your symptoms" id="floatingTextarea" required value="<?= $patientInfo[0]["address"] ?>"></textarea>
                                     <label for="floatingTextarea">Address
                                     </label>
                                 </div>
