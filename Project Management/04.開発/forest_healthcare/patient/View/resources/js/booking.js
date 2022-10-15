@@ -1,27 +1,29 @@
 
 $("#hospitalChoose").change(function () {
+
     let sendData = {
-    hospital: $(this).find(":selected").val(),
-    //   searchType: type,
+        hospital: $(this).find(":selected").val(),
     };
+
     $.ajax({
-    url: "../Controller/hospitalChooseController.php",
-    type: "POST",
-    data: sendData,
+        url: "../Controller/hospitalChooseController.php",
+        type: "POST",
+        data: sendData,
 
-    success: function (res) {
-        let doctors = JSON.parse(res);
-        console.log(doctors);
+        success: function (res) {
+            let doctors = JSON.parse(res);
+            console.log(doctors);
 
-        $("#cardResult").empty();
+            $("#cardResult").empty();
 
-        for (const doctor of doctors) {
-        $("#cardResult").append(
-            `
+            for (const doctor of doctors) {
+
+                $("#cardResult").append(
+                    `
             <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
                 <div class="row g-3 ">
                 <div class="col-md-2">
-                <img src="./storages/doctor1.png" width="100px" class="img-fluid rounded-start " alt="...">
+                <img src="" width="100px" class="img-fluid rounded-start " alt="...">
                 </div>
                 <div class="col-md-4">
                 <div class="card-body">
@@ -43,19 +45,19 @@ $("#hospitalChoose").change(function () {
                 </div>
             </div>
             <div class="col-md-2">
-                <a href="../Controller/doctorlistC.php?doctorID=<?=$doctor['id']?>" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
+                <a href="../Controller/doctorlistC.php?doctorID=${doctor.id}" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
                 <img src="booking.png" alt="">
                 Book</a>
             </div>
             </div>
         </div>
                     `
-        );
-        };
-    },
-    error: function (err) {
-        alert(err);
-    },
+                );
+            };
+        },
+        error: function (err) {
+            alert(err);
+        },
     });
 });
 

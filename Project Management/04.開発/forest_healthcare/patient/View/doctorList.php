@@ -78,7 +78,7 @@ include "../Controller/hospitalListController.php";
           <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
             <div class="row g-3 ">
               <div class="col-md-2">
-                <img src="./storages/doctor1.png" width="100px" class="img-fluid rounded-start " alt="...">
+                <img src="./storages/image/<?= $doctor["doctor_photo"]?>" width="100px" class="img-fluid rounded-start " alt="...">
               </div>
               <div class="col-md-4">
                 <div class="card-body">

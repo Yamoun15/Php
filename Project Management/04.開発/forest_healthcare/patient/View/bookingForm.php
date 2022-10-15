@@ -38,7 +38,8 @@ $patientInfo = $_SESSION["patientInfo"];
             max-width: 200px;
             transition: all 1s;
         }
-        .btnBook:hover{
+
+        .btnBook:hover {
             background-color: #43A391;
             max-width: 200px;
             transform: scale(1.1);
@@ -78,7 +79,7 @@ $patientInfo = $_SESSION["patientInfo"];
 
 
             <div class="modal-body">
-                <form action="../Controller/addBookingController.php">
+                <form action="../Controller/addBookingController.php" enctype="multipart/form-data" method="POST">
                     <div class="row ms-3 me-3">
                         <div class="col-7 ms-5 col-sm-12 col-md-6">
                             <div class="row ">
@@ -89,14 +90,14 @@ $patientInfo = $_SESSION["patientInfo"];
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="message-text" class="col-form-label"></label>
                                     <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["phone_no"] ?>" required readonly name="phone">
-                                    <!-- <input type="text" class="form-control" id="message-text" placeholder="Phone" value="<?= $patientInfo[0]["phone_no"] ?>" required></input> -->
+
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mt-3">
                                 <span class="form-check form-check-inline">
-                                    <label for="birthday">Date Of Birth:</label>
-                                    <input type="text" id="birthday" name="birthday" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $patientInfo[0]["date_of_birth"] ?>"></span>
-                                    <input type="hidden" id="birthday" name="id" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $doctorInfos[0]["id"] ?>"></span>
+                                    <label for="birthday"></label>
+                                    <input type="text" id="birthday" class="form-control" value="<?= $patientInfo[0]["date_of_birth"] ?>" name="birthday"></span>
+                                <input type="hidden" id="birthday" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $doctorInfos[0]["id"] ?>" name="id"></span>
                             </div>
 
                             <!-- <span>Select Gender</span>
@@ -121,10 +122,9 @@ $patientInfo = $_SESSION["patientInfo"];
 
                             <div class="row mt-3 mt-sm-3 mt-md-3 ">
                                 <div class="form-floating">
-                                <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["address"] ?>" required readonly>
-                                    <!-- <textarea class="form-control" placeholder="Brief description of your symptoms" id="floatingTextarea" required value="<?= $patientInfo[0]["address"] ?>"></textarea> -->
-                                    <label for="floatingTextarea">Address
-                                    </label>
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["address"] ?>" required readonly name="address">
+
+                                    <label for="floatingTextarea">Address</label>
                                 </div>
                             </div>
 
@@ -140,7 +140,7 @@ $patientInfo = $_SESSION["patientInfo"];
                             <div class="card text-center p-2" style="width: 18rem;">
                                 <div class="card-body">
                                     <h5 class="card-title booking-summary">Booking Summary</h5>
-                                    <img src="./storages/doctor1.png" alt="" width="100px">
+                                    <img src="<?= $doctorInfos[0]["doctor_photo"] ?>" alt="" width="100px">
                                     <p class="card-text"><b><?= $doctorInfos[0]["name"] ?></b></p>
                                     <p class="card-text"><b><?= $doctorInfos[0]["department_id"] ?></b></p>
                                     <div class="text-start">
@@ -151,24 +151,21 @@ $patientInfo = $_SESSION["patientInfo"];
                                 </div>
                             </div>
                         </div>
-
                         <!-- <div class=" form-check m-3 ms-3 ms-sm-3">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
                                 I have read and accept <a href="#"><u>the terms and conditions.</u></a>
                             </label>
                         </div> -->
-        
-                        <button class="btn btnBook" name="btn" type="submit">Submit</button>
-                        <!-- <a class="btn btnBook ms-5 text-white" href="#" role="button" type="submit" name="btn">Book Now</a> -->
-                        <a class="btn btn-danger btnCancel  ms-5 text-white" href="#" role="button" type="submit">Cancel</a>
+                        <div class="col-5 col-sm-12 col-md-4 mt-4 ms-sm-5">
+                            <button class="btn btnBook  text-white" name="bookingBtn" type="submit">Submit</button>
+                            <!-- <a class="btn btnBook ms-5 text-white" href="#" role="button" type="submit" name="bookingBtn">Book Now</a> -->
+                            <a class="btn btn-danger btnCancel  ms-5  text-white" href="#" role="button" type="submit">Cancel</a>
+                        </div>
                 </form>
             </div>
-
-
         </div>
     </div>
-
     </div>
     </div>
     </div>

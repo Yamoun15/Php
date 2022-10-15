@@ -4,20 +4,20 @@ session_start();
 
 include "../Model/dbConnection.php";
 
-if(isset($_POST["btn"])){
+if(isset($_POST["bookingBtn"])){
 
     $description = $_POST["description"];
     $doctorID = $_POST["id"];
 
     $email = $_SESSION["email_address"];
-    $sql= $pdo->prepare("SELECT id FROM tbl_user WHERE email_address = :email");
+    $sql= $pdo->prepare("SELECT * FROM tbl_user WHERE email_address = :email");
     $sql->bindValue(":email",$email);
     $sql->execute();
 
     $patientInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
     $patientID =  $patientInfo[0]['id'];
 
-    $sql= $pdo->prepare("SELECT id FROM tbl_doctor WHERE id = :doctorID");
+    $sql= $pdo->prepare("SELECT * FROM tbl_doctor WHERE id = :doctorID");
     $sql->bindValue(":doctorID",$doctorID);
     $sql->execute();
 
@@ -55,10 +55,10 @@ if(isset($_POST["btn"])){
 
     $sql->execute();
 
-    header("Location: ../View/home.php");
+    header("Location: ../View/userHomePage.php");
 
 }else{
-    header("Location: ../View/login.php");
+    header("Location: ../View/userLogin.php");
 }
 
 ?>
