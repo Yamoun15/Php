@@ -46,7 +46,7 @@
 
                                     </div>
                                     <div class="col-5 col-md-5 col-sm-5 ms-3">
-                                        <button class="btnlogin ">Login</button>
+                                        <button class="btnlogin" type="submit">Login</button>
                                     </div>
                                 </div>
                             </form>
