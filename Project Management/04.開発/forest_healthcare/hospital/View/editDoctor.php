@@ -34,7 +34,11 @@ $doctorInfo =  $_SESSION["doctorInfo"];
                             <label for="">Choose Department</label>
                             <select class="form-select" aria-label="Default select example" name="department">
                                 <?php foreach ($departmentList as $key => $department) { ?>
-                                    <option value="<?= $department["id"] ?>"><?= $department["name"] ?></option>
+                                    <option value="<?= $department["id"] ?>" 
+                                        <?php if ($department["id"]==$doctorInfo[0]["department_id"]) {
+                                            echo "selected";                                           
+                                        } ?>
+                                    ><?= $department["name"] ?></option>
                                 <?php } ?>
                                 <!-- <option selected>Department</option>
                                 <option value="1">Neurology</option>
@@ -67,7 +71,7 @@ $doctorInfo =  $_SESSION["doctorInfo"];
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <textarea type="text" value="<?= $doctorInfo[0]["address"] ?>" rows="3" class="form-control" id="address" placeholder="Address" name="address"></textarea>
+                            <textarea type="text" rows="3" class="form-control" id="address" placeholder="Address" name="address"><?= $doctorInfo[0]["address"] ?> </textarea>
                         </div>
                     </div>
                     <div class="form-group">

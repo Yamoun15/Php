@@ -74,7 +74,7 @@ include "../Controller/adminDoctorListController.php";
                             <tr>
                                 <td scope="row"><?= $count++; ?>.</td>
                                 <td><?= $doctor["name"] ?></td>
-                                <td><?= $doctor["department_id"] ?></td>
+                                <td><?= $doctor["depname"] ?></td>
                                 <td><?= $doctor["dr_expert_in"] ?></td>
                                 <td><?= $doctor["email_address"] ?></td>
                                 <td>

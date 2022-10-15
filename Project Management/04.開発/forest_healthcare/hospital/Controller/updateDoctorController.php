@@ -10,7 +10,7 @@ if (isset($_POST["updateDoctor"])) {
     $email = $_POST["email"];
     $phone = $_POST["phone"];
     $address = $_POST["address"];
-    // $department = $_POST["department"];
+    $department = $_POST["department"];
     $id = $_POST["id"];
 
 
@@ -22,7 +22,7 @@ if (isset($_POST["updateDoctor"])) {
             email_address=:email,       
             phone_no=:phone,
             address=:addr,
-            -- department_id=:departmentId,                
+            department_id=:departmentId,                
             updated_date=:updateDate
         WHERE   id =:id "
 );
@@ -34,7 +34,7 @@ if (isset($_POST["updateDoctor"])) {
     $sql->bindValue(":email", $email);
     $sql->bindValue(":phone", $phone);
     $sql->bindValue(":addr", $address);
-    // $sql->bindValue(":departmentId", $department);  
+    $sql->bindValue(":departmentId", $department);  
    
     $sql->bindValue(":updateDate", date("Y/m/d"));
     $sql->bindValue(":id", $id);  

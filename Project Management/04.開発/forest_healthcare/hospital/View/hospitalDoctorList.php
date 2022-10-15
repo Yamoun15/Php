@@ -78,7 +78,7 @@ include "../Controller/hospitalDoctorListController.php";
                             <tr>
                                 <td scope="row"><?= $count++; ?>.</td>
                                 <td><?= $doctor["name"] ?></td>
-                                <td><?= $doctor["department_id"] ?></td>
+                                <td><?= $doctor["depname"] ?></td>
                                 <td><?= $doctor["dr_expert_in"] ?></td>
                                 <td><?= $doctor["duty_day"] ?></td>
                                 <td><?= $doctor["duty_start_time"] ?></td>
@@ -87,7 +87,7 @@ include "../Controller/hospitalDoctorListController.php";
                                 <td><?= $doctor["phone_no"] ?></td>
                                 <td><?= $doctor["address"] ?></td>
                                 <td>
-                                    <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
+                                    <button class="btn"><a href="../Controller/editDoctorController.php?id=<?= $doctor["id"]?>"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></a></i></button>
                                     <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
                                 </td>
                             </tr>

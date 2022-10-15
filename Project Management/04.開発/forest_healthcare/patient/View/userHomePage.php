@@ -1,3 +1,9 @@
+<?php
+
+include "../Controller/visitorController.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
