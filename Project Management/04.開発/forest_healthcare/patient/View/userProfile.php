@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+$patientInfo = $_SESSION["patientInfo"];
+
+// echo "<pre>";
+// print_r($patientInfo);
+// session_destroy();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,6 +38,7 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <script src="https://kit.fontawesome.com/5053738b7f.js" crossorigin="anonymous"></script>
+<script src="./resources/js/uploadProfile.js" defer></script>
 </head>
 
 <body>
@@ -43,7 +56,7 @@
                     <div><i class="fa-solid fa-right-from-bracket fs-5 mt-5"></i></div>
                 </div>
                 <div class="col-6 fw-bold">
-                    <div class=" mt-5"><a href="" class="text-dark">My Profile</a></div>
+                    <div class=" mt-5"><a href="../Controller/userProfileEditController.php" class="text-dark">My Profile</a></div>
                     <div class=" mt-5"><a href="" class="text-dark">Appointment History</a></div>
                     <div class=" mt-5"><a href="" class="text-dark">Account Setting</a></div>
                     <div class="mt-5 mb-5"> <a href="" class="text-dark">Logout</a></div>
@@ -52,65 +65,66 @@
             </div>
             
             <div class="col-md-7  col-sm-8 adminContact-col">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/userProfileUpdateController.php" class="form-horizontal hr adminContact-form" method="post" enctype="multipart/form-data">
 
                     <div class="myProfileTitle">My Profile</div>
                     <span class="userProfileConfirmbtnfloat">
                         <div class="profilebg">
-                            <img src="./storages/download.jpg" alt="" class="userProfileUpdate">
+                            <img src="./storages/<?= $patientInfo[0]["profile_image"]?>" alt="" id="profileImg"  class="userProfileUpdate" name="profile_image">
                         </div>
 
                         <label for="userfile-upload" class="usercustom-file-upload">
                             <i class="fa-solid fa-camera"></i>
                         </label>
-                        <input id="userfile-upload" type="file" />
+                        <input id="userfile-upload" type="file" onchange="setImage()" name="uploadFile" />
                     </span>
                     <span>
-                        <input type="button" value="Update" class="adminContactbtn">
+                        <input type="submit" value="Update" class="adminContactbtn" name="updateProfile">
                     </span>
 
                     <div class="form-group userProfileInputfloat">
                         <label for="username" class="userProfileLabel col-md-5">Username</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="John">
+                            <input type="text" class="form-control adminContactInput" id="username" value="<?= $patientInfo[0]["name"] ?>" placeholder="John" name="name" >
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Password</label>
                         <div class="col-md-12">
-                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="password">
+                            <input type="password" class="form-control adminContactInput" id="usernaem" value="<?= $patientInfo[0]["password"] ?>" placeholder="password" name="password">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Phone Number</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="09-2150776">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="09-2150776" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no" >
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Email Address</label>
                         <div class="col-md-12">
-                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="john@gmail.com">
+                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="john@gmail.com" value="<?= $patientInfo[0]["email_address"] ?>" name="email_address" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Birthday</label>
                         <div class="col-md-12">
-                            <input type="date" class="form-control adminContactInput" id="usernaem" placeholder="1.3.1995">
+                            <input type="date" class="form-control adminContactInput" id="usernaem" placeholder="1.3.1995" value="<?= $patientInfo[0]["date_of_birth"] ?>" name="date_of_birth">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Address</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Yangon">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Male/Female</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Male/Female">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Male/Female" value="<?= $patientInfo[0]["gender"] ?>"  name="gender">
                         </div>
                     </div>
+                    <input type="hidden" name="id" value="<?= $patientInfo[0]["id"] ?>" >
                 </form>
             </div>
 

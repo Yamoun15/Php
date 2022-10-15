@@ -22,6 +22,7 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
 
     if (password_verify($pwd, $result[0]['password'])) {
         $_SESSION["email_address"] = $email;
+        $_SESSION["id"] = $result[0]['id'];
         header("Location: ../View/userHomePage.php");
     } else {
         header("Location: ../View/userLogin.php");

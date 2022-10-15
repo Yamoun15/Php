@@ -29,7 +29,7 @@
 <body>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
+        Log Out
     </button>
 
     <!-- Modal -->
@@ -43,7 +43,7 @@
                 </div>
                 <div class="modal-body d-flex justify-content-center align-items-center flex-column">
                     <div class="photo mx-auto ">
-                        <img src="LogOut-logo.png" alt="" width="160px">
+                        <img src="./storages/LogOut-logo.png" alt="" width="160px">
                     </div>
                     <div class="fw-bold fs-3 mt-3">Log Out?</div>
                     <div>Are you sure to leave?</div>

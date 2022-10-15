@@ -45,7 +45,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="../Controller/profileEditController.php" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="#" class="btn btn-default btn-flat">Sign out</a>
@@ -104,7 +104,7 @@
                     </a>
                 </li>
                 <li class="treeview">
-                    <a href="#">
+                    <a href="../Controller/profileEditController.php">
                         <i class="fa fa-cog" aria-hidden="true"></i><span>Account Setting</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
