@@ -10,4 +10,4 @@ $sql = $pdo->prepare("
 $sql->execute();
 
 $departmentList = $sql->fetchAll(PDO::FETCH_ASSOC);
-print_r($departmentList);
+// print_r($departmentList);
