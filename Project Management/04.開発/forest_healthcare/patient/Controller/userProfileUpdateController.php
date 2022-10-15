@@ -10,7 +10,7 @@ if(isset($_POST["updateProfile"])){
     $birthday = $_POST["date_of_birth"];
     $phone = $_POST["phone_no"];
     $address = $_POST["address"];
-    // $profileImg = $_POST["profile_image"];
+    // $profileImg = $_POST["photo"];
     $id = $_POST["id"];
 
     //get image info
@@ -36,7 +36,7 @@ if(isset($_POST["updateProfile"])){
             $sql = $pdo->prepare(
                 "UPDATE tbl_user SET 
             name = :name,
-            profile_image = :profileImg,
+            photo = :profileImg,
             password = :pwd,
             gender = :gender,
             date_of_birth = :birthday,

@@ -123,20 +123,20 @@
                         </li>
                         <li class="active"><a href="">Health Knowledge</a>
                             <ul class="treeview-menu">
-                                <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Add Article</a></li>
-                                <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Article List</a></li>
+                                <li class="active"><a href="./../View/(admin HKNWL)addArticle.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Article</a></li>
+                                <li><a href="./../View/(admin HKNWL)articleList.php"><i class="fa fa-circle" aria-hidden="true"></i>Article List</a></li>
                             </ul>
                         </li>
                         <li class="active"><a href="">Mental Health</a>
                             <ul class="treeview-menu">
-                                <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Add Viedo</a></li>
+                                <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Add Video</a></li>
                                 <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Viedo List</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#">
+                    <a href="../View/adminUserList.php">
                         <i class="fa fa-users" aria-hidden="true"></i> <span>User</span>
                     </a>
                 </li>

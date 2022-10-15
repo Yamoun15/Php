@@ -13,9 +13,9 @@ $sql->execute();
 $adminInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION["adminInfo"] = $adminInfo;
-echo $id;
-print_r($_SESSION["adminInfo"]);
+// echo $id;
+// print_r($_SESSION["adminInfo"]);
 
-// header("Location: ../View/adminProfileUpdate.php");
+header("Location: ../View/adminProfileUpdate.php");
 
 ?>

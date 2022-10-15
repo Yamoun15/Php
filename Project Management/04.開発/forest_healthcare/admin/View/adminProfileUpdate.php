@@ -4,8 +4,8 @@ session_start();
 
 $adminInfo = $_SESSION["adminInfo"];
 
-echo "<pre>";
-print_r($adminInfo);
+// echo "<pre>";
+// print_r($adminInfo);
 
 
 ?>
@@ -26,9 +26,9 @@ print_r($adminInfo);
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poly&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./resources/css/inputBox.css">
-<!-- Bootstrap -->
-<link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./resources/css/inputBox.css">
+    <!-- Bootstrap -->
+    <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- FontAwesome 4.3.0 -->
     <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
@@ -38,11 +38,12 @@ print_r($adminInfo);
     <!-- Theme style -->
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
+    <script src="./resources/js/uploadProfile.js" defer></script>
 </head>
 
 <body class="skin-blue">
-   <!-- Header -->
-   <?php include("common/header.php"); ?>
+    <!-- Header -->
+    <?php include("common/header.php"); ?>
     <section class="content-header">
         <i class="fa fa-dashboard icon"></i>
         <span>
@@ -58,46 +59,47 @@ print_r($adminInfo);
 
     <div class="container">
         <div class="adminHospitaladdTitle">Edit Profile Update</div>
-        <div class="row">
-            <div class="col-md-2 col-sm-2 col-2"></div>
-            <div class="col-md-6  col-sm-8 col-8 mx-auto">
-                <img src="./image/download.jpg" alt="" class="adminProfileUpdate">
-                <div class="adminProfileUpdateChoose">Upload a different photo</div>
-                <label for="Adminfile-upload" class="Admincustom-file-upload">
-                    Choose File
-                </label>
-                <input id="Adminfile-upload" type="file" name="photo"/>
+        <form action="../Controller/profileUpdateController.php" class="form-horizontal hr adminContact-form" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-2"></div>
+                <div class="col-md-6  col-sm-8 col-8 mx-auto">
+                    <img src="./image/<?= $adminInfo[0]["photo"] ?>" alt="" class="adminProfileUpdate" name="photo" id="profileImg">
+                    <div class="adminProfileUpdateChoose">Upload a different photo</div>
+                    <label for="Adminfile-upload" class="Admincustom-file-upload">
+                        Choose File
+                    </label>
+                    <input id="Adminfile-upload" type="file" name="uploadFile" onchange="setImage()" />
+                </div>
+                <div class="col-md-3 col-sm-2 col-2"></div>
             </div>
-            <div class="col-md-3 col-sm-2 col-2"></div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-2 col-sm-2 col-2"></div>
-            <div class="col-md-6  col-sm-8 col-8">
-                <form action="../Controller/profileUpdateController.php" class="form-horizontal hr adminContact-form">
+            <div class="row">
+                <div class="col-md-2 col-sm-2 col-2"></div>
+                <div class="col-md-6  col-sm-8 col-8">
+
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="Email Address" name="admin_email">
+                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="Email Address" name="admin_email" value="<?= $adminInfo[0]["email_address"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="Password" name="password">
+                            <input type="password" class="form-control adminContactInput" id="usernaem" placeholder="Password" name="password" value="<?= $adminInfo[0]["password"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Profile Name" name="name">
-                        </div>
-                    </div> 
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Phone Number" name="phone_no">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Profile Name" name="name" value="<?= $adminInfo[0]["name"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Address" name="address">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Phone Number" name="phone_no" value="<?= $adminInfo[0]["phone_no"] ?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Address" name="address" value="<?= $adminInfo[0]["address"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
@@ -111,11 +113,12 @@ print_r($adminInfo);
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-            <div class="col-md-3 col-sm-2 col-2"></div>
-        </div>
+        </form>
     </div>
+    <div class="col-md-3 col-sm-2 col-2"></div>
+
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
 

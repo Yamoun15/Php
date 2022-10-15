@@ -8,6 +8,7 @@ if(isset($_POST["updateProfile"])){
     $pwd = $_POST["password"];
     $phone = $_POST["phone_no"];
     $address = $_POST["address"];
+    $photo = $_POST["photo"];
     $id = $_POST["id"];
 
     //get image info
@@ -29,7 +30,7 @@ if(isset($_POST["updateProfile"])){
 
         if (move_uploaded_file($location, "../View/image/".$id.".".$extension)) {
             $sql = $pdo->prepare(
-                "UPDATE tbl_user SET 
+                "UPDATE tbl_admin SET 
             name = :name,
             photo = :photo,
             password = :pwd,
@@ -44,7 +45,6 @@ if(isset($_POST["updateProfile"])){
         }
     };
     $sql->bindValue(":name",$name);
-    // $sql->bindValue(":profileImg",$profileImg);
     $sql->bindValue(":pwd",$pwd);
     $sql->bindValue(":phone",$phone);
     $sql->bindValue(":address",$address);
