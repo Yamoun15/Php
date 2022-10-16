@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+include "../Model/dbConnection.php";
+
+
+$articleDetail = $_SESSION["articleDetail"];
+// $articleId = $_SESSION["ID"];
+// print_r($articleDetail);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,10 +40,6 @@
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
     <style>
-        body {
-            
-        }
-
         .adminAbout-col {
             border-radius: 10px;
             padding: 15px;
@@ -105,7 +112,8 @@
             background-color: #188067;
             height: 150px;
         }
-        .content-wrapper{
+
+        .content-wrapper {
             background-color: #64d3a5;
         }
     </style>
@@ -141,22 +149,18 @@
         <div class="row">
             <div class="col-md-1 col-sm-1 col-1"></div>
             <div class="col-md-9  col-sm- col-9 adminAbout-col">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/articleUpdateController.php" class="form-horizontal hr adminContact-form" method="POST" enctype="multipart/form-data">
                     <div class="subtitleAboutus">Topic Name</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="" name="title" value="<?php $articleDetail[0]["title"] ?>">
                         </div>
                     </div>
 
                     <div class="subtitleAboutus mt-3">Cover photo</div>
                     <div class="form-group">
-                        <div class=" col-md-12 selectBoxAboutus">
-                            <label for="file-upload" class="custom-file-upload">
-                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                                Upload Image
-                            </label>
-                            <input id="file-upload" type="file" />
+                        <div class="col-md-12">
+                            <input type="file" id="myFile"  name="photo" value="<?php $articleDetail[0]["photo"] ?>">
                         </div>
                     </div>
 
@@ -164,21 +168,21 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                                <textarea class="form-control" placeholder="" id="floatingTextarea" name="description" value="<?php $articleDetail[0]["description"] ?>"></textarea>
                                 <label for="floatingTextarea"></label>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group mx-auto me-md-3 me-sm-3 ms-5">
-                                <input type="button" value="Save Changes" class="btn btnSave mt-3 mx-auto">
-
-                        </div>
+                        <a href="../Controller/articleUpdateController.php"><input type="submit" value="Save Changes" class="btn btnSave mt-3 mx-auto" name="updateArticle"></a>
                     </div>
                 </form>
             </div>
-            <div class="col-md-1 col-sm-1 col-1"></div>
+
         </div>
+        <div class="col-md-1 col-sm-1 col-1"></div>
+    </div>
     </div>
 
     <!-- <div class="footer d-flex justify-content-center align-items-center">
@@ -189,7 +193,6 @@
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
 
-    <script src="./resources/js/adminAboutUs.js"></script>
 </body>
 
 </html>

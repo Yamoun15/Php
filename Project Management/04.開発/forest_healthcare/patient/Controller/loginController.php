@@ -4,8 +4,8 @@ session_start();
 
 include "../Model/dbConnection.php";
 
-if (isset($_POST["email_address"]) && isset($_POST["password"])) {
-    $email = $_POST["email_address"];
+if (isset($_POST["user_email"]) && isset($_POST["password"])) {
+    $email = $_POST["user_email"];
     $pwd = $_POST["password"];
 
     $sql = $pdo->prepare("
@@ -21,7 +21,7 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
     print_r($result);
 
     if (password_verify($pwd, $result[0]['password'])) {
-        $_SESSION["email_address"] = $email;
+        $_SESSION["user_email"] = $email;
         $_SESSION["id"] = $result[0]['id'];
         header("Location: ../View/userHomePage.php");
     } else {

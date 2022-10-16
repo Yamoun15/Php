@@ -5,8 +5,8 @@ session_start();
 
 include "../Model/dbConnection.php";
 
-if (isset($_POST["email_address"]) && isset($_POST["password"])) {
-    $email = $_POST["email_address"];
+if (isset($_POST["admin_email"]) && isset($_POST["password"])) {
+    $email = $_POST["admin_email"];
     $pwd = $_POST["password"];
 
     $sql = $pdo->prepare("
@@ -22,10 +22,10 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
     print_r($result);
 
     if ($pwd == $result[0]['password']) {
-        $_SESSION["email_address"] = $email;
+        $_SESSION["admin_email"] = $email;
         $_SESSION["id"] = $result[0]['id'];
         header("Location: ../View/adminProfileView.php");
     } else {
         header("Location: ../View/userLogin.php");
-    }
+    };
 }
