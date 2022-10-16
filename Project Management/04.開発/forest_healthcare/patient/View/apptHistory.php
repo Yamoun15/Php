@@ -47,11 +47,12 @@
             </div>
         </div>
         <div class="col-lg-8">
+            <h3 class="text-center">Your Booking History</h3><br>
             <table class="table">
                 <thead>
                     <tr class="title">
-                        <th scope="col">No</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">No</th>                       
+                        <th scope="col">Hospital</th>
                         <th scope="col">Doctor</th>
                         <th scope="col">Date&Time</th>
                         <th scope="col">Details</th>
@@ -61,59 +62,24 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
+                        <th scope="row">1</th>                        
                         <td>Dr.John</td>
+                        <td>Hospital 1</td>
                         <td>9AM-11AM(SUN)</td>
                         <td><button class="btnview">View</button></td>
                         <td>Approved</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Mark</td>
+                        <th scope="row">1</th>                        
                         <td>Dr.John</td>
+                        <td>Hospital 2</td>
                         <td>9AM-11AM(SUN)</td>
                         <td><button class="btnview">View</button></td>
                         <td>Approved</td>
                         <td></td>
                     </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Mark</td>
-                        <td>Dr.John</td>
-                        <td>9AM-11AM(SUN)</td>
-                        <td><button class="btnview">View</button></td>
-                        <td>Canceled</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Dr.John</td>
-                        <td>9AM-11AM(SUN)</td>
-                        <td><button class="btnview">View</button></td>
-                        <td>Canceled</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Mark</td>
-                        <td>Dr.John</td>
-                        <td>9AM-11AM(SUN)</td>
-                        <td><button class="btnview">View</button></td>
-                        <td>Pending</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Mark</td>
-                        <td>Dr.John</td>
-                        <td>9AM-11AM(SUN)</td>
-                        <td><button class="btnview">View</button></td>
-                        <td>Pending</td>
-                        <td>---</td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>

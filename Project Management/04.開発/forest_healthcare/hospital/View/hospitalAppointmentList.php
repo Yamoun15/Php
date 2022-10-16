@@ -1,3 +1,9 @@
+<?php
+include "../Controller/hospitalAppointmentListController.php";
+// echo "<pre>";
+print_r($appointmentList);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

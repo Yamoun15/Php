@@ -1,3 +1,10 @@
+<?php
+include "../Controller/adminAppointmentListController.php";
+// echo "<pre>";
+// print_r($appointmentList);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +24,7 @@
     <!-- Bootstrap -->
     <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/5053738b7f.js" crossorigin="anonymous"></script>
-    
+
     <!-- Theme style -->
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
@@ -36,34 +43,45 @@
                     <thead class="doctorTable">
                         <tr class="title">
                             <th scope="col">Patient Name</th>
+                            <th scope="col">Hospital Name</th>
                             <th scope="col">Doctor Name</th>
-                            <th scope="col">DateTime</th>
+                            <th scope="col">Date&Time</th>
                             <th scope="col">Patient Detail</th>
                             <th scope="col">Status</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <?php foreach ($appointmentList as $key => $appointment) { ?>
+                            <tr>
+                                <td><?= $appointment["username"]?></td>
+                                <td><?= $appointment["hosname"]?></td>
+                                <td><?= $appointment["docname"]?></td>
+                                <td><?= $appointment["docday"]?></td>
+                                <td><button class="btnview">view</button></td>
+                                <td>Pending</td>
+                            </tr>
+                            <!-- <tr>
+                                <td>patient name</td>
+                                <td><?= $appointment["docname"]?></td>
+                                <td>9AM-11AM(SUN)</td>
+                                <td><button class="btnview">view</button></td>
+                                <td>Pending</td>
+                            </tr> -->
+                        <?php } ?>
+                        <!-- <tr>
                             <td>U Nana</td>
                             <td>Dr John</td>
-                            <td>2022-2-2</td>
+                            <td>9AM-11AM(SUN)</td>
                             <td><button class="btnview">view</button></td>
                             <td>Pending</td>
                         </tr>
                         <tr>
                             <td>U Nana</td>
                             <td>Dr John</td>
-                            <td>2022-2-2</td>
+                            <td>9AM-11AM(SUN)</td>
                             <td><button class="btnview">view</button></td>
                             <td>Pending</td>
-                        </tr>
-                        <tr>
-                            <td>U Nana</td>
-                            <td>Dr John</td>
-                            <td>2022-2-2</td>
-                            <td><button class="btnview">view</button></td>
-                            <td>Pending</td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
