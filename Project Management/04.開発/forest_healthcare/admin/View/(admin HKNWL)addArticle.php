@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,89 +28,8 @@
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
-    <style>
-        body {
-            background-color: #64D3A5;
-            ;
-        }
-
-        .adminAbout-col {
-            border-radius: 10px;
-            padding: 15px;
-        }
-
-        .subtitleAboutus {
-            font-size: 1.3em;
-            font-family: poly !important;
-            margin-bottom: 15px;
-        }
-
-        .selectBoxAboutus {
-            border: 1px solid rgba(128, 128, 128, 0.619);
-            border-radius: 5px;
-            outline: none;
-            box-sizing: border-box;
-            height: 3em;
-            margin-bottom: 20px;
-        }
-
-        #file-upload {
-            display: none;
-        }
-
-        .custom-file-upload {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            display: inline-block;
-            padding: 6px;
-            cursor: pointer;
-            /* margin-left: 30%;
-            margin-top: 13%; */
-            max-width: 200px;
-            min-width: auto;
-            height: 3rem;
-            text-align: center;
-            color: black;
-            background-color: #F9C56B;
-        }
-
-        .container {
-            border-radius: 10px;
-            max-width: 600px;
-            min-height: 500px;
-            background-color: white;
-            margin-top: 3rem;
-            box-shadow: 0px 2px 5px gray;
-        }
-
-        .diseaseListTitle {
-            font-weight: 600;
-            background-color: white;
-            border-radius: 10px;
-            padding: 15px;
-            /* min-width: 250px; */
-            max-width: 600px;
-
-        }
-
-        .btnSave {
-            background-color: #188067;
-            color: white;
-            padding: 10px !important;
-            font-size: 20px !important;
-            width: 100px;
-            margin: auto;
-        }
-
-        .footer {
-            background-color: #188067;
-            height: 150px;
-        }
-
-        .content-wrapper {
-            background-color: #64d3a5;
-        }
-    </style>
+    <link rel="stylesheet" href="./resources/css/addArticle.css">
+    
 </head>
 
 <body class="skin-blue">
@@ -142,22 +60,18 @@
         <div class="row">
             <div class="col-md-1 col-sm-1 col-1"></div>
             <div class="col-md-9  col-sm-9 col-9 adminAbout-col">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/addArticleController.php" class="form-horizontal hr adminContact-form" method="POST" enctype="multipart/form-data">
                     <div class="subtitleAboutus">Topic Name</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="" name="title">
                         </div>
                     </div>
 
                     <div class="subtitleAboutus mt-3">Cover photo</div>
                     <div class="form-group">
-                        <div class=" col-md-12 selectBoxAboutus">
-                            <label for="file-upload" class="custom-file-upload">
-                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                                Upload Image
-                            </label>
-                            <input id="file-upload" type="file" />
+                        <div class="col-md-12">
+                            <input type="file" id="myFile" name="uploadFile">
                         </div>
                     </div>
 
@@ -165,7 +79,7 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                                <textarea class="form-control" placeholder="" id="floatingTextarea" name="description"></textarea>
                                 <label for="floatingTextarea"></label>
                             </div>
                         </div>
@@ -175,7 +89,7 @@
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Save" class="btn btnSave mt-3">
+                                <input type="submit" name="addArticle" value="Save" class="btn btnSave mt-3">
                             </div>
                         </div>
                     </div>

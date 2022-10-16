@@ -51,7 +51,7 @@ unset($_SESSION["email_address"]);
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                    <input type="email" class="form-control" placeholder="Email Address" name="email_address">
+                                    <input type="email" class="form-control" placeholder="Email Address" name="user_email">
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2">
                                     <input type="password" placeholder="Password" class="form-control" name="password">

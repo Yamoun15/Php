@@ -4,8 +4,8 @@ session_start();
 
 include "../Model/dbConnection.php";
 
-if (isset($_POST["email_address"]) && isset($_POST["password"])) {
-    $email = $_POST["email_address"];
+if (isset($_POST["hospital_email"]) && isset($_POST["password"])) {
+    $email = $_POST["hospital_email"];
     $pwd = $_POST["password"];
 
     $sql = $pdo->prepare("
@@ -15,14 +15,15 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
 
     $sql->bindValue(":email", $email);
     $sql->execute();
-    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     // echo "<pre>";
     // print_r($result);
 
     if (password_verify($pwd, $result[0]['password'])) {
-        $_SESSION["email_address"] = $email;
+        $_SESSION["hospital_email"] = $email;
         $_SESSION["id"] = $result[0]['id'];
+        
         header("Location: ../View/hospitalProfileEdit.php");
     } else {
         header("Location: ../View/hospitalLogin.php");

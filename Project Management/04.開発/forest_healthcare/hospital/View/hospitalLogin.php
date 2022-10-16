@@ -1,7 +1,7 @@
 <?php
- session_start();
+session_start();
 
- unset($_SESSION["email_address"]);
+unset($_SESSION["email_address"]);
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@
 </head>
 
 <body class="body">
-    <div class="container-fluid mt-5 p-0">    
+    <div class="container-fluid mt-5 p-0">
         <div class="row  g-0 ">
             <div class="col-12 col-md-8">
                 <div class="row  g-0 mt-5">
@@ -37,21 +37,24 @@
                                         <button class="btnlogin" type="submit">Login</button>
                                     </div>
                                     <div class="col-6 col-md-6 col-sm-5 mb-4">
-                                        <button class="dbtnsignup" >Sign Up</button>
+                                        <button class="dbtnsignup">Sign Up</button>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                    <input type="text" class="form-control" placeholder="Email Address" name="email_address">
+                                    <input type="text" class="form-control" placeholder="Email Address" name="hospital_email">
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2">
                                     <input type="password" placeholder="Password" class="form-control" name="password">
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="hidden" value="<?= $doctorInfo[0]["id"] ?>" class="form-control" id="id" placeholder="id" name="id">
                                 </div>
                                 <div class="row ">
                                     <div class="col-0 col-md-1 col-sm-1"></div>
                                     <div class="col-5 col-md-5 col-sm-5">
                                     </div>
                                     <div class="col-5 col-md-5 col-sm-5 ms-3">
-                                        <button class="btnlogin" type="submit">Login</button>
+                                        <button class="btnlogin" type="submit" name="hospitalLogin">Login</button>
                                     </div>
                                 </div>
                             </form>

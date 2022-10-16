@@ -20,7 +20,7 @@ if (isset($_POST["updateProfile"])) {
         $sql = $pdo->prepare(
             "UPDATE tbl_hospital SET 
             name = :name,
-            hospital_email = :email,
+            email_address = :email,
             password = :pwd,
             phone_no = :phone,
             address = :address
@@ -37,11 +37,11 @@ if (isset($_POST["updateProfile"])) {
         if (move_uploaded_file($location, "../View/image/" . $id . "." . $extension)) {
             $sql = $pdo->prepare(
                 "UPDATE tbl_hospital SET 
-            name = :name,
-            hospital_email = :email,
-            password = :pwd,
-            phone_no = :phone,
-            address = :address,
+                name = :name,
+                email_address = :email,
+                password = :pwd,
+                phone_no = :phone,
+                address = :address,
                 photo = :photo
                 WHERE id = :id
                 "
