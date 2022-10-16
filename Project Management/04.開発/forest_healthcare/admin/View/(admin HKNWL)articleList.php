@@ -220,8 +220,8 @@ include "../Controller/articleListController.php";
                 <tr>
                     <td><?= $count++; ?>.</td>
                     <td><?= $article["title"] ?></td>
-                    <td><?= $article["description"] ?></td>
                     <td><?= $article["photo"] ?></td>
+                    <td><?= $article["description"] ?></td>
                     <td><a href="../Controller/articleEditController.php?ID=<?=$article['id']?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
                 </tr>
             <?php } ?>
