@@ -140,13 +140,13 @@ $patientInfo = $_SESSION["patientInfo"];
                             <div class="card text-center p-2" style="width: 18rem;">
                                 <div class="card-body">
                                     <h5 class="card-title booking-summary">Booking Summary</h5>
-                                    <img src="<?= $doctorInfos[0]["doctor_photo"] ?>" alt="" width="100px">
+                                    <img src="./storages/image/<?= $doctorInfos[0]["doctor_photo"] ?>" alt="" width="100px">
                                     <p class="card-text"><b><?= $doctorInfos[0]["name"] ?></b></p>
-                                    <p class="card-text"><b><?= $doctorInfos[0]["department_id"] ?></b></p>
+                                    <p class="card-text"><b><?= $doctorInfos[0]["depname"] ?> Department</b></p>
                                     <div class="text-start">
                                         <div class="date"><b>Date </b><?= $doctorInfos[0]["duty_day"] ?></div>
                                         <div class="time"><b>Time</b> <?= $doctorInfos[0]["duty_start_time"] ?> <span>to <?= $doctorInfos[0]["duty_end_time"] ?></span></div>
-                                        <div class="place"><b>Place</b> <?= $doctorInfos[0]["hospital_id"] ?></div>
+                                        <div class="place"><b>Place</b> <?= $doctorInfos[0]["hosname"] ?> Hospital</div>
                                     </div>
                                 </div>
                             </div>

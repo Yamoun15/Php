@@ -48,11 +48,11 @@ include "../Controller/hospitalListController.php";
     
 
     <div class="body-content position-relative  ">
-      <div class="p1 fs-5 fw-bold ">Let’s get started for booking.</div>
+      <div class="p1 fs-5 fw-bold mt-3 ">Let’s get started for booking.</div>
       <div class="p1 fs-5 fw-bold  ">You can find doctors and hospital here.</div>
       <div class="dropdown">
         
-        <select class="form-select hospitalDropDown" aria-label="Default select example" name="hospital" id="hospitalChoose">
+        <select class="hospitalDropDown mt-3 mb-3" aria-label="Default select example" name="hospital" id="hospitalChoose">
           <?php foreach ($hospitalList as $key => $hospital) { ?>
             <option value="<?= $hospital["id"] ?>"><?= $hospital["name"] ?></option>
           <?php } ?>
@@ -61,16 +61,16 @@ include "../Controller/hospitalListController.php";
 
       <div class="hospitalCards">
         <!-- Hospital Logo -->
-        <div class="hospitalLogo position-relative start-0 ms-5">
+        <!-- <div class="hospitalLogo position-relative start-0 ms-5">
           <img src="./storages/pun hlaing logo 1.png" alt="">
-        </div>
+        </div> -->
 
         <!-- Department -->
-        <div class="department m-3 " style="background-color: #F9C56B; border-radius: 30px; max-width: 500px; ">
+        <!-- <div class="department m-3 " style="background-color: #F9C56B; border-radius: 30px; max-width: 500px; ">
 
           <img src="./storages/department item.png" alt="">
           <span class="fs-5 fw-bold ms-5">Cardiology Department</span>
-        </div>
+        </div> -->
 
         <!-- cards -->
         <div id="cardResult">
@@ -83,7 +83,7 @@ include "../Controller/hospitalListController.php";
               <div class="col-md-4">
                 <div class="card-body">
                   <h5 class="card-title"><?= $doctor["name"] ?></h5>
-                  <span class="card-title"><?= $doctor["department_id"] ?>Department</span>
+                  <span class="card-title"><?= $doctor["depname"] ?> Department</span>
                   <span class="card-title"> (<?= $doctor["dr_expert_in"] ?>)</span>
                   <p class="card-title"><?= $doctor["dr_degree"] ?></p>
                   <span class="card-title">(<?= $doctor["duty_day"] ?>) </span>
