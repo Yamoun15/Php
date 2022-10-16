@@ -56,7 +56,7 @@ include "../Controller/adminAppointmentListController.php";
                                 <td><?= $appointment["username"]?></td>
                                 <td><?= $appointment["hosname"]?></td>
                                 <td><?= $appointment["docname"]?></td>
-                                <td><?= $appointment["docday"]?></td>
+                                <td><?= $appointment["docday"]?><?= "(" ?><?= $appointment["docstarttime"]?><?= "~" ?><?= $appointment["docendtime"]?><?= ")" ?></td>
                                 <td><button class="btnview">view</button></td>
                                 <td>Pending</td>
                             </tr>

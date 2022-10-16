@@ -15,7 +15,7 @@ if (isset($_POST["hospital_email"]) && isset($_POST["password"])) {
 
     $sql->bindValue(":email", $email);
     $sql->execute();
-    $hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 
     // echo "<pre>";
     // print_r($result);

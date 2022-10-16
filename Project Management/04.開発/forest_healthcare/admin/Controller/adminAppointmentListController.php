@@ -16,13 +16,6 @@ $sql = $pdo->prepare("
 
     
 ");
-// $sql = $pdo->prepare("
-//         SELECT appointment.*,doc.name AS docname FROM tbl_appointment AS appointment
-//         INNER JOIN tbl_doctor AS doc
-//         ON appointment.doctor_id = doc.id 
-    
-// ");
-
 $sql->execute();
 
 $appointmentList = $sql->fetchAll(PDO::FETCH_ASSOC);
