@@ -142,7 +142,7 @@
             <div class="col-md-1 col-sm-1 col-1"></div>
             <div class="col-md-9  col-sm-9 col-9 adminAbout-col">
 
-                <form action="../Controller/C&SaddDiseaseController.php" class="form-horizontal hr adminContact-form" method="POST">
+                <form action="../Controller/C&SaddDiseaseController.php" class="form-horizontal hr adminContact-form" method="POST" enctype="multipart/form-data">
                     <div class="subtitleAboutus">Topic Name</div>
                     <div class="form-group">
                         <div class="col-md-12">
@@ -175,7 +175,8 @@
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Save" class="btn btnSave mt-3" name="diseaseBtn">
+                            <button class="btn btnSave mt-3" name="diseaseBtn" type="submit">Save</button>
+                                <!-- <input type="button" value="Save" class="btn btnSave mt-3" name="diseaseBtn"> -->
                             </div>
                         </div>
                     </div>
