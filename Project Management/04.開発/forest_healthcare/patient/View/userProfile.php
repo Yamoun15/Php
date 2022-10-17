@@ -57,7 +57,7 @@ $patientInfo = $_SESSION["patientInfo"];
                 </div>
                 <div class="col-6 fw-bold">
                     <div class=" mt-5"><a href="../Controller/userProfileEditController.php" class="text-dark">My Profile</a></div>
-                    <div class=" mt-5"><a href="" class="text-dark">Appointment History</a></div>
+                    <div class=" mt-5"><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
                     <div class=" mt-5"><a href="" class="text-dark">Account Setting</a></div>
                     <div class="mt-5 mb-5"> <a href="" class="text-dark">Logout</a></div>
                 </div>

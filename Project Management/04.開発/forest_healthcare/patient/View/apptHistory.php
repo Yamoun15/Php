@@ -1,3 +1,8 @@
+<?php
+include "../Controller/appHistoryController.php";
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,7 +56,8 @@
             <table class="table">
                 <thead>
                     <tr class="title">
-                        <th scope="col">No</th>                       
+                        <th scope="col">No</th>
+                        <th scope="col">Your Name</th>
                         <th scope="col">Hospital</th>
                         <th scope="col">Doctor</th>
                         <th scope="col">Date&Time</th>
@@ -61,16 +67,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>                        
-                        <td>Dr.John</td>
-                        <td>Hospital 1</td>
-                        <td>9AM-11AM(SUN)</td>
-                        <td><button class="btnview">View</button></td>
-                        <td>Approved</td>
-                        <td></td>
-                    </tr>
-                    <tr>
+                    <?php $count = 1; ?>
+                    <?php foreach ($appointmentList as $key => $appointment) { ?>
+                        <tr>
+                            <td scope="row"><?= $count++; ?>.</td>
+                            <td><?= $appointment["username"] ?></td>
+                            <td><?= $appointment["hosname"] ?></td>
+                            <td><?= $appointment["docname"] ?></td>
+                            <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
+                            <td><button class="btnview">view</button></td>
+                            <td>Pending</td>
+                            <td>qr code</td>
+                        </tr>
+                    <?php } ?>
+                    <!-- <tr>
                         <th scope="row">1</th>                        
                         <td>Dr.John</td>
                         <td>Hospital 2</td>
@@ -78,8 +88,8 @@
                         <td><button class="btnview">View</button></td>
                         <td>Approved</td>
                         <td></td>
-                    </tr>
-                    
+                    </tr> -->
+
                 </tbody>
             </table>
         </div>

@@ -1,18 +1,18 @@
 <?php
 
 session_start();
-$email = $_SESSION["hospital_email"];
+$email = $_SESSION["user_email"];
 
 
 include "../Model/dbConnection.php";
 $sql = $pdo->prepare("
-        SELECT * FROM tbl_hospital WHERE email_address =:email       
+        SELECT * FROM tbl_user WHERE email_address =:email       
         ");
         $sql->bindValue(":email",$email);
         $sql->execute();
 
-$hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
-$hospitalId = $hospitalInfo[0]["id"];
+$userInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+$userId = $userInfo[0]["id"];
 
 $sql = $pdo->prepare("
         SELECT appointment.*,user.name AS username,
@@ -25,9 +25,9 @@ $sql = $pdo->prepare("
         ON  appointment.doctor_id =doc.id 
         INNER JOIN tbl_hospital AS hos
         ON appointment.hospital_id = hos.id 
-        WHERE appointment.hospital_id =:hospitalId     
+        WHERE appointment.user_id =:userId     
 ");
-$sql->bindValue(":hospitalId",$hospitalId);
+$sql->bindValue(":userId",$userId);
 $sql->execute();
 
 $appointmentList = $sql->fetchAll(PDO::FETCH_ASSOC);

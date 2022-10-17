@@ -1,7 +1,7 @@
 <?php
-include "../Controller/hospitalAppointmentListController.php";
+include "../Controller/hospitalAppointmentistController.php";
 // echo "<pre>";
-print_r($appointmentList);
+// print_r($appointmentList);
 
 ?>
 <!DOCTYPE html>
@@ -37,12 +37,13 @@ print_r($appointmentList);
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/hospitalAppointmentList.css" rel="stylesheet" type="text/css" />
-
+    <!-- root css -->
+    <link rel="stylesheet" href="./resources/css/root.css">
 </head>
 
 <body class="skin-blue">
     <!-- Header -->
-    <?php include("common/header.php"); ?> 
+    <?php include("common/header.php"); ?>
 
     <!-- body -->
     <div class="container ">
@@ -50,9 +51,11 @@ print_r($appointmentList);
         <div class="row mt-5">
             <div class="col-md-1 col-sm-1 col-2"></div>
             <div class="col-md-10 col-sm-10 mx-auto table-responsive">
+                <h3 class="text-center totalappment">Total Appointment List</h3>
                 <table class="table">
                     <thead class="doctorTable">
                         <tr class="title">
+                            <th scope="col">No</th>
                             <th scope="col">Patient Name</th>
                             <th scope="col">Doctor Name</th>
                             <th scope="col">DateTime</th>
@@ -62,7 +65,19 @@ print_r($appointmentList);
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <?php $count = 1; ?>
+                        <?php foreach ($appointmentList as $key => $appointment) { ?>
+                            <tr>
+                                <td scope="row"><?= $count++; ?>.</td>
+                                <td><?= $appointment["username"] ?></td>
+                                <td><?= $appointment["docname"] ?></td>
+                                <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
+                                <td><button class="btnview">view</button></td>
+                                <td>Pending</td>
+                                <td>qr code</td>
+                            </tr>
+                        <?php } ?>
+                        <!-- <tr>
                             <td>U Nana</td>
                             <td>Dr John</td>
                             <td>2022-2-2</td>
@@ -82,41 +97,8 @@ print_r($appointmentList);
                                 </div>
                             </td>
                             <td>Qr</td>
-                        </tr>
-                        <tr>
-                            <td>U Nana</td>
-                            <td>Dr John</td>
-                            <td>2022-2-2</td>
-                            <td><button class="btnview">view</button></td>
-                            <td>
-                                <div class="dropdown">
-                                    <select name="Status" id="status">
-                                        <option value="volvo">Edit</option>
-                                        <option value="saab">Approved</option>
-                                        <option value="opel">Pedding</option>
-                                        <option value="audi">Cancle</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <td>Qr</td>
-                        </tr>
-                        <tr>
-                            <td>U Nana</td>
-                            <td>Dr John</td>
-                            <td>2022-2-2</td>
-                            <td><button class="btnview">view</button></td>
-                            <td>
-                            <div class="dropdown">
-                                    <select name="Status" id="status">
-                                        <option value="volvo">Edit</option>
-                                        <option value="saab">Approved</option>
-                                        <option value="opel">Pedding</option>
-                                        <option value="audi">Cancle</option>
-                                    </select>
-                                </div>
-                            </td>
-                            <td>Qr</td>
-                        </tr>
+                        </tr> -->
+
                     </tbody>
                 </table>
             </div>

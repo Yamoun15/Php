@@ -42,6 +42,7 @@ include "../Controller/adminAppointmentListController.php";
                 <table class="table">
                     <thead class="doctorTable">
                         <tr class="title">
+                            <th scope="col">No</th>
                             <th scope="col">Patient Name</th>
                             <th scope="col">Hospital Name</th>
                             <th scope="col">Doctor Name</th>
@@ -51,18 +52,20 @@ include "../Controller/adminAppointmentListController.php";
                         </tr>
                     </thead>
                     <tbody>
+                        <?php $count = 1; ?>
                         <?php foreach ($appointmentList as $key => $appointment) { ?>
                             <tr>
-                                <td><?= $appointment["username"]?></td>
-                                <td><?= $appointment["hosname"]?></td>
-                                <td><?= $appointment["docname"]?></td>
-                                <td><?= $appointment["docday"]?><?= "(" ?><?= $appointment["docstarttime"]?><?= "~" ?><?= $appointment["docendtime"]?><?= ")" ?></td>
+                                <td scope="row"><?= $count++; ?>.</td>
+                                <td><?= $appointment["username"] ?></td>
+                                <td><?= $appointment["hosname"] ?></td>
+                                <td><?= $appointment["docname"] ?></td>
+                                <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
                                 <td><button class="btnview">view</button></td>
                                 <td>Pending</td>
                             </tr>
                             <!-- <tr>
                                 <td>patient name</td>
-                                <td><?= $appointment["docname"]?></td>
+                                <td><?= $appointment["docname"] ?></td>
                                 <td>9AM-11AM(SUN)</td>
                                 <td><button class="btnview">view</button></td>
                                 <td>Pending</td>
