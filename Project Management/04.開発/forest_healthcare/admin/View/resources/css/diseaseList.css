@@ -2,7 +2,7 @@ body {
     background-color: #64D3A5;
 }
 
-#nav1 {
+/* #nav1 {
     background-color: #43A391;
     height: 50px;
 }
@@ -10,7 +10,7 @@ body {
 .nav1 {
     position: absolute;
     right: 35px;
-}
+} */
 
 #accicon {
     position: absolute;
@@ -18,10 +18,10 @@ body {
     width: 30px;
 }
 
-#nav2 {
+/* #nav2 {
     background-color: #64D3A5;
     height: 80px;
-}
+} */
 
 #logo {
     width: 110px;
@@ -65,10 +65,10 @@ body {
 }
 
 /* footer */
-.pagination {
+/* .pagination {
     position: relative;
     top: 670px;
-}
+} */
 
 .footer {
     background-color: #43A391;
@@ -98,10 +98,11 @@ body {
 /* table */
 .table {
     box-shadow: 0px 2px 5px gray;
+    margin-top: 3em;
 }
 
 .title {
-    padding: 10px !important;
+    /* padding: 10px !important; */
     background: #188067;
     color: white;
     text-align: center;
@@ -112,9 +113,6 @@ tr {
     color: black;
 }
 
-td {
-    text-align: center;
-}
 
 .editBtn {
     color: #188067;
