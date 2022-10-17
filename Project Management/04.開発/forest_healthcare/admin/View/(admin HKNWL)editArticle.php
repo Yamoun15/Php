@@ -1,11 +1,9 @@
 <?php
+
 session_start();
 
-include "../Model/dbConnection.php";
-
-
 $articleDetail = $_SESSION["articleDetail"];
-// $articleId = $_SESSION["ID"];
+$articleId = $_SESSION["ID"];
 // print_r($articleDetail);
 ?>
 
@@ -83,7 +81,7 @@ $articleDetail = $_SESSION["articleDetail"];
                     <div class="subtitleAboutus mt-3">Cover photo</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="file" id="myFile"  name="photo" value="<?php $articleDetail[0]["photo"] ?>">
+                            <!-- <input type="file" id="myFile"  name="photo" value="<?php $articleDetail[0]["photo"] ?>"> -->
                         </div>
                     </div>
 
