@@ -20,7 +20,7 @@ if (isset($_GET['doctorID'])) {
     $doctorInfos = $sql->fetchAll(PDO::FETCH_ASSOC);
     $_SESSION["doctorInfos"] = $doctorInfos;
 
-    $email = $_SESSION["email_address"];
+    $email = $_SESSION["user_email"];
     $sql = $pdo->prepare("SELECT * FROM tbl_user WHERE email_address = :email");
     $sql->bindValue(":email", $email);
     $sql->execute();
