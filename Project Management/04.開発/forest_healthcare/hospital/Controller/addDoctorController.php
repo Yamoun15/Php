@@ -21,7 +21,7 @@ if(isset($_POST["addDoctoreBtn"])){
     $extension = pathinfo($file)['extension'];
     // $path = $file ;
 
-    $email = $_SESSION["email_address"];
+    $email = $_SESSION["hospital_email"];
     $sql= $pdo->prepare("SELECT id FROM tbl_hospital WHERE email_address = :email");
     $sql->bindValue(":email",$email);
     $sql->execute();

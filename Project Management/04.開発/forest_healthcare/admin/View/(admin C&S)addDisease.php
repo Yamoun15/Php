@@ -141,11 +141,12 @@
         <div class="row">
             <div class="col-md-1 col-sm-1 col-1"></div>
             <div class="col-md-9  col-sm-9 col-9 adminAbout-col">
-                <form action="" class="form-horizontal hr adminContact-form">
+
+                <form action="../Controller/C&SaddDiseaseController.php" class="form-horizontal hr adminContact-form" method="POST">
                     <div class="subtitleAboutus">Topic Name</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="" name="topic">
                         </div>
                     </div>
 
@@ -156,7 +157,7 @@
                                 <i class="fa-solid fa-arrow-up-from-bracket"></i>
                                 Upload Image
                             </label>
-                            <input id="file-upload" type="file" />
+                            <input id="file-upload" type="file" name="photo" />
                         </div>
                     </div>
 
@@ -164,7 +165,7 @@
                     <div class="form-group">
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="" id="floatingTextarea"></textarea>
+                                <textarea class="form-control" placeholder="" id="floatingTextarea" name="detail"></textarea>
                                 <label for="floatingTextarea"></label>
                             </div>
                         </div>
@@ -174,7 +175,7 @@
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Save" class="btn btnSave mt-3">
+                                <input type="button" value="Save" class="btn btnSave mt-3" name="diseaseBtn">
                             </div>
                         </div>
                     </div>

@@ -54,7 +54,7 @@ include "../Controller/hospitalDoctorListController.php";
     <div class="container">
         <div class="row">
             <div class=" col-sm-1 col-2"></div>
-            <div class="col-md-12 col-sm-10 mx-auto table-responsive">
+            <div class="col-md-9 col-sm-9 mx-auto table-responsive">
 
                 <table class="table">
                     <thead class="doctorTable">
@@ -64,12 +64,10 @@ include "../Controller/hospitalDoctorListController.php";
                             <th scope="col">Department</th>
                             <th scope="col">Expert In</th>
                             <th scope="col">Day</th>
-                            <th scope="col">Start Time</th>
-                            <th scope="col">End Time</th>
                             <th scope="col">Email</th>
                             <th scope="col">Ph No</th>
-                            <th scope="col">Address</th>
-                            <th></th>
+                            <th scope="col">Status</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -80,12 +78,10 @@ include "../Controller/hospitalDoctorListController.php";
                                 <td><?= $doctor["name"] ?></td>
                                 <td><?= $doctor["depname"] ?></td>
                                 <td><?= $doctor["dr_expert_in"] ?></td>
-                                <td><?= $doctor["duty_day"] ?></td>
-                                <td><?= $doctor["duty_start_time"] ?></td>
-                                <td><?= $doctor["duty_end_time"] ?></td>
+                                <td><?= $doctor["duty_day"] ?>(<?= $doctor["duty_start_time"] ?>~<?= $doctor["duty_end_time"] ?>)</td>
+                                
                                 <td><?= $doctor["email_address"] ?></td>
                                 <td><?= $doctor["phone_no"] ?></td>
-                                <td><?= $doctor["address"] ?></td>
                                 <td>
                                     <button class="btn"><a href="../Controller/editDoctorController.php?id=<?= $doctor["id"]?>"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></a></i></button>
                                     <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
@@ -166,7 +162,7 @@ include "../Controller/hospitalDoctorListController.php";
         </div>
 
         <div class="row">
-            <div class="col-md-10 col-sm-5"></div>
+            <div class="col-md-8 col-sm-5"></div>
             <div class="col-md-2 col-sm-5">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">

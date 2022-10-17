@@ -38,7 +38,7 @@ if(isset($_POST["hospitalAddBtn"])){
     $sql->bindValue(":created_date", date("Y/m/d"));
 
     $sql->execute();
-    $_SESSION["email_address"] = $email;
+    $_SESSION["hospital_email"] = $email;
     header("Location: ../View/adminHospitalList.php");
 
 }else{
