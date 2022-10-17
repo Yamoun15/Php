@@ -13,51 +13,13 @@ $patientInfo = $_SESSION["patientInfo"];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
+    <title>Appointment Form</title>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
-    <style>
-        body {
-            height: 100vh;
-            background-image: url('./storages/doctor_kw5l.png');
-            background-repeat: no-repeat;
-            background-size: cover;
-            overflow: scroll;
-            background-attachment: fixed;
-        }
-
-        /* .modal-content {} */
-
-        .btnBook {
-            background-color: #43A391;
-            max-width: 200px;
-            transition: all 1s;
-        }
-
-        .btnBook:hover {
-            background-color: #43A391;
-            max-width: 200px;
-            transform: scale(1.1);
-        }
-
-        .btnCancel {
-            max-width: 200px;
-        }
-
-        .modal-header,
-        .date,
-        .time,
-        .place,
-        .booking-summary,
-        .modal-dialog {
-            color: #188067;
-        }
-    </style>
+    <link rel="stylesheet" href="./resources/css/bookingForm.css">
 </head>
 
 <body>
@@ -80,50 +42,31 @@ $patientInfo = $_SESSION["patientInfo"];
 
             <div class="modal-body">
                 <form action="../Controller/addBookingController.php" enctype="multipart/form-data" method="POST">
-                    <div class="row ms-3 me-3">
-                        <div class="col-7 ms-5 col-sm-12 col-md-6">
+                    <div class="row mx-auto ">
+                        <div class="col-12  col-sm-12 col-md-7 mx-auto mx-sm-auto mx-md-auto">
                             <div class="row ">
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="recipient-name" class="col-form-label"></label>
-                                    <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["name"] ?>" required readonly name="name">
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="Name" value="<?= $patientInfo[0]["name"] ?>" required readonly name="name">
                                 </div>
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="message-text" class="col-form-label"></label>
-                                    <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["phone_no"] ?>" required readonly name="phone">
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="Phone No." value="<?= $patientInfo[0]["phone_no"] ?>" required readonly name="phone">
 
                                 </div>
                             </div>
                             <div class="row mt-3">
-                                <span class="form-check form-check-inline">
+                                <span class="form-floating">
                                     <label for="birthday"></label>
-                                    <input type="text" id="birthday" class="form-control" value="<?= $patientInfo[0]["date_of_birth"] ?>" name="birthday"></span>
-                                <input type="hidden" id="birthday" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $doctorInfos[0]["id"] ?>" name="id"></span>
+                                    <input type="text" id="birthday" class="form-control" placeholder="Date of Birth" value="<?= $patientInfo[0]["date_of_birth"] ?>" name="birthday">
+                                    <input type="hidden" id="birthday" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $doctorInfos[0]["id"] ?>" name="id">
+                                    <label for="floatingTextarea">Date of Birth</label>
+                                </span>
                             </div>
-
-                            <!-- <span>Select Gender</span>
-                            <span class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Male
-                                </label>
-                            </span>
-                            <span class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Female
-                                </label>
-                            </span>
-                            <span class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Other
-                                </label>
-                            </span> -->
 
                             <div class="row mt-3 mt-sm-3 mt-md-3 ">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="recipient-name" placeholder="name" value="<?= $patientInfo[0]["address"] ?>" required readonly name="address">
-
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="Address" value="<?= $patientInfo[0]["address"] ?>" required readonly name="address">
                                     <label for="floatingTextarea">Address</label>
                                 </div>
                             </div>
@@ -136,7 +79,7 @@ $patientInfo = $_SESSION["patientInfo"];
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5 col-sm-12 col-md-4 mt-4 ms-sm-5">
+                        <div class="col-12 col-sm-12 col-md-4 mt-4 mx-sm-auto mx-md-auto mx-auto ms-sm-5 ms-sm-5 ms-md-5">
                             <div class="card text-center p-2" style="width: 18rem;">
                                 <div class="card-body">
                                     <h5 class="card-title booking-summary">Booking Summary</h5>
@@ -157,11 +100,12 @@ $patientInfo = $_SESSION["patientInfo"];
                                 I have read and accept <a href="#"><u>the terms and conditions.</u></a>
                             </label>
                         </div> -->
-                        <div class="col-5 col-sm-12 col-md-4 mt-4 ms-sm-5">
-                            <button class="btn btnBook  text-white" name="bookingBtn" type="submit">Submit</button>
+                        <div class="col-12 col-sm-12 col-md-4 mt-4 ms-sm-5 ms-md-5 ms-5">
+                            <button class=" btnBook text-white" name="bookingBtn" type="submit">Submit</button>
                             <!-- <a class="btn btnBook ms-5 text-white" href="#" role="button" type="submit" name="bookingBtn">Book Now</a> -->
                             <a class="btn btn-danger btnCancel  ms-5  text-white" href="#" role="button" type="submit">Cancel</a>
                         </div>
+                    </div>
                 </form>
             </div>
         </div>

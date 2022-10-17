@@ -1,5 +1,6 @@
-/* Carousel slides */
 
+
+/* Carousel slides */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   color: black !important;
@@ -31,6 +32,7 @@
   color: #494949;
   text-shadow: 0 3px #458a72, 0 5px #1ea58d, 0 7px #46504e;
   margin: 0.5rem;
+  font-size: smaller !important;
 }
 
 @keyframes bounce {

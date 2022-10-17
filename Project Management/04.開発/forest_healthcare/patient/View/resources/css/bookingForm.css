@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+    background-image: url('../../storages/doctor_kw5l.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: scroll;
+    background-attachment: fixed;
+}
+
+.btnBook {
+    background-color: #43A391;
+    max-width: 200px;
+    border: none;
+    padding: 8px 15px 8px 15px;
+    border-radius: 5px;
+    transition: all 0.5s;
+
+}
+
+.btnBook:hover,
+.btnCancel:hover {
+
+    transform: scale(1.01);
+    opacity: 1;
+}
+
+.btnCancel {
+    max-width: 200px;
+    transition: all 0.5s;
+}
+
+.modal-header,
+.date,
+.time,
+.place,
+.booking-summary,
+.modal-dialog {
+    color: #188067;
+}
