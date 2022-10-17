@@ -1,12 +1,12 @@
 <?php
 
 session_start();
-
+include "../Controller/userProfileUpdateController.php";
 $patientInfo = $_SESSION["patientInfo"];
 
 // echo "<pre>";
-// print_r($patientInfo);
-// session_destroy();
+// print_r($patientInfo[0]["photo"]);
+
 
 ?>
 
@@ -70,7 +70,7 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="myProfileTitle">My Profile</div>
                     <span class="userProfileConfirmbtnfloat">
                         <div class="profilebg">
-                            <img src="./storages/<?= $patientInfo[0]["profile_image"]?>" alt="" id="profileImg"  class="userProfileUpdate" name="profile_image">
+                            <img src="./storages/<?=$patientInfo[0]["photo"]?>" alt="" id="profileImg"  class="userProfileUpdate" name="photo">
                         </div>
 
                         <label for="userfile-upload" class="usercustom-file-upload">

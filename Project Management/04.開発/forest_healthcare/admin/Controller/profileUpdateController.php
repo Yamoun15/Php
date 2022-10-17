@@ -1,8 +1,6 @@
 <?php
-session_start();
-include "../Model/dbConnection.php";
 
-$_SESSION["id"] = $id;
+include "../Model/dbConnection.php";
 
 if(isset($_POST["updateProfile"])){
     //get admin info
@@ -10,7 +8,8 @@ if(isset($_POST["updateProfile"])){
     $pwd = $_POST["password"];
     $phone = $_POST["phone_no"];
     $address = $_POST["address"];
-    $photo = $_POST["photo"];
+    // $photo = $_POST["photo"];
+    $id = $_POST["id"];
 
     //get image info
     if($_FILES["uploadFile"]["name"] == ""){
@@ -31,14 +30,14 @@ if(isset($_POST["updateProfile"])){
 
         if (move_uploaded_file($location, "../View/image/".$id.".".$extension)) {
             $sql = $pdo->prepare(
-                "UPDATE tbl_admin SET 
+            "UPDATE tbl_admin SET 
             name = :name,
             photo = :photo,
             password = :pwd,
             phone_no = :phone,
             address = :address
             WHERE id = :id
-                "
+            "
             );
             $sql->bindValue(":photo", $path);
         } else {
@@ -53,5 +52,5 @@ if(isset($_POST["updateProfile"])){
 
     $sql->execute();
 
-    header("Location: ../View/adminProfileView.php");
+    header("Location: ../View/adminDashboard.php");
 }

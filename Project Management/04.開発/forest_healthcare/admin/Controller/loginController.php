@@ -18,8 +18,8 @@ if (isset($_POST["admin_email"]) && isset($_POST["password"])) {
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    echo "<pre>";
-    print_r($result);
+    // echo "<pre>";
+    // print_r($result);
 
     if ($pwd == $result[0]['password']) {
         $_SESSION["admin_email"] = $email;

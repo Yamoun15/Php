@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+include "../Controller/profileEditController.php";
 $adminInfo = $_SESSION["adminInfo"];
 
 // echo "<pre>";
@@ -44,7 +44,7 @@ $adminInfo = $_SESSION["adminInfo"];
     <div class="container d-flex flex-column justify-content-center align-items-center ">
         <div class="title">Admin Profile</div>
         <div class="d-flex justify-content-center m-3 mt-sm-3 mb-sm-3 mt-md-3 mb-md-3 mt-3 ">
-            <img src="./image/<?= $adminInfo[0]["photo"] ?>" alt="" class="profilePic m-3 ms-md-auto ms-sm-auto">
+            <img src="./image/<?=$adminInfo[0]["photo"]?>" alt="" class="profilePic m-3 ms-md-auto ms-sm-auto">
         </div>
         <div class="box mt-3 ">
             <table>

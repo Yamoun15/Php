@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+include "../Controller/profileUpdateController.php";
 $adminInfo = $_SESSION["adminInfo"];
 
 // echo "<pre>";
@@ -101,6 +101,7 @@ $adminInfo = $_SESSION["adminInfo"];
                         <div class="col-md-12">
                             <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Address" name="address" value="<?= $adminInfo[0]["address"] ?>">
                         </div>
+                        <input type="hidden" name="id" value="<?= $adminInfo[0]["id"] ?>" >
                     </div>
                     <div class="form-group">
                         <div class="row">

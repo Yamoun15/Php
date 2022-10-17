@@ -12,7 +12,6 @@ if (isset($_POST["updateProfile"])) {
     $photo = $_POST["photo"];
     $id = $_POST["id"];
 
-    // print_r($_POST);
 
     //get image Info
     if ($_FILES["uploadFile"]["name"] == "") {
@@ -25,8 +24,7 @@ if (isset($_POST["updateProfile"])) {
             phone_no = :phone,
             address = :address
             WHERE id = :id
-       "
-        );
+       ");
     }
     else {
         $file = $_FILES['uploadFile']['name'];
@@ -34,7 +32,7 @@ if (isset($_POST["updateProfile"])) {
         $extension = pathinfo($file)['extension'];
         $path = $id.".".$extension;
 
-        if (move_uploaded_file($location, "../View/image/" . $id . "." . $extension)) {
+        if (move_uploaded_file($location, "../View/image/".$id."." . $extension)) {
             $sql = $pdo->prepare(
                 "UPDATE tbl_hospital SET 
                 name = :name,
@@ -61,5 +59,5 @@ if (isset($_POST["updateProfile"])) {
 
     $sql->execute();
 
-    header("Location: ../View/hospitalProfileEdit.php");
+    header("Location: ../View/hospitalpatientDetail.php");
 }
