@@ -9,7 +9,7 @@ if(isset($_POST["bookingBtn"])){
     $description = $_POST["description"];
     $doctorID = $_POST["id"];
 
-    $email = $_SESSION["email_address"];
+    $email = $_SESSION["user_email"];
     $sql= $pdo->prepare("SELECT * FROM tbl_user WHERE email_address = :email");
     $sql->bindValue(":email",$email);
     $sql->execute();
