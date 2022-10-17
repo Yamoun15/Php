@@ -58,39 +58,46 @@ include "../Controller/C&SDiseaseListController.php";
         <div class="diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3">
             List of Conditions
         </div> -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-1 col-sm-1 "></div>
-        <div class="col-md-8 col-sm-10 table-responsive">
-            <table class="table mt-3">
-                <thead>
-                    <tr class="title">
-                        <th scope="col">No</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Photo</th>
-                        <th scope="col">Content</th>
-                        <th scope="col">Edit</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php $count = 1; ?>
-                    <?php foreach ($diseaseInfo as $key => $disease) { ?>
-                        <tr>
-                            <td scope="row"><?= $count++; ?>.</td>
-                            <td><?= $disease["disease_title"] ?> </td>
-                            <td>
-                                <img src="./image/<?= $disease["cs_photo"] ?>" alt="">
-                            </td>
-                            <td><?= $disease["disease_detail"] ?></td>
-                            <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-                        </tr>
-                    <?php  } ?>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Pagination -->
+    <div class="container">
         <div class="row">
+            <div class="col-md-1 col-sm-1 "></div>
+            <div class="col-md-9 col-sm-10 table-responsive">
+                <table class="table mt-3">
+                    <thead>
+                        <tr class="title">
+                            <th scope="col">No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Photo</th>
+                            <th scope="col">Content</th>
+                            <th scope="col">Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php $count = 1; ?>
+                        <?php foreach ($diseaseInfo as $key => $disease) { ?>
+                            <tr>
+                                <td scope="row"><?= $count++; ?>.</td>
+                                <td><?= $disease["disease_title"] ?> </td>
+                                <td>
+                                    <img src="./image/<?= $disease["cs_photo"] ?>" alt="" class="csImage">
+                                </td>
+                                <td><?= $disease["disease_detail"] ?></td>
+                                <td>
+                                    <span>
+                                        <a href="../Controller/C&SEditController.php?id=<?= $disease["id"] ?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a>
+                                    </span>
+                                    <span>
+                                        <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                        <?php  } ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="row">
                 <div class="col-md-7 col-sm-2"></div>
                 <div class="col-md-2 col-sm-5">
                     <nav aria-label="Page navigation example">
@@ -114,10 +121,10 @@ include "../Controller/C&SDiseaseListController.php";
                     </nav>
                 </div>
             </div>
+        </div>
     </div>
-</div>
-        <!-- Footer -->
-        <?php include("common/footer.php"); ?>
+    <!-- Footer -->
+    <?php include("common/footer.php"); ?>
 
 
 </body>
