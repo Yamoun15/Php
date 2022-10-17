@@ -1,5 +1,6 @@
 <?php
 
+include "../Controller/articleEditController.php";
 session_start();
 
 $articleDetail = $_SESSION["articleDetail"];
