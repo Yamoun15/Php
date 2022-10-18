@@ -1,15 +1,18 @@
 .healthKtitle{
     font-family: var(--fontfamily-poppins);
-    font-size: 5vw;
+    font-size: 1.5rem;
 }
 .para{
-    text-indent: 2%;
+    text-indent: 3rem;
     font-family: var(--fontfamily-poly );
 }
 .articaldetail::first-letter{
     font-size: 2em;
     font-weight: 20em;
-    color: aqua;
+    color: #43a391;
+}
+.articaldetail{
+    text-indent: 20%;
 }
 .card{
     max-width: 600px;   
@@ -18,9 +21,25 @@
     border-radius: 20px !important;
 }
 
-.btn-readmore{
+/* .btn-readmore{
     width: 100px !important;
     height: 35px !important;
     border-radius: 0px !important;
     background-color: #1c51d5;
+} */
+
+.articlePhoto{
+    width: 10rem ;
+}
+
+.btn-readmore{
+    background-color: #f9c56b;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px;
+    cursor: pointer;
+    min-width: fit-content;
+    font-size: 1rem;
+    border: none;
 }

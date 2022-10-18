@@ -1,10 +1,9 @@
 <?php
 
-include "../Controller/articleEditController.php";
 session_start();
 
 $articleDetail = $_SESSION["articleDetail"];
-$articleId = $_SESSION["ID"];
+
 // print_r($articleDetail);
 ?>
 
@@ -75,14 +74,14 @@ $articleId = $_SESSION["ID"];
                     <div class="subtitleAboutus">Topic Name</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="" name="title" value="<?php $articleDetail[0]["title"] ?>">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="" name="title" value="<?php echo $articleDetail[0]["title"] ?>">
                         </div>
                     </div>
 
                     <div class="subtitleAboutus mt-3">Cover photo</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <!-- <input type="file" id="myFile"  name="photo" value="<?php $articleDetail[0]["photo"] ?>"> -->
+                            <!-- <input type="file" id="myFile"  name="photo" value="<?php echo $articleDetail[0]["photo"] ?>"> -->
                         </div>
                     </div>
 
@@ -90,7 +89,7 @@ $articleId = $_SESSION["ID"];
                     <div class="form-group">
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="" id="floatingTextarea" name="description" value="<?php $articleDetail[0]["description"] ?>"></textarea>
+                                <textarea class="form-control" placeholder="" id="floatingTextarea" name="description" value="<?php echo $articleDetail[0]["description"] ?>"></textarea>
                                 <label for="floatingTextarea"></label>
                             </div>
                         </div>

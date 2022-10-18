@@ -1,3 +1,10 @@
+<?php
+
+include "../Controller/articleDetailC.php";
+$articleInfo =  $_SESSION["articleInfo"];
+// print_r($articleInfo);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,25 +31,25 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-1 col-md-1 col-sm-1"></div>
-            <div class="col-10 col-md-10 col-sm-10">
-                <label for="" class="healthKtitle">Helath Knowledge title</label>
+            <div class="col-10 col-md-10 col-sm-10 mt-5 text-center">
+                <strong for="" class="healthKtitle"><?= $articleInfo[0]["title"] ?></strong>
             </div>
             <div class="col-1 col-md-1 col-sm-1">
-                <a href="http://" class="back">back</a>
+                <a href="../View/healthKnowledgeList.php" class="back">back</a>
             </div>
         </div>
         <div class="row">
             <div class="col-6 col-md-6 col-sm-6">
-                <img src="./storages/healthKPhoto.png" class="img" alt="" srcset="">
+                <img src="./storages/<?= $articleInfo[0]["photo"] ?>" class="img" alt="" srcset="">
             </div>
             <!-- <div class="col-6 col-md-6 col-sm-6">
                 <img src="./storages/healthKPhoto.png" class="img w-50" alt="" srcset="">
             </div> -->
         </div>
 
-        <p class="articaldetail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, minus nesciunt aperiam a minima animi officiis ut consequuntur asperiores rerum quod ex deleniti eum eveniet ullam corrupti, voluptates esse ipsam omnis sint et explicabo. Minima omnis unde dolore exercitationem, doloribus saepe autem molestiae voluptate praesentium. Praesentium beatae nam itaque architecto!</p>
-        <p class="articaldetail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, delectus voluptatibus tempore quo obcaecati iure maiores, iusto aut aliquid dolorem eveniet reiciendis, consectetur explicabo mollitia harum rem? Quis veniam sint explicabo ratione error nulla soluta vero voluptates voluptate perspiciatis neque consequatur quibusdam eos harum rem quam saepe facere eligendi omnis natus sed quidem facilis, porro ipsum? Et delectus eum dolore recusandae, perspiciatis asperiores voluptatibus quam temporibus, repellendus deserunt facere id atque commodi pariatur optio sequi in. Porro cum, cupiditate qui animi libero accusantium dignissimos deleniti, quae modi tempora blanditiis ad. Fugit ratione voluptatem debitis sapiente obcaecati ullam neque, officiis eveniet maiores voluptate suscipit delectus necessitatibus deserunt ipsam ipsa aperiam, quasi atque est dolores reprehenderit eum aliquam distinctio dignissimos vitae! Incidunt voluptate id, veritatis, saepe nihil ipsum vel perspiciatis delectus doloremque ut ipsam inventore maxime totam? Facilis nesciunt hic nisi nulla cupiditate obcaecati consectetur non voluptatem, dignissimos molestias saepe ea recusandae!</p>
-        <p class="articaldetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam saepe culpa autem omnis provident a in iste quis, totam, consectetur ab, voluptas nostrum dignissimos vel nesciunt. At sunt voluptate harum possimus placeat dolorem laboriosam illo qui, est delectus nemo atque nulla? Voluptas illo quae a repellendus omnis tempore? Est dignissimos, quaerat necessitatibus, explicabo odio suscipit esse ullam, nemo nisi earum molestias? Neque numquam laborum, recusandae nostrum perferendis praesentium expedita tempore odio omnis quis autem distinctio doloribus vel? Fugiat suscipit voluptates, laudantium nesciunt illum sequi officia, doloremque sapiente, ab repudiandae perferendis nobis ratione unde numquam minus explicabo nostrum quae eaque excepturi.</p>
+        <p class="articaldetail"><?= $articleInfo[0]["description"] ?></p>
+        <!-- <p class="articaldetail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, delectus voluptatibus tempore quo obcaecati iure maiores, iusto aut aliquid dolorem eveniet reiciendis, consectetur explicabo mollitia harum rem? Quis veniam sint explicabo ratione error nulla soluta vero voluptates voluptate perspiciatis neque consequatur quibusdam eos harum rem quam saepe facere eligendi omnis natus sed quidem facilis, porro ipsum? Et delectus eum dolore recusandae, perspiciatis asperiores voluptatibus quam temporibus, repellendus deserunt facere id atque commodi pariatur optio sequi in. Porro cum, cupiditate qui animi libero accusantium dignissimos deleniti, quae modi tempora blanditiis ad. Fugit ratione voluptatem debitis sapiente obcaecati ullam neque, officiis eveniet maiores voluptate suscipit delectus necessitatibus deserunt ipsam ipsa aperiam, quasi atque est dolores reprehenderit eum aliquam distinctio dignissimos vitae! Incidunt voluptate id, veritatis, saepe nihil ipsum vel perspiciatis delectus doloremque ut ipsam inventore maxime totam? Facilis nesciunt hic nisi nulla cupiditate obcaecati consectetur non voluptatem, dignissimos molestias saepe ea recusandae!</p> -->
+        <!-- <p class="articaldetail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam saepe culpa autem omnis provident a in iste quis, totam, consectetur ab, voluptas nostrum dignissimos vel nesciunt. At sunt voluptate harum possimus placeat dolorem laboriosam illo qui, est delectus nemo atque nulla? Voluptas illo quae a repellendus omnis tempore? Est dignissimos, quaerat necessitatibus, explicabo odio suscipit esse ullam, nemo nisi earum molestias? Neque numquam laborum, recusandae nostrum perferendis praesentium expedita tempore odio omnis quis autem distinctio doloribus vel? Fugiat suscipit voluptates, laudantium nesciunt illum sequi officia, doloremque sapiente, ab repudiandae perferendis nobis ratione unde numquam minus explicabo nostrum quae eaque excepturi.</p> -->
     </div>
 
     <!-- Footer -->
