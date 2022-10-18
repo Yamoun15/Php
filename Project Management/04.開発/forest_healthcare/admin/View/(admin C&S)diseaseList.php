@@ -79,7 +79,7 @@ include "../Controller/C&SDiseaseListController.php";
                                 <td scope="row"><?= $count++; ?>.</td>
                                 <td><?= $disease["disease_title"] ?> </td>
                                 <td>
-                                    <img src="./image/<?= $disease["cs_photo"] ?>" alt="" class="csImage">
+                                    <img src="./image/C&S/<?= $disease["cs_photo"] ?>" alt="" class="csImage">
                                 </td>
                                 <td><?= $disease["disease_detail"] ?></td>
                                 <td>

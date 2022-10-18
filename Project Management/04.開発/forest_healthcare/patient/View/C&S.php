@@ -1,3 +1,8 @@
+<?php
+include "../Controller/C&SDiseaseController.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -128,7 +133,15 @@
             <span id="A">A</span>
             <div class="listDetail">
                 <ul class="diseaseli">
-                    <li>
+
+                    <?php foreach ($diseaseInfoA as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+
+
+                    <!-- <li>
                         <a href="">Abdominal Aortic Aneurysm</a>
                     </li>
                     <li>
@@ -148,10 +161,7 @@
                     </li>
                     <li>
                         <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -160,30 +170,11 @@
             <span id="B">B</span>
             <div class="listDetail">
                 <ul class="diseaseli">
-                    <li>
-                        <a href="">Abdominal</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
+                    <?php foreach ($diseaseInfoB as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
                 </ul>
             </div>
         </div>
@@ -192,30 +183,11 @@
             <span id="C">C</span>
             <div class="listDetail">
                 <ul class="diseaseli">
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
+                    <?php foreach ($diseaseInfoC as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
                 </ul>
             </div>
         </div>
@@ -224,30 +196,11 @@
             <span id="D">D</span>
             <div class="listDetail">
                 <ul class="diseaseli">
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
+                    <?php foreach ($diseaseInfoD as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
                 </ul>
             </div>
         </div>
@@ -256,30 +209,11 @@
             <span id="E">E</span>
             <div class="listDetail">
                 <ul class="diseaseli">
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
+                    <?php foreach ($diseaseInfoE as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
                 </ul>
             </div>
         </div>
@@ -288,30 +222,11 @@
             <span id="F">F</span>
             <div class="listDetail">
                 <ul class="diseaseli">
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
+                    <?php foreach ($diseaseInfoF as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
                 </ul>
             </div>
         </div>
@@ -320,30 +235,11 @@
             <span id="G">G</span>
             <div class="listDetail">
                 <ul class="diseaseli">
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
+                    <?php foreach ($diseaseInfoG as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
                 </ul>
             </div>
         </div>
@@ -352,33 +248,249 @@
             <span id="H">H</span>
             <div class="listDetail">
                 <ul class="diseaseli">
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
-                    <li>
-                        <a href="">Abdominal Aortic Aneurysm</a>
-                    </li>
+                    <?php foreach ($diseaseInfoH as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
                 </ul>
             </div>
         </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="I">I</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoI as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="J">J</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoJ as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="K">K</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoK as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="L">L</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoL as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="M">M</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoM as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="N">N</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoN as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="O">O</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoO as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="P">P</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoP as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="Q">Q</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoQ as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="R">R</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoR as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="S">S</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoS as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="T">T</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoT as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="U">U</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoU as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="V">V</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoV as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="W">W</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoW as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="X">X</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoX as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="Y">Y</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoY as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+        <hr class="CShr">
+        <div class="list">
+            <span id="Z">Z</span>
+            <div class="listDetail">
+                <ul class="diseaseli">
+                    <?php foreach ($diseaseInfoZ as $key => $disease) { ?>
+                        <li>
+                            <a href="../Controller/C&SDiseaseDetailController.php?id=<?=$disease['id']?>"><?= $disease["disease_title"] ?></a>
+                        </li>
+                    <?php  } ?>
+                </ul>
+            </div>
+        </div>
+
     </div>
     <hr class="CShr">
     <!-- Footer -->

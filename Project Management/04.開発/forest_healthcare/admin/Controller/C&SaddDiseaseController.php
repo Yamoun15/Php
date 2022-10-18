@@ -15,7 +15,7 @@ if(isset($_POST["diseaseBtn"])){
     $sql->execute();
     $diseaseInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    if (move_uploaded_file($location, "../View/image/". ($diseaseInfo[0]['id']+1).".".$extension)) {
+    if (move_uploaded_file($location, "../View/image/C&S/". ($diseaseInfo[0]['id']+1).".".$extension)) {
         $sql = $pdo->prepare("
         INSERT INTO tbl_conditionservices
         (
