@@ -33,16 +33,43 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-2 col-md-2 col-sm-2"></div>
-        <div class="col-5 col-md-5 col-sm-5 ">
-            <div class="mentalHealth-card">
-                <div class="card-body">
-                    <a href="#">YOUTUBE LINK</a>
+    <div class="container-fluid mt-5">
+        <div class="row  d-flex flex-wrap justify-content-center align-items-center">
+            <div class="mentalHealth-card col-12 col-md-5 col-sm-12 mb-5 d-flex flex-wrap flex-column justify-content-center align-items-center">
+                    <div class="card-body">
+                        <iframe src="https://www.youtube-nocookie.com/embed/_WB1TMvymS4?start=0&loop=1&iv_load_policy=3&color=white&playlist=_WB1TMvymS4&full-screen mode available" width="100%" height="280" title="BLACKPINK (JENNIE) New solo song (unreleased) [블랙핑크 제니] 4K 직캠 • 비몽" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <h5 class="card-title">hello</h5>
+            </div>
+
+
+            <div class="mentalHealth-card col-12 col-md-5 col-sm-12 mb-5 d-flex flex-wrap justify-content-center align-items-center ">
+
+                <div class="">
+                    <div class="card-body">
+                        <iframe src="https://www.youtube-nocookie.com/embed/_WB1TMvymS4?start=0&loop=1&iv_load_policy=3&color=white&playlist=_WB1TMvymS4&full-screen mode available" width="100%" height="280" title="BLACKPINK (JENNIE) New solo song (unreleased) [블랙핑크 제니] 4K 직캠 • 비몽" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
+            <div class="mentalHealth-card col-12 col-md-5 col-sm-12 mb-5 d-flex flex-wrap justify-content-center align-items-center">
+                <h5 class="card-title">hello</h5>
+                <div class="">
+                    <div class="card-body">
+                        <iframe src="https://www.youtube-nocookie.com/embed/_WB1TMvymS4?start=0&loop=1&iv_load_policy=3&color=white&playlist=_WB1TMvymS4&full-screen mode available" width="100%" height="280" title="BLACKPINK (JENNIE) New solo song (unreleased) [블랙핑크 제니] 4K 직캠 • 비몽" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="mentalHealth-card col-12 col-md-5 col-sm-12 mb-5 d-flex flex-wrap justify-content-center align-items-center>
+                <h5 class="card-title">hello</h5>
+                <div class="">
+                    <div class="card-body">
+                        <iframe src="https://www.youtube-nocookie.com/embed/_WB1TMvymS4?start=0&loop=1&iv_load_policy=3&color=white&playlist=_WB1TMvymS4&full-screen mode available" width="100%" height="280" title="BLACKPINK (JENNIE) New solo song (unreleased) [블랙핑크 제니] 4K 직캠 • 비몽" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="col-5 col-md-5 col-sm-5">
+        <!-- <div class="col-5 col-md-5 col-sm-5">
             <div class="mentalHealth-card">
                 <div class="card-body">
                     <a href="#">YOUTUBE LINK</a>
@@ -67,7 +94,7 @@
                     <a href="#">YOUTUBE LINK</a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="col-1 col-md-1 col-sm-1"></div>
 
     </div>

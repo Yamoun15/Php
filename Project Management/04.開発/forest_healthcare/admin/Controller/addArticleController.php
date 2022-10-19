@@ -7,6 +7,24 @@ if (isset($_POST["addArticle"])) {
     $title = $_POST["title"];
     $description = $_POST["description"];
 
+    if ($_FILES["uploadFile"]["name"] == "") {
+        // file not exist
+        $sql = $pdo->prepare("
+            INSERT INTO tbl_healthknowledge
+            (
+                title,
+                description,
+                created_date
+            )
+            VALUES
+            (
+                :title,
+                :description,
+                :created_date
+            )
+        "
+        );
+    } else {
     $file = $_FILES['uploadFile']['name'];
     $location = $_FILES['uploadFile']['tmp_name'];
     $extension = pathinfo($file)['extension'];
@@ -32,6 +50,10 @@ if (isset($_POST["addArticle"])) {
             :created_date
         )
     ");
+    $sql->bindValue(":photo", $path);
+} else {
+    echo 'There was some error moving the file to upload directory.';
+}
     $sql->bindValue(":title", $title);
     $sql->bindValue(":description", $description);
     $sql->bindValue(":photo", ($articleInfo[0]['id']+1).".".$extension);

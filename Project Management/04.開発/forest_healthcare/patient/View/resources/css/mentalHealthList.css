@@ -1,3 +1,6 @@
+body{
+    background-color: #9ECEF9 !important;
+}
 .mhdiv{
     width: 100%;
     overflow: hidden;
@@ -16,10 +19,16 @@
     align-items: center;
  }
 .mentalHealth-card{
-    max-width: 50vh !important;   
+    /* max-width: 50vh !important;   
     height: 20vh !important;
-    background-color: #99e3d2 !important;
-    border: 1px solid white !important;
+    background-color: #99e3d2 !important; */
+    /* border: 1px solid rgb(145, 13, 222) !important; */
     border-radius: 20px !important;
+    text-align: center;
+    margin: 10px;
 }
-
+.card-title{
+    background-color: aqua;
+    padding: 0.5rem;
+    width: auto;
+}
