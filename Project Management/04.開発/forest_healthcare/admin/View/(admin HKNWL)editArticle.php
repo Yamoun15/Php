@@ -81,7 +81,7 @@ $articleDetail = $_SESSION["articleDetail"];
                     <div class="subtitleAboutus mt-3">Cover photo</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <!-- <input type="file" id="myFile"  name="photo" value="<?php echo $articleDetail[0]["photo"] ?>"> -->
+                            <input type="file" id="myFile"  name="photo" value="<?php echo $articleDetail[0]["photo"] ?>">
                         </div>
                     </div>
 
@@ -89,9 +89,10 @@ $articleDetail = $_SESSION["articleDetail"];
                     <div class="form-group">
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="" id="floatingTextarea" name="description" value="<?php echo $articleDetail[0]["description"] ?>"></textarea>
+                                <textarea class="form-control" placeholder="" id="floatingTextarea" name="description" value=""><?= $articleDetail[0]["description"] ?></textarea>
                                 <label for="floatingTextarea"></label>
                             </div>
+                            <input type="hidden" name="id" value="<?= $articleDetail[0]["id"] ?>" >
                         </div>
                     </div>
 
