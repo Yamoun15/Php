@@ -32,3 +32,12 @@ body{
     padding: 0.5rem;
     width: auto;
 }
+
+.testImg{
+width: 70% !important;
+cursor: pointer;
+margin-bottom: 2rem;
+}
+.mental-health h3{
+    font-size: 2.5vw;
+}
