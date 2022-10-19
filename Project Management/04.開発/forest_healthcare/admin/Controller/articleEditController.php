@@ -16,6 +16,7 @@ if(isset($_GET["ID"])){
     // print_r($articleDetail);
 
     $_SESSION["articleDetail"] = $articleDetail;
+    $_SESSION["articleId"] = $articleId;
     
     header("Location: ../View/(admin HKNWL)editArticle.php");
 }

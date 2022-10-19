@@ -2,11 +2,14 @@
 
 include "../Model/dbConnection.php";
 include "../Controller/articleEditController.php";
+$articleDetail =  $_SESSION["articleDetail"];
+
 
 if (isset($_POST["updateArticle"])) {
     //get article info
     $title = $_POST["title"];
     $description = $_POST["description"];
+    $articleId = $_POST["id"];
 
     //get image Info
     if ($_FILES["photo"]["name"] == "") {
@@ -15,7 +18,7 @@ if (isset($_POST["updateArticle"])) {
             "UPDATE tbl_healthknowledge SET 
             title = :title,
             description = :description,
-            updated_date    = :updatedDate
+            updated_date = :updatedDate
             WHERE id = :id
         "
         );
@@ -23,9 +26,9 @@ if (isset($_POST["updateArticle"])) {
         $file = $_FILES['photo']['name'];
         $location = $_FILES['photo']['tmp_name'];
         $extension = pathinfo($file)['extension'];
-        $path = $title . "." . $extension;
+        $path = ($articleDetail[0]['id'] + 1) . "." . $extension;
 
-        if (move_uploaded_file($location, "../View/image/" . $title . "." . $extension)) {
+        if (move_uploaded_file($location, "../View/image/HealthKnowl/".$articleId.".".$extension)) {
             $sql = $pdo->prepare(
                 "UPDATE tbl_healthknowledge SET 
                     title = :title,
@@ -40,11 +43,10 @@ if (isset($_POST["updateArticle"])) {
             echo 'There was some error moving the file to upload directory.';
         }
     }
-    $sql->bindValue(":title", $title);
+    $sql->bindValue(":title", $articleId);
     $sql->bindValue(":description", $description);
-    $sql->bindValue(":photo", ($articleDetail[0]['id'] + 1) . "." . $extension);
     $sql->bindValue(":id", $articleId);
-
+    $sql->bindValue(":updatedDate", date("Y/m/d"));
     $sql->execute();
 
     header("Location: ../View/(admin HKNWL)articleList.php");
