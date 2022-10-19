@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+$policyInfo = $_SESSION["policyInfo"];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,23 +56,24 @@
         <div class="row">
             <div class="col-md-3 col-sm-4 col-3"></div>
             <div class="col-md-6  col-sm-5 col-6 adminAbout-col">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/adminP&PUpdateController.php" class="form-horizontal hr adminContact-form" method="POST">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Title">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Title" name="title" value="<?php echo $policyInfo[0]["title"] ?>">
+                            <input type="hidden" class="form-control adminContactInput" id="usernaem" placeholder="Title" name="id" value="<?php echo $policyInfo[0]["id"] ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <!-- <label for="username" class="control-label col-md-4">Username</label> -->
                         <div class="col-md-12">
-                            <textarea rows="10" type="text" class="form-control adminContactTextarea adminPPadd" id="usernaem" placeholder="Description"></textarea>
+                            <textarea rows="10" type="text" class="form-control adminContactTextarea adminPPadd" id="usernaem" placeholder="Description" name="detail"><?php echo $policyInfo[0]["description"] ?></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Edit" class="adminPPbtn adminContactbtn">
+                                <input type="submit" value="Update" class="adminPPbtn adminContactbtn" name="PrivacyBtn">
                             </div>
                         </div>
                     </div>

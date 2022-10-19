@@ -1,3 +1,7 @@
+<?php
+include "../Controller/adminP&PListController.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,13 +47,13 @@
     <!-- Header -->
 
     <div class="container">
-    <div class="row mainadminPPaddtitle">
+        <div class="row mainadminPPaddtitle">
             <div class="col-4">
                 <div class="row">
                     <div class="col-md-8"></div>
                     <div class="col-md-3">
                         <a href="./adminP&Padd.php"><button class="btn adminppaddbtn">Add</button></a>
-                        
+
                     </div>
                 </div>
             </div>
@@ -67,61 +71,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Question</td>
-                            <td><?php echo substr("Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis corporis aspernatur, nostrum facere voluptas exercitationem illo, saepe libero sit maxime repellendus illum! Possimus reprehenderit similique quae ipsa assumenda, nostrum aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eum beatae fugit. Possimus consectetur saepe earum! Eos iusto numquam error commodi minima, exercitationem voluptatem, animi sapiente mollitia, sint odit ab?", 0, 50) ?>... </td>
-                            <td>
-                                <a href="./adminP&Pedit.php">
-                                    <button class="btn"><i class="fa-solid fa-pen-to-square adminPPeditIcon"></i></button>
-                                </a>
-                                <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">2</td>
-                            <td>Question</td>
-                            <td>Answer</td>
-                            <td>
-                                <a href="./adminP&Pedit.php">
-                                    <button class="btn"><i class="fa-solid fa-pen-to-square adminPPeditIcon"></i></button>
-                                </a>
-                                <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3</td>
-                            <td>Question</td>
-                            <td>Answer</td>
-                            <td>
-                                <a href="./adminP&Pedit.php">
-                                    <button class="btn"><i class="fa-solid fa-pen-to-square adminPPeditIcon"></i></button>
-                                </a>
-                                <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">4</td>
-                            <td>Question</td>
-                            <td>Answer</td>
-                            <td>
-                                <a href="./adminP&Pedit.php">
-                                    <button class="btn"><i class="fa-solid fa-pen-to-square adminPPeditIcon"></i></button>
-                                </a>
-                                <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td scope="row">5</td>
-                            <td>Question</td>
-                            <td>Answer</td>
-                            <td>
-                                <a href="./adminP&Pedit.php">
-                                    <button class="btn"><i class="fa-solid fa-pen-to-square adminPPeditIcon"></i></button>
-                                </a>
-                                <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
-                            </td>
-                        </tr>
+                        <?php $count = 1; ?>
+                        <?php foreach ($policyList as $key => $policy) { ?>
+                            <tr>
+                                <td scope="row"><?= $count++; ?></td>
+                                <td><?= $policy["title"] ?></td>
+                                <td><?php echo substr($policy["description"], 0, 6) ?>... </td>
+                                <td>
+                                    <span>
+                                        <a href="../Controller/adminP&PEditController.php?id=<?= $policy["id"] ?>"><i class="fa-solid fa-pen-to-square adminPPeditIcon"></i></a>
+                                    </span>
+                                    <span>
+                                        <a href="../Controller/adminP&PEditController.php"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></a>
+                                    </span>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
