@@ -1,3 +1,8 @@
+<?php
+include "../Controller/adminP&PListController.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,20 +27,19 @@
 <body>
     <!-- Header -->
     <?php include("./common/top.php"); ?>
+
+
     <div class="container-fluid ppBcolor">
-        <div class="row">
-            <p class="ppTitle text-center mt-5">Policy & Privacy</p>
+    <?php foreach ($policyList as $key => $policy) { ?>
+        <div>
+            <div class="row">
+                <p class="ppTitle text-center mt-5"><?= $policy["title"] ?></p>
+            </div>
+            <div class="row">
+                <p class="ppDescription text-center mt-1"><?= $policy["description"] ?></p>
+            </div>
         </div>
-        <div class="row">
-            <p class="ppDescription text-center mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque adipisci repellat ratione nisi temporibus perferendis dolorem! Amet illo libero tempore expedita, tempora ipsum rerum sunt corporis! Error quos doloribus illo.</p>
-        </div>
-        <div class="row">
-            <p class="ppTitle text-center mt-5">Policy & Privacy</p>
-        </div>
-        <div class="row">
-            <p class="ppDescription text-center mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque adipisci repellat ratione nisi temporibus perferendis dolorem! Amet illo libero tempore expedita, tempora ipsum rerum sunt corporis! Error quos doloribus illo.</p>
-        </div>
-        
+        <?php  } ?>
     </div>
 
     <!-- Footer -->

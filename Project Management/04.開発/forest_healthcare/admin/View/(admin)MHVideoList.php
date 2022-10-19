@@ -1,3 +1,9 @@
+<?php
+
+include "../Controller/MHeditVideoListC.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,56 +64,28 @@
         </b></div> -->
 
     <!-- VIdeo List -->
-    <table class="table-responsive table mt-3">
+    <table class="table-responsive table  text-center ">
         <thead>
-            <tr class="title ">
+            <tr class="title">
                 <th scope="col">No</th>
                 <th scope="col">Name</th>
-                <th scope="col">Photo</th>
-                <th scope="col">Content</th>
+                <th scope="col">Link</th>
                 <th scope="col">Edit</th>
             </tr>
         </thead>
         <tbody>
+            <?php $count = 1; ?>
+            <?php foreach ($videoList as $key => $video){ ?>
             <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
+                <th scope="row"><?= $count++; ?>.</th>
+                <td><?= $video["mentalhealth_title"] ?></td>
+                <td><?= $video["youtube_link"] ?></td>
+                <td> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
             </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
-            <tr>
-                <th scope="row">1</th>
-                <td>Barrhet's oesophagus</td>
-                <td>Dr.John.png</td>
-                <td>Its about aphaxia...</td>
-                <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
+            <?php } ?>
 
         </tbody>
     </table>
-
 
     <!-- Pagination -->
     <nav aria-label="Page navigation example" class="mb-5 d-flex justify-content-lg-center">

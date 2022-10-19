@@ -81,7 +81,7 @@ include "../Controller/C&SDiseaseListController.php";
                                 <td>
                                     <img src="./image/C&S/<?= $disease["cs_photo"] ?>" alt="" class="csImage">
                                 </td>
-                                <td><?= $disease["disease_detail"] ?></td>
+                                <td><?= substr($disease["disease_detail"],0,15) ?>...</td>
                                 <td>
                                     <span>
                                         <a href="../Controller/C&SEditController.php?id=<?= $disease["id"] ?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a>

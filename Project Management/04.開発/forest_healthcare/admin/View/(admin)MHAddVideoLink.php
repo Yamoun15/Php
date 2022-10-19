@@ -57,18 +57,18 @@
         <div class="row p-1">
             <div class="col-md-1 col-sm-1 col-1"></div>
             <div class="col-md-9  col-sm-9 col-9 adminAbout-col">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/MHaddVideoLinkC.php" method="POST" class="form-horizontal hr adminContact-form">
                     <div class="subtitleAboutus">Video Title</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="">
+                            <input type="text" class="form-control adminContactInput" name="title" placeholder="">
                         </div>
                     </div>
 
                     <div class="subtitleAboutus">YouTube Link</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="">
+                            <input type="text" class="form-control adminContactInput" name="videoLink" placeholder="">
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Add" class="btn btnSave mt-3">
+                                <input type="submit" value="Add" name="add" class="btn btnSave mt-3">
                             </div>
                         </div>
                     </div>
