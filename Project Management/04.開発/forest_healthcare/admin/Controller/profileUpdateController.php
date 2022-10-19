@@ -1,6 +1,8 @@
 <?php
-
+session_start();
 include "../Model/dbConnection.php";
+
+$_SESSION["id"] = $id;
 
 if(isset($_POST["updateProfile"])){
     //get admin info
@@ -9,7 +11,6 @@ if(isset($_POST["updateProfile"])){
     $phone = $_POST["phone_no"];
     $address = $_POST["address"];
     $photo = $_POST["photo"];
-    $id = $_POST["id"];
 
     //get image info
     if($_FILES["uploadFile"]["name"] == ""){

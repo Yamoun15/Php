@@ -1,33 +1,35 @@
 <?php
 
 include "../Model/dbConnection.php";
+include "../Controller/articleEditController.php";
 
 if (isset($_POST["updateArticle"])) {
     //get article info
-    $name = $_POST["title"];
+    $title = $_POST["title"];
     $description = $_POST["description"];
 
     $file = $_FILES['photo']['name'];
     $location = $_FILES['photo']['tmp_name'];
     $extension = pathinfo($file)['extension'];
-    $path = $name . "." . $extension;
 
-    move_uploaded_file($location, "../View/image/" . $name . "." . $extension);
+    if (move_uploaded_file($location, "../View/image/" . ($articleInfo[0]['id'] + 1) . "." . $extension)) {
         $sql = $pdo->prepare(
             "UPDATE tbl_healthknowledge SET 
-                    title = :name,
+                    title = :title,
                     photo = :photo,
                     description = :description
                     WHERE id = :id
                 "
         );
-        $sql->bindValue(":photo", $path);
-    
-    $sql->bindValue(":name", $name);
-    $sql->bindValue(":description", $description);
-    $sql->bindValue(":id", $id);
 
-    $sql->execute();
 
-    header("Location: ../View/(admin HKNWL)articleList.php");
+        $sql->bindValue(":title", $title);
+        $sql->bindValue(":description", $description);
+        $sql->bindValue(":photo", ($articleDetail[0]['id'] + 1) . "." . $extension);
+        $sql->bindValue(":id", $articleId);
+
+        $sql->execute();
+
+        header("Location: ../View/(admin HKNWL)articleList.php");
+    }
 }
