@@ -1,10 +1,8 @@
 <?php
-
 session_start();
 
-$articleDetail = $_SESSION["articleDetail"];
+$diseaseInfo = $_SESSION["diseaseInfo"];
 
-// print_r($articleDetail);
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +35,7 @@ $articleDetail = $_SESSION["articleDetail"];
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="./resources/css/editArticle.css">
+    <link rel="stylesheet" href="./resources/css/addDisease.css">
 </head>
 
 <body class="skin-blue">
@@ -47,8 +45,8 @@ $articleDetail = $_SESSION["articleDetail"];
     <section class="content-header">
         <i class="fa fa-dashboard icon"></i>
         <span>
-            <span class="content-header-text1">Health Knowledge</span>
-            <p class="content-header-text2"><small>To edit Health article</small></p>
+            <span class="content-header-text1">Condition & Services</span>
+            <p class="content-header-text2"><small>To edit disease</small></p>
         </span>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -56,32 +54,28 @@ $articleDetail = $_SESSION["articleDetail"];
         </ol>
     </section>
 
-
-    <!-- <div class="row float-sm-start ">
-        <div class="diseaseListTitle  col-7 col-sm-6 ">
-            Admin >> Post >> Conditions & Services
-        </div>
-        <div class="diseaseListTitle col-5 col-sm-6 ">
-            Edit disease condtions
-        </div>
-    </div> -->
-    <!-- form -->
-    <div class="container mx-auto ">
+    <div class="container m-auto ms-auto">
         <div class="row">
             <div class="col-md-1 col-sm-1 col-1"></div>
-            <div class="col-md-9  col-sm- col-9 adminAbout-col">
-                <form action="../Controller/articleUpdateController.php" class="form-horizontal hr adminContact-form" method="POST" enctype="multipart/form-data">
+            <div class="col-md-9  col-sm-9 col-9 adminAbout-col">
+
+                <form action="../Controller/C&SUpdateController.php" class="form-horizontal hr adminContact-form" method="POST" enctype="multipart/form-data">
                     <div class="subtitleAboutus">Topic Name</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="" name="title" value="<?php echo $articleDetail[0]["title"] ?>">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="" name="topic" value="<?php echo $diseaseInfo[0]["disease_title"] ?>">
+                            <input type="hidden" class="form-control adminContactInput" id="usernaem" placeholder="" name="id" value="<?php echo $diseaseInfo[0]["id"] ?>">
                         </div>
                     </div>
 
                     <div class="subtitleAboutus mt-3">Cover photo</div>
                     <div class="form-group">
-                        <div class="col-md-12">
-                            <!-- <input type="file" id="myFile"  name="photo" value="<?php echo $articleDetail[0]["photo"] ?>"> -->
+                        <div class=" col-md-12 selectBoxAboutus">
+                            <label for="file-upload" class="custom-file-upload">
+                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                Upload Image
+                            </label>
+                            <input id="file-upload" type="file" name="photo" value="<?php echo $diseaseInfo[0]["cs_photo"] ?>"/>
                         </div>
                     </div>
 
@@ -89,30 +83,25 @@ $articleDetail = $_SESSION["articleDetail"];
                     <div class="form-group">
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="" id="floatingTextarea" name="description" value="<?php echo $articleDetail[0]["description"] ?>"></textarea>
+                                <textarea class="form-control" placeholder="" id="floatingTextarea" name="detail"><?php echo $diseaseInfo[0]["disease_detail"] ?></textarea>
                                 <label for="floatingTextarea"></label>
                             </div>
                         </div>
                     </div>
 
-                    <div class="form-group mx-auto me-md-3 me-sm-3 ms-5">
-                        <a href="../Controller/articleUpdateController.php"><input type="submit" value="Save Changes" class="btn btnSave mt-3 mx-auto" name="updateArticle"></a>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-9"></div>
+                            <div class="col-md-3">
+                            <button class="btn btnSave mt-3" name="diseaseUpdateBtn" type="submit">Update</button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
-
+            <div class="col-md-1 col-sm-1 col-1"></div>
         </div>
-        <div class="col-md-1 col-sm-1 col-1"></div>
     </div>
-    </div>
-
-    <!-- <div class="footer d-flex justify-content-center align-items-center">
-        <div class="diseaseListTitle   mx-auto m-sm-auto mt-sm-3 m-3 mt-md-3 mt-3">
-            <a href="#">Click to edit and see the list</a>
-        </div>
-    </div> -->
-    <!-- Footer -->
-    <?php include("common/footer.php"); ?>
 
 </body>
 

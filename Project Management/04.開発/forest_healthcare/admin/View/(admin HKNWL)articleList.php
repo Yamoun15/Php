@@ -87,9 +87,9 @@ include "../Controller/articleListController.php";
             <?php foreach ($articleList as $key => $article) { ?>
                 <tr>
                     <td><?= $count++; ?>.</td>
-                    <td><?= $article["title"] ?></td>
+                    <td><?php echo substr( $article["title"] , 0, 100 )?>...</td>
                     <td><?= $article["photo"] ?></td>
-                    <td><?= $article["description"] ?></td>
+                    <td><?php echo substr( $article["description"] , 0, 200)?>...</td>
                     <td><a href="../Controller/articleEditController.php?ID=<?=$article['id']?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
                 </tr>
             <?php } ?>

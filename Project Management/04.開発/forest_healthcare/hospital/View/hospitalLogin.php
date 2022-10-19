@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-unset($_SESSION["email_address"]);
+unset($_SESSION["hospital_email"]);
 ?>
 
 <!DOCTYPE html>
@@ -33,12 +33,12 @@ unset($_SESSION["email_address"]);
                                         <h3 class="text-center text-white mb-5">Hospital Login</h3>
                                     </div>
                                     <div class="col-md-1 col-sm-1"></div>
-                                    <div class="col-6 col-md-5 col-sm-5 ">
+                                    <!-- <div class="col-6 col-md-5 col-sm-5 ">
                                         <button class="btnlogin" type="submit">Login</button>
-                                    </div>
-                                    <div class="col-6 col-md-6 col-sm-5 mb-4">
+                                    </div> -->
+                                    <!-- <div class="col-6 col-md-6 col-sm-5 mb-4">
                                         <button class="dbtnsignup">Sign Up</button>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
                                     <input type="text" class="form-control" placeholder="Email Address" name="hospital_email">

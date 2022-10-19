@@ -15,14 +15,14 @@ if (isset($_POST["user_email"]) && isset($_POST["password"])) {
 
     $sql->bindValue(":email", $email);
     $sql->execute();
-    $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $patientInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    echo "<pre>";
-    print_r($result);
+    // echo "<pre>";
+    // print_r($patientInfo);
 
-    if (password_verify($pwd, $result[0]['password'])) {
+    if (password_verify($pwd, $patientInfo[0]['password'])) {
         $_SESSION["user_email"] = $email;
-        $_SESSION["id"] = $result[0]['id'];
+        $_SESSION["id"] = $patientInfo[0]['id'];
         header("Location: ../View/userHomePage.php");
     } else {
         header("Location: ../View/userLogin.php");

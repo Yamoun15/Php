@@ -4,10 +4,11 @@ session_start();
 
 include "../Model/dbConnection.php";
 
-$id= $_SESSION["id"];
-$sql = $pdo->prepare("SELECT * FROM tbl_admin WHERE id = :id");
+// $id= $_SESSION["id"];
+$email = $_SESSION["admin_email"];
+$sql = $pdo->prepare("SELECT * FROM tbl_admin WHERE email_address = :email");
 
-$sql->bindValue(":id", $id);
+$sql->bindValue(":email", $email);
 $sql->execute();
 
 $adminInfo = $sql->fetchAll(PDO::FETCH_ASSOC);

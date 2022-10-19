@@ -1,3 +1,10 @@
+<?php
+session_start();
+$diseaseDetailInfo = $_SESSION["diseaseDetail"];
+include "../Controller/hospitalListController.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,13 +34,23 @@
     <div class="container-fluid">
         <div class="row ">
             <div class="col-md-8 col-sm-12 detailbg">
-                <div class="detailTitle">Back, Neck and Spine</div>
-                <div class="detailbody">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora voluptates soluta libero voluptas aperiam ab magni corporis! Ullam eos enim voluptatem dicta doloribus rerum dignissimos ex, maiores praesentium! Porro odio dolore culpa? Cumque, exercitationem amet! Iusto, dolores placeat totam odio, deserunt deleniti magni vitae, rem voluptatem dignissimos commodi? Exercitationem vel voluptas ad aliquid, commodi quam mollitia, quae reprehenderit enim facere asperiores a magnam quia! Corrupti aperiam fuga quo laborum mollitia doloremque veniam quis, quibusdam qui voluptate, omnis modi optio reiciendis!,omnis modi optio reiciendis!</div>
+                <div class="detailTitle"><?= $diseaseDetailInfo[0]["disease_title"] ?></div>
+                <div class="detailbody"><?= $diseaseDetailInfo[0]["disease_detail"] ?></div>
                 <div class="CSimg">
-                    <img src="./storages/C&Sdetail1.png" alt="" class="CSdetailimg">
+                    <img src="./storages/image - SymbolicLink/C&S/<?= $diseaseDetailInfo[0]["cs_photo"] ?>" alt="" class="CSdetailimg">
                 </div>
                 <div class="treatmentTitle">You Can Make Treatment At</div>
+
+                <?php foreach ($hospitalList as $key => $hospital) { ?>
                 <div class="CSLocation">
+                    <div class="CSdetailTitle"><?= $hospital["name"] ?></div>
+                    <div class="address"><?= $hospital["address"] ?></div>
+                    <i class="fa-solid fa-phone-flip"></i>
+                    <span><?= $hospital["phone_no"] ?></span>
+                </div>
+                <?php  } ?>
+
+                <!-- <div class="CSLocation">
                     <div class="CSdetailTitle">Grand Hantha Hospital</div>
                     <div class="address">Bayint Naung Tower 2, Yangon</div>
                     <i class="fa-solid fa-phone-flip"></i>
@@ -50,13 +67,7 @@
                     <div class="address">Bayint Naung Tower 2, Yangon</div>
                     <i class="fa-solid fa-phone-flip"></i>
                     <span>01-2150776</span>
-                </div>
-                <div class="CSLocation">
-                    <div class="CSdetailTitle">Grand Hantha Hospital</div>
-                    <div class="address">Bayint Naung Tower 2, Yangon</div>
-                    <i class="fa-solid fa-phone-flip"></i>
-                    <span>01-2150776</span>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-4 col-sm-12 detailbg2">
                 <div class="anxeity">

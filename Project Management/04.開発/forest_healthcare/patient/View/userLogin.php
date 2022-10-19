@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-unset($_SESSION["email_address"]);
+unset($_SESSION["user_email"]);
 
 
 ?>
