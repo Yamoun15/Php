@@ -82,7 +82,7 @@ include "../Controller/adminP&PListController.php";
                                         <a href="../Controller/adminP&PEditController.php?id=<?= $policy["id"] ?>"><i class="fa-solid fa-pen-to-square adminPPeditIcon"></i></a>
                                     </span>
                                     <span>
-                                        <a href="../Controller/adminP&PEditController.php"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></a>
+                                        <a href="../Controller/adminP&PDeleteController.php?id=<?= $policy["id"] ?>"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></a>
                                     </span>
                                 </td>
                             </tr>
@@ -94,21 +94,37 @@ include "../Controller/adminP&PListController.php";
         </div>
 
         <div class="row">
-            <div class="col-md-7 col-sm-5"></div>
-            <div class="col-md-2 col-sm-5">
+            <div class="col-md-7 col-sm-4"></div>
+            <div class="col-md-4 col-sm-5">
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item 
+                    <?php if ($page <= 1) {
+                        echo "disabled";
+                    }  ?>
+                    ">
+                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
                                 <span aria-hidden="true">&laquo;</span>
                                 <span class="sr-only">Previous</span>
                             </a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
+
+                        <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                            <li class="page-item 
+                        <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                        ?>
+                        "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                        <?php } ?>
+
+                        <li class="page-item 
+                    <?php if ($page >= $totalPages) {
+                        echo "disabled";
+                    }  ?>">
+
+                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
                                 <span aria-hidden="true">&raquo;</span>
                                 <span class="sr-only">Next</span>
                             </a>
