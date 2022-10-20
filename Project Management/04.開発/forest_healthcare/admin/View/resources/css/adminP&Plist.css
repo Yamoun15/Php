@@ -12,6 +12,7 @@ tr{
 .adminPPeditIcon {
     color: var(--green);
     font-size: 1.5vw;
+    margin-right: 30px;
 }
 
 .adminPPdeleteIcon {
@@ -46,4 +47,8 @@ td{
     background-color: var(--white);
     margin-top: 2em;
     
+}
+
+.editbutton{
+    margin-left: 20px;
 }
