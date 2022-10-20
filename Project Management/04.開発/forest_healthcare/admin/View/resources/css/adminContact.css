@@ -105,3 +105,20 @@
 .adminProfileUpdatebtn{
     background-color: var(--btncolorred) !important;
 }
+
+.CScustom-file-upload {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0.5vw;
+    cursor: pointer;
+    margin-left: 30%;
+    /* margin-top: 10%; */
+    width: 33%;
+    text-align: center;
+    color: black;
+    background-color: var(--orange);
+}
+#file-upload {
+    display: none;
+}

@@ -87,7 +87,7 @@ include "../Controller/C&SDiseaseListController.php";
                                         <a href="../Controller/C&SEditController.php?id=<?= $disease["id"] ?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a>
                                     </span>
                                     <span>
-                                        <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a>
+                                        <a href="../Controller/C&SDeleteController.php?id=<?= $disease["id"] ?>"><i class="fa-solid fa-trash-can trashBtn"></i></a>
                                     </span>
                                 </td>
                             </tr>
@@ -100,25 +100,41 @@ include "../Controller/C&SDiseaseListController.php";
             <div class="row">
                 <div class="col-md-7 col-sm-2"></div>
                 <div class="col-md-2 col-sm-5">
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination">
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Previous">
-                                    <span aria-hidden="true">&laquo;</span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item">
-                                <a class="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">&raquo;</span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item 
+                    <?php if ($page <= 1) {
+                        echo "disabled";
+                    }  ?>
+                    ">
+                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </li>
+
+                        <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                            <li class="page-item 
+                        <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                        ?>
+                        "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                        <?php } ?>
+
+                        <li class="page-item 
+                    <?php if ($page >= $totalPages) {
+                        echo "disabled";
+                    }  ?>">
+
+                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
                 </div>
             </div>
         </div>
