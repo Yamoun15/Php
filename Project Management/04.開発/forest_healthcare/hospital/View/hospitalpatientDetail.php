@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+$userInfo = $_SESSION["userInfo"];
+
+// echo "pre";
+// print_r($userInfo);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,19 +56,17 @@
                 <p>Phone No</p>
                 <p>Age</p>
                 <p>Gender</p>
-                <p>State</p>
-                <p>Township</p>
+                <p>Address</p>                
                 <p>Description</p>
             </div>
 
             <div class="col-5 col-md-5 col-sm-5 ms-4">
-                <p>:U Zaw Zaw</p>
-                <p>:09-674687343</p>
-                <p>:65</p>
-                <p>:Male</p>
-                <p>:Mon</p>
-                <p>:Kyailmayaw</p>
-                <p>:Lorem soluta sequi eaque, eat, mollitia iusto. Aliquam nulla, et officia laudantium doloremque reiciendis dolorem accusamus sint perspiciatis nesciunt sit maiores error eligendi ullam quidem in beatae similique adipisci dolorum?</p>
+                <p>:<?= $userInfo[0]["name"] ?></p>
+                <p>:<?= $userInfo[0]["phone_no"] ?></p>
+                <p>:<?= $userInfo[0]["age"] ?></p>
+                <p>:<?= $userInfo[0]["gender"] ?></p>
+                <p>:<?= $userInfo[0]["address"] ?></p>                
+                <p>:<?= $userInfo[0]["appdes"] ?></p>
             </div>
             <div class="col-2 col-md-2 col-sm-2"></div>
         </div>

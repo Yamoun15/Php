@@ -60,8 +60,20 @@ include "../Controller/adminAppointmentListController.php";
                                 <td><?= $appointment["hosname"] ?></td>
                                 <td><?= $appointment["docname"] ?></td>
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
-                                <td><button class="btnview">view</button></td>
-                                <td>Pending</td>
+                                <td><button class="btnview"><a href="../Controller/adminPatientDetailController.php?id=<?= $appointment["userid"]?>">view</a></button></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                        <?php
+                                        if ($appointment["status"] == 0) {
+                                            echo "Pending";
+                                        } else  if ($appointment["status"] == 1) {
+                                            echo "Approved";
+                                        } else  if ($appointment["status"] == 2) {
+                                            echo "Reject";
+                                        }
+                                        ?>
+                                    </button>
+                                </td>
                             </tr>
                             <!-- <tr>
                                 <td>patient name</td>

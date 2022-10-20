@@ -25,6 +25,7 @@ include "../Controller/hospitalAppointmentistController.php";
     <!-- Bootstrap -->
     <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
+
     <script src="./resources/bootstrap/js/bootstrap.min.js" defer></script>
 
     <!-- FontAwesome 4.3.0 -->
@@ -61,7 +62,6 @@ include "../Controller/hospitalAppointmentistController.php";
                             <th scope="col">DateTime</th>
                             <th scope="col">Patient Detail</th>
                             <th scope="col">Status</th>
-                            <th scope="col">QR Code</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -72,11 +72,30 @@ include "../Controller/hospitalAppointmentistController.php";
                                 <td><?= $appointment["username"] ?></td>
                                 <td><?= $appointment["docname"] ?></td>
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
-                                <td><button class="btnview">view</button></td>
-                                <td>Pending</td>
-                                <td>qr code</td>
+                                <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["userid"]?>">view</a></button></td>
+                                <td>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                        <?php
+                                        if ($appointment["status"] == 0) {
+                                            echo "Pending";
+                                        } else  if ($appointment["status"] == 1) {
+                                            echo "Approved";
+                                        } else  if ($appointment["status"] == 2) {
+                                            echo "Reject";
+                                        }
+                                        ?>
+                                    </button>
+                                    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-sm">
+                                            <div class="modal-content">
+                                                ...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                         <?php } ?>
+
                         <!-- <tr>
                             <td>U Nana</td>
                             <td>Dr John</td>
@@ -129,5 +148,8 @@ include "../Controller/hospitalAppointmentistController.php";
         </div>
         <div class="col-md-1 col-sm-1 col-2"></div>
 </body>
+<script>
+           $('#myModal').modal('show')
+          </script>
 
 </html>

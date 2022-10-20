@@ -15,7 +15,7 @@ $userInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 $userId = $userInfo[0]["id"];
 
 $sql = $pdo->prepare("
-        SELECT appointment.*,user.name AS username,
+        SELECT appointment.*,user.name AS username,user.id AS userid,
         doc.name AS docname, doc.duty_day AS docday,doc.duty_start_time AS docstarttime,doc.duty_end_time AS docendtime
         , hos.name AS hosname
         FROM tbl_appointment AS appointment
