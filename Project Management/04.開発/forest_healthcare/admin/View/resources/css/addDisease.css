@@ -15,12 +15,13 @@ body {
 }
 
 .selectBoxAboutus {
-    border: 1px solid rgba(128, 128, 128, 0.619);
+    border: 1px solid #2535A1;
     border-radius: 5px;
     outline: none;
     box-sizing: border-box;
-    height: 3em;
+    height: 10em;
     margin-bottom: 20px;
+    background-color: var(--white);
 }
 
 #file-upload {
@@ -31,15 +32,14 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     display: inline-block;
-    padding: 6px;
+    padding: 0.5vw;
     cursor: pointer;
-    /* margin-left: 30%;
-    margin-top: 13%; */
-    max-width: 200px;
-    min-width: auto;
-    height: 3rem;
+    margin-left: 30%;
+    margin-top: 10%;
+    width: 33%;
     text-align: center;
     color: black;
+    background-color: var(--orange);
     background-color: #F9C56B;
 }
 
@@ -65,9 +65,9 @@ body {
 .btnSave {
     background-color: #188067;
     color: white;
-    padding: 10px !important;
-    font-size: 20px !important;
-    width: 100px;
+    padding: 3px !important;
+    font-size: 18px !important;
+    width: 90px;
     margin: auto;
 }
 
@@ -78,4 +78,9 @@ body {
 
 .content-wrapper {
     background-color: #64d3a5;
+}
+
+#CSfile-chosen{
+    margin-left: 35%;
+    font-family: var(--fontfamily-poly);
 }

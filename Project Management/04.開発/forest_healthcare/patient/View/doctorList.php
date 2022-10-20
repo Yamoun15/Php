@@ -35,9 +35,9 @@ include "../Controller/hospitalListController.php";
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./resources/css/doctorList.css">
   <!-- <script src="./resources/js/doctorList.js" defer></script> -->
-  <script src="./resources/js/jquery3.6.0.js" ></script>
+  <script src="./resources/js/jquery3.6.0.js"></script>
   <script src="./resources/js/booking.js" defer></script>
-  
+
 </head>
 
 <body>
@@ -45,13 +45,11 @@ include "../Controller/hospitalListController.php";
   <?php include("./common/top.php"); ?>
 
   <div class="container-fluid">
-    
-
     <div class="body-content position-relative  ">
       <div class="p1 fs-5 fw-bold mt-3 ">Let’s get started for booking.</div>
       <div class="p1 fs-5 fw-bold  ">You can find doctors and hospital here.</div>
       <div class="dropdown">
-        
+
         <select class="hospitalDropDown mt-3 mb-3" aria-label="Default select example" name="hospital" id="hospitalChoose">
           <?php foreach ($hospitalList as $key => $hospital) { ?>
             <option value="<?= $hospital["id"] ?>"><?= $hospital["name"] ?></option>
@@ -61,9 +59,9 @@ include "../Controller/hospitalListController.php";
 
       <div class="hospitalCards">
         <!-- Hospital Logo -->
-        <!-- <div class="hospitalLogo position-relative start-0 ms-5">
+        <div class="hospitalLogo position-relative start-0 ms-5">
           <img src="./storages/pun hlaing logo 1.png" alt="">
-        </div> -->
+        </div>
 
         <!-- Department -->
         <!-- <div class="department m-3 " style="background-color: #F9C56B; border-radius: 30px; max-width: 500px; ">
@@ -74,102 +72,43 @@ include "../Controller/hospitalListController.php";
 
         <!-- cards -->
         <div id="cardResult">
-        <?php foreach ($doctorList as $key => $doctor) { ?>
-          <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
-            <div class="row g-3 ">
-              <div class="col-md-2">
-                <img src="./storages/image/<?= $doctor["doctor_photo"]?>" width="100px" class="img-fluid rounded-start " alt="...">
-              </div>
-              <div class="col-md-4">
-                <div class="card-body">
-                  <h5 class="card-title"><?= $doctor["name"] ?></h5>
-                  <span class="card-title"><?= $doctor["depname"] ?> Department</span>
-                  <span class="card-title"> (<?= $doctor["dr_expert_in"] ?>)</span>
-                  <p class="card-title"><?= $doctor["dr_degree"] ?></p>
-                  <span class="card-title">(<?= $doctor["duty_day"] ?>) </span>
-                  <span class="card-title"><?= $doctor["duty_start_time"] ?> to </span>
-                  <span class="card-title"><?= $doctor["duty_end_time"] ?></span>
+          <?php foreach ($doctorList as $key => $doctor) { ?>
+            <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
+              <div class="row g-3 ">
+                <div class="col-md-2">
+                  <img src="./storages/image/<?= $doctor["doctor_photo"] ?>" width="100px" class="img-fluid rounded-start " alt="...">
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card-body " style="color: #188067">
-
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-
+                <div class="col-md-3">
+                  <div class="card-body">
+                    <h5 class="card-title"><?= $doctor["name"] ?></h5>
+                    <span class="card-title"><?= $doctor["depname"] ?> Department</span>
+                    <div class="card-title"> (<?= $doctor["dr_expert_in"] ?>)</div>
+                    <span class="card-title">(<?= $doctor["duty_day"] ?>) </span>
+                    <span class="card-title"><?= $doctor["duty_start_time"] ?> to </span>
+                    <span class="card-title"><?= $doctor["duty_end_time"] ?></span>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-2">
-                <a href="../Controller/doctorlistC.php?doctorID=<?=$doctor['id']?>" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
-                  <img src="booking.png" alt="">
-                  Book</a>
+                <div class="col-md-5">
+                  <div class="card-body " style="color: #188067">
+
+                    <p class="card-text"><?= $doctor["dr_degree"] ?></p>
+
+                  </div>
+                </div>
+                <div class="col-md-2">
+                  <a href="../Controller/doctorlistC.php?doctorID=<?= $doctor['id'] ?>" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
+                    <img src="booking.png" alt="">
+                    Book</a>
+                </div>
               </div>
             </div>
-          </div>
-        <?php } ?>
+          <?php } ?>
         </div>
-
-        <!-- <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
-          <div class="row g-3 ">
-            <div class="col-md-2">
-              <img src="./storages/doctor1.png" width="100px" class="img-fluid rounded-start " alt="...">
-            </div>
-            <div class="col-md-4">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card-body " style="color: #188067">
-
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                
-              </div>
-            </div>
-            <div class="col-md-2">
-              <a href="#" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
-                <img src="./storages/booking.png" alt="">
-                Book</a>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
-          <div class="row g-3 ">
-            <div class="col-md-2">
-              <img src="./storages/doctor1.png" width="100px" class="img-fluid rounded-start " alt="...">
-            </div>
-            <div class="col-md-4">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card-body " style="color: #188067">
-
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-                
-              </div>
-            </div>
-            <div class="col-md-2">
-              <a href="#" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
-                <img src="./storages/booking.png" alt="">
-                Book</a>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
+  </div>
 
-    <?php include('./common/footer.php'); ?>
+  <?php include('./common/footer.php'); ?>
 </body>
 
 </html>

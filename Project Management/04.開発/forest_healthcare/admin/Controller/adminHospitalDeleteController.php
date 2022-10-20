@@ -6,7 +6,7 @@ include "../Model/dbConnection.php";
 if(isset($_GET["id"])){
     $id =  $_GET["id"];
     $sql = $pdo->prepare(
-            "UPDATE tbl_privacypolicy SET
+            "UPDATE tbl_hospital SET
             del_flg = 1
             WHERE id = :id
         ");
@@ -14,6 +14,6 @@ if(isset($_GET["id"])){
         $sql->execute();
 
 
-    header("Location: ../View/adminP&Plist.php");
+    header("Location: ../View/adminHospitalList.php");
 
 }
