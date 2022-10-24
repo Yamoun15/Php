@@ -34,7 +34,7 @@ include "../Controller/MHeditVideoListC.php";
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="./resources/css/videoList.css">
+    <link rel="stylesheet" href="./resources/css/videoList.css?v="<?=time()?>>
 </head>
 
 <body class="skin-blue">
@@ -64,49 +64,57 @@ include "../Controller/MHeditVideoListC.php";
         </b></div> -->
 
     <!-- VIdeo List -->
-    <table class="table-responsive table  text-center ">
-        <thead>
-            <tr class="title">
-                <th scope="col">No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Link</th>
-                <th scope="col">Edit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php $count = 1; ?>
-            <?php foreach ($videoList as $key => $video){ ?>
-            <tr>
-                <th scope="row"><?= $count++; ?>.</th>
-                <td><?= $video["mentalhealth_title"] ?></td>
-                <td><?= $video["youtube_link"] ?></td>
-                <td> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-            </tr>
-            <?php } ?>
+    <div class="container">
+        <table class="table-responsive table  text-center ">
+            <thead>
+                <tr class="title">
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Link</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?php $count = ($page*$rowLimit)-1; ?>
+                <?php foreach ($videoList as $key => $video) { ?>
+                    <tr>
+                        <th scope="row"><?= $count++; ?>.</th>
+                        <td><?= $video["mentalhealth_title"] ?></td>
+                        <td><?= $video["youtube_link"] ?></td>
+                        <td> <a href="../Controller/videoDeleteC.php?id=<?= $video['mentalhealth_id'] ?>"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
+                    </tr>
+                <?php } ?>
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
 
-    <!-- Pagination -->
-    <nav aria-label="Page navigation example" class="mb-5 d-flex justify-content-lg-center">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example" class="mx-auto">
+            <ul class="pager">
+                <li class="
+                <?php if ($page <= 1) {
+                    echo "disabled";
+                } ?>
+                "><a href="?page=<?= $page - 1 ?>">&laquo;</a></li>
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                    <li><a href="?page=<?= $i ?>" class="btnNum
+                    <?php
+                    if ($page == $i) {
+                        echo "active";
+                    }
+                    ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
+                <?php } ?>
+
+                <li class="
+                <?php if ($page >= $totalPages) {
+                    echo "disabled";
+                } ?>">
+                    <a href="?page=<?= $page - 1 ?>">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Footer -->
     <?php include("common/footer.php"); ?>

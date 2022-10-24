@@ -47,7 +47,7 @@ unset($_SESSION["user_email"]);
                                         <button class="btnlogin">Login</button>
                                     </div>
                                     <div class="col-6 col-md-6 col-sm-5 mb-4">
-                                        <a href="signUp.php"><button class="dbtnsignup">Sign Up</button></a>
+                                        <button class="dbtnsignup"><a href="signUp.php">Sign Up</a></button>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">

@@ -117,8 +117,8 @@
                     <ul class="treeview-menu">
                         <li class="active"><a href="">Condition & Service</a>
                             <ul class="treeview-menu">
-                                <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Add Disease</a></li>
-                                <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Disease List</a></li>
+                                <li class="active"><a href="./../View/(admin C&S)addDisease.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Disease</a></li>
+                                <li><a href="./../View/(admin C&S)diseaseList.php"><i class="fa fa-circle" aria-hidden="true"></i>Disease List</a></li>
                             </ul>
                         </li>
                         <li class="active"><a href="">Health Knowledge</a>
@@ -129,8 +129,8 @@
                         </li>
                         <li class="active"><a href="">Mental Health</a>
                             <ul class="treeview-menu">
-                                <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Add Video</a></li>
-                                <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Viedo List</a></li>
+                                <li class="active"><a href="./../View/(admin)MHAddVideoLink.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Video</a></li>
+                                <li><a href="./../View/(admin)MHVideoList.php"><i class="fa fa-circle" aria-hidden="true"></i>Viedo List</a></li>
                             </ul>
                         </li>
                     </ul>

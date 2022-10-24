@@ -33,7 +33,7 @@ if (isset($_POST["addArticle"])) {
     $sql->execute();
     $articleInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    if (move_uploaded_file($location, "../View/image/HealthKnowl/". ($articleInfo[0]['id']+1).".".$extension)) {
+    if (move_uploaded_file($location, "../View/image/articles/". ($articleInfo[0]['id']+1).".".$extension)) {
         $sql = $pdo->prepare("
         INSERT INTO tbl_healthknowledge
         (

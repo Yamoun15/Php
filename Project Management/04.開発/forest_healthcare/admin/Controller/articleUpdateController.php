@@ -43,7 +43,7 @@ if (isset($_POST["updateArticle"])) {
             echo 'There was some error moving the file to upload directory.';
         }
     }
-    $sql->bindValue(":title", $articleId);
+    $sql->bindValue(":title", $title);
     $sql->bindValue(":description", $description);
     $sql->bindValue(":id", $articleId);
     $sql->bindValue(":updatedDate", date("Y/m/d"));

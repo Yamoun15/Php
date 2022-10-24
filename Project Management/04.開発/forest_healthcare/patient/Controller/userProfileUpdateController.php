@@ -7,19 +7,18 @@ if(isset($_POST["updateProfile"])){
     $name = $_POST["name"];
     $pwd = $_POST["password"];
     $gender = $_POST["gender"];
-    $birthday = $_POST["date_of_birth"];
+    $age = $_POST["age"];
     $phone = $_POST["phone_no"];
     $address = $_POST["address"];
     $id = $_POST["id"];
     
-
     //get image info
     if($_FILES["uploadFile"]["name"] == ""){
         $sql = $pdo->prepare(
             "UPDATE tbl_user SET
                 name = :name,
                 password = :pwd,
-                date_of_birth = :birthday,
+                age = :age,
                 gender = :gender,
                 address = :address,
                 phone_no = :phone
@@ -39,7 +38,7 @@ if(isset($_POST["updateProfile"])){
             photo = :photo,
             password = :pwd,
             gender = :gender,
-            date_of_birth = :birthday,
+            age = :age,
             phone_no = :phone,
             address = :address
             WHERE id = :id
@@ -53,7 +52,7 @@ if(isset($_POST["updateProfile"])){
     $sql->bindValue(":name",$name);
     $sql->bindValue(":pwd",$pwd);
     $sql->bindValue(":gender",$gender);
-    $sql->bindValue(":birthday",$birthday);
+    $sql->bindValue(":age",$age);
     $sql->bindValue(":phone",$phone);
     $sql->bindValue(":address",$address);
     $sql->bindValue(":id",$id);

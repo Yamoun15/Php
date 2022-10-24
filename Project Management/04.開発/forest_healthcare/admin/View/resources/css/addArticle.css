@@ -1,6 +1,6 @@
-body {
-    background-color: #64D3A5;
-    ;
+.content-wrapper {
+    background-color: #ecf0f5;
+    height: 100vh;
 }
 
 .adminAbout-col {
@@ -74,6 +74,3 @@ body {
     height: 150px;
 }
 
-.content-wrapper {
-    background-color: #64d3a5;
-}
