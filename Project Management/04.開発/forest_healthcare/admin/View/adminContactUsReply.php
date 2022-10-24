@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col-md-2 col-sm-2 col-2"></div>
             <div class="col-md-6  col-sm-8 col-8 adminContactReply-col">
-                <form action="" class="form-horizontal hr">
+                <form action="../Controller/adminContactUsMailController.php" mehtod="post" class="form-horizontal hr">
                     <div class="form-group">
                         <div class="col-md-12">
                             <input type="text" class="form-control adminContactReplyinput" id="usernaem" placeholder="To">

@@ -8,7 +8,7 @@
     <title>Document</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="./resources/css/adminContact.css?v="<?= time() ?>>
+    <link rel="stylesheet" href="./resources/css/adminContact.css?v=" <?= time() ?>>
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,8 +29,8 @@
 
 <body class="skin-blue">
 
-<!-- Header -->
-<?php include("common/header.php"); ?>
+    <!-- Header -->
+    <?php include("common/header.php"); ?>
     <section class="content-header">
         <i class="fa fa-dashboard icon"></i>
         <span>
@@ -52,40 +52,41 @@
         <div class="row">
             <div class="col-md-2 col-sm-2"></div>
             <div class="col-md-6  col-sm-8 adminContact-col">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/adminContactUsController.php" method="post" class="form-horizontal hr adminContact-form">
                     <div class="form-group">
-                        
+
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Title">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Title" name="title">
                         </div>
                     </div>
                     <div class="form-group">
-                        
+
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Phone Number">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="Email Address">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        
-                        <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Location">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Phone Number" name="phNo">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <textarea type="text" rows="3" class="form-control adminContactTextarea" id="usernaem" placeholder="Welcome Text"></textarea>
+                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="Email Address" name="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-md-12">
+                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Location" name="address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <textarea type="text" rows="3" class="form-control adminContactTextarea" id="usernaem" placeholder="Welcome Text" name="description"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                            <input type="button" value="Submit" class="adminContactbtn">
+                                <!-- <input type="button" value="Submit" class="adminContactbtn"> -->
+                                <button class="btn btn-warning col-10 boxStyle contactsendButton adminContactbtn" name="submitBtn" type="submit">Submit</button>
                             </div>
                         </div>
                     </div>

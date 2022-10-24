@@ -1,3 +1,7 @@
+<?php
+include "../Controller/adminContactUsListController.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,37 +51,24 @@
     <div class="container">
         <div class="row">
             <!-- <div class="col-md-1 col-sm-3 col-2"></div> -->
-            <div class="card adminContactListCardBg">
-                <div class="card-body cardBody">
-                    <div class="row cardRow">
-                        <div class="col-sm-8 contactListTitle">
-                            <div class="">Aung Aung</div>
-                            <div class="">aung@gmail.com</div>
-                            <div class="">09-2150776</div>
+            <?php foreach ($mailList as $mail) { ?>
+                <div class="card adminContactListCardBg">
+                    <div class="card-body cardBody">
+                        <div class="row cardRow">
+                            <div class="col-sm-8 contactListTitle">
+                                <div class=""><?= $mail["username"] ?></div>
+                                <div class=""><?= $mail["phone_no"] ?></div>
+                                <div class=""><?= $mail["email_address"] ?></div>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="" ><button class="btn adminContactListbtn" name="replyBtn">Reply</button></a>
+                            </div>
                         </div>
-                        <div class="col-sm-4">
-                            <a href="./adminContactUsReply.php" class="btn adminContactListbtn">Reply</a>
-                        </div>
+                        <p class="adminContactListCardText"><?= $mail["text_message"] ?></p>
                     </div>
-                    <p class="adminContactListCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quaerat earum dolor cumque, a ipsam modi iste veritatis assumenda harum totam, animi rerum omnis nam alias minus? A, cum sint.</p>
                 </div>
-            </div>
-            <div class="card adminContactListCardBg">
-                <div class="card-body cardBody">
-                    <div class="row mb-2 cardRow">
-                        <div class="col-sm-8 contactListTitle">
-                            <div class="">Aung Aung</div>
-                            <div class="">aung@gmail.com</div>
-                            <div class="">09-2150776</div>
-                        </div>
-                        <div class="col-sm-4">
-                            <a href="#" class="btn adminContactListbtn">Reply</a>
-                        </div>
-                    </div>
-                    <p class="adminContactListCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quaerat earum dolor cumque, a ipsam modi iste veritatis assumenda harum totam, animi rerum omnis nam alias minus? A, cum sint.</p>
-                </div>
-            </div>
-            <div class="card adminContactListCardBg">
+            <?php } ?>
+            <!-- <div class="card adminContactListCardBg">
                 <div class="card-body cardBody">
                     <div class="row mb-2 cardRow">
                         <div class="col-sm-8 contactListTitle">
@@ -107,6 +98,21 @@
                     <p class="adminContactListCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quaerat earum dolor cumque, a ipsam modi iste veritatis assumenda harum totam, animi rerum omnis nam alias minus? A, cum sint.</p>
                 </div>
             </div>
+            <div class="card adminContactListCardBg">
+                <div class="card-body cardBody">
+                    <div class="row mb-2 cardRow">
+                        <div class="col-sm-8 contactListTitle">
+                            <div class="">Aung Aung</div>
+                            <div class="">aung@gmail.com</div>
+                            <div class="">09-2150776</div>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="#" class="btn adminContactListbtn">Reply</a>
+                        </div>
+                    </div>
+                    <p class="adminContactListCardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quaerat earum dolor cumque, a ipsam modi iste veritatis assumenda harum totam, animi rerum omnis nam alias minus? A, cum sint.</p>
+                </div>
+            </div> -->
             <!-- <div class="col-md-1 col-sm-1 col-1"></div> -->
         </div>
 

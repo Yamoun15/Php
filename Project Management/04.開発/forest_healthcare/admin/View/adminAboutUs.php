@@ -53,17 +53,17 @@ Admin about us adding -->
         <div class="row">
             <div class="col-md-2 col-sm-2 col-2"></div>
             <div class="col-md-6  col-sm-8 col-8 adminAbout-col">
-                <form action="" class="form-horizontal hr adminContact-form">
+                <form action="../Controller/aboutUsController.php" method="post" class="form-horizontal hr adminContact-form">
                     <div class="subtitleAboutus">Change About Us Page</div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Title">
+                            <input type="text" class="form-control adminContactInput" id="usernaem"  placeholder="Title" name="title">
                         </div>
                     </div>
                     <div class="form-group">
                         <!-- <label for="username" class="control-label col-md-4">Username</label> -->
                         <div class="col-md-12">
-                            <textarea rows="3" type="text" class="form-control adminContactTextarea" id="usernaem" placeholder="Welcome Text"></textarea>
+                            <textarea rows="3" type="text" class="form-control adminContactTextarea" id="usernaem" placeholder="Welcome Text" name="description"></textarea>
                         </div>
                     </div>
                     <div class="subtitleAboutus">Change Photo or Picture</div>
@@ -73,7 +73,7 @@ Admin about us adding -->
                                 <i class="fa-solid fa-arrow-up-from-bracket"></i>
                                 Select
                             </label>
-                            <input id="Aboutfile-upload" type="file" />
+                            <input id="Aboutfile-upload" type="file" name="photo"/>
                             <div id="Aboutfile-chosen">No file chosen</div>
                         </div>
                     </div>
@@ -81,7 +81,8 @@ Admin about us adding -->
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                                <input type="button" value="Change" class="adminContactbtn">
+                                <!-- <input type="button" value="Change" name="changeBtn" class="adminContactbtn"> -->
+                                <button class="btn btn-warning col-10 boxStyle contactsendButton adminContactbtn" name="changeBtn" type="submit">Change</button>
                             </div>
                         </div>
                     </div>
