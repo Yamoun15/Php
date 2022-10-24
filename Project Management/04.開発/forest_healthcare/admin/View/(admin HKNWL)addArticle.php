@@ -29,7 +29,7 @@
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="./resources/css/addArticle.css">
-    
+
 </head>
 
 <body class="skin-blue">
@@ -70,8 +70,13 @@
 
                     <div class="subtitleAboutus mt-3">Cover photo</div>
                     <div class="form-group">
-                        <div class="col-md-12">
-                            <input type="file" id="myFile" name="uploadFile">
+                        <div class=" col-md-12 selectBoxAboutus">
+                            <label for="file-upload" class="custom-file-upload">
+                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                Upload Image
+                            </label>
+                            <input id="file-upload" type="file" name="photo" />
+                            <div id="CSfile-chosen">No file chosen</div>
                         </div>
                     </div>
 
@@ -104,6 +109,7 @@
             <a href="#">Click to edit and see the list</a>
         </div>
     </div> -->
+    <script src="./resources/js/articlePhotoAdd.js"></script>
 </body>
 
 </html>
