@@ -1,6 +1,7 @@
 <?php
 
 include "../Controller/visitorController.php";
+include "../Controller/homeController.php";
 ?>
 
 
@@ -65,36 +66,23 @@ include "../Controller/visitorController.php";
   </div>
 
   <div class="healthArticle">
-
+  <?php foreach ($articleList as $key => $article) { ?>
     <div class="card mb-3 me-3" style="max-width: 540px;">
       <div class="row g-0">
         <div class="col-md-8 col-sm-8 col-8">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.<span class="readMore">Read More>>></span></p>
+            <h5 class="card-title"><?= $article["title"] ?></h5>
+            <p class="card-text"><?php echo substr($article["description"], 0, 500) ?>... </p>
+            <a href="../Controller/articleDetailC.php?articleId=<?=$article["id"]?>"><button class="btn-readmore">Read More>>></button></a>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
         </div>
         <div class="col-md-4 col-sm-4 col-4">
-          <img src="./storages/meowArticle.jpg" class="img-fluid rounded-start" alt="...">
+          <img src="./storages/image - SymbolicLink/HealthKnowl/<?= $article["photo"] ?>" class="img-fluid rounded-start" alt="...">
         </div>
       </div>
     </div>
-
-    <div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-8 col-sm-8 col-8">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.<span class="readMore">Read More>>></span></p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-4">
-          <img src="./storages/meowArticle.jpg" class="img-fluid rounded-start" alt="...">
-        </div>
-      </div>
-    </div>
+    <?php } ?>
   </div>
 
   <div class="homeText mt-5 mb-3 text-center">

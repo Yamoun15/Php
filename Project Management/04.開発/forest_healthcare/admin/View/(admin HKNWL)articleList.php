@@ -63,18 +63,21 @@ include "../Controller/articleListController.php";
         <div class="diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3">
             List of Conditions
         </div> -->
-    <table class="table-responsive table mt-3">
-        <thead>
-            <tr class="title">
-                <th scope="col">No</th>
-                <th scope="col">Name</th>
-                <th scope="col">Photo</th>
-                <th scope="col">Content</th>
-                <th scope="col">Edit</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- <tr>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-sm-10 table-responsive">
+                <table class="table-responsive table mt-3">
+                    <thead>
+                        <tr class="title">
+                            <th scope="col">No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Photo</th>
+                            <th scope="col">Content</th>
+                            <th scope="col">Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
                     <th scope="row">1</th>
                     <td>Eat healthy Stay healthy</td>
                     <td>Dr.John.png</td>
@@ -83,66 +86,47 @@ include "../Controller/articleListController.php";
                     <td> <a href="(admin HKNWL)editArticle.php"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
                 </tr> -->
 
-            <?php $count = 1; ?>
-            <?php foreach ($articleList as $key => $article) { ?>
-                <tr>
-                    <td><?= $count++; ?>.</td>
-                    <td><?php echo substr( $article["title"] , 0, 100 )?>...</td>
-                    <td><?= $article["photo"] ?></td>
-                    <td><?php echo substr( $article["description"] , 0, 200)?>...</td>
-                    <td><a href="../Controller/articleEditController.php?ID=<?=$article['id']?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-                </tr>
-            <?php } ?>
+                        <?php $count = 1; ?>
+                        <?php foreach ($articleList as $key => $article) { ?>
+                            <tr>
+                                <td><?= $count++; ?>.</td>
+                                <td><?php echo substr($article["title"], 0, 100) ?>...</td>
+                                <td><?= $article["photo"] ?></td>
+                                <td><?php echo substr($article["description"], 0, 50) ?>...</td>
+                                <td><a href="../Controller/articleEditController.php?ID=<?= $article['id'] ?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
+                            </tr>
+                        <?php } ?>
 
-            <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>Barrhet's oesophagus</td>
-                    <td>Dr.John.png</td>
-                    <td>Its about aphaxia...</td>
-                    <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Barrhet's oesophagus</td>
-                    <td>Dr.John.png</td>
-                    <td>Its about aphaxia...</td>
-                    <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-                </tr>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Barrhet's oesophagus</td>
-                    <td>Dr.John.png</td>
-                    <td>Its about aphaxia...</td>
-                    <td> <a href="#"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-                </tr> -->
-        </tbody>
-    </table>
 
-    <!-- Pagination -->
-    <nav aria-label="Page navigation example" class="mb-5 d-flex justify-content-lg-center">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">5</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">&raquo;</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            <!-- Pagination -->
+            <nav aria-label="Page navigation example" class="mb-5 d-flex justify-content-lg-center">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+    </div>
+            <!-- Footer -->
+            <?php include("common/footer.php"); ?>
 
-    <!-- Footer -->
-    <?php include("common/footer.php"); ?>
-
-    <script src="./resources/js/adminAboutUs.js"></script>
+            <script src="./resources/js/adminAboutUs.js"></script>
 </body>
 
 </html>
