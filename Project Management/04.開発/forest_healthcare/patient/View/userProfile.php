@@ -5,7 +5,7 @@ include "../Controller/userProfileUpdateController.php";
 $patientInfo = $_SESSION["patientInfo"];
 
 // echo "<pre>";
-// print_r($patientInfo[0]["photo"]);
+// print_r($patientInfo);
 
 
 ?>
@@ -38,7 +38,7 @@ $patientInfo = $_SESSION["patientInfo"];
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
     <script src="https://kit.fontawesome.com/5053738b7f.js" crossorigin="anonymous"></script>
-<script src="./resources/js/uploadProfile.js" defer></script>
+    <script src="./resources/js/uploadProfile.js?v="<?=time()?> defer></script>
 </head>
 
 <body>
@@ -48,29 +48,29 @@ $patientInfo = $_SESSION["patientInfo"];
         <div class="row">
             <div class="col-md-4 col-sm-2 ">
                 <br>
-            <div class="row menubox">
-                <div class="col-2 offset-2">
-                    <div><i class="fa-solid fa-user fs-5 mt-5"></i></div>
-                    <div><i class="fa-regular fa-calendar-check fs-5 mt-5"></i></div>
-                    <div><i class="fa-solid fa-user-gear fs-5 mt-5"></i></div>
-                    <div><i class="fa-solid fa-right-from-bracket fs-5 mt-5"></i></div>
-                </div>
-                <div class="col-6 fw-bold">
-                    <div class=" mt-5"><a href="../Controller/userProfileEditController.php" class="text-dark">My Profile</a></div>
-                    <div class=" mt-5"><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
-                    <div class=" mt-5"><a href="" class="text-dark">Account Setting</a></div>
-                    <div class="mt-5 mb-5"> <a href="" class="text-dark">Logout</a></div>
+                <div class="row menubox">
+                    <div class="col-2 offset-2">
+                        <div><i class="fa-solid fa-user fs-5 mt-5"></i></div>
+                        <div><i class="fa-regular fa-calendar-check fs-5 mt-5"></i></div>
+                        <div><i class="fa-solid fa-user-gear fs-5 mt-5"></i></div>
+                        <div><i class="fa-solid fa-right-from-bracket fs-5 mt-5"></i></div>
+                    </div>
+                    <div class="col-6 fw-bold">
+                        <div class=" mt-5"><a href="../Controller/userProfileEditController.php" class="text-dark">My Profile</a></div>
+                        <div class=" mt-5"><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
+                        <div class=" mt-5"><a href="" class="text-dark">Account Setting</a></div>
+                        <div class="mt-5 mb-5"> <a href="" class="text-dark">Logout</a></div>
+                    </div>
                 </div>
             </div>
-            </div>
-            
+
             <div class="col-md-7  col-sm-8 adminContact-col">
                 <form action="../Controller/userProfileUpdateController.php" class="form-horizontal hr adminContact-form" method="post" enctype="multipart/form-data">
 
                     <div class="myProfileTitle">My Profile</div>
                     <span class="userProfileConfirmbtnfloat">
                         <div class="profilebg">
-                            <img src="./storages/<?=$patientInfo[0]["photo"]?>" alt="" id="profileImg"  class="userProfileUpdate" name="photo">
+                            <img src="./storages/<?= $patientInfo[0]["photo"] ?>" alt="" id="profileImg" class="userProfileUpdate" name="photo">
                         </div>
 
                         <label for="userfile-upload" class="usercustom-file-upload">
@@ -85,46 +85,58 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="form-group userProfileInputfloat">
                         <label for="username" class="userProfileLabel col-md-5">Username</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="username" value="<?= $patientInfo[0]["name"] ?>" placeholder="John" name="name" >
+                            <input type="text" class="form-control adminContactInput" id="username" value="<?= $patientInfo[0]["name"] ?>" placeholder="John" name="name">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="username" class="userProfileLabel col-md-5">Password</label>
+                        <label for="username" class="userProfileLabel col-md-5">Password<i class="far fa-eye" id="togglePassword" style=" cursor: pointer;"></i></label>
                         <div class="col-md-12">
-                            <input type="password" class="form-control adminContactInput" id="usernaem" value="<?= $patientInfo[0]["password"] ?>" placeholder="password" name="password">
+                            <input type="password" class="form-control adminContactInput" id="password" value="<?= $patientInfo[0]["password"] ?>" placeholder="password" name="password">
+
+
+
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Phone Number</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="09-2150776" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no" >
+                            <input type="text" class="form-control adminContactInput" placeholder="09-2150776" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Email Address</label>
                         <div class="col-md-12">
-                            <input type="email" class="form-control adminContactInput" id="usernaem" placeholder="john@gmail.com" value="<?= $patientInfo[0]["email_address"] ?>" name="email_address" disabled>
+                            <input type="email" class="form-control adminContactInput" placeholder="john@gmail.com" value="<?= $patientInfo[0]["email_address"] ?>" name="email_address" disabled>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="username" class="userProfileLabel col-md-5">Birthday</label>
+                        <label for="username" class="userProfileLabel col-md-5">Completed Age</label>
                         <div class="col-md-12">
-                            <input type="date" class="form-control adminContactInput" id="usernaem" placeholder="1.3.1995" value="<?= $patientInfo[0]["date_of_birth"] ?>" name="date_of_birth">
+                            <input type="number" min="1" class="form-control adminContactInput" placeholder="Age(Completed age)" value="<?= $patientInfo[0]["age"] ?>" name="age">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Address</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address">
+                            <input type="text" class="form-control adminContactInput" placeholder="Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="username" class="userProfileLabel col-md-5">Male/Female</label>
-                        <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="usernaem" placeholder="Male/Female" value="<?= $patientInfo[0]["gender"] ?>"  name="gender">
+                        <label for="gender" class="userProfileLabel col-md-5">Gender- <span class="text-dark"><?= $patientInfo[0]["gender"] ?></span></label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male" <?php echo ($patientInfo[0]["gender"] == 'Male') ?  "checked" : "";  ?>>
+                            <label class="form-check-label" for="inlineRadio1">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female" <?php echo ($patientInfo[0]["gender"] == 'Female') ?  "checked" : "";  ?>>
+                            <label class="form-check-label" for="inlineRadio2">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="Other" <?php echo ($patientInfo[0]["gender"] == 'Other') ?  "checked" : "";  ?>>
+                            <label class="form-check-label" for="inlineRadio3">Other</label>
                         </div>
                     </div>
-                    <input type="hidden" name="id" value="<?= $patientInfo[0]["id"] ?>" >
+                    <input type="hidden" name="id" value="<?= $patientInfo[0]["id"] ?>">
                 </form>
             </div>
 
@@ -132,6 +144,7 @@ $patientInfo = $_SESSION["patientInfo"];
     </div>
     <!-- Footer -->
     <?php include("./common/footer.php"); ?>
+
 </body>
 
 </html>

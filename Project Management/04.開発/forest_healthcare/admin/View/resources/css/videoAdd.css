@@ -1,6 +1,7 @@
-body {
+/* .content-wrapper {
     background-color: #64D3A5;
-}
+    height: 100vh;
+} */
 
 .adminAbout-col {
     border-radius: 10px;
@@ -52,7 +53,4 @@ body {
     font-size: 20px !important;
     width: 100px;
     margin: auto;
-}
-.content-wrapper{
-    background-color: #64D3A5;
 }

@@ -1,6 +1,7 @@
-body {
+/* .content-wrapper {
     background-color: #64D3A5;
-}
+    height: 100vh;
+} */
 
 #nav1 {
     background-color: #43A391;
@@ -125,3 +126,20 @@ td {
 .trashBtn {
     color: #F55858;
 }
+
+/* pagination */
+.pager .active {
+    background-color: #188067;
+    color: white;
+    font-weight: 700;
+    transition: all 0.3s;
+  }
+  .pager .btnNum {
+    transition: all 0.3s;
+  }
+  .pager .btnNum:hover {
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-weight: 700;
+  }
+  

@@ -43,13 +43,13 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-6 fw-bold">
                     <span>
-                        <a class="text-light me-4" aria-current="page" href="#">Home</a>
+                        <a class="text-light me-4" aria-current="page" href="../View/userHomePage.php">Home</a>
                     </span>
                     <span>
-                        <a class="text-light me-4"  href="#">Login/SignUp</a>
+                        <a class="text-light me-4"  href="../View/userLogin.php">Login/SignUp</a>
                     </span>
                     <span>
-                        <a class="text-light me-4"  href="#">ContactUs</a>
+                        <a class="text-light me-4"  href="../View/contactUs.php">ContactUs</a>
                     </span>
                     <span>
                         <a class="text-light"  href="../Controller/userProfileEditController.php"><i class="fa-regular fa-user"></i></a>
@@ -70,16 +70,16 @@
             <div class="collapse navbar-collapse justify-content-end fw-bold" id="navbarNav">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Appointment</a>
+                        <a class="nav-link text-light" href="../View/doctorList.php">Appointment</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Condition & Service</a>
+                        <a class="nav-link text-light" href="../View/C&S.php">Conditions & Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Health Knowledge</a>
+                        <a class="nav-link text-light" href="../View/HealthKnowledgeList.php">Health Knowledge</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Mental Health</a>
+                        <a class="nav-link text-light" href="../View/mentalHealthList.php">Mental Health</a>
                     </li>
                 </ul>
             </div>

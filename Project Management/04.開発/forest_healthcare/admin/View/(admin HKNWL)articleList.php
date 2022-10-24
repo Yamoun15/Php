@@ -18,6 +18,7 @@ include "../Controller/articleListController.php";
     <title>Document</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+
     <link rel="stylesheet" href="./resources/css/AdminDoctorList.css?v=" <?= time() ?>>
     <link rel="stylesheet" href="./resources/css/adminContact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -57,76 +58,67 @@ include "../Controller/articleListController.php";
         </ol>
     </section>
 
-    <!-- <div class="diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3">
-            Admin >> Post >> Conditions & Services
-        </div>
-        <div class="diseaseListTitle m-sm-auto mt-sm-3 mb-sm-3 mb-md-3 mb-3">
-            List of Conditions
-        </div> -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-sm-10 table-responsive">
-                <table class="table-responsive table mt-3">
-                    <thead>
-                        <tr class="title">
-                            <th scope="col">No</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Photo</th>
-                            <th scope="col">Content</th>
-                            <th scope="col">Edit</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>Eat healthy Stay healthy</td>
-                    <td>Dr.John.png</td>
-                    <td>The Definitive Guide to Healthy
-                        Eating in Real Life...</td>
-                    <td> <a href="(admin HKNWL)editArticle.php"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-                </tr> -->
+    <!-- Table starts-->
 
-                        <?php $count = 1; ?>
-                        <?php foreach ($articleList as $key => $article) { ?>
-                            <tr>
-                                <td><?= $count++; ?>.</td>
-                                <td><?php echo substr($article["title"], 0, 100) ?>...</td>
-                                <td><?= $article["photo"] ?></td>
-                                <td><?php echo substr($article["description"], 0, 50) ?>...</td>
-                                <td><a href="../Controller/articleEditController.php?ID=<?= $article['id'] ?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a> <a href="#"><i class="fa-solid fa-trash-can trashBtn"></i></a></td>
-                            </tr>
-                        <?php } ?>
+    <div class="table-responsive ">
+        <table class="table ">
+            <thead>
+                <tr class="title">
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Photo</th>
+                    <th scope="col">Content</th>
+                    <th scope="col">Edit</th>
+                </tr>
+            </thead>
+            <tbody>
 
+                <?php $count = ($page*$rowLimit)-1; ?>
+                <?php foreach ($articleList as $key => $article) { ?>
+                    <tr>
+                        <td scope="row"><?= $count++; ?>.</td>
+                        <td><?php echo substr($article["title"], 0, 50) ?>...</td>
+                        <td><img src="./image/articles/<?= $article["photo"] ?>" alt=""></td>
+                        <td><?php echo substr($article["description"], 0, 50) ?>...</td>
+                        <td><a href="../Controller/articleEditController.php?ID=<?= $article['id'] ?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a>
+                            <a href="../Controller/articleDeleteC.php?id=<?= $article['id'] ?>"><i class="fa-solid fa-trash-can trashBtn"></i></a>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-            <!-- Pagination -->
-            <nav aria-label="Page navigation example" class="mb-5 d-flex justify-content-lg-center">
-                <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                        </a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">5</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#" aria-label="Next">
-                            <span aria-hidden="true">&raquo;</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        <!-- Pagination -->
+        <nav aria-label="Page navigation example" class="mx-auto">
+            <ul class="pager">
+                <li class="
+                <?php if ($page <= 1) {
+                    echo "disabled";
+                } ?>
+                "><a href="?page=<?= $page-1?>">&laquo;</a></li>
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                    <li 
+                    ><a href="?page=<?= $i ?>" class=" btnNum
+                    <?php
+                    if($page == $i){
+                        echo "active";
+                    }
+                    ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
+                <?php } ?>
+
+                <li class="
+                <?php if ($page >= $totalPages) {
+                    echo "disabled";
+                } ?>">
+                    <a href="?page=<?= $page-1?>">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-            <!-- Footer -->
-            <?php include("common/footer.php"); ?>
+    <!-- Footer -->
+    <?php include("common/footer.php"); ?>
 
-            <script src="./resources/js/adminAboutUs.js"></script>
 </body>
 
 </html>

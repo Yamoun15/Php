@@ -7,7 +7,7 @@ if (isset($_POST["addArticle"])) {
     $title = $_POST["title"];
     $description = $_POST["description"];
 
-    if ($_FILES["uploadFile"]["name"] == "") {
+    if ($_FILES["photo"]["name"] == "") {
         // file not exist
         $sql = $pdo->prepare("
             INSERT INTO tbl_healthknowledge
@@ -25,15 +25,15 @@ if (isset($_POST["addArticle"])) {
         "
         );
     } else {
-    $file = $_FILES['uploadFile']['name'];
-    $location = $_FILES['uploadFile']['tmp_name'];
+    $file = $_FILES['photo']['name'];
+    $location = $_FILES['photo']['tmp_name'];
     $extension = pathinfo($file)['extension'];
 
     $sql = $pdo->prepare("SELECT id FROM tbl_healthknowledge ORDER BY id DESC LIMIT 1");
     $sql->execute();
     $articleInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    if (move_uploaded_file($location, "../View/image/HealthKnowl/". ($articleInfo[0]['id']+1).".".$extension)) {
+    if (move_uploaded_file($location, "../View/image/articles/". ($articleInfo[0]['id']+1).".".$extension)) {
         $sql = $pdo->prepare("
         INSERT INTO tbl_healthknowledge
         (
