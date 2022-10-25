@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-
+include "../Model/dbConnection.php";
 $articleDetail = $_SESSION["articleDetail"];
 
 // print_r($articleDetail);

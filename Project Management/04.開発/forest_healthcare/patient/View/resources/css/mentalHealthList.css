@@ -1,43 +1,109 @@
-body{
-    background-color: #9ECEF9 !important;
+body {
+  background-color: #9ecef9 !important;
 }
-.mhdiv{
-    width: 100%;
-    overflow: hidden;
+.mhdiv {
+  width: 100%;
+  overflow: hidden;
 }
-.pluse-parent{
+.pluse-parent {
+  display: flex;
+}
+
+.plusebtn {
+  width: 150px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #063551;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mental Health Cards */
+
+.cards {
+  column-count: 2;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  display: flex ;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.cards .card-body{
+    margin-bottom: 30px;
+    cursor: pointer;
     display: flex;
+    flex-wrap: wrap;
+
+}
+.cards .text{
+    text-align: left;
+    margin: 110px 0 0 10px;
+    font-size: larger;
+    font-family: 'Poly', serif;
+    text-decoration: none !important;
 }
 
-.plusebtn{
-    width: 150px;
-    height: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: #063551;
-    justify-content: center;
-    align-items: center;
- }
-.mentalHealth-card{
-    /* max-width: 50vh !important;   
-    height: 20vh !important;
-    background-color: #99e3d2 !important; */
-    /* border: 1px solid rgb(145, 13, 222) !important; */
-    border-radius: 20px !important;
-    text-align: center;
-    margin: 10px;
+.card-body .card1 {
+  background-image: radial-gradient(
+    rgb(186, 242, 248),
+    rgb(87, 210, 221),
+    rgb(24, 161, 173)
+  );
+  margin: auto;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  width: 18rem;
+  height: 10rem;
 }
-.card-title{
-    background-color: aqua;
-    padding: 0.5rem;
-    width: auto;
-}
+.card4 {
+    background-image: radial-gradient(
+      rgb(217, 194, 255),
+      rgb(194, 129, 244),
+      rgb(152, 47, 235)
+    );
+    margin: auto;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 18rem;
+    height: 10rem;
+  }
+  .card2 {
+    background-image: radial-gradient(
+      rgb(240, 205, 205),
+      rgb(242, 149, 149),
+      rgb(251, 121, 137)
+    );
+    margin: auto;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 18rem;
+    height: 10rem;
+  }
+  .card3 {
+    background-image: radial-gradient(
+      rgb(191, 248, 186),
+      rgb(106, 221, 87),
+      rgb(27, 173, 24)
+    );
+    margin: auto;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    width: 18rem;
+    height: 10rem;
+  }
 
-.testImg{
-width: 70% !important;
-cursor: pointer;
-margin-bottom: 2rem;
+  /* Mental Health Test */
+.testImg {
+  width: 70% !important;
+  cursor: pointer;
+  margin-bottom: 2rem;
 }
-.mental-health h3{
-    font-size: 2.5vw;
+.mental-health h3 {
+  font-size: 2.5vw;
 }
