@@ -59,9 +59,9 @@ include "../Controller/hospitalListController.php";
 
       <div class="hospitalCards">
         <!-- Hospital Logo -->
-        <div class="hospitalLogo position-relative start-0 ms-5">
+        <!-- <div class="hospitalLogo position-relative start-0 ms-5" id="hospital">
           <img src="./storages/pun hlaing logo 1.png" alt="">
-        </div>
+        </div> -->
 
         <!-- Department -->
         <!-- <div class="department m-3 " style="background-color: #F9C56B; border-radius: 30px; max-width: 500px; ">
@@ -76,7 +76,7 @@ include "../Controller/hospitalListController.php";
             <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
               <div class="row g-3 ">
                 <div class="col-md-2">
-                  <img src="./storages/image/<?= $doctor["doctor_photo"] ?>" width="100px" class="img-fluid rounded-start " alt="...">
+                  <img src="./storages/doctor/<?= $doctor["doctor_photo"] ?>" width="100px" class="img-fluid rounded-start " alt="...">
                 </div>
                 <div class="col-md-3">
                   <div class="card-body">

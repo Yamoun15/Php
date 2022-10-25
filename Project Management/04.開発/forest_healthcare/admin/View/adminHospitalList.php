@@ -41,8 +41,8 @@ include "../Controller/hospitalListController.php";
             <p class="content-header-text2"><small>Hospital List Features</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Hospital List</li>
+            <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"><a href="adminHospitalList.php">Hospital List</a></li>
         </ol>
     </section>
     <!-- Header -->
@@ -54,7 +54,7 @@ include "../Controller/hospitalListController.php";
                     <div class="col-md-8"></div>
                     <div class="col-md-3">
                         <a href="./adminHospitalAdd.php"><button class="btn adminppaddbtn">Add</button></a>
-                        
+
                     </div>
                 </div>
             </div>
@@ -75,64 +75,64 @@ include "../Controller/hospitalListController.php";
                         </tr>
                     </thead>
                     <tbody>
-                    <?php $count = 1; ?>
-                    <?php foreach ($hospitalList as $key => $hospital) { ?>
-                        <tr>
-                            <td scope="row"><?= $count++; ?>.</td>
-                            <td><?= $hospital["name"] ?></td>
-                            <td><?= $hospital["email_address"] ?></td>
-                            <td><?= $hospital["phone_no"] ?></td>
-                            <td><?= $hospital["address"] ?></td>
-                            <td>
-                                <img src="<?= $hospital["photo"] ?>" alt="">
-                            </td>
-                            <td>
-                                <a href="../Controller/adminHospitalDeleteController.php?id=<?= $hospital["id"] ?>"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></a>
-                            </td>
-                        </tr>
+                        <?php $count = 1; ?>
+                        <?php foreach ($hospitalList as $key => $hospital) { ?>
+                            <tr>
+                                <td scope="row"><?= $count++; ?>.</td>
+                                <td><?= $hospital["name"] ?></td>
+                                <td><?= $hospital["email_address"] ?></td>
+                                <td><?= $hospital["phone_no"] ?></td>
+                                <td><?= $hospital["address"] ?></td>
+                                <td>
+                                    <img src="<?= $hospital["photo"] ?>" alt="">
+                                </td>
+                                <td>
+                                    <a href="../Controller/adminHospitalDeleteController.php?id=<?= $hospital["id"] ?>"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></a>
+                                </td>
+                            </tr>
                         <?php } ?>
-                        
+
                     </tbody>
                 </table>
             </div>
             <div class="row">
                 <div class="col-md-7 col-sm-5"></div>
                 <div class="col-md-2 col-sm-5">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item 
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item 
                     <?php if ($page <= 1) {
                         echo "disabled";
                     }  ?>
                     ">
-                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
+                                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
 
-                        <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                            <li class="page-item 
+                            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                                <li class="page-item 
                         <?php
-                            if ($page == $i) {
-                                echo "active";
-                            }
+                                if ($page == $i) {
+                                    echo "active";
+                                }
                         ?>
                         "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
-                        <?php } ?>
+                            <?php } ?>
 
-                        <li class="page-item 
+                            <li class="page-item 
                     <?php if ($page >= $totalPages) {
                         echo "disabled";
                     }  ?>">
 
-                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                                <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <!-- Footer -->

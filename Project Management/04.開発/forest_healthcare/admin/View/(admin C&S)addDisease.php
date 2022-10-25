@@ -43,8 +43,8 @@
             <p class="content-header-text2"><small>To add new disease</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"><a href="(admin C&S)addDisease.php">Condition&Service</a></li>
         </ol>
     </section>
 
@@ -76,7 +76,7 @@
                                 <i class="fa-solid fa-arrow-up-from-bracket"></i>
                                 Upload Image
                             </label>
-                            <input id="file-upload" type="file" name="photo"/>
+                            <input id="file-upload" type="file" name="photo" />
                             <div id="CSfile-chosen">No file chosen</div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                         <div class="row">
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
-                            <button class="btn btnSave mt-3" name="diseaseBtn" type="submit">Save</button>
+                                <button class="btn btnSave mt-3" name="diseaseBtn" type="submit">Save</button>
                                 <!-- <input type="button" value="Save" class="btn btnSave mt-3" name="diseaseBtn"> -->
                             </div>
                         </div>

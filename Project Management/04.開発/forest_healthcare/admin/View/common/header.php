@@ -98,8 +98,8 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href="adminHospitalAdd.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Hospital</a></li>
-                        <li><a href="adminHospitalList.php"><i class="fa fa-circle" aria-hidden="true"></i>Hospital List</a></li>
+                        <li class="active"><a href="./../View/adminHospitalAdd.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Hospital</a></li>
+                        <li><a href="./../View/adminHospitalList.php"><i class="fa fa-circle" aria-hidden="true"></i>Hospital List</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -152,7 +152,7 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Privacy & Policy</a></li>
+                        <li class="active"><a href="./../View/adminP&Padd.php"><i class="fa fa-circle" aria-hidden="true"></i>Privacy & Policy</a></li>
                         <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Contact Us</a></li>
                         <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>About Us</a></li>
                         <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Account Setting</a></li>

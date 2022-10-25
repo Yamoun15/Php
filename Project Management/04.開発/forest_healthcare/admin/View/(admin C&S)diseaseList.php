@@ -47,8 +47,8 @@ include "../Controller/C&SDiseaseListController.php";
             <p class="content-header-text2"><small>List of Conditions</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"><a href="(admin C&S)addDisease.php">Condition&Service</a></li>
         </ol>
     </section>
 
@@ -81,7 +81,7 @@ include "../Controller/C&SDiseaseListController.php";
                                 <td>
                                     <img src="./image/C&S/<?= $disease["cs_photo"] ?>" alt="" class="csImage">
                                 </td>
-                                <td><?= substr($disease["disease_detail"],0,15) ?>...</td>
+                                <td><?= substr($disease["disease_detail"], 0, 15) ?>...</td>
                                 <td>
                                     <span>
                                         <a href="../Controller/C&SEditController.php?id=<?= $disease["id"] ?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a>
@@ -100,41 +100,41 @@ include "../Controller/C&SDiseaseListController.php";
             <div class="row">
                 <div class="col-md-7 col-sm-2"></div>
                 <div class="col-md-2 col-sm-5">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item 
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item 
                     <?php if ($page <= 1) {
                         echo "disabled";
                     }  ?>
                     ">
-                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
+                                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
 
-                        <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                            <li class="page-item 
+                            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                                <li class="page-item 
                         <?php
-                            if ($page == $i) {
-                                echo "active";
-                            }
+                                if ($page == $i) {
+                                    echo "active";
+                                }
                         ?>
                         "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
-                        <?php } ?>
+                            <?php } ?>
 
-                        <li class="page-item 
+                            <li class="page-item 
                     <?php if ($page >= $totalPages) {
                         echo "disabled";
                     }  ?>">
 
-                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                                <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>

@@ -83,7 +83,7 @@ $patientInfo = $_SESSION["patientInfo"];
                             <div class="card text-center p-2" style="width: 18rem;">
                                 <div class="card-body">
                                     <h5 class="card-title booking-summary">Booking Summary</h5>
-                                    <img src="./storages/image/<?= $doctorInfos[0]["doctor_photo"] ?>" alt="" width="100px">
+                                    <img src="./storages/doctor/<?= $doctorInfos[0]["doctor_photo"] ?>" alt="" width="100px">
                                     <p class="card-text"><b><?= $doctorInfos[0]["name"] ?></b></p>
                                     <p class="card-text"><b><?= $doctorInfos[0]["depname"] ?> Department</b></p>
                                     <div class="text-start">

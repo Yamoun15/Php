@@ -86,7 +86,7 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Add Doctor</a></li>
+                        <li class="active"><a href="./../View/addDoctor.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Doctor</a></li>
                         <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Doctor List</a></li>
                         <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Schedule List</a></li>
                     </ul>

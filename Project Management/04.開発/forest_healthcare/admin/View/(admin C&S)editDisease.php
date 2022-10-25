@@ -42,8 +42,8 @@
             <p class="content-header-text2"><small>Edit disease condtions</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"><a href="(admin C&S)addDisease.php">Condition&Service</a></li>
         </ol>
     </section>
 
@@ -91,14 +91,14 @@
                     </div>
 
                     <div class="form-group mx-auto me-md-3 me-sm-3 ms-5">
-                                <input type="button" value="Save Changes" class="btn btnSave mt-3 mx-auto">
+                        <input type="button" value="Save Changes" class="btn btnSave mt-3 mx-auto">
 
-                        </div>
                     </div>
-                </form>
             </div>
-            <div class="col-md-1 col-sm-1 col-1"></div>
+            </form>
         </div>
+        <div class="col-md-1 col-sm-1 col-1"></div>
+    </div>
     </div>
 
     <!-- <div class="footer d-flex justify-content-center align-items-center">
