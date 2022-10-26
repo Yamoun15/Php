@@ -1,7 +1,7 @@
 <?php
 include "../Controller/departmentListController.php";
-include "../Controller/dashboardNameController.php";
-// session_start();
+// include "../Controller/dashboardNameController.php";
+session_start();
 $doctorInfo =  $_SESSION["doctorInfo"];
 
 ?>

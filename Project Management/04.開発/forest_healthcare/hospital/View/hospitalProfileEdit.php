@@ -1,6 +1,6 @@
 <?php
-include "../Controller/dashboardNameController.php";
-// session_start();
+// include "../Controller/dashboardNameController.php";
+session_start();
 
 $hospitalInfo = $_SESSION["hospitalInfo"];
 
@@ -37,7 +37,7 @@ $hospitalInfo = $_SESSION["hospitalInfo"];
     <!-- Theme style -->
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
-<script src="./resources/js/hospitalProfileUpdate.js" defer></script>i
+<script src="./resources/js/hospitalProfileUpdate.js" defer></script>
 </head>
 
 <body class="skin-blue">
