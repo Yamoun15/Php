@@ -96,6 +96,7 @@ Admin about us adding -->
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
 
+
     <script src="./resources/js/adminAboutUs.js"></script>
     
 </body>
