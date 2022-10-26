@@ -34,7 +34,7 @@ if(isset($_POST["addDoctoreBtn"])){
     $doctorInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
    
-    if (move_uploaded_file($location, "../View/image/". ($doctorInfo[0]['id']+1).".".$extension)) {
+    if (move_uploaded_file($location, "../View/image/doctor/". ($doctorInfo[0]['id']+1).".".$extension)) {
         $sql = $pdo->prepare("
         INSERT INTO tbl_doctor
         (

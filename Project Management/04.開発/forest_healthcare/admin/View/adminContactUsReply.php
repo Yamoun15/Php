@@ -1,7 +1,10 @@
 <?php
-session_start();
+// session_start();
+include "../Controller/dashboardNameController.php";
 
 $replyMail = $_SESSION["replyMail"];
+
+
 
 ?>
 

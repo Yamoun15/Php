@@ -1,5 +1,8 @@
 <?php
 include "../Controller/adminDashboardController.php";
+
+include "../Controller/dashboardNameController.php";
+
 ?>
 
 <!DOCTYPE html>

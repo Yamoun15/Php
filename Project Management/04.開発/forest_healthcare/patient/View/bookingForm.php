@@ -52,15 +52,14 @@ $patientInfo = $_SESSION["patientInfo"];
                                 <div class="col-md-6 mb-3 col-sm-12">
                                     <label for="message-text" class="col-form-label"></label>
                                     <input type="text" class="form-control" id="recipient-name" placeholder="Phone No." value="<?= $patientInfo[0]["phone_no"] ?>" required readonly name="phone">
-
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <span class="form-floating">
                                     <label for="birthday"></label>
-                                    <input type="text" id="birthday" class="form-control" placeholder="Date of Birth" value="<?= $patientInfo[0]["date_of_birth"] ?>" name="birthday">
+                                    <input type="text" id="birthday" class="form-control" placeholder="Age" value="<?= $patientInfo[0]["age"] ?>" name="birthday">
                                     <input type="hidden" id="birthday" class="col-md-12 mb-3 col-sm-12 col-12 " value="<?= $doctorInfos[0]["id"] ?>" name="id">
-                                    <label for="floatingTextarea">Date of Birth</label>
+                                    <label for="floatingTextarea">Age</label>
                                 </span>
                             </div>
 
@@ -83,7 +82,7 @@ $patientInfo = $_SESSION["patientInfo"];
                             <div class="card text-center p-2" style="width: 18rem;">
                                 <div class="card-body">
                                     <h5 class="card-title booking-summary">Booking Summary</h5>
-                                    <img src="./storages/image/<?= $doctorInfos[0]["doctor_photo"] ?>" alt="" width="100px">
+                                    <img src="./storages/doctor/<?= $doctorInfos[0]["doctor_photo"] ?>" alt="" width="100px">
                                     <p class="card-text"><b><?= $doctorInfos[0]["name"] ?></b></p>
                                     <p class="card-text"><b><?= $doctorInfos[0]["depname"] ?> Department</b></p>
                                     <div class="text-start">
@@ -103,7 +102,7 @@ $patientInfo = $_SESSION["patientInfo"];
                         <div class="col-12 col-sm-12 col-md-4 mt-4 ms-sm-5 ms-md-5 ms-5">
                             <button class=" btnBook text-white" name="bookingBtn" type="submit">Submit</button>
                             <!-- <a class="btn btnBook ms-5 text-white" href="#" role="button" type="submit" name="bookingBtn">Book Now</a> -->
-                            <a class="btn btn-danger btnCancel  ms-5  text-white" href="#" role="button" type="submit">Cancel</a>
+                            <!-- <a class="btn btn-danger btnCancel  ms-5  text-white" href="#" role="button" type="submit">Cancel</a> -->
                         </div>
                     </div>
                 </form>

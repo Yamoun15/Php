@@ -18,7 +18,7 @@
                         <!--Grid column-->
 
                         <!--Grid column-->
-                        <div class="col-lg-4 offset-lg-4 col-md-12 col-sm-5 fw-bold mt-3 footerRightSide">
+                        <div class="col-lg-5 offset-lg-3 col-md-12 col-sm-5 fw-bold mt-3 footerRightSide">
                             <span class="text-light me-3 ">Privacy&Policy</span>
                             <span class="text-light me-3">AboutUs</span>
                             <span><i class="fa-brands fa-facebook text-light me-3 fs-5"></i></span>

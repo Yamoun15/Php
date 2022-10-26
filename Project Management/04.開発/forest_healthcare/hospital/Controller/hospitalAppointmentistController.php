@@ -13,6 +13,7 @@ $sql = $pdo->prepare("
 
 $hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 $hospitalId = $hospitalInfo[0]["id"];
+$_SESSION["hospitalInfo"]=$hospitalInfo;
 
 $sql = $pdo->prepare("
         SELECT appointment.*,user.name AS username,user.id AS userid,

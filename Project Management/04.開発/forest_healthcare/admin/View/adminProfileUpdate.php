@@ -1,6 +1,6 @@
 <?php
-
-session_start();
+include "../Controller/dashboardNameController.php";
+// session_start();
 include "../Controller/profileUpdateController.php";
 $adminInfo = $_SESSION["adminInfo"];
 

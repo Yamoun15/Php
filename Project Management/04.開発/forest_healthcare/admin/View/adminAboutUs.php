@@ -1,6 +1,14 @@
+
+
 <!-- Create:Nandar(5.10.2022)
 Update:Nandar(11.10.2022)
 Admin about us adding -->
+
+<?php
+
+include "../Controller/dashboardNameController.php";
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">

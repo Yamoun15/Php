@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    height: 100vh;
+}
 
 .healthKtitle{
     font-family: var(--fontfamily-poppins);
@@ -13,11 +15,17 @@
     font-weight: 10em;
 }
 p{
-    text-indent: 2%;
+    /* text-indent: 2%; */
     font-family: var(--fontfamily-poly );
 }
 .articaldetail::first-letter{
     font-size: 2em;
     font-weight: 20em;
     color: aqua;
+}
+
+.image{
+    width: 50% !important;
+    height: 50% !important;
+
 }

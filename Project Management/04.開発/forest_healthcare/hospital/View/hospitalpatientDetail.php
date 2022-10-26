@@ -1,6 +1,6 @@
 <?php
-
-session_start();
+include "../Controller/dashboardNameController.php";
+// session_start();
 $userInfo = $_SESSION["userInfo"];
 
 // echo "pre";

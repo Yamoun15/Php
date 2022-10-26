@@ -64,11 +64,14 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="./image/Hospitalphoto.png" class="img-circle" alt="User Image" />
+                    <img src="./image/<?= $hospitalInfo[0]["photo"]?>" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
                     <p>Welcome</p>
-                    <p>Pun Hlaing Hospital</p>
+                    <p><?php
+                        echo  $hospitalInfo[0]["name"];
+                        ?>
+                    </p>
                 </div>
             </div>
             <!-- /.search form -->
@@ -86,7 +89,7 @@
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Add Doctor</a></li>
+                        <li class="active"><a href="./../View/addDoctor.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Doctor</a></li>
                         <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Doctor List</a></li>
                         <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Schedule List</a></li>
                     </ul>
@@ -95,6 +98,12 @@
                     <a href="#">
                         <i class="fa fa-calendar-o" aria-hidden="true"></i>
                         <span>Appointment</span>
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="./../View/departmentAdd.php">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                        <span>Department Add</span>
                     </a>
                 </li>
                 <li>

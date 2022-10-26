@@ -1,31 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-body{
-    
+.hospitalCards {
+  min-height: 50vh;
 }
 
-*{
-    margin: 0 !important;
-    padding: 0 !important;
+/* * {
+  margin: 0 !important;
+  padding: 0 !important;
+} */
+
+/* .nav .nav-item {
+  margin: 50px !important;
+} */
+.p1 {
+  font-family: "Roboto", sans-serif !important;
+}
+.body-content {
+  position: relative !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.department {
+  margin: auto !important;
 }
 
-
-.nav .nav-item{
-margin: 50px !important;
+.nav-link{
+    padding: 0.5rem 1rem !important;
 }
-.p1{
-    font-family: 'Roboto', sans-serif !important;
-
+.appointment{
+    color: blue !important;
 }
-.body-content{
-position: relative !important;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-.department{
-margin: auto !important;
-}
-
-

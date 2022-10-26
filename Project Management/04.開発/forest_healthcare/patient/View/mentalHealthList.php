@@ -1,6 +1,8 @@
-<?php 
+<?php
+
 include "../Controller/videoListC.php";
-$videoList =$_SESSION["videoList"];
+$videoList = $_SESSION["videoList"];
+// print_r($videoList);
 ?>
 
 <!DOCTYPE html>
@@ -38,33 +40,38 @@ $videoList =$_SESSION["videoList"];
         </div>
     </div>
 
-    <div class="container-fluid mt-5">
-        <h3>You Deserve To Take A Break</h3>
-        <div class="row  d-flex flex-wrap justify-content-center align-items-center">
-            <!-- <?php foreach ($videoList as $key => $video) {?>
-            <div class="mentalHealth-card col-12 col-md-5 col-sm-12 mb-5 d-flex flex-wrap flex-column justify-content-center align-items-center">
-                    <div class="card-body">
-                        <iframe src="<?php echo $video["youtube_link"]?>" width="100%" height="280" title="BLACKPINK (JENNIE) New solo song (unreleased) [블랙핑크 제니] 4K 직캠 • 비몽" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <h5 class="card-title"><?php echo $video["mentalhealth_title"]?></h5>
-            </div>
-            <?php } ?> -->
+    <div class="container-fluid mt-5 mx-auto text-center">
+        <h3 class="mb-5">You Deserve To Take A Break</h3>
 
-            <div class="mentalHealth-card col-12 col-md-5 col-sm-12 mb-5 d-flex flex-wrap justify-content-center align-items-center ">
+        <div class="cards">
+            <div class="card-body ">
+                <a href="<?=$videoList[0]["youtube_link"] ?>" class=" card1 mb-sm-5 mb-5 mb-md-0">
+                    <div class="text text-decoration-none">Halo of love</div>
+                </a>
 
-                <div class="">
-                    <div class="card-body">
-                    <iframe src="https://www.youtube-nocookie.com/embed/r00ikilDxW4?start=0&iv_load_policy=3&color=white&playlist=_WB1TMvymS4&full-screen mode available" width="350" height="280" title="A YouTube video" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                <div class=" card2">
+                    <div class="text">Letting go</div>
                 </div>
             </div>
-            
-        <div class="mental-health text-center">
-            <h3>Your Mental Health is more than important your grades</h3>
-            <div  >
-                <img src="./storages/mentalhealthtest.png" alt="" class="testImg">
+
+            <div class="card-body ">
+                <div class="card3 mb-sm-5 mb-5 mb-md-0">
+                    <div class="text">Observe your breath</div>
+                </div>
+
+                <div class="card4">
+                    <div class="text">Anchor yourself</div>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="mental-health text-center mt-5">
+        <h3>Your Mental Health is more than important your grades</h3>
+        <div>
+            <img src="./storages/mentalhealthtest.png" alt="" class="testImg">
+        </div>
+    </div>
 
     </div>
 

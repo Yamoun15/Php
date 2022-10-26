@@ -1,5 +1,6 @@
 <?php
 include "../Controller/adminP&PListController.php";
+include "../Controller/dashboardNameController.php";
 ?>
 
 <!DOCTYPE html>
@@ -40,8 +41,8 @@ include "../Controller/adminP&PListController.php";
             <p class="content-header-text2"><small>Privacy & Policy List Features</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Privacy & Policy List</li>
+        <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"><a href="adminP&Padd.php">Privacy & Policy</a></li>
         </ol>
     </section>
     <!-- Header -->

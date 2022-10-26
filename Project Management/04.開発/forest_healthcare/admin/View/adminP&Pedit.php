@@ -1,5 +1,6 @@
 <?php
-session_start();
+include "../Controller/dashboardNameController.php";
+// session_start();
 
 $policyInfo = $_SESSION["policyInfo"];
 
@@ -45,8 +46,8 @@ $policyInfo = $_SESSION["policyInfo"];
             <p class="content-header-text2"><small>Privacy & Policy</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Privacy & Policy</li>
+            <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"><a href="adminP&Padd.php">Privacy & Policy</a></li>
         </ol>
     </section>
     <!-- Header -->
