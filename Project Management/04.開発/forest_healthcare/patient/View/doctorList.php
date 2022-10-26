@@ -1,4 +1,19 @@
 <?php
+session_start();
+
+if (isset($_POST["user_email"]) && isset($_POST["password"])) {
+    $user_email = $_POST["user_email"];
+    $password = $_POST["password"];
+    $_SESSION["user_email"] = $user_email;
+}
+
+
+if (!isset($_SESSION["user_email"])) {
+    // go to login
+    header("Location: userLogin.php");
+} else {
+    $email = $_SESSION["user_email"];
+}
 
 include "../Controller/adminDoctorListController.php";
 include "../Controller/hospitalListController.php";
@@ -27,9 +42,8 @@ include "../Controller/hospitalListController.php";
   <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
   <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
   <!-- fontawesome cdn -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,6 +52,8 @@ include "../Controller/hospitalListController.php";
   <script src="./resources/js/jquery3.6.0.js"></script>
   <script src="./resources/js/booking.js" defer></script>
 
+
+  
 </head>
 
 <body>
@@ -51,8 +67,16 @@ include "../Controller/hospitalListController.php";
       <div class="dropdown">
 
         <select class="hospitalDropDown mt-3 mb-3" aria-label="Default select example" name="hospital" id="hospitalChoose">
-          <?php foreach ($hospitalList as $key => $hospital) { ?>
-            <option value="<?= $hospital["id"] ?>"><?= $hospital["name"] ?></option>
+        <!-- <option value="">All Hospital</option> -->
+        <?php foreach ($hospitalList as $key => $hospital) { ?>
+            <option value="<?= $hospital["id"] ?>" 
+              <?php
+
+              if($hospital["id"]==1)
+              echo "selected";
+              ?>
+
+            ><?= $hospital["name"] ?></option>
           <?php } ?>
         </select>
       </div>

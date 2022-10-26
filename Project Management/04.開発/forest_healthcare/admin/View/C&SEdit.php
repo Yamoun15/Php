@@ -1,5 +1,6 @@
 <?php
-session_start();
+include "../Controller/dashboardNameController.php";
+// session_start();
 
 $diseaseInfo = $_SESSION["diseaseInfo"];
 

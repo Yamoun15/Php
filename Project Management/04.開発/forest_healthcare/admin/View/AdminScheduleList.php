@@ -1,3 +1,9 @@
+<?php
+
+include "../Controller/dashboardNameController.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,8 +1,13 @@
 
+chooseHospital();
 $("#hospitalChoose").change(function () {
 
+    chooseHospital();
+});
+
+function chooseHospital(){
     let sendData = {
-        hospital: $(this).find(":selected").val(),
+        hospital: $("#hospitalChoose").find(":selected").val(),
     };
 
     $.ajax({
@@ -59,5 +64,4 @@ $("#hospitalChoose").change(function () {
             alert(err);
         },
     });
-});
-
+}

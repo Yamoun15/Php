@@ -70,7 +70,7 @@
             <div class="collapse navbar-collapse justify-content-end fw-bold" id="navbarNav">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                        <a class="nav-link text-light" href="../View/doctorList.php">Appointment</a>
+                        <a class="nav-link text-light appointment" href="../View/doctorList.php">Appointment</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="../View/C&S.php">Conditions & Services</a>

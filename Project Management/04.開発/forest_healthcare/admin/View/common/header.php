@@ -1,3 +1,5 @@
+
+
 <div class="wrapper">
 
     <header class="main-header">
@@ -65,11 +67,14 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="./image/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                <img src="./image/<?= $adminInfo[0]["photo"]?>" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
                     <p>Welcome</p>
-                    <p>Alexander Pierce</p>
+                    <p><?php
+                        echo  $adminInfo[0]["name"];
+                        ?>
+                    </p>
                 </div>
             </div>
             <!-- /.search form -->

@@ -1,6 +1,7 @@
 <?php
 
 include "../Controller/MHeditVideoListC.php";
+include "../Controller/dashboardNameController.php";
 
 ?>
 
