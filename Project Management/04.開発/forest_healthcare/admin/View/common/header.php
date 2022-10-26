@@ -2,7 +2,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="" class="logo"><img src="./image/logoAdmin.png" id="logo" alt=""><b>ADMIN</b></a>
+        <a href="" class="logo"><img src="./image/loginLogo.png" id="logo" alt=""><b>ADMIN</b></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->

@@ -1,58 +1,69 @@
-const config = {
-    type: 'pie',
-    data: data,
-  };
-  
-// const labels = [
+
+// linechart start
+// const data1 = {
+//   labels: [
+//     'October',
+//     'November',
+//     'December',
 //     'January',
 //     'February',
 //     'March',
-//     'April',
-//     'May',
-//     'June',
-// ];
-
-// const data = {
-//     labels: labels,
-//     datasets: [{
-//         label: 'My First dataset',
-//         backgroundColor: 'rgb(255, 99, 132)',
-//         borderColor: 'rgb(255, 99, 132)',
-//         data: [0, 10, 5, 2, 20, 30, 45],
-//     }]
+//     'April'
+//   ],
+//   datasets: [{
+//     label: 'Booking Range',
+//     backgroundColor: 'rgb(255, 99, 132)',
+//     borderColor: 'rgb(255, 99, 132)',
+//     data: [10, 0, 0, 0, 0, 0, 45],
+//   }]
 // };
 
-// const config = {
-//     type: 'line',
-//     data: data,
-//     options: {}
+// const config1 = {
+//   type: 'line',
+//   data: data,
+//   options: {}
 // };
 
-// const myChart = new Chart(
-//     document.getElementById('myChart'),
-//     config
+// const myChart1 = new Chart(
+//   document.getElementById('myChart1'),
+//   config
 // );
-// var xValues = ["Man", "Woman", "Other"];
-// var yValues = [55, 49, 44];
-// var barColors = [
-//   "#b91d47",
-//   "#00aba9",
-//   "#2b5797"
-// ];
+// linechart end
 
-// new Chart("myChart", {
-//   type: "pie",
-//   data: {
-//     labels: xValues,
-//     datasets: [{
-//       backgroundColor: barColors,
-//       data: yValues
-//     }]
-//   },
-//   options: {
-//     title: {
-//       display: true,
-//       text: "World Wide Wine Production 2018"
-//     }
-//   }
-// });
+// piechart start
+const data = {
+  labels: ['Kid', 'Over 18', 'Over 65'],
+  datasets: [
+    {
+      label: 'Dataset 1',
+      data: pieData,
+      backgroundColor: ["red","green","blue"],
+    }
+  ]
+};
+const config = {
+  type: 'pie',
+  data: data,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Pie Chart'
+      }
+    }
+  },
+};
+
+const myChart = new Chart(
+  document.getElementById('myChart'),
+  config
+);
+// piechart end
+
+
+
+

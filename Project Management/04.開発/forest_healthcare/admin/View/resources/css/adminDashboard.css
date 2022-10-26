@@ -72,3 +72,9 @@
         font-size: 12px
     }
 }
+
+#myChartPie{
+    width:100px !important;
+    height:100px !important;
+
+}

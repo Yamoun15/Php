@@ -1,6 +1,5 @@
 <?php
 
-
 include "../Model/dbConnection.php";
 
 if (isset($_POST["changeBtn"])){
@@ -11,22 +10,10 @@ if (isset($_POST["changeBtn"])){
     // echo $title;
     // echo $text;
 
-    $sql = $pdo->prepare(
-        "INSERT INTO tbl_aboutus
-        (
-            title,
-            description,
-            photo,
-            created_date
-        )
-        VALUES
-        (
-            :title,
-            :description,
-            :photo,
-            :createdDate
-        )"
-    );
+    $sql = $pdo->prepare("UPDATE tbl_aboutus SET title=:title,
+                                description=:description,
+                                photo=:photo,
+                                created_date=:createdDate");
 
     $sql->bindValue(":title",$title);
     $sql->bindValue(":description",$description);

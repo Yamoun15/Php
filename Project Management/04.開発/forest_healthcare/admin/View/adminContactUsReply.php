@@ -1,6 +1,10 @@
 <?php
-
+// session_start();
 include "../Controller/dashboardNameController.php";
+
+$replyMail = $_SESSION["replyMail"];
+
+
 
 ?>
 
@@ -57,25 +61,26 @@ include "../Controller/dashboardNameController.php";
         <div class="row">
             <div class="col-md-2 col-sm-2 col-2"></div>
             <div class="col-md-6  col-sm-8 col-8 adminContactReply-col">
-                <form action="../Controller/adminContactUsMailController.php" mehtod="post" class="form-horizontal hr">
+                <form action="../Controller/adminContactUsMailController.php" method="POST" class="form-horizontal hr">
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactReplyinput" id="usernaem" placeholder="To">
+                            <input type="text" class="form-control adminContactReplyinput" id="usernaem" value="<?= $replyMail[0]["email_address"]?>" name="userEmail">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactReplyinput" id="usernaem" placeholder="Subject">
+                            <input type="text" class="form-control adminContactReplyinput" id="usernaem" placeholder="Subject" name="subject">
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <textarea rows="9" type="text" class="form-control adminContactReplyinput" id="usernaem" placeholder="Message"></textarea>
+                            <textarea rows="9" type="text" class="form-control adminContactReplyinput" id="usernaem" placeholder="Message" name="replyMeaasge"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                            <input type="button" value="Send" class="adminContactReplybtn">
+                            <!-- <input type="button" value="Send" class="adminContactReplybtn"> -->
+                            <button class="adminContactReplybtn" name="replyBtn">Reply</button>
                         </div>
                     </div>
                 </form>
