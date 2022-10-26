@@ -1,5 +1,6 @@
 <?php
 include "../Controller/C&SDiseaseListController.php";
+include "../Controller/dashboardNameController.php";
 
 ?>
 

@@ -1,4 +1,19 @@
 <?php
+session_start();
+
+if (isset($_POST["user_email"]) && isset($_POST["password"])) {
+    $user_email = $_POST["user_email"];
+    $password = $_POST["password"];
+    $_SESSION["user_email"] = $user_email;
+}
+
+
+if (!isset($_SESSION["user_email"])) {
+    // go to login
+    header("Location: userLogin.php");
+} else {
+    $email = $_SESSION["user_email"];
+}
 
 include "../Controller/adminDoctorListController.php";
 include "../Controller/hospitalListController.php";

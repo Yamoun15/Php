@@ -1,6 +1,7 @@
 <?php
 
 include "../Controller/articleListController.php";
+include "../Controller/dashboardNameController.php";
 
 // echo "<pre>";
 // print_r($articleList);

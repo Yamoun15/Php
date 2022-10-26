@@ -1,5 +1,6 @@
 <?php
 include "../Controller/hospitalAppointmentistController.php";
+include "../Controller/dashboardNameController.php";
 // echo "<pre>";
 // print_r($appointmentList);
 
