@@ -27,4 +27,9 @@ if (isset($_POST["user_email"]) && isset($_POST["password"])) {
     } else {
         header("Location: ../View/userLogin.php");
     }
+<<<<<<< HEAD
+} else {
+    header("Location: ../View/userLogin.php");
+=======
+>>>>>>> origin/main
 }

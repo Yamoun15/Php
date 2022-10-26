@@ -31,7 +31,7 @@ if (isset($_POST["email_address"]) && isset($_POST["password"])) {
         $sql->execute();
 
         $_SESSION["user_email"] = $email;
-        header("Location: ../View/userHomePage.php");
+        header("Location: ../View/userLogin.php");
     } else {
         echo "error";
     }
