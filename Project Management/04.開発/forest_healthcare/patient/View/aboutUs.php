@@ -30,17 +30,16 @@ include "../Controller/webisteAboutUsController.php";
         <div class="row">
             <div class="col-1 col-md-1 col-sm-1"></div>
             <div class="col-10 col-md-10 col-sm-10">
-            <?php foreach ($mailList as $mail) { ?>
-                <p class="text-white mt-5 aboutUstitle">About Us</p>
+                <?php foreach ($aboutUs as $aboutUs) { ?>
+                    <p class="text-white mt-5 aboutUstitle"><?= $aboutUs["title"] ?></p>
             </div>
         </div>
         <div class="row">
-        <div class="col-1 col-md-1 col-sm-1"></div>
+            <div class="col-1 col-md-1 col-sm-1"></div>
             <div class="col-5 col-md-5 col-sm-5">
-                <p class="description text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex, minus quisquam a itaque voluptates numquam laborum perferendis quasi repellat nisi quos magni ea pariatur officiis culpa ipsum ut consectetur.</p>
-                <p class="description text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex, minus quisquam a itaque voluptates numquam laborum perferendis quasi repellat nisi quos magni ea pariatur officiis culpa ipsum ut consectetur.</p>
-                <?php } ?>
-                <button class="larnmorebtn text-white">Learn More</button>
+                <p class="description text-white"><?= $aboutUs["description"] ?></p>
+            <?php } ?>
+            <button class="larnmorebtn text-white">Learn More</button>
             </div>
             <div class="col-1 col-md-1 col-sm-1"></div>
             <div class="col-5 col-md-5 col-sm-5">

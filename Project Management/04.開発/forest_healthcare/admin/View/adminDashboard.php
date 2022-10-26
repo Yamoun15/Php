@@ -1,4 +1,5 @@
 <?php
+include "../Controller/adminDashboardController.php";
 
 include "../Controller/dashboardNameController.php";
 
@@ -53,36 +54,7 @@ include "../Controller/dashboardNameController.php";
         </ol>
     </section>
     <!-- Header -->
-    <!-- <div>
-        <canvas id="myChart"></canvas>
-    </div> -->
-    <!-- <div class="row dashboard_box_all">
-        <span class="col-lg-2 col col-xs-6 bg-aqua">
-            <div></div>
-            <div>2000</div>
-            <div>Users</div>
-        </span>
-        <span class="col-lg-2 col col-xs-6 dashboard_box">
-            <div></div>
-            <div>2000</div>
-            <div>Visitors</div>
-        </span>
-        <span class="col-lg-2 col col-xs-6 dashboard_box">
-            <div></div>
-            <div>2000</div>
-            <div>Appointment</div>
-        </span>
-        <span class="col-lg-2 col col-xs-6 dashboard_box">
-            <div></div>
-            <div>2000</div>
-            <div>Users</div>
-        </span>
-        <span class="col-lg-2 col col-xs-6 dashboard_box">
-            <div></div>
-            <div>2000</div>
-            <div>Users</div>
-        </span>
-    </div> -->
+
     <section class="content">
         <!-- Small boxes (Stat box) -->
         <div class="row">
@@ -151,31 +123,41 @@ include "../Controller/dashboardNameController.php";
             </div>
             <!--col -->
         </div>
-        <!--.row -->
-        <!-- Main row -->
-        <div class="row">
-            <!-- Left col -->
-            <section class="col-lg-7 connectedSortable">
-                <!-- Custom tabs (Charts with tabs)-->
-                <div class="nav-tabs-custom">
-
-                </div>
-            </section><!-- Left col -->
-
-            <section class="col-lg-5 connectedSortable">
-
-
-            </section><!-- right col -->
-        </div>
-
     </section><!-- content -->
-    </div>
 
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5 col-md-5 col-sm-12">
+            <div>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12">
+            <div>
+                <canvas id="myChart1"></canvas>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+    </div>
 
 
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
 
+    <script>
+        let ages = <?= json_encode($ages) ?>;
+        let pieData = [0, 0, 0];
+
+        for (let index = 0; index < ages.length; index++) {
+            if (ages[index] < 18) {
+                pieData[0] += 1;
+            } else if (18 <ages[index]&& ages[index]<65) {
+                pieData[1] += 1;
+            } else if (ages[index] > 65) {
+                pieData[2] += 1;
+            }
+        };
+    </script>
 
 </body>
 

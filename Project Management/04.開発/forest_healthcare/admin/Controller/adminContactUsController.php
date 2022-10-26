@@ -9,26 +9,12 @@ if(isset($_POST["submitBtn"])){
     $address = $_POST["address"];
     $description = $_POST["description"];
 
-    $sql = $pdo->prepare(
-        "INSERT INTO tbl_contactus
-        (
-            phone_no,
-            email_address,
-            address,
-            title,
-            welcome_text,
-            created_date
-        )
-        VALUE
-        (
-            :phNo,
-            :email,
-            :address,
-            :title,
-            :description,
-            :createdDate
-        )"
-    );
+    $sql = $pdo->prepare("UPDATE tbl_contactus SET phone_no=:phNo,
+                                email_address=:email,
+                                address=:address,
+                                title=:title,
+                                welcome_text=:description,
+                                created_date=:createdDate");
 
     $sql->bindValue(":phNo",$phNo);
     $sql->bindValue(":email",$email);
