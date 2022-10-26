@@ -50,18 +50,17 @@ if (isset($_POST["addArticle"])) {
             :created_date
         )
     ");
-    $sql->bindValue(":photo", $path);
+    $sql->bindValue(":photo", ($articleInfo[0]['id']+1).".".$extension);
 } else {
     echo 'There was some error moving the file to upload directory.';
 }
     $sql->bindValue(":title", $title);
     $sql->bindValue(":description", $description);
-    $sql->bindValue(":photo", ($articleInfo[0]['id']+1).".".$extension);
     $sql->bindValue(":created_date", date("Y/m/d"));
 
     $sql->execute();
-    // header("Location: ../View/(admin HKNWL)articleList.php");
-    print_r($description);
+    header("Location: ../View/(admin HKNWL)articleList.php");
+    // print_r($description);
     } 
 } else {
     echo "Error";

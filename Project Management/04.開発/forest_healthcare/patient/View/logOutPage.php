@@ -22,6 +22,7 @@
             .btnLogOut{
                 background-color: #188067;
                 color: white;
+                text-decoration: none;
             }
         </style>
 </head>
@@ -50,7 +51,7 @@
                 </div>
                 <div class="modal-footer mx-auto">
                     <button type="button" class="btn btn-danger btnCancel me-3" data-bs-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btnLogOut">Log Out</button>
+                    <button type="button" class="btn btnLogOut" style="text-decoration: none; color:white;">Log Out</button>
                 </div>
             </div>
         </div>
