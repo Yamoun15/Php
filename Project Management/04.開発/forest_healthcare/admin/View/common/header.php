@@ -1,5 +1,3 @@
-
-
 <div class="wrapper">
 
     <header class="main-header">
@@ -67,7 +65,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                <img src="./image/<?= $adminInfo[0]["photo"]?>" class="img-circle" alt="User Image" />
+                    <img src="./image/<?= $adminInfo[0]["photo"] ?>" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
                     <p>Welcome</p>
@@ -122,8 +120,9 @@
                     <ul class="treeview-menu">
                         <li class="active"><a href="">Condition & Service</a>
                             <ul class="treeview-menu">
-                                <li class="active"><a href="./../View/(admin C&S)addDisease.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Disease</a></li>
                                 <li><a href="./../View/(admin C&S)diseaseList.php"><i class="fa fa-circle" aria-hidden="true"></i>Disease List</a></li>
+                                <li><a href="./../View/(admin C&S)addDisease.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Disease</a></li>
+
                             </ul>
                         </li>
                         <li class="active"><a href="">Health Knowledge</a>

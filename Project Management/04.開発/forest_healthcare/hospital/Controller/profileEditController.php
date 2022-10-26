@@ -13,9 +13,9 @@ $sql->execute();
 $hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 $_SESSION["hospitalInfo"] = $hospitalInfo;
-// echo $id;
-// print_r($hospitalInfo);
+echo $id;
+print_r($hospitalInfo);
 
-header("Location: ../View/hospitalProfileEdit.php");
+// header("Location: ../View/hospitalProfileEdit.php");
 
 ?>

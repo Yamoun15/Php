@@ -1,6 +1,8 @@
 <?php
 
+include "../Controller/C&SDiseaseListController.php";
 include "../Controller/dashboardNameController.php";
+
 
 ?>
 
@@ -102,7 +104,7 @@ include "../Controller/dashboardNameController.php";
                             <div class="col-md-9"></div>
                             <div class="col-md-3">
                                 <button class="btn btnSave mt-3" name="diseaseBtn" type="submit">Save</button>
-                                <!-- <input type="button" value="Save" class="btn btnSave mt-3" name="diseaseBtn"> -->
+                                
                             </div>
                         </div>
                     </div>
@@ -117,6 +119,8 @@ include "../Controller/dashboardNameController.php";
             <a href="#">Click to edit and see the list</a>
         </div>
     </div> -->
+    <!-- Footer -->
+    <?php include("common/footer.php"); ?>
     <script src="./resources/js/CS.js"></script>
 </body>
 
