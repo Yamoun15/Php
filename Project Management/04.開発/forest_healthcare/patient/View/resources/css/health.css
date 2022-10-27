@@ -1,3 +1,6 @@
+#health{
+    color: var(--orange) !important;
+}
 /* Nandar */
 
 
@@ -246,7 +249,5 @@ i {
 
 /* Nandar end */
 
-#condition{
-    color: var(--orange ) !important;
-}
+
 

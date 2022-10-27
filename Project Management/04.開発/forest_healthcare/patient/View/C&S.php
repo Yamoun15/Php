@@ -19,13 +19,15 @@ include "../Controller/C&SDiseaseController.php";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poly&family=Poppins&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/root.css" />
-    <link rel="stylesheet" href="./resources/css/C&S.css">
+    
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./resources/css/root.css" />
     <link rel="stylesheet" href="./resources/css/all.css" />
+    <link rel="stylesheet" href="./resources/css/C&S.css">
+
     <!-- logouticon2 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">

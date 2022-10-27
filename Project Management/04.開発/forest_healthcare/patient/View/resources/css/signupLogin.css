@@ -58,3 +58,6 @@
 .acolor{
     color: black;
 }
+.login{
+    color: var(--orange ) !important;
+  }

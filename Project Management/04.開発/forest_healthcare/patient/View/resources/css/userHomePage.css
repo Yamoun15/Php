@@ -300,3 +300,7 @@ a.articleImg {
   font-size: 1rem;
   border: none;
 }
+
+.home{
+  color: var(--orange ) !important;
+}
