@@ -26,9 +26,9 @@
                 <div class="row">
                     <div class="login_logo me-3">
                         <img src="./storages/loginLogo.png" alt="" srcset="">
-                        <label for="" class="mx-3"><a href="http://" class="acolor">Home</a></label>
-                        <label for="" class="mx-3"><a href="http://" class="acolor">About Us</a></label>
-                        <label for="" class=""><a href="http://" class="acolor">Contact Us</a></label>
+                        <label for="" class="mx-3"><a href="./userHomePage.php" class="acolor">Home</a></label>
+                        <label for="" class="mx-3"><a href="./aboutUs.php" class="acolor">About Us</a></label>
+                        <label for="" class=""><a href="./contactUs.php" class="acolor">Contact Us</a></label>
                     </div>
                 </div>
 
