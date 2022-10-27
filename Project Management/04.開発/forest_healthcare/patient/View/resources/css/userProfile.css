@@ -1,15 +1,16 @@
-
-.adminContact-col{
+.adminContact-col {
     border-radius: 10px;
     padding: 15px;
 }
-.adminContact-form{
-    margin: 20px ;
+
+.adminContact-form {
+    margin: 20px;
 }
+
 .adminContactInput {
     /* color: #188067 !important;
     font-size: 1rem !important; */
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     outline: none;
@@ -20,19 +21,19 @@
     font-family: var(--fontfamily-poppins) !important;
 }
 
-.adminContactbtn{
-    color: white ;
-    background-color: #188067 ;
+.adminContactbtn {
+    color: white;
+    background-color: #188067;
     font-family: var(--fontfamily-poppins) !important;
-    font-size: 0.8em ;
-    padding: 3px ;
-    border-radius: 8px ;
+    font-size: 0.8em;
+    padding: 3px;
+    border-radius: 8px;
     border: none;
     width: 70px;
     margin-left: 65%;
 }
 
-.profilebg{
+.profilebg {
     width: 6rem;
     height: 6rem;
     background-color: #ccc;
@@ -41,15 +42,17 @@
     margin-left: 10px;
 }
 
-.userProfileUpdate{
+.userProfileUpdate {
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
     margin-bottom: 10px;
 }
+
 #userfile-upload {
     display: none;
 }
+
 .usercustom-file-upload {
     display: inline-block;
     cursor: pointer;
@@ -57,35 +60,43 @@
     margin-bottom: 20px;
     color: black;
 }
-.adminProfileUpdateChoose{
+
+.adminProfileUpdateChoose {
     margin-left: 32%;
     margin-bottom: 10px;
     font-size: 1.5vw;
     font-family: var(--fontfamily-poly);
 }
-.adminProfileUpdatebtn{
+
+.adminProfileUpdatebtn {
     background-color: #FC4D36 !important;
 }
-.myProfileTitle{
+
+.myProfileTitle {
     color: #188067;
     font-size: 2em;
     margin-bottom: 10px;
     font-family: var(--fontfamily-poly);
 }
-.userProfileConfirmbtnfloat{
+
+.userProfileConfirmbtnfloat {
     float: left;
 }
-.userProfileInputfloat{
+
+.userProfileInputfloat {
     clear: both;
 }
-.userProfileLabel ,.form-check{
+
+.userProfileLabel,
+.form-check {
     color: var(--gray);
     font-family: var(--fontfamily-poly);
     color: #188067;
 }
-.passwordsendButton{
+
+.passwordsendButton {
     color: white;
-    margin-bottom: 20px ;
+    margin-bottom: 20px;
     border: none;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     outline: none;
@@ -96,9 +107,18 @@
     font-family: var(--fontfamily-poppins) !important;
     background-color: #188067;
 }
+
 .menubox {
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 29px;
     margin-top: 20px;
+}
+
+.pEdit {
+    color: var(--orange) !important;
+}
+
+.myProfile {
+    color: var(--green) !important;
 }

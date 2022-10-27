@@ -7,7 +7,6 @@ $patientInfo = $_SESSION["patientInfo"];
 // echo "<pre>";
 // print_r($patientInfo);
 
-
 ?>
 
 <!DOCTYPE html>
@@ -78,13 +77,13 @@ $patientInfo = $_SESSION["patientInfo"];
                 <br>
                 <div class="row menubox">
                     <div class="col-2 offset-2">
-                        <div><i class="fa-solid fa-user fs-5 mt-5"></i></div>
+                        <div><i class="fa-solid fa-user fs-5 mt-5 myProfile"></i></div>
                         <div><i class="fa-regular fa-calendar-check fs-5 mt-5"></i></div>
                         <div><i class="fa-solid fa-user-gear fs-5 mt-5"></i></div>
                         <div><i class="fa-solid fa-right-from-bracket fs-5 mt-5"></i></div>
                     </div>
                     <div class="col-6 fw-bold">
-                        <div class=" mt-5"><a href="../Controller/userProfileEditController.php" class="text-dark">My Profile</a></div>
+                        <div class=" mt-5"><a href="../Controller/userProfileEditController.php" class="myProfile">My Profile</a></div>
                         <div class=" mt-5"><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
                         <div class=" mt-5"><a href="" class="text-dark">Account Setting</a></div>
                         <div class="btn mt-5 mb-5 text-dark fw-bold text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>

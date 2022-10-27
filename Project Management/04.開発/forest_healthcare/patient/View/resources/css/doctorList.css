@@ -30,5 +30,5 @@
     padding: 0.5rem 1rem !important;
 }
 .appointment{
-    color: blue !important;
+  color: var(--orange ) !important;
 }
