@@ -103,6 +103,8 @@ $diseaseInfo = $_SESSION["diseaseInfo"];
             <div class="col-md-1 col-sm-1 col-1"></div>
         </div>
     </div>
+<!-- Footer -->
+<?php include("common/footer.php"); ?>
 
 </body>
 

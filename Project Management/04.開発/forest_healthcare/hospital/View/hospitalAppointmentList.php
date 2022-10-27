@@ -167,6 +167,8 @@ include "../Controller/hospitalAppointmentistController.php";
             </div>
         </div>
         <div class="col-md-1 col-sm-1 col-2"></div>
+        <!-- Footer -->
+    <?php include("common/footer.php"); ?>
 </body>
 <script>
     // $('#myModal').modal('show')

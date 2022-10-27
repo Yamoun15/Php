@@ -71,6 +71,8 @@ $userInfo = $_SESSION["userInfo"];
             <div class="col-2 col-md-2 col-sm-2"></div>
         </div>
     </div>
+    <!-- Footer -->
+    <?php include("common/footer.php"); ?>
 </body>
 
 </html>

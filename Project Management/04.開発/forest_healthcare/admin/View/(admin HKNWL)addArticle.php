@@ -109,6 +109,8 @@ include "../Controller/dashboardNameController.php";
             <div class="col-md-1 col-sm-1 col-1"></div>
         </div>
     </div>
+    <!-- Footer -->
+    <?php include("common/footer.php"); ?>
 
     <!-- <div class="footer">
         <div class="diseaseListTitle m-sm-auto mt-sm-3 m-3 mt-md-3 mt-3">
