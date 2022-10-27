@@ -1,7 +1,7 @@
-/* .content-wrapper {
-    background-color: #64D3A5;
+.content-wrapper {
+    background-color: #64D3A5 !important;
     height: 100vh;
-} */
+}
 
 .adminAbout-col {
     border-radius: 10px;
