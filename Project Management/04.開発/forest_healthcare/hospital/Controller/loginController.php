@@ -16,6 +16,7 @@ if (isset($_POST["hospital_email"]) && isset($_POST["password"])) {
     $sql->bindValue(":email", $email);
     $sql->execute();
     $result = $sql->fetchAll(PDO::FETCH_ASSOC);
+    $_SESSION["hospital_name"] = $result[0]['name'];
 
     // echo "<pre>";
     // print_r($result);
@@ -23,7 +24,7 @@ if (isset($_POST["hospital_email"]) && isset($_POST["password"])) {
     if (password_verify($pwd, $result[0]['password'])) {
         $_SESSION["hospital_email"] = $email;
         $_SESSION["id"] = $result[0]['id'];
-        
+       
         header("Location: ../View/hospitalProfileEdit.php");
     } else {
         header("Location: ../View/hospitalLogin.php");

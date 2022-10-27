@@ -64,7 +64,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="./image/<?= $hospitalInfo[0]["photo"]?>" class="img-circle" alt="User Image" />
+                    <img src="./image/<?= $hospitalInfo[0]["photo"] ?>" class="img-circle" alt="User Image" />
                 </div>
                 <div class="pull-left info">
                     <p>Welcome</p>
@@ -90,12 +90,12 @@
                     </a>
                     <ul class="treeview-menu">
                         <li class="active"><a href="./../View/addDoctor.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Doctor</a></li>
-                        <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Doctor List</a></li>
+                        <li class="active"><a href="../View/hospitalDoctorList.php"><i class="fa fa-circle" aria-hidden="true"></i>Doctor List</a></li>
                         <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Schedule List</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
-                    <a href="#">
+                    <a href="../view/hospitalAppointmentList.php">
                         <i class="fa fa-calendar-o" aria-hidden="true"></i>
                         <span>Appointment</span>
                     </a>

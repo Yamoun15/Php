@@ -45,7 +45,7 @@ include "../Controller/appHistoryController.php";
                 </div>
                 <div class="col-6 fw-bold">
                     <div class=" mt-5"><a href="" class="text-dark">My Profile</a></div>
-                    <div class=" mt-5"><a href="" class="text-dark">Appointment History</a></div>
+                    <div class=" mt-5"><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
                     <div class=" mt-5"><a href="" class="text-dark">Account Setting</a></div>
                     <div class="mt-5 mb-5"> <a href="" class="text-dark">Logout</a></div>
                 </div>
@@ -61,7 +61,7 @@ include "../Controller/appHistoryController.php";
                         <th scope="col">Hospital</th>
                         <th scope="col">Doctor</th>
                         <th scope="col">Date&Time</th>
-                        <th scope="col">Details</th>
+                        <th scope="col">Description</th>
                         <th scope="col">Status</th>
                         <th scope="col">QR</th>
                     </tr>
@@ -75,7 +75,8 @@ include "../Controller/appHistoryController.php";
                             <td><?= $appointment["hosname"] ?></td>
                             <td><?= $appointment["docname"] ?></td>
                             <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
-                            <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["userid"]?>">View</a></button></td>
+                            <td><?= $appointment["description"] ?></td>
+                            <!-- <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["userid"]?>">View</a></button></td> -->
                             <td>
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                                         <?php

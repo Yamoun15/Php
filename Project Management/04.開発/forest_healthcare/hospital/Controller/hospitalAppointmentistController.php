@@ -3,7 +3,6 @@
 session_start();
 $email = $_SESSION["hospital_email"];
 
-
 include "../Model/dbConnection.php";
 $sql = $pdo->prepare("
         SELECT * FROM tbl_hospital WHERE email_address =:email       
