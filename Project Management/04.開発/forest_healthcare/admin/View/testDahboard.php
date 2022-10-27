@@ -2,7 +2,8 @@
 // session_start();
 
 // $totalUser = $_SESSION["totalUser"];
-include "../Controller/testDahboardController.php"
+include "../Controller/testDahboardController.php";
+include "../Controller/dashboardNameController.php";
 
 ?>
 

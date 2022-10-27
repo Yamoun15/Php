@@ -25,7 +25,7 @@ if (isset($_POST["hospital_email"]) && isset($_POST["password"])) {
         $_SESSION["hospital_email"] = $email;
         $_SESSION["id"] = $result[0]['id'];
        
-        header("Location: ../View/hospitalProfileEdit.php");
+        header("Location: ../View/hospitalAppointmentList.php");
     } else {
         header("Location: ../View/hospitalLogin.php");
     }

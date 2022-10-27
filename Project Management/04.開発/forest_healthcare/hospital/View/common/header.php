@@ -113,7 +113,7 @@
                     </a>
                 </li>
                 <li class="treeview">
-                    <a href="../Controller/profileEditController.php">
+                    <a href="./../View/hospitalProfileEdit.php">
                         <i class="fa fa-cog" aria-hidden="true"></i><span>Account Setting</span>
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
