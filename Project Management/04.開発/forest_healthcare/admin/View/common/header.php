@@ -26,9 +26,11 @@
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="./image/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                                <img src="./image/<?= $adminInfo[0]["photo"] ?>" class="img-circle" alt="User Image" />
                                 <p>
-                                    Alexander Pierce
+                                    <?php
+                                    echo  $adminInfo[0]["name"];
+                                    ?>
                                 </p>
                             </li>
                             <!-- Menu Body -->
@@ -157,9 +159,9 @@
                     </a>
                     <ul class="treeview-menu">
                         <li class="active"><a href="./../View/adminP&Padd.php"><i class="fa fa-circle" aria-hidden="true"></i>Privacy & Policy</a></li>
-                        <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Contact Us</a></li>
-                        <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>About Us</a></li>
-                        <li class="active"><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Account Setting</a></li>
+                        <li><a href="./../View/adminContact.php"><i class="fa fa-circle" aria-hidden="true"></i>Contact Us</a></li>
+                        <li class="active"><a href="./../View/adminAboutUs.php"><i class="fa fa-circle" aria-hidden="true"></i>About Us</a></li>
+                        <li class="active"><a href="./../View/adminProfileUpdate.php"><i class="fa fa-circle" aria-hidden="true"></i>Account Setting</a></li>
                     </ul>
                 </li>
 

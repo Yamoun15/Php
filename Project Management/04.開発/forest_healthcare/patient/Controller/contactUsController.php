@@ -38,6 +38,7 @@ if (isset($_POST["sendMail"])) {
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
+    header("Location: ../View/contactUs.php");
 }
 
 // $sql = $pdo->prepare("SELECT * FROM tbl_contactusmail ");
