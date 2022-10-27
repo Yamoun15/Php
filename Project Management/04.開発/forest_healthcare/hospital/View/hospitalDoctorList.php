@@ -1,6 +1,6 @@
 <?php
 include "../Controller/hospitalDoctorListController.php";
-include "../Controller/dashboardNameController.php";
+// include "../Controller/dashboardNameController.php";
 ?>
 
 <!DOCTYPE html>
