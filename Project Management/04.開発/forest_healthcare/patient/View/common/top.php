@@ -43,16 +43,16 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-6 fw-bold">
                     <span>
-                        <a class="text-light me-4 home" aria-current="page" href="../View/userHomePage.php">Home</a>
+                        <a class="text-light me-4" aria-current="page" href="../View/userHomePage.php">Home</a>
                     </span>
                     <span>
-                        <a class="text-light me-4 login"  href="../View/userLogin.php">Login/SignUp</a>
+                        <a class="text-light me-4"  href="../View/userLogin.php">Login/SignUp</a>
                     </span>
                     <span>
-                        <a class="text-light me-4" id="contactone"  href="../View/contactUs.php">ContactUs</a>
+                        <a class="text-light me-4"  href="../View/contactUs.php">ContactUs</a>
                     </span>
                     <span>
-                        <a class="text-light "  href="../View/userProfile.php"><i class="fa-regular fa-user pEdit"></i></a>
+                        <a class="text-light"  href="../Controller/userProfileEditController.php"><i class="fa-regular fa-user"></i></a>
                     </span>
                 </div>
             </div>
@@ -73,13 +73,13 @@
                         <a class="nav-link text-light appointment" href="../View/doctorList.php">Appointment</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" id="condition" href="../View/C&S.php">Conditions & Services</a>
+                        <a class="nav-link text-light" href="../View/C&S.php">Conditions & Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light " id="health" href="../View/HealthKnowledgeList.php">Health Knowledge</a>
+                        <a class="nav-link text-light" href="../View/HealthKnowledgeList.php">Health Knowledge</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" id="mental" href="../View/mentalHealthList.php">Mental Health</a>
+                        <a class="nav-link text-light" href="../View/mentalHealthList.php">Mental Health</a>
                     </li>
                 </ul>
             </div>

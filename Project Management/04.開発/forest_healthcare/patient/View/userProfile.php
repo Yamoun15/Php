@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 include "../Controller/userProfileUpdateController.php";
 $patientInfo = $_SESSION["patientInfo"];
 
