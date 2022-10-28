@@ -31,6 +31,8 @@ include "../Controller/dashboardNameController.php";
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./resources/css/adminTableStyle.css">
     <link rel="stylesheet" href="./resources/css/root.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./resources/js/adminAppointmentList.js"></script>
 </head>
 
 <body class="skin-blue">
@@ -64,7 +66,7 @@ include "../Controller/dashboardNameController.php";
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
                                 <td><button class="btnview"><a href="../Controller/adminPatientDetailController.php?id=<?= $appointment["userid"]?>" class="view">view</a></button></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                    <button type="button" onclick="modal(<?= $appointment['status'] ?>,<?= $appointment['id']?>)" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                                         <?php
                                         if ($appointment["status"] == 0) {
                                             echo "Pending";
