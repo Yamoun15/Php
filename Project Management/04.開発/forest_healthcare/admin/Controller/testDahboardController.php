@@ -10,7 +10,7 @@ $pieChart = $sql->fetchAll(PDO::FETCH_ASSOC);
 $ages = [];
 
 foreach($pieChart as $key => $value){
-    array_push($ages,$value["date_of_birth"]);
+    array_push($ages,$value["age"]);
 }
 // echo "<pre>";
 // print_r($ages);

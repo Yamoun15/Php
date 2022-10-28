@@ -74,7 +74,8 @@
 }
 
 #myChartPie{
-    width:100px !important;
-    height:100px !important;
+    margin-top: 2em;
+    width:300px !important;
+    height:300px !important;
 
 }
