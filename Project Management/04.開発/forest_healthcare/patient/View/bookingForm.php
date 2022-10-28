@@ -101,8 +101,7 @@ $patientInfo = $_SESSION["patientInfo"];
                         </div> -->
                         <div class="col-12 col-sm-12 col-md-4 mt-4 ms-sm-5 ms-md-5 ms-5">
                             <button class=" btnBook text-white" name="bookingBtn" type="submit">Submit</button>
-                            <!-- <a class="btn btnBook ms-5 text-white" href="#" role="button" type="submit" name="bookingBtn">Book Now</a> -->
-                            <!-- <a class="btn btn-danger btnCancel  ms-5  text-white" href="#" role="button" type="submit">Cancel</a> -->
+                            <a class="btn btn-danger btnCancel  ms-5  text-white" href="./doctorList.php" role="button" type="submit">Cancel</a>
                         </div>
                     </div>
                 </form>

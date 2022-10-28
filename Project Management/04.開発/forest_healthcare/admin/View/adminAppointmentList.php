@@ -30,6 +30,7 @@ include "../Controller/dashboardNameController.php";
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./resources/css/adminTableStyle.css">
+    <link rel="stylesheet" href="./resources/css/root.css">
 </head>
 
 <body class="skin-blue">

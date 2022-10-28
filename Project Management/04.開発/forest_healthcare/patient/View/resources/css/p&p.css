@@ -1,5 +1,6 @@
 .ppBcolor{
-    background-image: linear-gradient(to right,#d2d7d6 ,#56b18b ,#60b18f,#c1ded1 )
+    /* background-image: linear-gradient(to right,#d2d7d6 ,#56b18b ,#60b18f,#c1ded1 ) */
+    background-color: #9ecef9;
 }
 .ppTitle{
     font-family: var(--fontfamily-poppins);
