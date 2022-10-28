@@ -53,7 +53,7 @@ include "../Controller/hospitalAppointmentistController.php";
         <br>
         <div class="row mt-5">
             <div class="col-md-1 col-sm-1 col-2"></div>
-            <div class="col-md-10 col-sm-10 mx-auto table-responsive">
+            <div class="col-md-8 col-sm-10 mx-auto table-responsive">
                 <h3 class="text-center totalappment">Total Appointment List</h3>
                 <table class="table">
                     <thead class="doctorTable">
