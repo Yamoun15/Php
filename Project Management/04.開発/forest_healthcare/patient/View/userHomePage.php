@@ -113,7 +113,7 @@ include "../Controller/homeController.php";
       <div class="hovereffect">
         <a class="articleImg" href=""><img src="./storages/Mental_Health1.png" alt=""></a>
         <div class="overlay">
-          <a class="info" href="#">Click to read</a>
+          <a class="info" href="#">Click to listen</a>
         </div>
       </div>
       <a href="" class="articleTitle">ANXIETY</a>
@@ -124,7 +124,7 @@ include "../Controller/homeController.php";
       <div class="hovereffect">
         <a class="articleImg" href=""><img src="./storages/Mental_Health2.png" alt=""></a>
         <div class="overlay">
-          <a class="info" href="#">Click to read</a>
+          <a class="info" href="#">Click to listen</a>
         </div>
       </div>
       <a href="" class="articleTitle">SElF-LOVE</a>
@@ -136,7 +136,7 @@ include "../Controller/homeController.php";
       <div class="hovereffect">
         <a class="articleImg" href=""><img src="./storages/Mental_Health3.png" alt=""></a>
         <div class="overlay">
-          <a class="info" href="#">Click to read</a>
+          <a class="info" href="#">Click to listen</a>
         </div>
       </div>
       <a href="" class="articleTitle">HEALING</a>

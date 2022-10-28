@@ -180,8 +180,10 @@ a.articleImg {
   text-decoration: none;
   padding: 18px 20px;
   text-transform: uppercase;
-  color: #1ea58d;
-  text-shadow: 1px 1px #fff;
+  /* color: #1ea58d; */
+  color: black;
+  text-shadow: 1px 1px rgb(45, 44, 44);
+  font-weight: bold;
   border: 1px solid #fff;
   border-radius: 50%;
   background-color: rgba(246, 255, 248, 0.5);

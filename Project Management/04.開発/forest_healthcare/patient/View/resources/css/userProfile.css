@@ -122,3 +122,27 @@
 .myProfile {
     color: var(--green) !important;
 }
+
+/* Log out button */
+.modal-footer button {
+    box-shadow: 0px 4px 5px gray;
+    font-weight: 700;
+}
+
+.btnLogOut {
+    background-color: #188067;
+    color: white;
+    text-decoration: none;
+}
+.btnLogOut:hover{
+    color: white;
+    background-color: #064536;
+}
+.logOut:hover{
+    color: white;
+    background-color: #064536;
+}
+.logOut{
+    text-decoration: none;
+    color: white;
+}

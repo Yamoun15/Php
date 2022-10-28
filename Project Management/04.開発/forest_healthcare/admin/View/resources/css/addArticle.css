@@ -1,7 +1,7 @@
 .content-wrapper {
     /* background-color: #ecf0f5; */
     background-color: #64d3a5 !important;
-    height: 100vh;
+    height: 100vh !important;
 }
 
 .adminAbout-col {
