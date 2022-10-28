@@ -53,7 +53,7 @@ include "../Controller/hospitalAppointmentistController.php";
         <br>
         <div class="row mt-5">
             <div class="col-md-1 col-sm-1 col-2"></div>
-            <div class="col-md-10 col-sm-10 mx-auto table-responsive">
+            <div class="col-md-8 col-sm-10 mx-auto table-responsive">
                 <h3 class="text-center totalappment">Total Appointment List</h3>
                 <table class="table">
                     <thead class="doctorTable">
@@ -74,7 +74,7 @@ include "../Controller/hospitalAppointmentistController.php";
                                 <td><?= $appointment["username"] ?></td>
                                 <td><?= $appointment["docname"] ?></td>
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
-                                <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["userid"] ?>">view</a></button></td>
+                                <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["userid"] ?>" class="view">view</a></button></td>
                                 <td>
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                                         <?php

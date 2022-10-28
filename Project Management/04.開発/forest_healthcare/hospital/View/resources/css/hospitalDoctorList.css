@@ -19,3 +19,6 @@ table tr{
     color: var(--btncolorred);
     font-size: 1.5vw;
 }
+.docPhoto{
+    width: 40%;
+}

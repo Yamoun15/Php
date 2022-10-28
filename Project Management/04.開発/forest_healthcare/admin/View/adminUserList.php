@@ -52,6 +52,7 @@ include "../Controller/dashboardNameController.php";
                                 <th scope="col">Phone No</th>
                                 <th scope="col">Email</th>
                                 <th scope="col">Address</th>
+                                <th scope="col">Photo</th>
                             </tr>
                         </thead>
                     <tbody>
@@ -64,7 +65,7 @@ include "../Controller/dashboardNameController.php";
                                 <td><?= $user["phone_no"] ?></td>
                                 <td><?= $user["address"] ?></td>
                                 <td>
-                                    <img src="<?= $user["profile_image"] ?>" alt="">
+                                    <img src="./image/userProfile/<?php echo $user["photo"] ?>" alt="photo">
                                 </td>
                             </tr>
                         <?php } ?>

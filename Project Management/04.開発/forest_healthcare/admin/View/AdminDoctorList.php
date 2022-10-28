@@ -67,6 +67,7 @@ include "../Controller/dashboardNameController.php";
                             <th scope="col">Expert In</th>
                             <th scope="col">Email</th>
                             <th scope="col">Photo</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -79,7 +80,8 @@ include "../Controller/dashboardNameController.php";
                                 <td><?= $doctor["dr_expert_in"] ?></td>
                                 <td><?= $doctor["email_address"] ?></td>
                                 <td>
-                                    <img src="<?= $doctor["doctor_photo"] ?>" alt="doctor Photo">
+                                    <!-- <img src="<?= $doctor["doctor_photo"] ?>" alt="doctor Photo"> -->
+                                    <img src="./image/doctor/<?php echo $doctor["doctor_photo"] ?>" alt="doctor Photo">
                                 </td>
                                 <td>
                                     <button class="btn"><i class="fa-solid fa-trash-can adminPPdeleteIcon"></i></button>
