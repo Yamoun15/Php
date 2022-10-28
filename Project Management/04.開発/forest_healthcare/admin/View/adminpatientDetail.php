@@ -17,7 +17,7 @@ $userInfo = $_SESSION["userInfo"];
     <title>Patient Detail</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="./resources/css/adminContact.css?v="<?= time() ?>>
+    <link rel="stylesheet" href="./resources/css/adminContact.css?v=" <?= time() ?>>
     <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,12 +26,12 @@ $userInfo = $_SESSION["userInfo"];
     <!-- Bootstrap -->
     <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/5053738b7f.js" crossorigin="anonymous"></script>
-    
+
     <!-- Theme style -->
     <link href="./resources/css/Admin.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
-   <!-- css -->
-   <link rel="stylesheet" href="./resources/css/patientDetail.css?v=<?= time() ?> ">
+    <!-- css -->
+    <link rel="stylesheet" href="./resources/css/patientDetail.css?v=<?= time() ?> ">
     <!-- root css -->
     <link rel="stylesheet" href="./resources/css/root.css">
 </head>
@@ -55,7 +55,7 @@ $userInfo = $_SESSION["userInfo"];
                 <p>Phone No</p>
                 <p>Age</p>
                 <p>Gender</p>
-                <p>Address</p>                
+                <p>Address</p>
                 <p>Description</p>
             </div>
 
@@ -63,15 +63,25 @@ $userInfo = $_SESSION["userInfo"];
                 <p>: <?= $userInfo[0]["name"] ?></p>
                 <p>: <?= $userInfo[0]["phone_no"] ?></p>
                 <p>: <?= $userInfo[0]["age"] ?></p>
-                <p>: <?= $userInfo[0]["gender"] ?></p>
-                <p>: <?= $userInfo[0]["address"] ?></p>               
+                <p>:
+                    <?php
+                    if ($userInfo[0]["gender"] == 0) {
+                        echo "Male";
+                    } else  if ($userInfo[0]["gender"] == 1) {
+                        echo "Female";
+                    } else  if ($userInfo[0]["gender"] == 2) {
+                        echo "Other";
+                    }
+                    ?>
+                </p>
+                <p>: <?= $userInfo[0]["address"] ?></p>
                 <p>: <?= $userInfo[0]["appdes"] ?></p>
             </div>
             <div class="col-2 col-md-2 col-sm-2"></div>
         </div>
     </div>
-        <!-- Footer -->
-        <?php include("common/footer.php"); ?>
+    <!-- Footer -->
+    <?php include("common/footer.php"); ?>
 </body>
 
 </html>
