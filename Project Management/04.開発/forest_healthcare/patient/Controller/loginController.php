@@ -25,6 +25,6 @@ if (isset($_POST["user_email"]) && isset($_POST["password"])) {
         $_SESSION["id"] = $patientInfo[0]['id'];
         header("Location: ../View/userHomePage.php");
     } else {
-        header("Location: ../View/userLogin.php");
+        echo "error";
     }
 }

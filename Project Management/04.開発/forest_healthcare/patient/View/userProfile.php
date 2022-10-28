@@ -2,7 +2,21 @@
 
 session_start();
 
-include "../Controller/userProfileUpdateController.php";
+include "../Model/dbConnection.php";
+if (isset($_SESSION["user_email"])) {
+    $email = $_SESSION["user_email"];
+}
+
+$sql = $pdo->prepare("
+SELECT * FROM tbl_user 
+WHERE email_address = :email
+");
+$sql->bindValue(":email", $email);
+$sql->execute();
+
+$patientInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+$_SESSION["patientInfo"] = $patientInfo;
 $patientInfo = $_SESSION["patientInfo"];
 
 // echo "<pre>";
@@ -61,9 +75,9 @@ $patientInfo = $_SESSION["patientInfo"];
                         <div><i class="fa-solid fa-right-from-bracket fs-5 mt-5"></i></div>
                     </div>
                     <div class="col-6 fw-bold">
-                        <div class=" mt-5"><a href="../Controller/userProfileEditController.php" class="myProfile">My Profile</a></div>
+                        <div class=" mt-5"><a href="./userProfile.php" class="myProfile">My Profile</a></div>
                         <div class=" mt-5"><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
-                        <div class=" mt-5"><a href="" class="text-dark">Account Setting</a></div>
+                        <div class=" mt-5"><a href="./accountSetting.php" class="text-dark">Account Setting</a></div>
                         <div class="btn mt-5 mb-5 text-dark fw-bold text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>
                     </div>
                 </div>
@@ -94,33 +108,33 @@ $patientInfo = $_SESSION["patientInfo"];
             <!--Log Out Modal -->
 
             <div class="col-md-7  col-sm-8 adminContact-col">
-                <form action="../Controller/userProfileUpdateController.php" class="form-horizontal hr adminContact-form" method="post" enctype="multipart/form-data">
+                <form action="../Controller/userProfileEditController.php" class="form-horizontal hr adminContact-form" method="post" enctype="multipart/form-data">
 
                     <div class="myProfileTitle">My Profile</div>
                     <span class="userProfileConfirmbtnfloat">
                         <div class="profilebg">
-                            <img src="./storages/<?= $patientInfo[0]["photo"] ?>" alt="" id="profileImg" class="userProfileUpdate" name="photo">
+                            <img src="./storages/userProfile/<?= $patientInfo[0]["photo"] ?>" alt="" id="profileImg" class="userProfileUpdate" name="photo">
                         </div>
 
-                        <label for="userfile-upload" class="usercustom-file-upload">
+                        <!-- <label for="userfile-upload" class="usercustom-file-upload">
                             <i class="fa-solid fa-camera"></i>
-                        </label>
-                        <input id="userfile-upload" type="file" onchange="setImage()" name="uploadFile" />
+                        </label> -->
+                        <!-- <input id="userfile-upload" type="file" onchange="setImage()" name="uploadFile" /> -->
                     </span>
                     <span>
-                        <input type="submit" value="Update" class="adminContactbtn" name="updateProfile">
+                        <input type="submit" value="Edit" class="adminContactbtn" name="updateProfile">
                     </span>
 
                     <div class="form-group userProfileInputfloat">
                         <label for="username" class="userProfileLabel col-md-5">Username</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" id="username" value="<?= $patientInfo[0]["name"] ?>" placeholder="John" name="name">
+                            <input type="text" class="form-control adminContactInput" id="username" value="<?= $patientInfo[0]["name"] ?>" placeholder="John" name="name" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Password<i class="far fa-eye" id="togglePassword" style=" cursor: pointer;"></i></label>
                         <div class="col-md-12">
-                            <input type="password" class="form-control adminContactInput" id="password" value="<?= $patientInfo[0]["password"] ?>" placeholder="password" name="password">
+                            <input type="password" class="form-control adminContactInput" id="password" value="<?= $patientInfo[0]["password"] ?>" placeholder="password" name="password" disabled>
 
 
 
@@ -129,7 +143,7 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Phone Number</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" placeholder="09-2150776" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no">
+                            <input type="text" class="form-control adminContactInput" placeholder="09-2150776" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no" disabled>
                         </div>
                     </div>
                     <div class="form-group">
@@ -141,29 +155,22 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Completed Age</label>
                         <div class="col-md-12">
-                            <input type="number" min="1" class="form-control adminContactInput" placeholder="Age(Completed age)" value="<?= $patientInfo[0]["age"] ?>" name="age">
+                            <input type="number" min="1" class="form-control adminContactInput" placeholder="Age(Completed age)" value="<?= $patientInfo[0]["age"] ?>" name="age" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Address</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" placeholder="Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address">
+                            <input type="text" class="form-control adminContactInput" placeholder="Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address" disabled>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="gender" class="userProfileLabel col-md-5">Gender- <span class="text-dark"><?= $patientInfo[0]["gender"] ?></span></label>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male" <?php echo ($patientInfo[0]["gender"] == 'Male') ?  "checked" : "";  ?>>
-                            <label class="form-check-label" for="inlineRadio1">Male</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female" <?php echo ($patientInfo[0]["gender"] == 'Female') ?  "checked" : "";  ?>>
-                            <label class="form-check-label" for="inlineRadio2">Female</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="Other" <?php echo ($patientInfo[0]["gender"] == 'Other') ?  "checked" : "";  ?>>
-                            <label class="form-check-label" for="inlineRadio3">Other</label>
-                        </div>
+                        <label for="gender" class="userProfileLabel col-md-5">Gender-
+                            <?php if($patientInfo[0]["gender"] == 2){echo "Other";}
+                            else if($patientInfo[0]["gender"] == 0){echo "Male";}
+                            else if($patientInfo[0]["gender"] == 1){echo "Female";}
+                            else if($patientInfo[0]["gender"] == ""){echo "Not Set";}
+                            ?> <span class="text-dark"><?= $patientInfo[0]["gender"] ?></span></label>
                     </div>
                     <input type="hidden" name="id" value="<?= $patientInfo[0]["id"] ?>">
                 </form>

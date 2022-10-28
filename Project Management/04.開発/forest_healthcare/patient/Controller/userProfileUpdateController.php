@@ -31,7 +31,7 @@ if(isset($_POST["updateProfile"])){
         $extension = pathinfo($file)['extension'];
         $path = $id.".".$extension;
 
-        if (move_uploaded_file($location, "../View/storages/userProfile".$id.".".$extension)) {
+        if (move_uploaded_file($location, "../View/storages/userProfile/".$id.".".$extension)) {
             $sql = $pdo->prepare(
             "UPDATE tbl_user SET 
             name = :name,
@@ -59,5 +59,5 @@ if(isset($_POST["updateProfile"])){
 
     $sql->execute();
 
-    header("Location: ../View/userHomePage.php");
+    header("Location: ../View/userProfile.php");
 }
