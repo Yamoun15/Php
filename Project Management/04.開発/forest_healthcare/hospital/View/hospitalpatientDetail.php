@@ -64,7 +64,17 @@ $userInfo = $_SESSION["userInfo"];
                 <p>:<?= $userInfo[0]["name"] ?></p>
                 <p>:<?= $userInfo[0]["phone_no"] ?></p>
                 <p>:<?= $userInfo[0]["age"] ?></p>
-                <p>:<?= $userInfo[0]["gender"] ?></p>
+                <p>:
+                    <?php
+                    if ($userInfo[0]["gender"] == 0) {
+                        echo "Male";
+                    } else  if ($userInfo[0]["gender"] == 1) {
+                        echo "Female";
+                    } else  if ($userInfo[0]["gender"] == 2) {
+                        echo "Other";
+                    }
+                    ?>
+                </p>
                 <p>:<?= $userInfo[0]["address"] ?></p>                
                 <p>:<?= $userInfo[0]["appdes"] ?></p>
             </div>

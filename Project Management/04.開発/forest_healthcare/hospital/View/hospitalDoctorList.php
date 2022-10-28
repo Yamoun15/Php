@@ -67,6 +67,7 @@ include "../Controller/hospitalDoctorListController.php";
                             <th scope="col">Day</th>
                             <th scope="col">Email</th>
                             <th scope="col">Ph No</th>
+                            <th scope="col">Photo</th>
                             <th scope="col">Status</th>
                             
                         </tr>
@@ -83,6 +84,7 @@ include "../Controller/hospitalDoctorListController.php";
                                 
                                 <td><?= $doctor["email_address"] ?></td>
                                 <td><?= $doctor["phone_no"] ?></td>
+                                <td><img src="./image/doctor/<?php echo $doctor["doctor_photo"] ?>" alt="photo" class="docPhoto"></td>
                                 <td>
                                     <button class="btn"><a href="../Controller/editDoctorController.php?id=<?= $doctor["id"]?>"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></a></i></button>
                                     <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
