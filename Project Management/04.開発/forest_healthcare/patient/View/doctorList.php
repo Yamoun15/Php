@@ -97,26 +97,24 @@ include "../Controller/hospitalListController.php";
         <!-- cards -->
         <div id="cardResult">
           <?php foreach ($doctorList as $key => $doctor) { ?>
-            <div class="card m-3  d-flex justify-content-evenly p-2" style="max-width: 1000px; border-radius: 25px;">
+            <div class="card m-3  d-flex justify-content-evenly p-2">
               <div class="row g-3 ">
-                <div class="col-md-2">
+                <div class="col-md-1">
                   <img src="./storages/doctor/<?= $doctor["doctor_photo"] ?>" width="100px" class="img-fluid rounded-start " alt="...">
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-5">
                   <div class="card-body">
                     <h5 class="card-title"><?= $doctor["name"] ?></h5>
-                    <span class="card-title"><?= $doctor["depname"] ?> Department</span>
+                    <span class="card-title"><?= $doctor["depname"] ?>Department</span>
                     <div class="card-title"> (<?= $doctor["dr_expert_in"] ?>)</div>
                     <span class="card-title">(<?= $doctor["duty_day"] ?>) </span>
                     <span class="card-title"><?= $doctor["duty_start_time"] ?> to </span>
                     <span class="card-title"><?= $doctor["duty_end_time"] ?></span>
                   </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                   <div class="card-body " style="color: #188067">
-
                     <p class="card-text"><?= $doctor["dr_degree"] ?></p>
-
                   </div>
                 </div>
                 <div class="col-md-2">

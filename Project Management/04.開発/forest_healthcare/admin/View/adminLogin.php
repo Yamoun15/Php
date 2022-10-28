@@ -55,9 +55,9 @@
                     <!-- <div class="col-0 col-md-2 "></div> -->
                 </div>
             </div>
-            <div class="col-0 col-md-4  login_image text-end">
+            <!-- <div class="col-0 col-md-4  login_image text-end">
                 <img class="loginimg" src="./image/loginPhoto.png" alt="Login Photo" srcset="">
-            </div>
+            </div> -->
         </div>
     </div>
     <!-- <div class="login_image col-md-6 col-sm-6 w-50%">

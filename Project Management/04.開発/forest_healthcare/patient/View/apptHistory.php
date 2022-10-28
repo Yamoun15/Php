@@ -38,34 +38,6 @@ include "../Controller/appHistoryController.php";
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="./resources/js/uploadProfile.js?v=" <?= time() ?> defer></script>
 
-    <style>
-        .modal-footer button {
-            box-shadow: 0px 4px 5px gray;
-            font-weight: 700;
-        }
-
-        .btnLogOut {
-            background-color: #188067;
-            color: white;
-            text-decoration: none;
-        }
-
-        .btnLogOut:hover {
-            color: white;
-            background-color: #064536;
-        }
-
-        .logOut:hover {
-            color: white;
-            background-color: #064536;
-        }
-
-        .logOut {
-            text-decoration: none;
-            color: white;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -86,7 +58,7 @@ include "../Controller/appHistoryController.php";
                     <div class="col-6 fw-bold">
                         <div class=" mt-5"><a href="./userProfile.php" class="text-dark">My Profile</a></div>
                         <div class=" mt-5"><a href="./apptHistory.php" class="history">Appointment History</a></div>
-                        <div class=" mt-5"><a href="" class="text-dark">Account Setting</a></div>
+                        <div class=" mt-5"><a href="./accountSetting.php" class="text-dark">Account Setting</a></div>
                         <div class="btn mt-5 mb-5 text-dark fw-bold text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>
                     </div>
                 </div>

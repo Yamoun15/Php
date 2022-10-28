@@ -10,7 +10,6 @@ if (!isset($_SESSION["user_email"])) {
 
     include "../Model/dbConnection.php";
 
-
     $email = $_SESSION["user_email"];
     $id = $_SESSION["id"];
 
@@ -27,5 +26,5 @@ if (!isset($_SESSION["user_email"])) {
 
     $_SESSION["patientInfo"] = $patientInfo ;
 
-    header("Location: ../View/userProfile.php");
+    header("Location: ../View/accountSetting.php");
 }

@@ -11,13 +11,6 @@
             </a>
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
-                    <!-- Messages: style can be found in dropdown.less-->
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-envelope-o"></i>
-                            <span class="label label-success">4</span>
-                        </a>
-                    </li>
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -81,7 +74,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="active treeview">
-                    <a href="#">
+                    <a href="./../View/testDahboard.php">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
                 </li>
@@ -93,7 +86,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li class="active"><a href="./AdminDoctorList.php"><i class="fa fa-circle" aria-hidden="true"></i>Doctor List</a></li>
-                        <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Schedule List</a></li>
+                        <li><a href="./AdminScheduleList.php"><i class="fa fa-circle" aria-hidden="true"></i>Schedule List</a></li>
                     </ul>
                 </li>
                 <li>
@@ -147,7 +140,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="../View/adminContact.php">
                         <i class="fa fa-envelope"></i> <span>Mail</span>
                         <small class="label pull-right bg-yellow">12</small>
                     </a>

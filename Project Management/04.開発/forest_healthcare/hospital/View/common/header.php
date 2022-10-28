@@ -12,12 +12,12 @@
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <!-- Messages: style can be found in dropdown.less-->
-                    <li class="dropdown messages-menu">
+                    <!-- <li class="dropdown messages-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-envelope-o"></i>
                             <span class="label label-success">4</span>
                         </a>
-                    </li>
+                    </li> -->
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -26,9 +26,12 @@
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="./image/Hospitalphoto.png" class="img-circle" alt="User Image" />
+                                <img src="./image/<?= $hospitalInfo[0]["photo"] ?>" class="img-circle" alt="User Image" />
                                 <p>
-                                    Pun Hlaing Hospital
+                                    <?php
+                                    echo  $hospitalInfo[0]["name"];
+                                    ?>
+                                </p>
                             </li>
                             <!-- Menu Body -->
                             <li class="user-body">
@@ -91,7 +94,7 @@
                     <ul class="treeview-menu">
                         <li class="active"><a href="./../View/addDoctor.php"><i class="fa fa-circle" aria-hidden="true"></i>Add Doctor</a></li>
                         <li class="active"><a href="../View/hospitalDoctorList.php"><i class="fa fa-circle" aria-hidden="true"></i>Doctor List</a></li>
-                        <li><a href=""><i class="fa fa-circle" aria-hidden="true"></i>Schedule List</a></li>
+                        <li><a href="../View/hospitalScheduleList.php"><i class="fa fa-circle" aria-hidden="true"></i>Schedule List</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -106,12 +109,12 @@
                         <span>Department Add</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="">
                         <i class="fa fa-envelope"></i> <span>Mail</span>
                         <small class="label pull-right bg-yellow">12</small>
                     </a>
-                </li>
+                </li> -->
                 <li class="treeview">
                     <a href="./../View/hospitalProfileEdit.php">
                         <i class="fa fa-cog" aria-hidden="true"></i><span>Account Setting</span>

@@ -61,9 +61,9 @@ $patientInfo = $_SESSION["patientInfo"];
                         <div><i class="fa-solid fa-right-from-bracket fs-5 mt-5"></i></div>
                     </div>
                     <div class="col-6 fw-bold">
-                        <div class=" mt-5"><a href="../Controller/userProfileEditController.php" class="myProfile">My Profile</a></div>
+                        <div class=" mt-5"><a href="./userProfile.php" class="myProfile">My Profile</a></div>
                         <div class=" mt-5"><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
-                        <div class=" mt-5"><a href="" class="text-dark">Account Setting</a></div>
+                        <div class=" mt-5"><a href="./accountSetting.php" class="text-dark">Account Setting</a></div>
                         <div class="btn mt-5 mb-5 text-dark fw-bold text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>
                     </div>
                 </div>
@@ -96,10 +96,10 @@ $patientInfo = $_SESSION["patientInfo"];
             <div class="col-md-7  col-sm-8 adminContact-col">
                 <form action="../Controller/userProfileUpdateController.php" class="form-horizontal hr adminContact-form" method="post" enctype="multipart/form-data">
 
-                    <div class="myProfileTitle">My Profile</div>
+                    <div class="myProfileTitle">Edit My Profile</div>
                     <span class="userProfileConfirmbtnfloat">
                         <div class="profilebg">
-                            <img src="./storages/<?= $patientInfo[0]["photo"] ?>" alt="" id="profileImg" class="userProfileUpdate" name="photo">
+                            <img src="./storages/userProfile/<?= $patientInfo[0]["photo"] ?>" alt="" id="profileImg" class="userProfileUpdate" name="photo">
                         </div>
 
                         <label for="userfile-upload" class="usercustom-file-upload">
@@ -151,7 +151,7 @@ $patientInfo = $_SESSION["patientInfo"];
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="gender" class="userProfileLabel col-md-5">Gender- <span class="text-dark"><?= $patientInfo[0]["gender"] ?></span></label>
+                        <label for="gender" class="userProfileLabel col-md-5">Gender- <span class="text-dark"></span></label>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male" <?php echo ($patientInfo[0]["gender"] == 'Male') ?  "checked" : "";  ?>>
                             <label class="form-check-label" for="inlineRadio1">Male</label>

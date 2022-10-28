@@ -59,5 +59,5 @@ if(isset($_POST["updateProfile"])){
 
     $sql->execute();
 
-    header("Location: ../View/userHomePage.php");
+    header("Location: ../View/userProfile.php");
 }

@@ -32,3 +32,15 @@
 .appointment{
   color: var(--orange ) !important;
 }
+
+.carddesign{
+  width: 1000px;
+  border-radius: 25px;
+}
+
+@media screen and (max-width:600px) {
+  .carddesign{
+      width: 300px;
+      border-radius: 25px;
+  }
+}

@@ -19,6 +19,7 @@ include "../Controller/dashboardNameController.php";
     <link rel="stylesheet" href="./resources/css/AdminDoctorList.css?v=" <?= time() ?>>
     <link rel="stylesheet" href="./resources/css/adminContact.css">
     <link rel="stylesheet" href="./resources/css/adminAboutUs.css">
+    <link rel="stylesheet" href="./resources/css/root.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,9 +120,10 @@ include "../Controller/dashboardNameController.php";
             <a href="#">Click to edit and see the list</a>
         </div>
     </div> -->
+    
+    <script src="./resources/js/CS.js"></script>
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
-    <script src="./resources/js/CS.js"></script>
 </body>
 
 </html>

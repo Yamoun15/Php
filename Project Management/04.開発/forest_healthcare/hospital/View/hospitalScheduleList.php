@@ -1,4 +1,5 @@
 <?php
+include "../Controller/ScheduleListController.php";
 include "../Controller/dashboardNameController.php";
 ?>
 
@@ -54,7 +55,7 @@ include "../Controller/dashboardNameController.php";
     <div class="container">
         <div class="row">
             <div class="col-md-1 col-sm-1 col-2"></div>
-            <div class="col-md-10 col-sm-10 mx-auto table-responsive">
+            <div class="col-md-8 col-sm-10 mx-auto table-responsive">
 
                 <table class="table">
                     <thead class="doctorTable">
@@ -65,126 +66,76 @@ include "../Controller/dashboardNameController.php";
                             <th scope="col">Day</th>
                             <th scope="col">Start Time</th>
                             <th scope="col">End Time</th>
-                            <th></th>
+                            <th scope="col">Edit</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">7</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">8</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">9</th>
-                            <td>Dr.John</td>
-                            <td>Neurology</td>
-                            <td>SUNDAY</td>
-                            <td>10AM</td>
-                            <td>12PM</td>
-                            <td>
-                                <button class="btn"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></button>
-                                <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
-                            </td>
-                        </tr>
+                        <?php $count = 1; ?>
+                        <?php foreach ($doctorList as $key => $doctor) { ?>
+                            <tr>
+                                <th scope="row"><?= $count++; ?>.</th>
+                                <td><?= $doctor["name"] ?></td>
+                                <td><?= $doctor["depname"] ?></td>
+                                <td><?= $doctor["duty_day"] ?></td>
+                                <td><?= $doctor["duty_start_time"] ?></td>
+                                <td><?= $doctor["duty_end_time"] ?></td>
+                                <td>
+                                    <span>
+                                        <a href="../Controller/editDoctorController.php?id=<?= $doctor["id"] ?>"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></i></a>
+                                    </span>
+                                    <span>
+                                        <a href="../Controller/scheduleDeleteController.php?id=<?= $doctor["id"] ?>"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></a>
+                                    </span>
+                                    
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
-
             </div>
-
         </div>
 
         <div class="row">
-            <div class="col-md-9 col-sm-5"></div>
-            <div class="col-md-3 col-sm-5">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="col-md-7 col-sm-5"></div>
+                <div class="col-md-2 col-sm-5">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item 
+                    <?php if ($page <= 1) {
+                        echo "disabled";
+                    }  ?>
+                    ">
+                                <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+
+                            <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                                <li class="page-item 
+                        <?php
+                                if ($page == $i) {
+                                    echo "active";
+                                }
+                        ?>
+                        "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                            <?php } ?>
+
+                            <li class="page-item 
+                    <?php if ($page >= $totalPages) {
+                        echo "disabled";
+                    }  ?>">
+
+                                <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-        </div>
         <div class="col-md-1 col-sm-1 col-2"></div>
 
 
