@@ -13,7 +13,7 @@ if (isset($_GET['doctorID'])) {
         ON doc.department_id = dep.id
         INNER JOIN tbl_hospital As hos
         ON doc.hospital_id = hos.id
-        WHERE doc.id = :doctorID
+        WHERE doc.id = :doctorID 
 ");
     $sql->bindValue(":doctorID", $doctorID);
     $sql->execute();

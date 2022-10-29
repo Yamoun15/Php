@@ -35,10 +35,10 @@
                                     </div> -->
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                    <input type="text" class="form-control" placeholder="Email Address" name="admin_email">
+                                    <input type="text" class="form-control" placeholder="Email Address" name="admin_email" required>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2">
-                                    <input type="password" placeholder="Password" class="form-control" name="password">
+                                    <input type="password" placeholder="Password" class="form-control" name="password" required>
                                 </div>
                                 <div class="row ">
                                     <div class="col-0 col-md-1 col-sm-1"></div>

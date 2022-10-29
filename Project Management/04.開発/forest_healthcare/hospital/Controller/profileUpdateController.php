@@ -58,6 +58,6 @@ if (isset($_POST["updateProfile"])) {
     $sql->bindValue(":id", $id);
 
     $sql->execute();
-
-    header("Location: ../View/hospitalpatientDetail.php");
+    echo "<script>alert('Update Successful')</script>";
+    echo "<script>window.location='../View/hospitalProfileEdit.php'</script>";
 }

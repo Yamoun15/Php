@@ -116,13 +116,7 @@
   margin-top: 20px;
 }
 
-.pEdit {
-  color: var(--orange) !important;
-}
 
-.myProfile {
-  color: var(--green) !important;
-}
 
 /* Log out button */
 .modal-footer button {

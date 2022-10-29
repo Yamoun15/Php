@@ -27,6 +27,7 @@ include "../Controller/C&SDiseaseController.php";
     <link rel="stylesheet" href="./resources/css/root.css" />
     <link rel="stylesheet" href="./resources/css/all.css" />
     <link rel="stylesheet" href="./resources/css/C&S.css">
+    <link rel="stylesheet" href="./resources/css/C&Scolor.css">
 
     <!-- logouticon2 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -1,7 +1,7 @@
 <?php
- session_start();
+session_start();
 
- unset($_SESSION["email_address"]);
+unset($_SESSION["email_address"]);
 
 ?>
 <!DOCTYPE html>
@@ -36,37 +36,37 @@
                     <div class="col-0 col-md-2 "></div>
                     <div class="col-md-8 col-sm-8">
                         <div class="simple-login-container text-center">
-                        <form action="../Controller/registerController.php" method="post">
-                            <div class="row  g-0 ms-3 mb-3 ">
+                            <form action="../Controller/registerController.php" method="post">
+                                <div class="row  g-0 ms-3 mb-3 ">
 
-                                <div class="col-md-1 col-sm-1"></div>
-                                <div class="col-6 col-md-5 col-sm-5 ">
-                                    <button class="dbtnlogin" disabled>Login</button>
+                                    <div class="col-md-1 col-sm-1"></div>
+                                    <div class="col-6 col-md-5 col-sm-5 ">
+                                        <div class="dbtnlogin"><a href="./userLogin.php">Login</a></div>
+                                    </div>
+                                    <div class="col-6 col-md-6 col-sm-5 mb-4">
+                                        <button class="btnsignup">Sign Up</button>
+                                    </div>
                                 </div>
-                                <div class="col-6 col-md-6 col-sm-5 mb-4">
-                                    <button class="btnsignup">Sign Up</button>
+                                <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
+                                    <input type="text" class="form-control" placeholder="Username" name="username" required>
                                 </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                <input type="text" class="form-control" placeholder="Username" name="username">
-                            </div>
-                            <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                <input type="text" class="form-control" placeholder="Email Address" name="email_address">
-                            </div>
-                            <div class="col-md-12 col-sm-12 mb-4 mx-2">
-                                <input type="password" placeholder="Password" class="form-control" name="password">
-                            </div>
-                            <div class="row ">
-                                <div class="col-0 col-md-1 col-sm-1"></div>
-                                <div class="col-5 col-md-5 col-sm-5">
+                                <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
+                                    <input type="text" class="form-control" placeholder="Email Address" name="email_address" required>
+                                </div>
+                                <div class="col-md-12 col-sm-12 mb-4 mx-2">
+                                    <input type="password" placeholder="Password" class="form-control" name="password" required>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-0 col-md-1 col-sm-1"></div>
+                                    <div class="col-5 col-md-5 col-sm-5">
 
-                                </div>
+                                    </div>
 
-                                <div class="col-5 col-md-5 col-sm-5 ms-3">
-                                    <button class="btnsignup" type="submit">Signup</button>
+                                    <div class="col-5 col-md-5 col-sm-5 ms-3">
+                                        <button class="btnsignup" type="submit">Signup</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
                         </div>
                     </div>
                     <!-- <div class="col-0 col-md-2 "></div> -->
