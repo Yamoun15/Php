@@ -41,10 +41,10 @@ unset($_SESSION["hospital_email"]);
                                     </div> -->
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                    <input type="text" class="form-control" placeholder="Email Address" name="hospital_email">
+                                    <input type="text" class="form-control" placeholder="Email Address" name="hospital_email" required>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2">
-                                    <input type="password" placeholder="Password" class="form-control" name="password">
+                                    <input type="password" placeholder="Password" class="form-control" name="password" required>
                                 </div>
                                 <div class="col-md-12">
                                     <input type="hidden" value="<?= $doctorInfo[0]["id"] ?>" class="form-control" id="id" placeholder="id" name="id">

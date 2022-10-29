@@ -3,6 +3,10 @@
 session_start();
 $email = $_SESSION["user_email"];
 
+$rowLimit = 1;
+$page = (isset($_GET["page"])) ?  $_GET["page"] : 1;
+
+$startPage = ($page-1)*$rowLimit;
 
 include "../Model/dbConnection.php";
 $sql = $pdo->prepare("
@@ -25,12 +29,19 @@ $sql = $pdo->prepare("
         ON  appointment.doctor_id =doc.id 
         INNER JOIN tbl_hospital AS hos
         ON appointment.hospital_id = hos.id 
-        WHERE appointment.user_id =:userId     
+        WHERE appointment.user_id =:userId  
+        AND appointment.del_flg = 0 LIMIT $startPage, $rowLimit   
 ");
 $sql->bindValue(":userId",$userId);
 $sql->execute();
 
 $appointmentList = $sql->fetchAll(PDO::FETCH_ASSOC);
 // print_r($appointmentList);
+$sql = $pdo->prepare("
+        SELECT COUNT(id) As total FROM tbl_appointment WHERE del_flg = 0 ORDER BY created_date  
+");
+$sql->execute();
+$totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC)[0]['total'];
 
+$totalPages = ceil($totalRecord/$rowLimit); 
 ?>

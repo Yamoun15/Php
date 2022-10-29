@@ -1,9 +1,7 @@
 <?php
 
 include "../Model/dbConnection.php";
-$sql = $pdo->prepare("
-        SELECT * FROM tbl_hospital  
-");
+$sql = $pdo->prepare("SELECT * FROM tbl_hospital");
 
 $sql->execute();
 

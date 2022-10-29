@@ -41,16 +41,16 @@ include "../Controller/webisteContactInfoController.php"
                         <div class="Contact text-light">Contact Us</div>
                         <form action="../Controller/contactUsController.php" method="post">
                             <div>
-                                <input type="text" class="col-10 contactboxStyle" name="username" placeholder="User Name">
+                                <input type="text" class="col-10 contactboxStyle" name="username" placeholder="User Name" required>
                             </div>
                             <div>
-                                <input type="text" class="col-10 mt-3 contactboxStyle" name="email" placeholder="Email Address">
+                                <input type="text" class="col-10 mt-3 contactboxStyle" name="email" placeholder="Email Address" required>
                             </div>
                             <div>
-                                <input type="text" class="col-10 mt-3 contactboxStyle" name="phNo" placeholder="Phone Number">
+                                <input type="text" class="col-10 mt-3 contactboxStyle" name="phNo" placeholder="Phone Number" required>
                             </div>
                             <div>
-                                <textarea rows="5" class="col-10 mt-3 contactboxStyle" name="textMessage" placeholder="Message"></textarea>
+                                <textarea rows="5" class="col-10 mt-3 contactboxStyle" name="textMessage" placeholder="Message" required></textarea>
                             </div>
                             <button class="btn btn-warning col-10 boxStyle contactsendButton" name="sendMail" type="submit">Send</button>
                             <!-- <div class="btn btn-warning col-10 boxStyle contactsendButton">Send</div> -->

@@ -26,19 +26,19 @@
                                     <div class="row">
                                         <h3 class="text-center text-white mb-5">Admin Login</h3>
                                     </div>
-                                    <div class="col-md-1 col-sm-1"></div>
+                                    <!-- <div class="col-md-1 col-sm-1"></div>
                                     <div class="col-6 col-md-5 col-sm-5 ">
                                         <button class="btnlogin">Login</button>
                                     </div>
                                     <div class="col-6 col-md-6 col-sm-5 mb-4">
                                         <button class="dbtnsignup" disabled>Sign Up</button>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                    <input type="text" class="form-control" placeholder="Email Address" name="admin_email">
+                                    <input type="text" class="form-control" placeholder="Email Address" name="admin_email" required>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2">
-                                    <input type="password" placeholder="Password" class="form-control" name="password">
+                                    <input type="password" placeholder="Password" class="form-control" name="password" required>
                                 </div>
                                 <div class="row ">
                                     <div class="col-0 col-md-1 col-sm-1"></div>
@@ -55,14 +55,11 @@
                     <!-- <div class="col-0 col-md-2 "></div> -->
                 </div>
             </div>
-            <!-- <div class="col-0 col-md-4  login_image text-end">
+        </div>
+        <div class="col-0 col-md-4  login_image text-end">
                 <img class="loginimg" src="./image/loginPhoto.png" alt="Login Photo" srcset="">
-            </div> -->
         </div>
     </div>
-    <!-- <div class="login_image col-md-6 col-sm-6 w-50%">
-        <img class="loginimg" src="./images/loginPhoto.png" alt="Login Photo" srcset="">
-    </div> -->
 </body>
 
 </html>

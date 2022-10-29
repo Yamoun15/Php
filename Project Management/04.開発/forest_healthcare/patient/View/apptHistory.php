@@ -98,8 +98,7 @@ include "../Controller/appHistoryController.php";
                             <th scope="col">Doctor</th>
                             <th scope="col">Date&Time</th>
                             <th scope="col">Description</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">QR</th>
+                            <th scope="col">Status</th>                            
                         </tr>
                     </thead>
                     <tbody>
@@ -125,8 +124,7 @@ include "../Controller/appHistoryController.php";
                                         }
                                         ?>
                                     </button>
-                                </td>
-                                <td>qr code</td>
+                                </td>                               
                             </tr>
                         <?php } ?>
                         <!-- <tr>
@@ -141,6 +139,33 @@ include "../Controller/appHistoryController.php";
 
                     </tbody>
                 </table>
+                <!-- Pagination -->
+        <nav aria-label="Page navigation example" class="mx-auto">
+            <ul class="pager">
+                <li class="
+                <?php if ($page <= 1) {
+                    echo "disabled";
+                } ?>
+                "><a href="?page=<?= $page-1?>">&laquo;</a></li>
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                    <li 
+                    ><a href="?page=<?= $i ?>" class=" btnNum
+                    <?php
+                    if($page == $i){
+                        echo "active";
+                    }
+                    ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
+                <?php } ?>
+
+                <li class="
+                <?php if ($page >= $totalPages) {
+                    echo "disabled";
+                } ?>">
+                    <a href="?page=<?= $page-1?>">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
             </div>
         </div>
     </div>

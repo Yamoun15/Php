@@ -1,5 +1,7 @@
 .body{
     background-color: #99e3d2 ;
+height: 100vh;
+position: relative;
 }
 .btnlogin {
     width: 88px;
@@ -40,7 +42,10 @@
 
 
 .loginimg{
-    width: 85%;     
+    width: 30%;    
+    position: absolute; 
+    top: 0;
+    right: 0;
 }
 @media (max-width: 768px){
     .loginimg{
