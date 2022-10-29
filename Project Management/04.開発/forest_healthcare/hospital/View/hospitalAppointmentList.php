@@ -31,6 +31,7 @@ include "../Controller/hospitalAppointmentistController.php";
     <script src="./resources/bootstrap/js/bootstrap.min.js" defer></script>
 
     <!-- FontAwesome 4.3.0 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/5053738b7f.js" crossorigin="anonymous"></script>
@@ -41,8 +42,10 @@ include "../Controller/hospitalAppointmentistController.php";
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/hospitalAppointmentList.css" rel="stylesheet" type="text/css" />
     <!-- root css -->
-    <link rel="stylesheet" href="./resources/css/root.css">
-    <script src="./resources/js/jquery3.6.0.js"></script>
+    <link rel="stylesheet" href="./resources/css/root.css">   
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./resources/js/hospitalAppointmentList.js"></script>
+  
 </head>
 
 <body class="skin-blue">
@@ -76,6 +79,7 @@ include "../Controller/hospitalAppointmentistController.php";
                             <th scope="col">DateTime</th>
                             <th scope="col">Patient Detail</th>
                             <th scope="col">Status</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -88,7 +92,7 @@ include "../Controller/hospitalAppointmentistController.php";
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
                                 <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["userid"] ?>" class="view">view</a></button></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                <button type="button" onclick="modal(<?= $appointment['status'] ?>,<?= $appointment['id']?>)" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                                         <?php
                                         if ($appointment["status"] == 0) {
                                             echo "Pending";
@@ -99,7 +103,9 @@ include "../Controller/hospitalAppointmentistController.php";
                                         }
                                         ?>
                                     </button>
-
+                                </td>
+                                <td>                                    
+                                <a href="../Controller/hospitalAppointmentDeleteController.php?id=<?= $appointment['id'] ?>"><i class="fa-solid fa-trash-can trash"></i></a>
                                 </td>
                             </tr>
 
@@ -129,55 +135,38 @@ include "../Controller/hospitalAppointmentistController.php";
 
                     </tbody>
                 </table>
+                 <!-- Pagination -->
+        <nav aria-label="Page navigation example" class="mx-auto">
+            <ul class="pager">
+                <li class="
+                <?php if ($page <= 1) {
+                    echo "disabled";
+                } ?>
+                "><a href="?page=<?= $page-1?>">&laquo;</a></li>
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                    <li 
+                    ><a href="?page=<?= $i ?>" class=" btnNum
+                    <?php
+                    if($page == $i){
+                        echo "active";
+                    }
+                    ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
+                <?php } ?>
+
+                <li class="
+                <?php if ($page >= $totalPages) {
+                    echo "disabled";
+                } ?>">
+                    <a href="?page=<?= $page-1?>">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
+
             </div>
         </div>
-        <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal fade">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title">Modal title</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <p>One fine body&hellip;</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal-dialog -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-9 col-sm-5"></div>
-            <div class="col-md-3 col-sm-5">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+       
+       
         <div class="col-md-1 col-sm-1 col-2"></div>
         <!-- Footer -->
     <?php include("common/footer.php"); ?>

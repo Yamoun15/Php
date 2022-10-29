@@ -53,6 +53,7 @@ include "../Controller/dashboardNameController.php";
                             <th scope="col">Date&Time</th>
                             <th scope="col">Patient Detail</th>
                             <th scope="col">Status</th>
+                            <!-- <th scope="col">Action</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -78,7 +79,11 @@ include "../Controller/dashboardNameController.php";
                                         ?>
                                     </button>
                                 </td>
+                                <!-- <td>                                    
+                                <a href="../Controller/adminAppointmentDeleteController.php?id=<?= $appointment['id'] ?>"><i class="fa-solid fa-trash-can trashBtn"></i></a>
+                                </td> -->
                             </tr>
+
                             <!-- <tr>
                                 <td>patient name</td>
                                 <td><?= $appointment["docname"] ?></td>
@@ -103,32 +108,36 @@ include "../Controller/dashboardNameController.php";
                         </tr> -->
                     </tbody>
                 </table>
+                 <!-- Pagination -->
+        <nav aria-label="Page navigation example" class="mx-auto">
+            <ul class="pager">
+                <li class="
+                <?php if ($page <= 1) {
+                    echo "disabled";
+                } ?>
+                "><a href="?page=<?= $page-1?>">&laquo;</a></li>
+
+                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                    <li 
+                    ><a href="?page=<?= $i ?>" class=" btnNum
+                    <?php
+                    if($page == $i){
+                        echo "active";
+                    }
+                    ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
+                <?php } ?>
+
+                <li class="
+                <?php if ($page >= $totalPages) {
+                    echo "disabled";
+                } ?>">
+                    <a href="?page=<?= $page-1?>">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-9 col-sm-5"></div>
-            <div class="col-md-3 col-sm-5">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+       
         <div class="col-md-1 col-sm-1 col-2"></div>
         <!-- Footer -->
         <?php include("common/footer.php"); ?>
