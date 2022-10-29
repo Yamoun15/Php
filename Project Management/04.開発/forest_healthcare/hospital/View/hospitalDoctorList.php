@@ -68,8 +68,8 @@ include "../Controller/hospitalDoctorListController.php";
                             <th scope="col">Email</th>
                             <th scope="col">Ph No</th>
                             <th scope="col">Photo</th>
-                            <th scope="col">Status</th>
-                            
+                            <th scope="col">Action</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -81,13 +81,14 @@ include "../Controller/hospitalDoctorListController.php";
                                 <td><?= $doctor["depname"] ?></td>
                                 <td><?= $doctor["dr_expert_in"] ?></td>
                                 <td><?= $doctor["duty_day"] ?>(<?= $doctor["duty_start_time"] ?>~<?= $doctor["duty_end_time"] ?>)</td>
-                                
+
                                 <td><?= $doctor["email_address"] ?></td>
                                 <td><?= $doctor["phone_no"] ?></td>
                                 <td><img src="./image/doctor/<?php echo $doctor["doctor_photo"] ?>" alt="photo" class="docPhoto"></td>
                                 <td>
-                                    <button class="btn"><a href="../Controller/editDoctorController.php?id=<?= $doctor["id"]?>"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></a></i></button>
-                                    <button class="btn"><i class="fa-solid fa-trash-can hospitalScheduleDeleteIcon"></i></button>
+                                    <button class="btn"><a href="../Controller/editDoctorController.php?id=<?= $doctor["id"] ?>"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></a></i></button>
+                                    
+                                    <button class="btn"><a href="../Controller/doctorDeleteController.php?id=<?= $doctor['id'] ?>"><i class="fa-solid fa-trash-can deleteBtn"></i></a></button>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -159,43 +160,44 @@ include "../Controller/hospitalDoctorListController.php";
                         </tr>
                     </tbody> -->
                 </table>
+                <!-- Pagination -->
+                <nav aria-label="Page navigation example" class="mx-auto">
+                    <ul class="pager">
+                        <li class="
+                <?php if ($page <= 1) {
+                    echo "disabled";
+                } ?>
+                "><a href="?page=<?= $page - 1 ?>">&laquo;</a></li>
 
-            </div>
+                        <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                            <li><a href="?page=<?= $i ?>" class=" btnNum
+                    <?php
+                            if ($page == $i) {
+                                echo "active";
+                            }
+                    ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
+                        <?php } ?>
 
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-sm-5"></div>
-            <div class="col-md-2 col-sm-5">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                        <li class="
+                <?php if ($page >= $totalPages) {
+                    echo "disabled";
+                } ?>">
+                            <a href="?page=<?= $page ?>">&raquo;</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="col-md-1 col-sm-1 col-2"></div>
+    </div>
+    </div>
+    <div class="col-md-1 col-sm-1 col-2"></div>
 
 
 
-        <!-- Footer -->
-        <?php include("common/footer.php"); ?>
+    <!-- Footer -->
+    <?php include("common/footer.php"); ?>
 
-        <script src="./resources/js/adminAboutUs.js"></script>
+    <script src="./resources/js/adminAboutUs.js"></script>
 
 </body>
 
