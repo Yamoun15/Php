@@ -59,5 +59,6 @@ if (isset($_POST["updateProfile"])) {
 
     $sql->execute();
     echo "<script>alert('Update Successful')</script>";
-    echo "<script>window.location='../View/hospitalProfileEdit.php'</script>";
+    echo "<script>window.location='../View/hospitalAppointmentList.php'</script>";
+    // header("Location: ../View/hospitalProfileEdit.php");
 }
