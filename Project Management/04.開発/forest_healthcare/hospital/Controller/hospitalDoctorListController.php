@@ -3,6 +3,12 @@
 session_start();
 $email = $_SESSION["hospital_email"];
 
+$rowLimit = 2;
+$page = (isset($_GET["page"])) ?  $_GET["page"] : 1;
+
+$startPage = ($page-1)*$rowLimit;
+
+
 include "../Model/dbConnection.php";
 $sql = $pdo->prepare("
         SELECT * FROM tbl_hospital WHERE email_address =:email       
@@ -22,11 +28,20 @@ $sql = $pdo->prepare("
         INNER JOIN tbl_hospital AS hos
         ON doc.hospital_id = hos.id 
         WHERE doc.hospital_id =:hospitalId   
+        AND doc.del_flg = 0 LIMIT $startPage, $rowLimit
 ");
 $sql->bindValue(":hospitalId",$hospitalId);
 $sql->execute();
 
 $doctorList = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+$sql = $pdo->prepare("
+        SELECT COUNT(id) As total FROM tbl_doctor WHERE del_flg = 0 ORDER BY created_date  
+");
+$sql->execute();
+$totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC)[0]['total'];
+
+$totalPages = ceil($totalRecord/$rowLimit); 
 
 //tbl_department AS dep == dep ka tbl_department
 //tbl_doctor AS doc == doc ka tbl_doctor
