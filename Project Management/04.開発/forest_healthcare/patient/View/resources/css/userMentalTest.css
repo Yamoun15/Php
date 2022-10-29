@@ -1,20 +1,47 @@
 .quiz{
-    margin: auto;
-    width:600px;
-    height: 800px;
-    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left:500px;
+    width:650px;
+    height: 650px;
+    /* background-color: rgb(164, 233, 164); */
+
 }
 
 .question{
-    line-height: 3;
+    line-height: 2;
     /* text-align: center; */
-    margin-left: 10%;
+    margin-left: 5%;
     font-size: 1.2em;
+    font-weight: 10px;
+    /* color: rgb(54, 54, 224); */
 }
 
+span{
+    /* color: rgb(31, 7, 153); */
+    margin-left: 4%;
+    font-size: 1em;
+    font-weight:500;
+}
 input{
     line-height: 1;
     text-align: center;
     /* margin-left: 10%;
     font-size: 1.2em; */
+}
+
+#submit{
+    margin-top: 2em;
+    margin-left: 3em;
+}
+#result{
+    width:650px;
+    height: 650px;
+    background-color: rgb(164, 233, 164);
+    position: absolute;
+    left:500px;
+    font-size: 1.2em;
+    visibility: hidden;
+}
+#resultCondition{
+    color: rgb(0, 154, 154);
 }
