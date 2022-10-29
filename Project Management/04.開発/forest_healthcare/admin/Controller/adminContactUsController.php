@@ -24,7 +24,7 @@ if(isset($_POST["submitBtn"])){
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
-    header("Location: ../View/adminContactList.php");
+    header("Location: ../View/adminContact.php");
 };
 
 ?>
