@@ -19,6 +19,10 @@
     text-decoration: none;
     color: #044A3A;
 }
+.dbtnlogin a{
+    text-decoration: none;
+    color: #044A3A;
+}
 .btnsignup {
     width: 88px;
     height: 36px;

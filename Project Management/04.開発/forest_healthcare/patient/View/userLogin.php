@@ -44,22 +44,22 @@ unset($_SESSION["user_email"]);
                                 <div class="row  g-0 ms-3 mb-3 ">
                                     <div class="col-md-1 col-sm-1"></div>
                                     <div class="col-6 col-md-5 col-sm-5 ">
-                                        <button class="btnlogin">Login</button>
+                                        <button class="btnlogin" disabled>Login</button>
                                     </div>
                                     <div class="col-6 col-md-6 col-sm-5 mb-4">
                                         <button class="dbtnsignup"><a href="signUp.php">Sign Up</a></button>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
-                                    <input type="email" class="form-control" placeholder="Email Address" name="user_email">
+                                    <input type="email" class="form-control" placeholder="Email Address" name="user_email" required>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2">
-                                    <input type="password" placeholder="Password" class="form-control" name="password">
+                                    <input type="password" placeholder="Password" class="form-control" name="password" required>
                                 </div>
                                 <div class="row ">
                                     <div class="col-0 col-md-1 col-sm-1"></div>
                                     <div class="col-5 col-md-5 col-sm-5">
-                                        <a href="https://">Forgot your Password?</a>
+                                        <a href="#" hidden>Forgot your Password?</a>
                                     </div>
                                     <div class="col-5 col-md-5 col-sm-5 ms-3">
                                         <button class="btnlogin" type="submit">Login</button>

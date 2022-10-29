@@ -2,7 +2,7 @@
 
     <header class="main-header">
         <!-- Logo -->
-        <a href="" class="logo"><img src="./image/punhlainglogo .png" id="hospitalLogo" alt=""><b>HOSPITAL</b></a>
+        <a href="" class="logo"><img src="./image/<?= $hospitalInfo[0]["photo"] ?>" id="" alt="" width="40px"><b>HOSPITAL</b></a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
             <!-- Sidebar toggle button-->
@@ -48,10 +48,10 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="../Controller/profileEditController.php" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="../View/hospitalProfileEdit.php" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="../Controller/logoutController.php" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>
