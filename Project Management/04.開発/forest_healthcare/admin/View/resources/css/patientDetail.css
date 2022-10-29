@@ -11,3 +11,23 @@
     font-size: 20px;
     font-weight: 1vw;
 }
+.back{
+    position: relative;
+}
+
+.btnBack{
+    
+    width: 88px;
+    height: 36px;
+    background: #188067 !important;
+    border-radius: 8px;
+    border: none;
+    border-bottom: 1px solid #161817;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnBack{
+color: white !important;
+}

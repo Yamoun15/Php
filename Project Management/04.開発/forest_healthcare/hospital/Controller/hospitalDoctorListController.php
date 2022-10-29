@@ -19,7 +19,7 @@ $sql = $pdo->prepare("
 $hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 $hospitalId = $hospitalInfo[0]["id"];
 $_SESSION["hospitalInfo"]=$hospitalInfo;
-
+$hosId = $_SESSION["hospitalInfo"];
 
 $sql = $pdo->prepare("
         SELECT doc.*,dep.name AS depname FROM tbl_doctor AS doc
@@ -36,12 +36,18 @@ $sql->execute();
 $doctorList = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 $sql = $pdo->prepare("
-        SELECT COUNT(id) As total FROM tbl_doctor WHERE del_flg = 0 ORDER BY created_date  
+        SELECT COUNT(id) As total FROM tbl_doctor 
+        WHERE del_flg = 0 AND hospital_id =:hospitalId ORDER BY created_date
+         
+      
 ");
+// AND hospital_id =:hospitalId
+ $sql->bindValue(":hospitalId",$hospitalId);
 $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC)[0]['total'];
 
 $totalPages = ceil($totalRecord/$rowLimit); 
+// echo "$totalPages";
 
 //tbl_department AS dep == dep ka tbl_department
 //tbl_doctor AS doc == doc ka tbl_doctor

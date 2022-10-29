@@ -14,7 +14,7 @@ $hospitalInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
 $hospitalId = $hospitalInfo[0]["id"];
 $_SESSION["hospitalInfo"]=$hospitalInfo;
 
-$rowLimit = 4;
+$rowLimit = 2;
 $page = (isset($_GET["page"])) ?  $_GET["page"] : 1;
 
 $startPage = ($page-1)*$rowLimit;
@@ -41,8 +41,10 @@ $appointmentList = $sql->fetchAll(PDO::FETCH_ASSOC);
 // print_r($appointmentList);
 
 $sql = $pdo->prepare("
-        SELECT COUNT(id) As total FROM tbl_appointment WHERE del_flg = 0 ORDER BY created_date  
+        SELECT COUNT(id) As total FROM tbl_appointment WHERE del_flg = 0 
+        AND hospital_id =:hospitalId ORDER BY created_date  
 ");
+$sql->bindValue(":hospitalId",$hospitalId);
 $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC)[0]['total'];
 

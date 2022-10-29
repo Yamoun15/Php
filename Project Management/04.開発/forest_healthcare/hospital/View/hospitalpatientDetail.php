@@ -80,7 +80,9 @@ $userInfo = $_SESSION["userInfo"];
             </div>
             <div class="col-2 col-md-2 col-sm-2"></div>
         </div>
+        
     </div>
+    <button class="btnBack" name="back" type="submit"><a href="./hospitalAppointmentList.php" class="btnBack">Back</a></button>
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
 </body>

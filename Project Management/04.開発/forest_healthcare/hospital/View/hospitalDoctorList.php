@@ -56,7 +56,7 @@ include "../Controller/hospitalDoctorListController.php";
         <div class="row">
             <div class=" col-sm-1 col-2"></div>
             <div class="col-md-9 col-sm-9 mx-auto table-responsive">
-
+<?php echo $totalRecord ?>
                 <table class="table">
                     <thead class="doctorTable">
                         <tr class="title">
@@ -87,7 +87,7 @@ include "../Controller/hospitalDoctorListController.php";
                                 <td><img src="./image/doctor/<?php echo $doctor["doctor_photo"] ?>" alt="photo" class="docPhoto"></td>
                                 <td>
                                     <button class="btn"><a href="../Controller/editDoctorController.php?id=<?= $doctor["id"] ?>"><i class="fa-solid fa-pen-to-square hospitalScheduleEditIcon"></a></i></button>
-                                    
+
                                     <button class="btn"><a href="../Controller/doctorDeleteController.php?id=<?= $doctor['id'] ?>"><i class="fa-solid fa-trash-can deleteBtn"></i></a></button>
                                 </td>
                             </tr>
@@ -182,14 +182,14 @@ include "../Controller/hospitalDoctorListController.php";
                 <?php if ($page >= $totalPages) {
                     echo "disabled";
                 } ?>">
-                            <a href="?page=<?= $page ?>">&raquo;</a>
+                            <a href="?page=<?= $page - 1 ?>">&raquo;</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </div>
-    </div>
+
     <div class="col-md-1 col-sm-1 col-2"></div>
 
 

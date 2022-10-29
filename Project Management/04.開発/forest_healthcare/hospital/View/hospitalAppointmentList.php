@@ -42,10 +42,11 @@ include "../Controller/hospitalAppointmentistController.php";
     <link href="./resources/css/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <link href="./resources/css/hospitalAppointmentList.css" rel="stylesheet" type="text/css" />
     <!-- root css -->
-    <link rel="stylesheet" href="./resources/css/root.css">   
+    <link rel="stylesheet" href="./resources/css/root.css">
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./resources/js/hospitalAppointmentList.js"></script>
-  
+
+
 </head>
 
 <body class="skin-blue">
@@ -92,7 +93,7 @@ include "../Controller/hospitalAppointmentistController.php";
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
                                 <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["userid"] ?>" class="view">view</a></button></td>
                                 <td>
-                                <button type="button" onclick="modal(<?= $appointment['status'] ?>,<?= $appointment['id']?>)" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                    <button type="button" onclick="modal(<?= $appointment['status'] ?>,<?= $appointment['id'] ?>)" class="btn btn-primary" data-toggle="modal" data-target="#modal">
                                         <?php
                                         if ($appointment["status"] == 0) {
                                             echo "Pending";
@@ -104,8 +105,8 @@ include "../Controller/hospitalAppointmentistController.php";
                                         ?>
                                     </button>
                                 </td>
-                                <td>                                    
-                                <a href="../Controller/hospitalAppointmentDeleteController.php?id=<?= $appointment['id'] ?>"><i class="fa-solid fa-trash-can trash"></i></a>
+                                <td>
+                                    <a href="../Controller/hospitalAppointmentDeleteController.php?id=<?= $appointment['id'] ?>"><i class="fa-solid fa-trash-can trash"></i></a>
                                 </td>
                             </tr>
 
@@ -135,44 +136,40 @@ include "../Controller/hospitalAppointmentistController.php";
 
                     </tbody>
                 </table>
-                 <!-- Pagination -->
-        <nav aria-label="Page navigation example" class="mx-auto">
-            <ul class="pager">
-                <li class="
+                <!-- Pagination -->
+                <nav aria-label="Page navigation example" class="mx-auto">
+                    <ul class="pager">
+                        <li class="
                 <?php if ($page <= 1) {
                     echo "disabled";
                 } ?>
-                "><a href="?page=<?= $page-1?>">&laquo;</a></li>
+                "><a href="?page=<?= $page - 1 ?>">&laquo;</a></li>
 
-                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                    <li 
-                    ><a href="?page=<?= $i ?>" class=" btnNum
+                        <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                            <li><a href="?page=<?= $i ?>" class=" btnNum
                     <?php
-                    if($page == $i){
-                        echo "active";
-                    }
+                            if ($page == $i) {
+                                echo "active";
+                            }
                     ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
-                <?php } ?>
+                        <?php } ?>
 
-                <li class="
+                        <li class="
                 <?php if ($page >= $totalPages) {
                     echo "disabled";
                 } ?>">
-                    <a href="?page=<?= $page-1?>">&raquo;</a>
-                </li>
-            </ul>
-        </nav>
+                            <a href="?page=<?= $page - 1 ?>">&raquo;</a>
+                        </li>
+                    </ul>
+                </nav>
 
             </div>
         </div>
-       
-       
+
+
         <div class="col-md-1 col-sm-1 col-2"></div>
         <!-- Footer -->
-    <?php include("common/footer.php"); ?>
+        <?php include("common/footer.php"); ?>
 </body>
-<script>
-    // $('#myModal').modal('show')
-</script>
 
 </html>

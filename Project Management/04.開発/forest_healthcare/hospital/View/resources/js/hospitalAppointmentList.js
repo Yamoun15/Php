@@ -1,3 +1,5 @@
+
+
 function modal(status,id) {
     if (status == 0) {
         Swal.fire({
@@ -14,15 +16,15 @@ function modal(status,id) {
             else if (result.isDenied) 
                 status = 2;
             
-            let sendStatus = {
+            let sendData = {
                 status: status,
                 bookingID : id
             }
             
             $.ajax({
-                url: "../../../Controller/hospitalAppointmentStatusUpdateController.php",
+                url: "../Controller/hospitalAppointmentStatusUpdateController.php",
                 type: "POST",
-                data: sendStatus,
+                data: sendData,
                 success: function (res) {
                     if(res == 1)
                     location.reload();

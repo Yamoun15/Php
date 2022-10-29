@@ -34,11 +34,9 @@ $doctorInfo =  $_SESSION["doctorInfo"];
                             <label for="">Choose Department</label>
                             <select class="form-select" aria-label="Default select example" name="department">
                                 <?php foreach ($departmentList as $key => $department) { ?>
-                                    <option value="<?= $department["id"] ?>" 
-                                        <?php if ($department["id"]==$doctorInfo[0]["department_id"]) {
-                                            echo "selected";                                           
-                                        } ?>
-                                    ><?= $department["name"] ?></option>
+                                    <option value="<?= $department["id"] ?>" <?php if ($department["id"] == $doctorInfo[0]["department_id"]) {
+                                                                                    echo "selected";
+                                                                                } ?>><?= $department["name"] ?></option>
                                 <?php } ?>
                                 <!-- <option selected>Department</option>
                                 <option value="1">Neurology</option>
@@ -81,12 +79,15 @@ $doctorInfo =  $_SESSION["doctorInfo"];
                     </div>
                     <div class="form-group">
                         <div class="row">
-                            <div class="col-8 col-md-9 col-sm9"></div>
+                            <div class="col-6 col-md-7 col-sm7"></div>
+                            <div class="col-2 col-md-2 col-sm2">
+                                <button class="btnEditD" name="cancel" type="submit"><a href="./hospitalDoctorList.php" class="cancleBtn">Cancel</a></button>
+                            </div>
                             <div class="col-3 col-md-3 col-sm-3">
                                 <button class="btnEditD" name="updateDoctor" type="submit">Edit Doctor</button>
                             </div>
                         </div>
-                    </div>    
+                    </div>
                 </form>
             </div>
             <div class="col-2 col-md-2 col-sm-2"></div>

@@ -3,7 +3,7 @@
 session_start();
 $email = $_SESSION["user_email"];
 
-$rowLimit = 1;
+$rowLimit = 2;
 $page = (isset($_GET["page"])) ?  $_GET["page"] : 1;
 
 $startPage = ($page-1)*$rowLimit;
