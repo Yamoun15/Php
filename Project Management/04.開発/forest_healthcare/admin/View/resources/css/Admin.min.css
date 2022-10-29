@@ -959,3 +959,9 @@ table.text-center th {
 .table.align td {
     text-align: right
 }
+
+.navbar-custom-menu>.navbar-nav>li>.dropdown-menu {
+    position: absolute;
+    right: 0;
+    left: auto
+}
