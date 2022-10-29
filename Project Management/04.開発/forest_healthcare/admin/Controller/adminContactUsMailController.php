@@ -50,4 +50,6 @@ if (isset($_POST["replyBtn"])) {
     
     $mail = new SendMail();
     $mail->sendMail($userEmail, $subject, $replyMeaasge);
+
+    header("Location: ../View/adminContactList.php");
 }

@@ -140,9 +140,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="../View/adminContact.php">
+                    <a href="../View/adminContactList.php">
                         <i class="fa fa-envelope"></i> <span>Mail</span>
-                        <small class="label pull-right bg-yellow">12</small>
+                        <!-- <small class="label pull-right bg-yellow">12</small> -->
                     </a>
                 </li>
                 <li class="treeview">

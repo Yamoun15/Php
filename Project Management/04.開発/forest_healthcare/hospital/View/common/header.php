@@ -81,7 +81,7 @@
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li class="active treeview">
-                    <a href="#">
+                    <a href="../view/hospitalDashboard.php">
                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                     </a>
                 </li>
