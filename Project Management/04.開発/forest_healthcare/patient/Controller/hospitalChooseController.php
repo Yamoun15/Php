@@ -16,5 +16,7 @@ if(isset($_POST["hospital"])){
     $sql->execute();
     $doctorList = $sql->fetchAll(PDO::FETCH_ASSOC);
     echo json_encode($doctorList);
+
+    
 }
 ?>

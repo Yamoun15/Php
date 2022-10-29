@@ -26,6 +26,6 @@ if (isset($_POST["admin_email"]) && isset($_POST["password"])) {
         $_SESSION["id"] = $result[0]['id'];
         header("Location: ../View/testDahboard.php");
     } else {
-        header("Location: ../View/userLogin.php");
+        header("Location: ../View/adminLogin.php");
     };
 }

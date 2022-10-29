@@ -47,7 +47,7 @@ function chooseHospital() {
                     </div>
             
                     <div class="col-md-2">
-                        <a href="../Controller/doctorlistC.php?doctorID=<?= $doctor['id'] ?>" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
+                        <a href="../Controller/doctorlistC.php?doctorID=${doctor.id}" class="btn btn-warning p-2 text-white mt-4 " style="width: 130px">
                         <img src="booking.png" alt="">Book</a>
                     </div>
                 </div>

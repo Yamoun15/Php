@@ -5,7 +5,7 @@ include "../Model/dbConnection.php";
 if(isset($_POST["departmentBtn"])){
     $name =  $_POST["name"];
 
-    $email = $_SESSION["email_address"];
+    $email = $_SESSION["hospital_email"];
     $sql= $pdo->prepare("SELECT id FROM tbl_hospital WHERE email_address = :email");
     $sql->bindValue(":email",$email);
     $sql->execute();
