@@ -31,7 +31,7 @@ include "../Controller/dashboardNameController.php";
     <link href="./resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 
 
-    <script src="./resources/bootstrap/js/bootstrap.min.js" defer></script>
+    <!-- <script src="./resources/bootstrap/js/bootstrap.min.js" defer></script> -->
 
     <!-- FontAwesome 4.3.0 -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
