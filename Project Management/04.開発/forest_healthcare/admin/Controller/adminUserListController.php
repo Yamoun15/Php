@@ -17,7 +17,7 @@ $userList = $sql->fetchAll(PDO::FETCH_ASSOC);
 // print_r($userList);
 
 $sql = $pdo->prepare("
-        SELECT COUNT(id) As total FROM tbl_user WHERE del_flg = 0 ORDER BY created_date  
+        SELECT COUNT(id) As total FROM tbl_user WHERE del_flg = 0 ORDER BY create_date  
 ");
 $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC)[0]['total'];

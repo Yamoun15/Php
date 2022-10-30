@@ -102,31 +102,30 @@ include "../Controller/dashboardNameController.php";
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
                             <li class="page-item 
-                    <?php if ($page <= 1) {
-                        echo "disabled";
-                    }  ?>
-                    ">
+                                <?php if ($page <= 1) {
+                                    echo "disabled";
+                                }  ?>
+                            ">
                                 <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                     <span class="sr-only">Previous</span>
                                 </a>
                             </li>
-
                             <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
                                 <li class="page-item 
-                        <?php
-                                if ($page == $i) {
-                                    echo "active";
-                                }
-                        ?>
-                        "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                                    <?php
+                                    if ($page == $i) {
+                                        echo "active";
+                                    }
+                                    ?>
+                                ">
+                                    <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                                </li>
                             <?php } ?>
-
                             <li class="page-item 
-                    <?php if ($page >= $totalPages) {
-                        echo "disabled";
-                    }  ?>">
-
+                                <?php if ($page >= $totalPages) {
+                                    echo "disabled";
+                                }  ?>">
                                 <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                     <span class="sr-only">Next</span>
