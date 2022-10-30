@@ -103,7 +103,7 @@ include "../Controller/dashboardNameController.php";
                         <ul class="pagination justify-content-center">
                             <li class="page-item 
                     <?php if ($page <= 1) {
-                        echo "disabled";
+                        echo "btn disabled";
                     }  ?>
                     ">
                                 <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
@@ -124,7 +124,7 @@ include "../Controller/dashboardNameController.php";
 
                             <li class="page-item 
                     <?php if ($page >= $totalPages) {
-                        echo "disabled";
+                        echo "btn disabled";
                     }  ?>">
 
                                 <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
