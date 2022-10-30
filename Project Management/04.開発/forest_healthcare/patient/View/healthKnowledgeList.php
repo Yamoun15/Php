@@ -34,17 +34,17 @@ include "../Controller/articleListC.php";
 
     <!-- search box -->
     <div class="container-fluid">
-        <div class="row mt-4 ms-5 ">
-            <div class="col-12 col-md-12 col-sm-12 ">
+        <div class="row mt-4 ms-5">
+            <div class="col-12 col-md-12 col-sm-12 mx-sm-auto">
                 <input type="text" placeholder="Search.." name="searchText" class="searchBox" id="searchBox">
                 <button type="submit" id="btnSearch"><i class="fa fa-search"></i></button>
             </div>
         </div>
 
         <!-- article list -->
-        <div class="row g-0" id="searchResult">
+        <div class="row d-flex justify-content-center" id="searchResult">
             <?php foreach ($articleList as $key => $article) { ?>
-                <div class="card ms-5 mt-3 col-md-5">
+                <div class="card mt-3 col-md-10 col-sm-10 col-10 m-5">
                     <div class="row">
                         <div class="col-md-8 col-sm-8 col-8">
                             <div class="card-body">

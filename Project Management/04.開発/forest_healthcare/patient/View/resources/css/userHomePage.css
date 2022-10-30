@@ -1,4 +1,6 @@
-
+.box{
+  min-height: 100vh;
+}
 
 /* Carousel slides */
 .carousel-control-prev-icon,
@@ -31,7 +33,7 @@
 .s {
   color: #494949;
   text-shadow: 0 3px #458a72, 0 5px #1ea58d, 0 7px #46504e;
-  margin: 0.5rem;
+  letter-spacing: 0.5rem;
   font-size: smaller !important;
 }
 
@@ -224,14 +226,6 @@ a.articleImg {
   cursor: default;
 }
 
-/* .text1 {
-  transition: all 1s;
-}
-
-.text1:hover {
-  transform: translateY(-5px) scale(1.1);
-  color: #73777b;
-} */
 
 .articleTitle {
   position: relative;
@@ -306,3 +300,5 @@ a.articleImg {
 .home{
   color: var(--orange ) !important;
 }
+
+

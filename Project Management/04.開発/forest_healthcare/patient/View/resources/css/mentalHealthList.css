@@ -20,7 +20,9 @@ body {
 }
 
 /* Mental Health Cards */
-
+#searchResult{
+  margin: auto !important;
+}
 .cards {
   column-count: 2;
   text-align: center;

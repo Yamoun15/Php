@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
 } */
-body {
-  height: 100vh;
+.body {
+  min-height: 100vh;
 }
 
 .healthKtitle {
@@ -27,6 +27,7 @@ body {
   background-color: #188067;
   color: white;
   border-radius: 50%;
+  font-size: larger;
 }
 p {
   /* text-indent: 2%; */

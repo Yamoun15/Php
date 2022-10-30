@@ -41,7 +41,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" id="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-6 fw-bold">
+                <div class="col-lg-12 col-md-12 col-sm-12 fw-bold">
                     <span>
                         <a class="text-light me-4 home" aria-current="page" href="../View/userHomePage.php">Home</a>
                     </span>
