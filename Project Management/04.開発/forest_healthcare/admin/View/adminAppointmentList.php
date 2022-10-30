@@ -42,7 +42,7 @@ include "../Controller/dashboardNameController.php";
         <br>
         <div class="row">
             <div class="col-md-1 col-sm-1 col-2"></div>
-            <div class="col-md-10 col-sm-10 mx-auto table-responsive">
+            <div class="col-md-8 col-sm-8 mx-auto table-responsive">
                 <table class="table">
                     <thead class="doctorTable">
                         <tr class="title">
