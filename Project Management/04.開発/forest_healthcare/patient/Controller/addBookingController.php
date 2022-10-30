@@ -55,7 +55,7 @@ if(isset($_POST["bookingBtn"])){
 
     $sql->execute();
 
-    header("Location: ../View/userHomePage.php");
+    header("Location: ../View/apptHistory.php");
 
 }else{
     header("Location: ../View/userLogin.php");

@@ -1,5 +1,7 @@
 <?php
 include "../Controller/appHistoryController.php";
+// include "../Controller/qrcode/phpqrcode/qrlib.php";
+include "./resources/lib/phpqrcode/qrlib.php"
 
 
 ?>
@@ -88,7 +90,7 @@ include "../Controller/appHistoryController.php";
             </div>
 
             <div class="col-lg-8">
-                <h3 class="text-center mt-3">Your Booking History</h3><br>
+                <h3 class="text-center mt-3">Your Booking History</h3><br>                
                 <table class="table">
                     <thead>
                         <tr class="title">
@@ -98,12 +100,19 @@ include "../Controller/appHistoryController.php";
                             <th scope="col">Doctor</th>
                             <th scope="col">Date&Time</th>
                             <th scope="col">Description</th>
-                            <th scope="col">Status</th>                            
+                            <th scope="col">Status</th> 
+                            <th scope="col">QR Code</th>                            
                         </tr>
                     </thead>
                     <tbody>
                         <?php $count = 1; ?>
-                        <?php foreach ($appointmentList as $key => $appointment) { ?>
+                        <?php foreach ($appointmentList as $key => $appointment) {
+                            if ($appointment["status"] == 1) {
+                                $text =  $appointment["qrcode"];
+                                //  echo $text ;
+                                QRcode::png($text, "./qrcodePhotos" . $appointment["id"] . ".png");
+                                
+                            } ?>
                             <tr>
                                 <td scope="row"><?= $count++; ?>.</td>
                                 <td><?= $appointment["username"] ?></td>
@@ -124,9 +133,20 @@ include "../Controller/appHistoryController.php";
                                         }
                                         ?>
                                     </button>
-                                </td>                               
+                                </td> 
+                                <td>
+                            <?php
+                            if ($appointment["status"] == 1) {
+                            ?>
+                                <img src="./qrcodePhotos/<?= $appointment["id"] ?>.png" width="100" alt="qrcode">
+
+                            <?php   } ?>
+                        </td>                              
                             </tr>
                         <?php } ?>
+                        <td>
+
+                        </td>
                         <!-- <tr>
                         <th scope="row">1</th>                        
                         <td>Dr.John</td>
