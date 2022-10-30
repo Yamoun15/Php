@@ -126,7 +126,6 @@ include "../Controller/dashboardNameController.php";
                     <?php if ($page >= $totalPages) {
                         echo "btn disabled";
                     }  ?>">
-
                                 <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                     <span class="sr-only">Next</span>
@@ -136,7 +135,6 @@ include "../Controller/dashboardNameController.php";
                     </nav>
                 </div>
             </div>
-            <!-- jjj -->
             <!-- Footer -->
             <?php include("common/footer.php"); ?>
 </body>

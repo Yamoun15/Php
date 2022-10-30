@@ -28,7 +28,7 @@ foreach($pieChart as $key => $value){
 }
 
 //get total users
-$sql = $pdo->prepare("SELECT COUNT(id) AS totalUser, created_date FROM tbl_user GROUP BY YEAR(created_date), MONTH(created_date)");
+$sql = $pdo->prepare("SELECT COUNT(id) AS totalUser, create_date FROM tbl_user GROUP BY YEAR(create_date), MONTH(create_date)");
 $sql->execute();
 $totalUser= $sql->fetchAll(PDO::FETCH_ASSOC);
 
