@@ -76,7 +76,7 @@ include "../Controller/dashboardNameController.php";
                 </tr>
             </thead>
             <tbody>
-            <?php $count = ($page*$rowLimit)-1; ?>
+            <?php $count = 1; ?>
                 <?php foreach ($videoList as $key => $video) { ?>
                     <tr>
                         <th scope="row"><?= $count++; ?>.</th>
