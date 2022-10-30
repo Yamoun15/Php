@@ -3,7 +3,7 @@
 session_start();
 $email = $_SESSION["user_email"];
 
-$rowLimit = 2;
+$rowLimit = 4;
 $page = (isset($_GET["page"])) ?  $_GET["page"] : 1;
 
 $startPage = ($page-1)*$rowLimit;
@@ -38,8 +38,11 @@ $sql->execute();
 $appointmentList = $sql->fetchAll(PDO::FETCH_ASSOC);
 // print_r($appointmentList);
 $sql = $pdo->prepare("
-        SELECT COUNT(id) As total FROM tbl_appointment WHERE del_flg = 0 ORDER BY created_date  
+        SELECT COUNT(id) As total FROM tbl_appointment 
+        WHERE del_flg = 0 
+        AND user_id = :userid ORDER BY created_date  
 ");
+$sql->bindValue(":userid",$userId);
 $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC)[0]['total'];
 
