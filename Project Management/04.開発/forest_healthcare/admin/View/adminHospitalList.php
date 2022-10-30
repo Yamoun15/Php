@@ -102,10 +102,10 @@ include "../Controller/dashboardNameController.php";
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justify-content-center">
                             <li class="page-item 
-                                <?php if ($page <= 1) {
-                                    echo "disabled";
-                                }  ?>
-                            ">
+                    <?php if ($page <= 1) {
+                        echo "btn disabled";
+                    }  ?>
+                    ">
                                 <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
                                     <span aria-hidden="true">&laquo;</span>
                                     <span class="sr-only">Previous</span>
@@ -123,9 +123,10 @@ include "../Controller/dashboardNameController.php";
                                 </li>
                             <?php } ?>
                             <li class="page-item 
-                                <?php if ($page >= $totalPages) {
-                                    echo "disabled";
-                                }  ?>">
+                    <?php if ($page >= $totalPages) {
+                        echo "btn disabled";
+                    }  ?>">
+
                                 <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
                                     <span aria-hidden="true">&raquo;</span>
                                     <span class="sr-only">Next</span>
@@ -135,6 +136,7 @@ include "../Controller/dashboardNameController.php";
                     </nav>
                 </div>
             </div>
+            <!-- jjj -->
             <!-- Footer -->
             <?php include("common/footer.php"); ?>
 </body>
