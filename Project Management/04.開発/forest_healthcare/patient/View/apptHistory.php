@@ -111,8 +111,10 @@ include "./resources/lib/phpqrcode/qrlib.php"
                         <?php $count = 1; ?>
                         <?php foreach ($appointmentList as $key => $appointment) {
                             if ($appointment["status"] == 1) {
-                                $text =  $appointment["qrcode"];
-                                //  echo $text ;
+                                // $text =  $appointment["qrcode"];
+                                // //  echo $text ;
+                                // QRcode::png($text, "./qrcodePhotos/" . $appointment["id"] . ".png");
+                                $text =  $appointment["id"];
                                 QRcode::png($text, "./qrcodePhotos/" . $appointment["id"] . ".png");
                             } ?>
                             <tr>
@@ -164,8 +166,8 @@ include "./resources/lib/phpqrcode/qrlib.php"
                         </li>
                         <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
                             <li class="page-item
-                            <?php 
-                            if ($page == $i){
+                            <?php
+                            if ($page == $i) {
                                 echo "active";
                             }
                             ?>
