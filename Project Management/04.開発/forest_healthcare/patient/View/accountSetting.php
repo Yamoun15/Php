@@ -130,7 +130,7 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Phone Number</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" placeholder="09-2150776" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no">
+                            <input type="text" class="form-control adminContactInput" placeholder="eg. 0949289781" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no">
                         </div>
                     </div>
                     <div class="form-group">
@@ -142,27 +142,38 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Completed Age</label>
                         <div class="col-md-12">
-                            <input type="number" min="1" class="form-control adminContactInput" placeholder="Age(Completed age)" value="<?= $patientInfo[0]["age"] ?>" name="age">
+                            <input type="number" min="1" class="form-control adminContactInput" placeholder="your age(Completed age)" value="<?= $patientInfo[0]["age"] ?>" name="age">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Address</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" placeholder="Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address">
+                            <input type="text" class="form-control adminContactInput" placeholder="eg. Kamaryut Tsp., Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="gender" class="userProfileLabel col-md-5">Gender- <span class="text-dark"></span></label>
+                        <label for="gender" class="userProfileLabel col-md-5">Gender- <span class="text-dark">
+                        <?php if ($patientInfo[0]["gender"] == 2) {
+                                    echo "Other";
+                                } else if ($patientInfo[0]["gender"] == 0) {
+                                    echo "Male";
+                                } else if ($patientInfo[0]["gender"] == 1) {
+                                    echo "Female";
+                                } else if ($patientInfo[0]["gender"] == "") {
+                                    echo "Not Set";
+                                }
+                                ?>
+                        </span></label>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male" <?php echo ($patientInfo[0]["gender"] == 'Male') ?  "checked" : "";  ?>>
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="0" >
                             <label class="form-check-label" for="inlineRadio1">Male</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female" <?php echo ($patientInfo[0]["gender"] == 'Female') ?  "checked" : "";  ?>>
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="1" >
                             <label class="form-check-label" for="inlineRadio2">Female</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="Other" <?php echo ($patientInfo[0]["gender"] == 'Other') ?  "checked" : "";  ?>>
+                            <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="2">
                             <label class="form-check-label" for="inlineRadio3">Other</label>
                         </div>
                     </div>

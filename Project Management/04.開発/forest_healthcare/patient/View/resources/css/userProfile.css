@@ -117,7 +117,6 @@
 }
 
 
-
 /* Log out button */
 .modal-footer button {
   box-shadow: 0px 4px 5px gray;
@@ -128,9 +127,14 @@
   background-color: #188067 !important;
   color: white !important;
   text-decoration: none !important;
-  font-weight:bold !important;
+  font-weight:700 !important;
+  box-shadow: 0px 4px 5px grey !important;
 }
 .btnLogOut:hover {
   color: white;
   background-color: #064536 !important;
+}
+
+input::placeholder {
+  color: #ccc !important;
 }

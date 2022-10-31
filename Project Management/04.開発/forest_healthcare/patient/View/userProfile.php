@@ -144,7 +144,7 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Phone Number</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" placeholder="09-2150776" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no" disabled>
+                            <input type="text" class="form-control adminContactInput" placeholder="eg. 0949289781" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no" disabled>
                         </div>
                     </div>
                     <div class="form-group">
@@ -156,22 +156,29 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Completed Age</label>
                         <div class="col-md-12">
-                            <input type="number" min="1" class="form-control adminContactInput" placeholder="Age(Completed age)" value="<?= $patientInfo[0]["age"] ?>" name="age" disabled>
+                            <input type="number" min="1" class="form-control adminContactInput" placeholder="your Age(Completed age)" value="<?= $patientInfo[0]["age"] ?>" name="age" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Address</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" placeholder="Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address" disabled>
+                            <input type="text" class="form-control adminContactInput" placeholder="eg. Kamaryut Tsp., Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="gender" class="userProfileLabel col-md-5">Gender-
-                            <?php if($patientInfo[0]["gender"] == 2){echo "Other";}
-                            else if($patientInfo[0]["gender"] == 0){echo "Male";}
-                            else if($patientInfo[0]["gender"] == 1){echo "Female";}
-                            else if($patientInfo[0]["gender"] == ""){echo "Not Set";}
-                            ?> <span class="text-dark"><?= $patientInfo[0]["gender"] ?></span></label>
+                            <span class="text-dark">
+                                <?php if ($patientInfo[0]["gender"] == 2) {
+                                    echo "Other";
+                                } else if ($patientInfo[0]["gender"] == 0) {
+                                    echo "Male";
+                                } else if ($patientInfo[0]["gender"] == 1) {
+                                    echo "Female";
+                                } else if ($patientInfo[0]["gender"] == "") {
+                                    echo "Not Set";
+                                }
+                                ?>
+                            </span></label>
                     </div>
                     <input type="hidden" name="id" value="<?= $patientInfo[0]["id"] ?>">
                 </form>
