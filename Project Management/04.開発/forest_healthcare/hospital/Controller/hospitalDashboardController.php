@@ -43,17 +43,17 @@ $sql->execute();
 $totalVisitor= $sql->fetchAll(PDO::FETCH_ASSOC);
 
 //get total appt
-$sql = $pdo->prepare("SELECT COUNT(id) AS totalAppt FROM tbl_appointment");
+$sql = $pdo->prepare("SELECT COUNT(id) AS totalAppt FROM tbl_appointment WHERE del_flg=0");
 $sql->execute();
 $totalAppt= $sql->fetchAll(PDO::FETCH_ASSOC);
 
 //get total hospitals
-$sql = $pdo->prepare("SELECT COUNT(id) AS totalHospital FROM tbl_hospital");
+$sql = $pdo->prepare("SELECT COUNT(id) AS totalHospital FROM tbl_hospital WHERE del_flg=0");
 $sql->execute();
 $totalHospital= $sql->fetchAll(PDO::FETCH_ASSOC);
 
 //get total doctors
-$sql = $pdo->prepare("SELECT COUNT(id) AS totalDoctor FROM tbl_doctor");
+$sql = $pdo->prepare("SELECT COUNT(id) AS totalDoctor FROM tbl_doctor WHERE del_flg=0");
 $sql->execute();
 $totalDoctor= $sql->fetchAll(PDO::FETCH_ASSOC);
 

@@ -10,10 +10,11 @@
 .dbtnsignup {
     width: 88px;
     height: 36px;
-    border-radius: 12px;
+    border-radius: 12px !important;
     border: none;
-    border-bottom: 1px solid #161817;
-    color: rgb(155, 131, 131);
+    
+    color: rgb(155, 131, 131) !important;
+    background: rgb(229, 229, 229) !important;
 }
 .dbtnsignup a{
     text-decoration: none;
@@ -44,15 +45,21 @@
     color: rgb(155, 131, 131);
 }
 .login_logo{
-    max-width: 10%;
+    max-width: 5%;
 }
 
 .loginimg{
     width: 100%;     
 }
+.loginLogo{
+    width: 20%;     
+}
 @media (max-width: 768px){
     .small{
         background-color: #99e3d2 ;
+    }
+    .loginLogo{
+        width: 25%;     
     }
     .loginimg{
         display: none;
@@ -64,4 +71,9 @@
 }
 .login{
     color: var(--orange ) !important;
+  }
+  .signuptext{
+    font-family: var(--fontfamily-poly);
+    color: var(--green );
+    font-size: 1.em;
   }

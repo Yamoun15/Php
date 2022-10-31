@@ -28,7 +28,7 @@ unset($_SESSION["user_email"]);
             <div class="col-12 col-md-8">
                 <div class="row">
                     <div class="login_logo me-3">
-                        <img src="./storages/loginLogo.png" alt="" srcset="">
+                        <img src="./storages/loginLogo.png" alt="" srcset="" class="loginLogo">
                         <label for="" class="mx-3"><a href="./userHomePage.php" class="acolor">Home</a></label>
                         <label for="" class="mx-3"><a href="./aboutUs.php" class="acolor">About Us</a></label>
                         <label for="" class=""><a href="./contactUs.php" class="acolor">Contact Us</a></label>
@@ -40,14 +40,14 @@ unset($_SESSION["user_email"]);
                         <div class="col-0 col-md-2 "></div>
                         <div class="col-md-8 col-sm-8">
                             <div class="simple-login-container text-center">
-
                                 <div class="row  g-0 ms-3 mb-3 ">
                                     <div class="col-md-1 col-sm-1"></div>
                                     <div class="col-6 col-md-5 col-sm-5 ">
                                         <button class="btnlogin" disabled>Login</button>
                                     </div>
                                     <div class="col-6 col-md-6 col-sm-5 mb-4">
-                                        <button class="dbtnsignup"><a href="signUp.php">Sign Up</a></button>
+                                        <a href="signUp.php" class="dbtnsignup btn">Sign Up</a>
+                                        <!-- <button class="dbtnsignup"><a href="signUp.php">Sign Up</a></button> -->
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 mb-4 mx-2 ">
