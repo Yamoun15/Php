@@ -44,15 +44,21 @@
     color: rgb(155, 131, 131);
 }
 .login_logo{
-    max-width: 10%;
+    max-width: 5%;
 }
 
 .loginimg{
     width: 100%;     
 }
+.loginLogo{
+    width: 20%;     
+}
 @media (max-width: 768px){
     .small{
         background-color: #99e3d2 ;
+    }
+    .loginLogo{
+        width: 25%;     
     }
     .loginimg{
         display: none;

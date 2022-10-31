@@ -45,13 +45,13 @@ $userInfo = $_SESSION["userInfo"];
     <!-- body -->
     <div class="">
         <div class="row title">
-            <div class="col-12 col-md-12 col-sm-12">
+            <div class="col-0 col-md-12 col-sm-12">
                 <p class="text-center">Patient's Detail </p>
             </div>
         </div>
         <div class="row pdBodybgcolor">
-            <div class="col-2 col-md-2 col-sm-2"></div>
-            <div class="col-3 col-md-3 col-sm-3 ms-3">
+            <div class="col-0 col-md-2 col-sm-2"></div>
+            <div class="col-0 col-md-3 col-sm-3 ms-3">
                 <p>Patient Name</p>
                 <p>Phone No</p>
                 <p>Age</p>
@@ -60,7 +60,7 @@ $userInfo = $_SESSION["userInfo"];
                 <p>Description</p>
             </div>
 
-            <div class="col-5 col-md-5 col-sm-5 ms-4">
+            <div class="col-0 col-md-5 col-sm-5 ms-4">
             <p>:<?= $userInfo[0]["userna"] ?></p>
                 <p>:<?= $userInfo[0]["userph"] ?></p>
                 <p>:<?= $userInfo[0]["userage"] ?></p>
@@ -78,7 +78,7 @@ $userInfo = $_SESSION["userInfo"];
                 <p>:<?= $userInfo[0]["useradd"] ?></p>                
                 <p>:<?= $userInfo[0]["des"] ?></p>
             </div>
-            <div class="col-2 col-md-2 col-sm-2"></div>
+            <div class="col-0 col-md-2 col-sm-2"></div>
         </div>
         
     </div>
