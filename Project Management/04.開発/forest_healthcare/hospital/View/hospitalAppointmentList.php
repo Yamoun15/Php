@@ -141,7 +141,7 @@ include "../Controller/hospitalAppointmentistController.php";
                     <ul class="pager">
                         <li class="
                 <?php if ($page <= 1) {
-                    echo "disabled";
+                    echo "btn disabled";
                 } ?>
                 "><a href="?page=<?= $page - 1 ?>">&laquo;</a></li>
 
@@ -156,9 +156,9 @@ include "../Controller/hospitalAppointmentistController.php";
 
                         <li class="
                 <?php if ($page >= $totalPages) {
-                    echo "disabled";
+                    echo "btn disabled";
                 } ?>">
-                            <a href="?page=<?= $page - 1 ?>">&raquo;</a>
+                            <a href="?page=<?= $page + 1 ?>">&raquo;</a>
                         </li>
                     </ul>
                 </nav>

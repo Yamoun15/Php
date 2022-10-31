@@ -132,10 +132,10 @@ include "../Controller/dashboardNameController.php";
                 <?php if ($page >= $totalPages) {
                     echo "btn disabled";
                 } ?>">
-                            <a href="?page=<?= $page - 1 ?>">&raquo;</a>
-                        </li>
-                    </ul>
-                </nav>
+                    <a href="?page=<?= $page+1?>">&raquo;</a>
+                </li>
+            </ul>
+        </nav>
             </div>
 
             <!-- Footer -->

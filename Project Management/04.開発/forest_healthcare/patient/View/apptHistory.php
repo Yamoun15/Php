@@ -90,9 +90,9 @@ include "./resources/lib/phpqrcode/qrlib.php"
             </div>
 
             <div class="col-lg-8">
-                <?php echo $totalRecord ;
-                    echo $totalPages  
-                    ?>
+                <!-- <?php echo $totalRecord;
+                        echo $totalPages
+                        ?> -->
                 <h3 class="text-center mt-3">Your Booking History</h3><br>
                 <table class="table">
                     <thead>
@@ -124,7 +124,7 @@ include "./resources/lib/phpqrcode/qrlib.php"
                                 <td><?= $appointment["description"] ?></td>
                                 <!-- <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["userid"] ?>">View</a></button></td> -->
                                 <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                    <label type="" class="statusLabel">
                                         <?php
                                         if ($appointment["status"] == 0) {
                                             echo "Pending";
@@ -134,7 +134,7 @@ include "./resources/lib/phpqrcode/qrlib.php"
                                             echo "Sorry! full of appointments";
                                         }
                                         ?>
-                                    </button>
+                                    </label>
                                 </td>
                                 <td>
                                     <?php
@@ -149,62 +149,41 @@ include "./resources/lib/phpqrcode/qrlib.php"
                         <td>
 
                         </td>
-                        <!-- <tr>
-                        <th scope="row">1</th>                        
-                        <td>Dr.John</td>
-                        <td>Hospital 2</td>
-                        <td>9AM-11AM(SUN)</td>
-                        <td><button class="btnview">View</button></td>
-                        <td>Approved</td>
-                        <td></td>
-                    </tr> -->
-
                     </tbody>
                 </table>
-                
-                <!-- Pagination -->
-                <nav aria-label="Page navigation example" class="mx-auto">
-                    <ul class="pager">
-                        <li class="
-                <?php if ($page <= 1) {
-                    echo "btn disabled";
-                } ?>
-                "><a href="?page=<?= $page - 1 ?>">&laquo;</a></li>
-
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center paper">
+                        <li class="page-item
+                        <?php if ($page <= 1) {
+                            echo "disabled";
+                        } ?>
+                ">
+                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
                         <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                            <li><a href="?page=<?= $i ?>" class=" btnNum
-                    <?php
-                            if ($page == $i) {
+                            <li class="page-item
+                            <?php 
+                            if ($page == $i){
                                 echo "active";
                             }
-                    ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
+                            ?>
+                            "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
                         <?php } ?>
 
-                        <li class="
-                <?php if ($page >= $totalPages) {
-                    echo "btn disabled";
-                } ?>">
-                            <a href="?page=<?= $page + 1 ?>">&raquo;</a>
+
+                        <li class="page-item
+                        <?php if ($page >= $totalPages) {
+                            echo "disabled";
+                        } ?>
+                ">
+                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
                         </li>
                     </ul>
                 </nav>
-                <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
             </div>
         </div>
     </div>
