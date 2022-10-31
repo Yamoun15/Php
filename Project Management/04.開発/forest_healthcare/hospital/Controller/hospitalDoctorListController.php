@@ -38,11 +38,9 @@ $doctorList = $sql->fetchAll(PDO::FETCH_ASSOC);
 $sql = $pdo->prepare("
         SELECT COUNT(id) As total FROM tbl_doctor 
         WHERE del_flg = 0 AND hospital_id =:hospitalId ORDER BY created_date
-         
-      
 ");
 // AND hospital_id =:hospitalId
- $sql->bindValue(":hospitalId",$hospitalId);
+$sql->bindValue(":hospitalId",$hospitalId);
 $sql->execute();
 $totalRecord = $sql->fetchAll(PDO::FETCH_ASSOC)[0]['total'];
 

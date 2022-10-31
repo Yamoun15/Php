@@ -27,7 +27,7 @@ if (isset($_POST["updateDoctor"])) {
         WHERE   id =:id "
 );
         
-   
+
     $sql->bindValue(":day", $day);       
     $sql->bindValue(":startTime", $startTime);
     $sql->bindValue(":endTime", $endTime);
@@ -35,7 +35,7 @@ if (isset($_POST["updateDoctor"])) {
     $sql->bindValue(":phone", $phone);
     $sql->bindValue(":addr", $address);
     $sql->bindValue(":departmentId", $department);  
-   
+
     $sql->bindValue(":updateDate", date("Y/m/d"));
     $sql->bindValue(":id", $id);  
 
@@ -43,5 +43,5 @@ if (isset($_POST["updateDoctor"])) {
 
     header("Location: ../View/hospitalDoctorList.php");
 }else{
-     header("Location: ../View/doctorList.php");
+    header("Location: ../View/doctorList.php");
 }
