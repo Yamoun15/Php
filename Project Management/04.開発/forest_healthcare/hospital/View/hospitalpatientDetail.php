@@ -61,7 +61,7 @@ $userInfo = $_SESSION["userInfo"];
             </div>
 
             <div class="col-5 col-md-5 col-sm-5 ms-4">
-                <p>:<?= $userInfo[0]["userna"] ?></p>
+            <p>:<?= $userInfo[0]["userna"] ?></p>
                 <p>:<?= $userInfo[0]["userph"] ?></p>
                 <p>:<?= $userInfo[0]["userage"] ?></p>
                 <p>:
