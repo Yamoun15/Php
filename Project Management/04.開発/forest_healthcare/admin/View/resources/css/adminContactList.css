@@ -48,9 +48,11 @@
     padding: 20px;
     height: 230px;
     overflow: hidden;
-    overflow-y: scroll;
-    scrollbar-width: thin;
+    overflow-x: scroll;
 }
 .cardRow{
     margin-bottom: 15px;
+}
+.textC{
+    width: 50px;
 }

@@ -40,3 +40,16 @@
 .replyTitle{
     margin-top: 20px;
 }
+.adminContactCancelbtn{
+    color: var(--white);
+    background-color: var(--btncolorred);
+    font-family: var(--fontfamily-poppins) !important;
+    font-size: 1.5rem ;
+    padding: 4px ;
+    border-radius: 8px ;
+    border: none;
+    width: 5em;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-decoration: none !important;
+}

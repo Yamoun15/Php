@@ -51,7 +51,7 @@ $hospitalInfo = $_SESSION["hospitalInfo"];
             <p class="content-header-text2"><small>Account Setting</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="hospitalDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Account Setting
 
             </li>
@@ -108,12 +108,12 @@ $hospitalInfo = $_SESSION["hospitalInfo"];
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6 col-5"></div>
-                            <div class="col-md-3 col-3">
+                            <span class="col-md-3 col-3">
                                 <input type="submit" value="Update" class="adminContactbtn" name="updateProfile">
-                            </div>
-                            <div class="col-md-3 col-3">
+                            </span>
+                            <span class="col-md-3 col-3">
                                 <input type="submit" value="Cancel" class="adminContactbtn hospitalProfileUpdatebtn">
-                            </div>
+                            </span>
                         </div>
                     </div>
                     <input type="hidden" name="id" value="<?= $hospitalInfo[0]["id"] ?>" >

@@ -47,7 +47,7 @@ $policyInfo = $_SESSION["policyInfo"];
         </span>
         <ol class="breadcrumb">
             <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active"><a href="adminP&Padd.php">Privacy & Policy</a></li>
+            <li class="active"><a href="adminP&Plist.php">Privacy & Policy List</a></li>
         </ol>
     </section>
     <!-- Header -->

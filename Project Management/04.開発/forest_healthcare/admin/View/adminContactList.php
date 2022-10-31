@@ -43,7 +43,7 @@ include "../Controller/dashboardNameController.php";
             <p class="content-header-text2"><small>Mail Features</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Mail</li>
         </ol>
     </section>
@@ -67,7 +67,10 @@ include "../Controller/dashboardNameController.php";
                                 <a href="../Controller/adminContactUsReplyUpdateController.php?id=<?= $mail["id"]?>"><button class="btn adminContactListbtn" name="replyBtn">Reply</button></a>
                             </div>
                         </div>
+                        <div class="textC">
                         <p class="adminContactListCardText"><?= $mail["text_message"] ?></p>
+                        </div>
+                        
                     </div>
                 </div>
             <?php } ?>

@@ -78,40 +78,30 @@ include "../Controller/dashboardNameController.php";
         </div>
 
         <div class="row">
-            <div class="col-md-7 col-sm-5"></div>
-            <div class="col-md-2 col-sm-5">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item 
-                    <?php if ($page <= 1) {
-                        echo "disabled";
-                    }  ?>
-                    ">
-                            <a class="page-link" href="?page=<?= $page - 1 ?>" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                        </li>
+            <div class="col-md-5 col-sm-2"></div>
+            <div class="col-md-6 col-sm-6">
+                <nav aria-label="Page navigation example" class="mx-auto">
+                    <ul class="pager">
+                        <li class="
+                <?php if ($page <= 1) {
+                    echo "btn disabled";
+                } ?>
+                "><a href="?page=<?= $page - 1 ?>">&laquo;</a></li>
 
                         <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                            <li class="page-item 
-                        <?php
+                            <li><a href="?page=<?= $i ?>" class=" btnNum
+                    <?php
                             if ($page == $i) {
                                 echo "active";
                             }
-                        ?>
-                        "><a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a></li>
+                    ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
                         <?php } ?>
 
-                        <li class="page-item 
-                    <?php if ($page >= $totalPages) {
-                        echo "disabled";
-                    }  ?>">
-
-                            <a class="page-link" href="?page=<?= $page + 1 ?>" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                        <li class="
+                <?php if ($page >= $totalPages) {
+                    echo "btn disabled";
+                } ?>">
+                            <a href="?page=<?= $page - 1 ?>">&raquo;</a>
                         </li>
                     </ul>
                 </nav>

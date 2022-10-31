@@ -51,7 +51,7 @@ $adminInfo = $_SESSION["adminInfo"];
             <p class="content-header-text2"><small>Account Setting Features</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="./testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Account Setting</li>
         </ol>
     </section>
@@ -106,12 +106,12 @@ $adminInfo = $_SESSION["adminInfo"];
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-6"></div>
-                            <div class="col-md-3">
+                            <span class="col-md-3">
                                 <input type="submit" value="Update" class="adminContactbtn" name="updateProfile">
-                            </div>
-                            <div class="col-md-3">
+                            </span>
+                            <span class="col-md-3">
                                 <input type="submit" value="Cancel" class="adminContactbtn adminProfileUpdatebtn">
-                            </div>
+                            </span>
                         </div>
                     </div>
                 </div>

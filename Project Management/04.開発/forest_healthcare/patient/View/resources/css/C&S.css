@@ -90,13 +90,15 @@
 .detailTitle {
     text-align: center;
     margin-top: 1.5em;
-    font-size: 3vw;
+    /* font-size: 3vw; */
+    font-size: 2.3em;
     font-weight: bold;
 }
 
 .detailbody {
     text-align: center;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
+    font-size: 1.2em;
     margin: 1.5em 2em 2.5em 2em;
     font-family: var(--fontfamily-poppins) !important;
 }
@@ -237,6 +239,16 @@ i {
     border: none !important;
     margin-top: 5% !important;
 }
+
+/* backbutton */
+.back {
+    font-weight: 10em;
+    color: #188067 !important;
+    display: inline;
+    font-size: 1.2em !important;
+    transition: all 0.1s;
+    font-weight: bold;
+  }
 
 /* contact us end */
 

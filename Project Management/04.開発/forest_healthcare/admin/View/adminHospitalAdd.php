@@ -51,7 +51,7 @@ include "../Controller/dashboardNameController.php";
 
     <div class="container">
         <br>
-        <br>
+        <a href="adminHospitalList.php">Back To Hospital List</a>
         <div class="row">
             <div class="col-md-3 col-sm-2 col-2"></div>
             <div class="col-md-6  col-sm-8 col-8">

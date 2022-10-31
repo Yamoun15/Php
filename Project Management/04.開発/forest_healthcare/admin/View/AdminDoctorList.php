@@ -66,7 +66,7 @@ include "../Controller/dashboardNameController.php";
                             <th scope="col">Department</th>
                             <th scope="col">Expert In</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Photo</th>                           
+                            <th scope="col">Photo</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -82,7 +82,7 @@ include "../Controller/dashboardNameController.php";
                                     <!-- <img src="<?= $doctor["doctor_photo"] ?>" alt="doctor Photo"> -->
                                     <img src="./image/doctor/<?php echo $doctor["doctor_photo"] ?>" alt="doctor Photo">
                                 </td>
-                               </tr>
+                            </tr>
                         <?php } ?>
                     </tbody>
                     <!-- <tbody>
@@ -110,33 +110,32 @@ include "../Controller/dashboardNameController.php";
                         <tr>
                     </tbody> -->
                 </table>
-                 <!-- Pagination -->
-        <nav aria-label="Page navigation example" class="mx-auto">
-            <ul class="pager">
-                <li class="
+                <!-- Pagination -->
+                <nav aria-label="Page navigation example" class="mx-auto">
+                    <ul class="pager">
+                        <li class="
                 <?php if ($page <= 1) {
-                    echo "disabled";
+                    echo "btn disabled";
                 } ?>
-                "><a href="?page=<?= $page-1?>">&laquo;</a></li>
+                "><a href="?page=<?= $page - 1 ?>">&laquo;</a></li>
 
-                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                    <li 
-                    ><a href="?page=<?= $i ?>" class=" btnNum
+                        <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                            <li><a href="?page=<?= $i ?>" class=" btnNum
                     <?php
-                    if($page == $i){
-                        echo "active";
-                    }
+                            if ($page == $i) {
+                                echo "active";
+                            }
                     ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
-                <?php } ?>
+                        <?php } ?>
 
-                <li class="
+                        <li class="
                 <?php if ($page >= $totalPages) {
-                    echo "disabled";
+                    echo "btn disabled";
                 } ?>">
-                    <a href="?page=<?= $page-1?>">&raquo;</a>
-                </li>
-            </ul>
-        </nav>
+                            <a href="?page=<?= $page - 1 ?>">&raquo;</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
             <!-- Footer -->

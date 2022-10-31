@@ -47,7 +47,7 @@ $replyMail = $_SESSION["replyMail"];
             <p class="content-header-text2"><small>Mail Reply Features</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Mail Reply</li>
         </ol>
     </section>
@@ -81,6 +81,7 @@ $replyMail = $_SESSION["replyMail"];
                         <div class="col-md-12">
                             <!-- <input type="button" value="Send" class="adminContactReplybtn"> -->
                             <button class="adminContactReplybtn" name="replyBtn">Reply</button>
+                            <a href="adminContactList.php" class="adminContactCancelbtn">Cancel</a>
                         </div>
                     </div>
                 </form>

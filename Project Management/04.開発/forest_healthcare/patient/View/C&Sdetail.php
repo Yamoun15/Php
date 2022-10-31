@@ -34,6 +34,7 @@ include "../Controller/hospitalListController.php";
     <div class="container-fluid">
         <div class="row ">
             <div class="col-md-8 col-sm-12 detailbg">
+                <a href="C&S.php" class="back"><i class="fa-regular fa-circle-left"></i>Go Back</a>
                 <div class="detailTitle"><?= $diseaseDetailInfo[0]["disease_title"] ?></div>
                 <div class="detailbody"><?= $diseaseDetailInfo[0]["disease_detail"] ?></div>
                 <div class="CSimg">
@@ -42,12 +43,23 @@ include "../Controller/hospitalListController.php";
                 <div class="treatmentTitle">You Can Make Treatment At</div>
 
                 <?php foreach ($hospitalList as $key => $hospital) { ?>
-                <div class="CSLocation">
-                    <div class="CSdetailTitle"><?= $hospital["name"] ?></div>
-                    <div class="address"><?= $hospital["address"] ?></div>
-                    <i class="fa-solid fa-phone-flip"></i>
-                    <span><?= $hospital["phone_no"] ?></span>
-                </div>
+                    <div class="CSLocation">
+                        <div class="mt-3">
+                            <i class="fa-solid fa-stethoscope iconColor text-dark"></i>
+                            <span class="CSdetailTitle"><?= $hospital["name"] ?></span>
+                        </div>
+                        <div class="mt-3">
+                            <i class="fa-solid fa-location-dot iconColor text-dark"></i>
+                            <span class="address"><?= $hospital["address"] ?></span>
+                        </div>
+                        <div class="mt-3">
+                            <i class="fa-solid fa-phone iconColor text-dark"></i>
+                            <span><?= $hospital["phone_no"] ?></span>
+                        </div>
+
+
+
+                    </div>
                 <?php  } ?>
 
                 <!-- <div class="CSLocation">
@@ -82,7 +94,7 @@ include "../Controller/hospitalListController.php";
                 </div>
             </div>
         </div>
-        </div>
+    </div>
     <!-- Footer -->
     <?php include("./common/footer.php"); ?>
 </body>
