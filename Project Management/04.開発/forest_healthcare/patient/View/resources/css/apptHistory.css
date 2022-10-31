@@ -9,19 +9,9 @@
 .history {
   color: var(--green) !important;
 }
-/* pagination */
-.pager .active {
-  background-color: #188067;
-  color: white !important;
-  font-weight: 700;
-  transition: all 0.3s;
+.statusLabel{
+ color: var(--btncoloryellow ) !important;
+ font-family: var(----fontfamily-poppins) !important;
+ font-size: large;
 }
-.pager .btnNum {
-  transition: all 0.3s;
-  color: black;
-}
-.pager .btnNum:hover {
-  background-color: rgb(240, 240, 240);
-  color: black;
-  font-weight: 700;
-}
+

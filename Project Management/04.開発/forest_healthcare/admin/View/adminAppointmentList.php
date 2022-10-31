@@ -42,7 +42,7 @@ include "../Controller/dashboardNameController.php";
         <br>
         <div class="row">
             <div class="col-md-1 col-sm-1 col-2"></div>
-            <div class="col-md-8 col-sm-8 mx-auto table-responsive">
+            <div class="col-md-8 col-sm-8 table-responsive">
                 <table class="table">
                     <thead class="doctorTable">
                         <tr class="title">
@@ -67,7 +67,7 @@ include "../Controller/dashboardNameController.php";
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
                                 <td><button class="btnview"><a href="../Controller/adminPatientDetailController.php?id=<?= $appointment["userid"]?>" class="view">view</a></button></td>
                                 <td>
-                                    <button type="button" onclick="modal(<?= $appointment['status'] ?>,<?= $appointment['id']?>)" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                                    <label>
                                         <?php
                                         if ($appointment["status"] == 0) {
                                             echo "Pending";
@@ -77,7 +77,7 @@ include "../Controller/dashboardNameController.php";
                                             echo "Reject";
                                         }
                                         ?>
-                                    </button>
+                                    </label>
                                 </td>
                                 <!-- <td>                                    
                                 <a href="../Controller/adminAppointmentDeleteController.php?id=<?= $appointment['id'] ?>"><i class="fa-solid fa-trash-can trashBtn"></i></a>
@@ -113,7 +113,7 @@ include "../Controller/dashboardNameController.php";
             <ul class="pager">
                 <li class="
                 <?php if ($page <= 1) {
-                    echo "disabled";
+                    echo "btn disabled";
                 } ?>
                 "><a href="?page=<?= $page-1?>">&laquo;</a></li>
 
@@ -129,9 +129,9 @@ include "../Controller/dashboardNameController.php";
 
                 <li class="
                 <?php if ($page >= $totalPages) {
-                    echo "disabled";
+                    echo "btn disabled";
                 } ?>">
-                    <a href="?page=<?= $page-1?>">&raquo;</a>
+                    <a href="?page=<?= $page+1?>">&raquo;</a>
                 </li>
             </ul>
         </nav>

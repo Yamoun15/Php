@@ -40,6 +40,10 @@ include "../Controller/dashboardNameController.php";
         <br>
 
         <div class="row">
+            <!-- <?php 
+                echo $totalRecord;
+                echo $totalPages;
+            ?> -->
             <div class="col-md-1 col-sm-1 col-2"></div>
             <div class="col-md-8 col-sm-10 mx-auto table-responsive">
 
@@ -110,7 +114,7 @@ include "../Controller/dashboardNameController.php";
             <ul class="pager">
                 <li class="
                 <?php if ($page <= 1) {
-                    echo "disabled";
+                    echo "btn disabled";
                 } ?>
                 "><a href="?page=<?= $page-1?>">&laquo;</a></li>
 
@@ -126,9 +130,9 @@ include "../Controller/dashboardNameController.php";
 
                 <li class="
                 <?php if ($page >= $totalPages) {
-                    echo "disabled";
+                    echo "btn disabled";
                 } ?>">
-                    <a href="?page=<?= $page-1?>">&raquo;</a>
+                    <a href="?page=<?= $page+1?>">&raquo;</a>
                 </li>
             </ul>
         </nav>
