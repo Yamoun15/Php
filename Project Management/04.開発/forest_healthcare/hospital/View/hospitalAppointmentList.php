@@ -91,7 +91,7 @@ include "../Controller/hospitalAppointmentistController.php";
                                 <td><?= $appointment["username"] ?></td>
                                 <td><?= $appointment["docname"] ?></td>
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
-                                <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["userid"] ?>" class="view">view</a></button></td>
+                                <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["id"] ?>" class="view">view</a></button></td>
                                 <td>
                                     <button type="button" onclick="modal(<?= $appointment['status'] ?>,<?= $appointment['id'] ?>)" class="btn btn-primary" data-toggle="modal" data-target="#modal">
                                         <?php

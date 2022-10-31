@@ -61,22 +61,22 @@ $userInfo = $_SESSION["userInfo"];
             </div>
 
             <div class="col-5 col-md-5 col-sm-5 ms-4">
-                <p>:<?= $userInfo[0]["name"] ?></p>
-                <p>:<?= $userInfo[0]["phone_no"] ?></p>
-                <p>:<?= $userInfo[0]["age"] ?></p>
+                <p>:<?= $userInfo[0]["userna"] ?></p>
+                <p>:<?= $userInfo[0]["userph"] ?></p>
+                <p>:<?= $userInfo[0]["userage"] ?></p>
                 <p>:
                     <?php
-                    if ($userInfo[0]["gender"] == 0) {
+                    if ($userInfo[0]["usergen"] == 0) {
                         echo "Male";
-                    } else  if ($userInfo[0]["gender"] == 1) {
+                    } else  if ($userInfo[0]["usergen"] == 1) {
                         echo "Female";
-                    } else  if ($userInfo[0]["gender"] == 2) {
+                    } else  if ($userInfo[0]["usergen"] == 2) {
                         echo "Other";
                     }
                     ?>
                 </p>
-                <p>:<?= $userInfo[0]["address"] ?></p>                
-                <p>:<?= $userInfo[0]["appdes"] ?></p>
+                <p>:<?= $userInfo[0]["useradd"] ?></p>                
+                <p>:<?= $userInfo[0]["des"] ?></p>
             </div>
             <div class="col-2 col-md-2 col-sm-2"></div>
         </div>
