@@ -77,7 +77,8 @@ $videoList = $sql->fetchAll(PDO::FETCH_ASSOC);
         <div class="mental-health text-center mt-5">
             <h3>Your Mental Health is more than important your grades</h3>
             <div>
-                <img src="./storages/mentalhealthtest.png" alt="" class="testImg">
+                <a href="userMentalTest.php"><img src="./storages/mentalhealthtest.png" alt="" class="testImg"></a>
+                
             </div>
         </div>
 
