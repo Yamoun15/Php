@@ -46,22 +46,25 @@ include "./resources/lib/phpqrcode/qrlib.php"
     <!-- Header -->
     <?php include("./common/top.php"); ?>
     <!-- Header -->
-    <div class="container">
+    <div class="container-fluid box">
         <div class="row">
-            <div class="col-md-4 col-sm-2 mb-3">
-                <br>
-                <div class="row  menubox">
-                    <div class="col-2 offset-2">
-                        <div><i class="fa-solid fa-user fs-5 mt-5"></i></div>
-                        <div><i class="fa-regular fa-calendar-check fs-5 mt-5 history"></i></div>
-                        <div><i class="fa-solid fa-user-gear fs-5 mt-5"></i></div>
-                        <div><i class="fa-solid fa-right-from-bracket fs-5 mt-5"></i></div>
+            <div class="col-md-3 col-sm-8 col-8 mx-auto ">
+                <div class="menubox">
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-solid fa-user fs-5 "></i></div>
+                        <div class="col-7 "><a href="./userProfile.php" class="text-dark">My Profile</a></div>
                     </div>
-                    <div class="col-6 fw-bold">
-                        <div class=" mt-5"><a href="./userProfile.php" class="text-dark">My Profile</a></div>
-                        <div class=" mt-5"><a href="./apptHistory.php" class="history">Appointment History</a></div>
-                        <div class=" mt-5"><a href="./accountSetting.php" class="text-dark">Account Setting</a></div>
-                        <div class="btn mt-5 mb-5 text-dark fw-bold text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-regular fa-calendar-check fs-5 myProfile"></i></div>
+                        <div class="col-7 "><a href="./apptHistory.php" class="myProfile">Appointment History</a></div>
+                    </div>
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-solid fa-user-gear fs-5 "></i></div>
+                        <div class="col-7 "><a href="./accountSetting.php" class="text-dark">Account Setting</a></div>
+                    </div>
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-solid fa-right-from-bracket fs-5 "></i></div>
+                        <div class="col-7 btn text-dark fw-bold text-start text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>
                     </div>
                 </div>
             </div>
@@ -83,13 +86,13 @@ include "./resources/lib/phpqrcode/qrlib.php"
                         </div>
                         <div class="modal-footer mx-auto">
                             <button type="button" class="btn btn-danger btnCancel me-3" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btnLogOut"><a href="../Controller/logOutC.php" class="logOut">Log Out</a></button>
+                            <a href="../Controller/logOutC.php" type="button" class="btn btnLogOut ">Log Out</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-8 col-sm-8 table-responsive">
+            <div class="col-md-8 col-sm-8 table-responsive  mx-auto">
                 <!-- <?php echo $totalRecord;
                         echo $totalPages
                         ?> -->

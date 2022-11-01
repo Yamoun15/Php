@@ -64,25 +64,29 @@ $patientInfo = $_SESSION["patientInfo"];
 <body>
     <!-- Header -->
     <?php include("./common/top.php"); ?>
-    <div class="container">
+    <div class="container-fluid box">
         <div class="row">
-            <div class="col-md-4 col-sm-2 ">
-                <br>
-                <div class="row menubox">
-                    <div class="col-2 offset-2">
-                        <div><i class="fa-solid fa-user fs-5 mt-5 myProfile"></i></div>
-                        <div><i class="fa-regular fa-calendar-check fs-5 mt-5"></i></div>
-                        <div><i class="fa-solid fa-user-gear fs-5 mt-5"></i></div>
-                        <div><i class="fa-solid fa-right-from-bracket fs-5 mt-5"></i></div>
+            <div class="col-md-3 col-sm-8 col-8 mx-auto ">
+                <div class="menubox">
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-solid fa-user fs-5 myProfile"></i></div>
+                        <div class="col-7 "><a href="./userProfile.php" class="myProfile">My Profile</a></div>
                     </div>
-                    <div class="col-6 fw-bold">
-                        <div class=" mt-5"><a href="./userProfile.php" class="myProfile">My Profile</a></div>
-                        <div class=" mt-5"><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
-                        <div class=" mt-5"><a href="./accountSetting.php" class="text-dark">Account Setting</a></div>
-                        <div class="btn mt-5 mb-5 text-dark fw-bold text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-regular fa-calendar-check fs-5"></i></div>
+                        <div class="col-7 "><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
+                    </div>
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-solid fa-user-gear fs-5"></i></div>
+                        <div class="col-7 "><a href="./accountSetting.php" class="text-dark">Account Setting</a></div>
+                    </div>
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-solid fa-right-from-bracket fs-5 "></i></div>
+                        <div class="col-7 btn text-dark fw-bold text-start text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>
                     </div>
                 </div>
             </div>
+
             <!--Log Out Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -101,14 +105,14 @@ $patientInfo = $_SESSION["patientInfo"];
                         </div>
                         <div class="modal-footer mx-auto">
                             <button type="button" class="btn btn-danger btnCancel me-3" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btnLogOut"><a href="../Controller/logOutC.php" class="logOut">Log Out</a></button>
+                            <a href="../Controller/logOutC.php" type="button" class="btn btnLogOut text-white">Log Out</a>
                         </div>
                     </div>
                 </div>
             </div>
             <!--Log Out Modal -->
 
-            <div class="col-md-7  col-sm-8 adminContact-col">
+            <div class="col-md-7  col-sm-8 adminContact-col  mx-auto">
                 <form action="../Controller/userProfileEditController.php" class="form-horizontal hr adminContact-form" method="post" enctype="multipart/form-data">
 
                     <div class="myProfileTitle">My Profile</div>
@@ -144,7 +148,7 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Phone Number</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" placeholder="09-2150776" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no" disabled>
+                            <input type="text" class="form-control adminContactInput" placeholder="eg. 0949289781" value="<?= $patientInfo[0]["phone_no"] ?>" name="phone_no" disabled>
                         </div>
                     </div>
                     <div class="form-group">
@@ -156,22 +160,29 @@ $patientInfo = $_SESSION["patientInfo"];
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Completed Age</label>
                         <div class="col-md-12">
-                            <input type="number" min="1" class="form-control adminContactInput" placeholder="Age(Completed age)" value="<?= $patientInfo[0]["age"] ?>" name="age" disabled>
+                            <input type="number" min="1" class="form-control adminContactInput" placeholder="your Age(Completed age)" value="<?= $patientInfo[0]["age"] ?>" name="age" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="username" class="userProfileLabel col-md-5">Address</label>
                         <div class="col-md-12">
-                            <input type="text" class="form-control adminContactInput" placeholder="Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address" disabled>
+                            <input type="text" class="form-control adminContactInput" placeholder="eg. Kamaryut Tsp., Yangon" value="<?= $patientInfo[0]["address"] ?>" name="address" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="gender" class="userProfileLabel col-md-5">Gender-
-                            <?php if($patientInfo[0]["gender"] == 2){echo "Other";}
-                            else if($patientInfo[0]["gender"] == 0){echo "Male";}
-                            else if($patientInfo[0]["gender"] == 1){echo "Female";}
-                            else if($patientInfo[0]["gender"] == ""){echo "Not Set";}
-                            ?> <span class="text-dark"><?= $patientInfo[0]["gender"] ?></span></label>
+                            <span class="text-dark">
+                                <?php if ($patientInfo[0]["gender"] == 2) {
+                                    echo "Other";
+                                } else if ($patientInfo[0]["gender"] == 0) {
+                                    echo "Male";
+                                } else if ($patientInfo[0]["gender"] == 1) {
+                                    echo "Female";
+                                } else if ($patientInfo[0]["gender"] == "") {
+                                    echo "Not Set";
+                                }
+                                ?>
+                            </span></label>
                     </div>
                     <input type="hidden" name="id" value="<?= $patientInfo[0]["id"] ?>">
                 </form>
