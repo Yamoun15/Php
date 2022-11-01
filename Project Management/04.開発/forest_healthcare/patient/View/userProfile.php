@@ -64,25 +64,29 @@ $patientInfo = $_SESSION["patientInfo"];
 <body>
     <!-- Header -->
     <?php include("./common/top.php"); ?>
-    <div class="container">
+    <div class="container-fluid box">
         <div class="row">
-            <div class="col-md-4 col-sm-2 ">
-                <br>
-                <div class="row menubox">
-                    <div class="col-2 offset-2">
-                        <div><i class="fa-solid fa-user fs-5 mt-5 myProfile"></i></div>
-                        <div><i class="fa-regular fa-calendar-check fs-5 mt-5"></i></div>
-                        <div><i class="fa-solid fa-user-gear fs-5 mt-5"></i></div>
-                        <div><i class="fa-solid fa-right-from-bracket fs-5 mt-5"></i></div>
+            <div class="col-md-3 col-sm-8 col-8 mx-auto ">
+                <div class="menubox">
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-solid fa-user fs-5 myProfile"></i></div>
+                        <div class="col-7 "><a href="./userProfile.php" class="myProfile">My Profile</a></div>
                     </div>
-                    <div class="col-6 fw-bold">
-                        <div class=" mt-5"><a href="./userProfile.php" class="myProfile">My Profile</a></div>
-                        <div class=" mt-5"><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
-                        <div class=" mt-5"><a href="./accountSetting.php" class="text-dark">Account Setting</a></div>
-                        <div class="btn mt-5 mb-5 text-dark fw-bold text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-regular fa-calendar-check fs-5"></i></div>
+                        <div class="col-7 "><a href="./apptHistory.php" class="text-dark">Appointment History</a></div>
+                    </div>
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-solid fa-user-gear fs-5"></i></div>
+                        <div class="col-7 "><a href="./accountSetting.php" class="text-dark">Account Setting</a></div>
+                    </div>
+                    <div class="row mt-5 d-flex justify-content-between">
+                        <div class="col-5 icons"><i class="fa-solid fa-right-from-bracket fs-5 "></i></div>
+                        <div class="col-7 btn text-dark fw-bold text-start text-decoration-underline" data-bs-toggle="modal" data-bs-target="#exampleModal"> Logout</div>
                     </div>
                 </div>
             </div>
+
             <!--Log Out Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -108,7 +112,7 @@ $patientInfo = $_SESSION["patientInfo"];
             </div>
             <!--Log Out Modal -->
 
-            <div class="col-md-7  col-sm-8 adminContact-col">
+            <div class="col-md-7  col-sm-8 adminContact-col  mx-auto">
                 <form action="../Controller/userProfileEditController.php" class="form-horizontal hr adminContact-form" method="post" enctype="multipart/form-data">
 
                     <div class="myProfileTitle">My Profile</div>
