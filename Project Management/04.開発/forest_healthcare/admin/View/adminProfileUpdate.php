@@ -51,7 +51,7 @@ $adminInfo = $_SESSION["adminInfo"];
             <p class="content-header-text2"><small>Account Setting Features</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="./testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="testDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Account Setting</li>
         </ol>
     </section>

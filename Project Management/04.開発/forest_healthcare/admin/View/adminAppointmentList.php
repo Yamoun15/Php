@@ -45,7 +45,7 @@ include "../Controller/dashboardNameController.php";
             <p class="content-header-text2"><small>Appointment List Feature</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="./testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Appointment</li>
         </ol>
     </section>

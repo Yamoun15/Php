@@ -51,7 +51,7 @@ $articleDetail = $_SESSION["articleDetail"];
             <p class="content-header-text2"><small>To edit Health article</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Dashboard</li>
         </ol>
     </section>

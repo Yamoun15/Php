@@ -43,7 +43,7 @@ include "../Controller/dashboardNameController.php";
             <p class="content-header-text2"><small>Hospital Add Features</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active"><a href="adminHospitalAdd.php">Hospital Add</a></li>
         </ol>
     </section>
