@@ -33,13 +33,22 @@ p {
   /* text-indent: 2%; */
   font-family: var(--fontfamily-poly);
 }
-.articaldetail::first-letter {
+.articledetail::first-letter {
   font-size: 2em;
   font-weight: 20em;
   color: #64d3a5;
 }
+.articledetail ~ p , .articledetail ~ ul{
+  font-size: 22px !important;
+  --fontfamily-poly: 'Poly', serif !important;
+}
 
 .image {
-  width: 50% !important;
-  height: 50% !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.articlephoto{
+  width: 60vw !important;
+  height: 40vw !important;
 }

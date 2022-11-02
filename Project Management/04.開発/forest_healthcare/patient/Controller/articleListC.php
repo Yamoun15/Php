@@ -2,7 +2,7 @@
 
 include "../Model/dbConnection.php";
 $sql = $pdo->prepare("
-        SELECT * FROM tbl_healthknowledge
+        SELECT * FROM tbl_healthknowledge WHERE del_flg = 0
 ");
 
 $sql->execute();

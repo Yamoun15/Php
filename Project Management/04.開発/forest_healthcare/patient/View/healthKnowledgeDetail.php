@@ -41,13 +41,13 @@ $articleInfo =  $_SESSION["articleInfo"];
             </div>
         </div>
         <div class="row">
-            <div class="col-6 col-md-6 col-sm-6 mx-auto text-center mt-3">
+            <div class="col-6 col-md-6 col-sm-6 mx-auto text-center mt-3 articlephoto">
                 <img src="./storages/healthKnowl/<?= $articleInfo[0]["photo"] ?>" class="image" alt="" srcset="">
             </div>
         </div>
         <div class="row">
             <div class="col-8 col-sm-8 col-md-8 mx-auto">
-            <p class="articaldetail"><?= $articleInfo[0]["description"] ?></p>
+            <p class="articledetail"><?= $articleInfo[0]["description"] ?></p>
             </div>
         </div>
     </div>

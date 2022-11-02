@@ -60,62 +60,62 @@ include "../Controller/dashboardNameController.php";
     </section>
 
     <!-- Table starts-->
-
-    <div class="table-responsive ">
-        <table class="table ">
-            <thead>
-                <tr class="title">
-                    <th scope="col">No</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Photo</th>
-                    <th scope="col">Content</th>
-                    <th scope="col">Edit</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            <?php $count = 1; ?>
-                <?php foreach ($articleList as $key => $article) { ?>
-                    <tr>
-                        <td scope="row"><?= $count++; ?>.</td>
-                        <td><?php echo substr($article["title"], 0, 50) ?>...</td>
-                        <td><img src="./image/articles/<?= $article["photo"] ?>" alt=""></td>
-                        <td><?php echo substr($article["description"], 0, 50) ?>...</td>
-                        <td><a href="../Controller/articleEditController.php?ID=<?= $article['id'] ?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a>
-                            <a href="../Controller/articleDeleteC.php?id=<?= $article['id'] ?>"><i class="fa-solid fa-trash-can trashBtn"></i></a>
-                        </td>
+    <div class="container">
+        <div class="table-responsive ">
+            <table class="table ">
+                <thead>
+                    <tr class="title">
+                        <th scope="col">No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Content</th>
+                        <th scope="col-2">Edit</th>
                     </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
 
-        <!-- Pagination -->
-        <nav aria-label="Page navigation example" class="mx-auto">
-            <ul class="pager">
-                <li class="
+                    <?php $count = 1; ?>
+                    <?php foreach ($articleList as $key => $article) { ?>
+                        <tr>
+                            <td scope="row"><?= $count++; ?>.</td>
+                            <td><?php echo substr($article["title"], 0, 50) ?>...</td>
+                            <td><img src="./image/HealthKnowl/<?= $article["photo"] ?>" alt=""></td>
+                            <td><?php echo substr($article["description"], 0, 30) ?>...</td>
+                            <td><a href="../Controller/articleEditController.php?ID=<?= $article['id'] ?>"><i class="fa-solid fa-pen-to-square editBtn"></i></a>
+                                <a href="../Controller/articleDeleteC.php?id=<?= $article['id'] ?>"><i class="fa-solid fa-trash-can trashBtn"></i></a>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation example" class="mx-auto">
+                <ul class="pager">
+                    <li class="
                 <?php if ($page <= 1) {
                     echo "disabled";
                 } ?>
-                "><a href="?page=<?= $page-1?>">&laquo;</a></li>
+                "><a href="?page=<?= $page - 1 ?>">&laquo;</a></li>
 
-                <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
-                    <li 
-                    ><a href="?page=<?= $i ?>" class=" btnNum
+                    <?php for ($i = 1; $i <= $totalPages; $i++) { ?>
+                        <li><a href="?page=<?= $i ?>" class=" btnNum
                     <?php
-                    if($page == $i){
-                        echo "active";
-                    }
+                        if ($page == $i) {
+                            echo "active";
+                        }
                     ?>"> <?= $i ?> <span class="sr-only">(current)</span></a></li>
-                <?php } ?>
+                    <?php } ?>
 
-                <li class="
+                    <li class="
                 <?php if ($page >= $totalPages) {
                     echo "disabled";
                 } ?>">
-                    <a href="?page=<?= $page+1?>">&raquo;</a>
-                </li>
-            </ul>
-        </nav>
+                        <a href="?page=<?= $page + 1 ?>">&raquo;</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
