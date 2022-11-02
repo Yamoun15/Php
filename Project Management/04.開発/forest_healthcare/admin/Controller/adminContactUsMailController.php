@@ -51,5 +51,8 @@ if (isset($_POST["replyBtn"])) {
     $mail = new SendMail();
     $mail->sendMail($userEmail, $subject, $replyMeaasge);
 
-    header("Location: ../View/adminContactList.php");
+    echo "<script>alert('Email sent Successfully')</script>";
+    echo "<script>window.location='../View/adminContactList.php'</script>";
+
+    // header("Location: ../View/adminContactList.php");
 }

@@ -19,6 +19,8 @@ if (isset($_POST["changeBtn"])){
 
     $sql->execute();
 
-
+    echo "<script>alert('Update Successful')</script>";
+    echo "<script>window.location='../View/adminAboutUs.php'</script>";
+    // header("Location: ../View/adminAboutUs.php");
 }
 
