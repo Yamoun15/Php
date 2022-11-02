@@ -42,7 +42,7 @@ $articleInfo =  $_SESSION["articleInfo"];
         </div>
         <div class="row">
             <div class="col-6 col-md-6 col-sm-6 mx-auto text-center mt-3 articlephoto">
-                <img src="./storages/HealthKnowl - SymbolicLink/<?= $articleInfo[0]["photo"] ?>" class="image" alt="" srcset="">
+                <img src="./storages/HealthKnowl/<?= $articleInfo[0]["photo"] ?>" class="image" alt="" srcset="">
             </div>
         </div>
         <div class="row">
