@@ -125,19 +125,12 @@
 }
 
 .btnLogOut {
-  background-color: #188067;
-  color: white;
-  text-decoration: none;
+  background-color: #188067 !important;
+  color: white !important;
+  text-decoration: none !important;
+  font-weight:bold !important;
 }
 .btnLogOut:hover {
   color: white;
-  background-color: #064536;
-}
-.logOut:hover {
-  color: white;
-  background-color: #064536;
-}
-.logOut {
-  text-decoration: none;
-  color: white;
+  background-color: #064536 !important;
 }

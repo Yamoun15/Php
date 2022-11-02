@@ -83,7 +83,7 @@ include "./resources/lib/phpqrcode/qrlib.php"
                         </div>
                         <div class="modal-footer mx-auto">
                             <button type="button" class="btn btn-danger btnCancel me-3" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btnLogOut"><a href="../Controller/logOutC.php" class="logOut">Log Out</a></button>
+                            <a href="../Controller/logOutC.php" type="button" class="btn btnLogOut ">Log Out</a>
                         </div>
                     </div>
                 </div>
@@ -111,8 +111,10 @@ include "./resources/lib/phpqrcode/qrlib.php"
                         <?php $count = 1; ?>
                         <?php foreach ($appointmentList as $key => $appointment) {
                             if ($appointment["status"] == 1) {
-                                $text =  $appointment["qrcode"];
-                                //  echo $text ;
+                                // $text =  $appointment["qrcode"];
+                                // //  echo $text ;
+                                // QRcode::png($text, "./qrcodePhotos/" . $appointment["id"] . ".png");
+                                $text =  $appointment["id"];
                                 QRcode::png($text, "./qrcodePhotos/" . $appointment["id"] . ".png");
 
                                 // $text = $appointment["id"];

@@ -35,7 +35,8 @@ function submit() {
     var score4 = 0;
     var total;
 
-    document.getElementById('result').style.visibility = "visible";
+    document.getElementById('restart').style.visibility = "visible";
+    
     check();
 
     total = score1 + score2 + score3 + score4;
@@ -86,3 +87,6 @@ function submit() {
     }
 }
 
+function restart(){
+    location.assign("userMentalTest.php");
+}

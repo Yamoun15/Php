@@ -59,7 +59,7 @@ include "../Controller/hospitalAppointmentistController.php";
             <p class="content-header-text2"><small>Appointment List Feature</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="./hospitalDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Appointment</li>
         </ol>
     </section>
@@ -91,7 +91,7 @@ include "../Controller/hospitalAppointmentistController.php";
                                 <td><?= $appointment["username"] ?></td>
                                 <td><?= $appointment["docname"] ?></td>
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
-                                <td><button class="btnview"><a href="../Controller/patientDetailController.php?id=<?= $appointment["id"] ?>" class="view">view</a></button></td>
+                                <td><a href="../Controller/patientDetailController.php?id=<?= $appointment["id"] ?>" class="view"><button class="btnview">view</button></a></td>
                                 <td>
                                     <button type="button" onclick="modal(<?= $appointment['status'] ?>,<?= $appointment['id'] ?>)" class="btn btn-primary" data-toggle="modal" data-target="#modal">
                                         <?php

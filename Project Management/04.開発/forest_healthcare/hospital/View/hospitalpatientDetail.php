@@ -41,17 +41,42 @@ $userInfo = $_SESSION["userInfo"];
     <!-- Header -->
     <?php include("common/header.php"); ?> 
     <br>
-
     <!-- body -->
+    <div action="" class="patient_detail">
+        <p class="text-center title">Patient's Detail </p>
+        <div class="detail">
+            <p>Patient Name <span></span>:<span class="text_color"><?= $userInfo[0]["userna"] ?></span></p>
+            <p>Phone No<span></span>:<span class="text_color"><?= $userInfo[0]["userph"] ?></span></p>
+            <p>Age<span></span>:<span class="text_color"><?= $userInfo[0]["userage"] ?></span></p>
+            <p>Gender<span></span>:<span class="text_color"><?php
+                if ($userInfo[0]["usergen"] == 0) {
+                    echo "Male";
+                } else  if ($userInfo[0]["usergen"] == 1) {
+                    echo "Female";
+                } else  if ($userInfo[0]["usergen"] == 2) {
+                    echo "Other";
+                }
+                ?></span>
+                </p>
+            <p>Address<span></span>:<span class="text_color"><?= $userInfo[0]["useradd"] ?></span></p>
+            <p>Description<span></span>:<span class="text_color"><?= $userInfo[0]["des"] ?></span></p>
+        </div>
+
+        <div class="back">
+            <a href="./hospitalAppointmentList.php" class="btnBack"><button class="btnBack" name="back" type="">Back</button></a>
+        </div>
+    </div>
+
+    <!-- body
     <div class="">
         <div class="row title">
-            <div class="col-0 col-md-12 col-sm-12">
+            <div class="col-12 col-md-12 col-sm-12">
                 <p class="text-center">Patient's Detail </p>
             </div>
         </div>
         <div class="row pdBodybgcolor">
-            <div class="col-0 col-md-2 col-sm-2"></div>
-            <div class="col-0 col-md-3 col-sm-3 ms-3">
+            <div class="col-2 col-md-2 col-sm-2"></div>
+            <div class="col-3 col-md-3 col-sm-3 ms-3">
                 <p>Patient Name</p>
                 <p>Phone No</p>
                 <p>Age</p>
@@ -60,8 +85,8 @@ $userInfo = $_SESSION["userInfo"];
                 <p>Description</p>
             </div>
 
-            <div class="col-0 col-md-5 col-sm-5 ms-4">
-            <p>:<?= $userInfo[0]["userna"] ?></p>
+            <div class="col-5 col-md-5 col-sm-5 ms-4">
+                <p>:<?= $userInfo[0]["userna"] ?></p>
                 <p>:<?= $userInfo[0]["userph"] ?></p>
                 <p>:<?= $userInfo[0]["userage"] ?></p>
                 <p>:
@@ -78,11 +103,11 @@ $userInfo = $_SESSION["userInfo"];
                 <p>:<?= $userInfo[0]["useradd"] ?></p>                
                 <p>:<?= $userInfo[0]["des"] ?></p>
             </div>
-            <div class="col-0 col-md-2 col-sm-2"></div>
+            <div class="col-2 col-md-2 col-sm-2"></div>
         </div>
         
     </div>
-    <button class="btnBack" name="back" type="submit"><a href="./hospitalAppointmentList.php" class="btnBack">Back</a></button>
+    <button class="btnBack" name="back" type="submit"><a href="./hospitalAppointmentList.php" class="btnBack">Back</a></button> -->
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
 </body>

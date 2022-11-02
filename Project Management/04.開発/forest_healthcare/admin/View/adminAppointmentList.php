@@ -38,8 +38,19 @@ include "../Controller/dashboardNameController.php";
 <body class="skin-blue">
     <!-- Header -->
     <?php include("common/header.php"); ?>
+    <section class="content-header">
+        <i class="fa fa-dashboard icon"></i>
+        <span>
+            <span class="content-header-text1">Appointment</span>
+            <p class="content-header-text2"><small>Appointment List Feature</small></p>
+        </span>
+        <ol class="breadcrumb">
+            <li><a href="./testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Appointment</li>
+        </ol>
+    </section>
     <div class="container">
-        <br>
+    <br>
         <div class="row">
             <div class="col-md-1 col-sm-1 col-2"></div>
             <div class="col-md-8 col-sm-8 table-responsive">
@@ -65,7 +76,7 @@ include "../Controller/dashboardNameController.php";
                                 <td><?= $appointment["hosname"] ?></td>
                                 <td><?= $appointment["docname"] ?></td>
                                 <td><?= $appointment["docday"] ?><?= "(" ?><?= $appointment["docstarttime"] ?><?= "~" ?><?= $appointment["docendtime"] ?><?= ")" ?></td>
-                                <td><button class="btnview"><a href="../Controller/adminPatientDetailController.php?id=<?= $appointment["id"]?>" class="view">view</a></button></td>
+                                <td><a href="../Controller/adminPatientDetailController.php?id=<?= $appointment["id"]?>" class="view"><button class="btnview">view</button></a></td>
                                 <td>
                                     <label>
                                         <?php

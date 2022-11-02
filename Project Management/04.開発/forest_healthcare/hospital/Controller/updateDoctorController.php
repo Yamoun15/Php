@@ -43,5 +43,5 @@ if (isset($_POST["updateDoctor"])) {
 
     header("Location: ../View/hospitalDoctorList.php");
 }else{
-    header("Location: ../View/doctorList.php");
+    header("Location: ../View/hospitalDoctorList.php");
 }

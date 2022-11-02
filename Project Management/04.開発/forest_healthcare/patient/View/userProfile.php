@@ -101,7 +101,7 @@ $patientInfo = $_SESSION["patientInfo"];
                         </div>
                         <div class="modal-footer mx-auto">
                             <button type="button" class="btn btn-danger btnCancel me-3" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btnLogOut"><a href="../Controller/logOutC.php" class="logOut">Log Out</a></button>
+                            <a href="../Controller/logOutC.php" type="button" class="btn btnLogOut text-white">Log Out</a>
                         </div>
                     </div>
                 </div>
