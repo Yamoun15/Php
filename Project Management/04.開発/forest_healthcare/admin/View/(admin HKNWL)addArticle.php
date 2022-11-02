@@ -49,8 +49,8 @@ include "../Controller/dashboardNameController.php";
             <p class="content-header-text2"><small>To add health article</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Health Knowledge</li>
         </ol>
     </section>
 

@@ -36,6 +36,19 @@ include "../Controller/dashboardNameController.php";
 <body class="skin-blue">
     <!-- Header -->
     <?php include("common/header.php"); ?>
+
+    <section class="content-header">
+        <i class="fa fa-dashboard icon"></i>
+        <span>
+            <span class="content-header-text1">User</span>
+            <p class="content-header-text2"><small>User List Features</small></p>
+        </span>
+        <ol class="breadcrumb">
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">User List</li>
+        </ol>
+    </section>
+        <!-- Header -->
     <div class="container">
         <br>
 

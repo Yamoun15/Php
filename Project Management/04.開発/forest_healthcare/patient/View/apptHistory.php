@@ -119,6 +119,10 @@ include "./resources/lib/phpqrcode/qrlib.php"
                                 // QRcode::png($text, "./qrcodePhotos/" . $appointment["id"] . ".png");
                                 $text =  $appointment["id"];
                                 QRcode::png($text, "./qrcodePhotos/" . $appointment["id"] . ".png");
+
+                                // $text = $appointment["id"];
+                                // QRcode::png($text, "./qrcodePhotos/" . $appointment["id"] . ".png");
+
                             } ?>
                             <tr>
                                 <td scope="row"><?= $count++; ?>.</td>

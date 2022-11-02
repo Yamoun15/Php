@@ -1,3 +1,10 @@
+.patient_detail{
+    width: 70vw;
+    height: 50vh;
+    margin-left: 10pc;
+    font-size: 20pt;
+    
+}
 .title {
     background: #188067 !important;
     color: white;
@@ -5,14 +12,12 @@
     font-family: var(--fontfamily-poppins);
     font-size: 2vw;
 }
-.pdBodybgcolor{
-    background-color: #A6E1F3;
-    font-family: var(--fontfamily-poppins);
-    font-size: 20px;
-    font-weight: 1vw;
+.detail{
+    margin-left: 7pc;
+    
 }
-.back{
-    position: relative;
+.text_color{
+    color:var(--btncolorteal );
 }
 
 .btnBack{
@@ -30,4 +35,31 @@
 
 .btnBack{
 color: white !important;
+}
+
+/* .pdBodybgcolor{
+    background-color: #A6E1F3;
+    font-family: var(--fontfamily-poppins);
+    font-size: 20px;
+    font-weight: 1vw;
+} */
+
+@media (max-width: 768px){
+    .title{
+        height: 4vh;
+        font-size: 4vw;
+    }
+    .patient_detail{
+        margin-left: 2pc;
+        font-size: 12pt;
+        
+    }
+    .detail{
+        margin-left: 1pc;
+        
+    }
+    .btnBack{    
+        width: 50px;
+        height: 30px;
+    }
 }

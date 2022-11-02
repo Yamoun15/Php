@@ -40,6 +40,18 @@ $adminInfo = $_SESSION["adminInfo"];
 <body class="skin-blue">
     <!-- Header -->
     <?php include("common/header.php"); ?>
+    <section class="content-header">
+        <i class="fa fa-dashboard icon"></i>
+        <span>
+            <span class="content-header-text1">Account Setting</span>
+            <p class="content-header-text2"><small>Account Setting Features</small></p>
+        </span>
+        <ol class="breadcrumb">
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Account Setting</li>
+        </ol>
+    </section>
+    <!-- Header -->
 
     <div class="container d-flex flex-column justify-content-center align-items-center ">
         <div class="title">Admin Profile</div>

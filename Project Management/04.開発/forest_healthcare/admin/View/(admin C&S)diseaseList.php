@@ -48,7 +48,7 @@ include "../Controller/dashboardNameController.php";
             <p class="content-header-text2"><small>List of Conditions</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active"><a href="(admin C&S)addDisease.php">Condition&Service</a></li>
         </ol>
     </section>

@@ -24,7 +24,10 @@ if(isset($_POST["submitBtn"])){
     $sql->bindValue(":createdDate", date("Y/m/d"));
 
     $sql->execute();
-    header("Location: ../View/adminContact.php");
+    
+    echo "<script>alert('Update Successful')</script>";
+    echo "<script>window.location='../View/adminContact.php'</script>";
+    // header("Location: ../View/adminContact.php");
 };
 
 ?>

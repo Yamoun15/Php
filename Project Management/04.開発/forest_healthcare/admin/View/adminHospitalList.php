@@ -42,7 +42,7 @@ include "../Controller/dashboardNameController.php";
             <p class="content-header-text2"><small>Hospital List Features</small></p>
         </span>
         <ol class="breadcrumb">
-            <li><a href="adminDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active"><a href="adminHospitalList.php">Hospital List</a></li>
         </ol>
     </section>
