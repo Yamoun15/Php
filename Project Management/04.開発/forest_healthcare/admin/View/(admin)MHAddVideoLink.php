@@ -45,12 +45,12 @@ include "../Controller/dashboardNameController.php";
     <section class="content-header">
         <i class="fa fa-dashboard icon"></i>
         <span>
-            <span class="content-header-text1">Dashboard</span>
-            <p class="content-header-text2"><small>Dashboard Features</small></p>
+            <span class="content-header-text1">Mental Health</span>
+            <p class="content-header-text2"><small>Add Mental Health Video Features</small></p>
         </span>
         <ol class="breadcrumb">
             <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
+            <li class="active">Mental Health</li>
         </ol>
     </section>
 

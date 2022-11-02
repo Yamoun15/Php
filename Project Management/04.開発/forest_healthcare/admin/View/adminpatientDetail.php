@@ -42,12 +42,12 @@ $userInfo = $_SESSION["userInfo"];
     <section class="content-header">
         <i class="fa fa-dashboard icon"></i>
         <span>
-            <span class="content-header-text1">Privacy & Policy List</span>
-            <p class="content-header-text2"><small>Privacy & Policy List Features</small></p>
+            <span class="content-header-text1">Appointment</span>
+            <p class="content-header-text2"><small>Patient Details </small></p>
         </span>
         <ol class="breadcrumb">
             <li><a href="testDashboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active"><a href="adminP&Padd.php">Privacy & Policy</a></li>
+            <li class="active"><a href="adminP&Padd.php">Appointment</a></li>
         </ol>
     </section>
 

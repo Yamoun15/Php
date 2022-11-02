@@ -41,12 +41,12 @@ include "../Controller/dashboardNameController.php";
     <section class="content-header">
         <i class="fa fa-dashboard icon"></i>
         <span>
-            <span class="content-header-text1">Account Setting</span>
-            <p class="content-header-text2"><small>Account Setting Features</small></p>
+            <span class="content-header-text1">Doctor</span>
+            <p class="content-header-text2"><small>Schedule List Features</small></p>
         </span>
         <ol class="breadcrumb">
             <li><a href="testDahboard.php"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Account Setting</li>
+            <li class="active">Doctor</li>
         </ol>
     </section>
     <!-- Header -->
