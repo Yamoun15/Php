@@ -3,7 +3,7 @@
 session_start();
 $email = $_SESSION["hospital_email"];
 
-$rowLimit = 2;
+$rowLimit = 5;
 $page = (isset($_GET["page"])) ?  $_GET["page"] : 1;
 
 $startPage = ($page-1)*$rowLimit;
