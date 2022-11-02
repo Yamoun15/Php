@@ -2,7 +2,7 @@
 
 include "../Model/dbConnection.php";
 
-$rowLimit = 3;
+$rowLimit = 5;
 $page = (isset($_GET["page"])) ?  $_GET["page"] : 1;
 
 $startPage = ($page-1)*$rowLimit;
