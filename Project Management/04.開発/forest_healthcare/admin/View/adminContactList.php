@@ -67,9 +67,9 @@ include "../Controller/dashboardNameController.php";
                                 <a href="../Controller/adminContactUsReplyUpdateController.php?id=<?= $mail["id"]?>"><button class="btn adminContactListbtn" name="replyBtn">Reply</button></a>
                             </div>
                         </div>
-                        <div class="textC">
+                        
                         <p class="adminContactListCardText"><?= $mail["text_message"] ?></p>
-                        </div>
+                        
                         
                     </div>
                 </div>

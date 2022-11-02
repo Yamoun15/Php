@@ -26,26 +26,22 @@ include "../Controller/webisteAboutUsController.php";
 <body>
     <!-- Header -->
     <?php include("./common/top.php"); ?>
-    <div class="container-fluid aboutUs">
-        <div class="row">
-            <div class="col-1 col-md-1 col-sm-1"></div>
-            <div class="col-10 col-md-10 col-sm-10">
+    <div class="container-fluid ">
+        <div class="row aboutUs">
+            <!-- <div class="col-lg-1 col-md-1 col-sm-1"></div> -->
+            <div class="col-lg-6 col-md-6 col-sm-6 ms-3 me-5">
                 <?php foreach ($aboutUs as $aboutUs) { ?>
                     <p class="text-white mt-5 aboutUstitle"><?= $aboutUs["title"] ?></p>
+                    <p class="description text-white"><?= $aboutUs["description"] ?></p>
+                <?php } ?>
+                <button class="larnmorebtn text-white">Learn More</button>
             </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <img src="./storages/tt.png" class="ms-5" alt="About Us img" srcset="">
+            </div>
+
         </div>
-        <div class="row">
-            <div class="col-1 col-md-1 col-sm-1"></div>
-            <div class="col-5 col-md-5 col-sm-5">
-                <p class="description text-white"><?= $aboutUs["description"] ?></p>
-            <?php } ?>
-            <button class="larnmorebtn text-white">Learn More</button>
-            </div>
-            <div class="col-1 col-md-1 col-sm-1"></div>
-            <div class="col-5 col-md-5 col-sm-5">
-                <img src="./storages/aboutUs.png" class="" alt="About Us img" srcset="">
-            </div>
-        </div>
+
     </div>
 
     <!-- Footer -->
