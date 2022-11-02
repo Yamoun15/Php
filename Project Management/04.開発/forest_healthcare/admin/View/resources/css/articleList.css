@@ -122,6 +122,7 @@ tr {
 
 td {
   text-align: center !important;
+  max-width: fit-content !important;
 }
 
 .editBtn {

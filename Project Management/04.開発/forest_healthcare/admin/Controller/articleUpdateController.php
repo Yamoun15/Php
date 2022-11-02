@@ -26,9 +26,14 @@ if (isset($_POST["updateArticle"])) {
         $file = $_FILES['photo']['name'];
         $location = $_FILES['photo']['tmp_name'];
         $extension = pathinfo($file)['extension'];
-        $path = ($articleDetail[0]['id'] + 1) . "." . $extension;
+        // $path = ($articleDetail[0]['id'] + 1) . "." . $extension;
 
-        if (move_uploaded_file($location, "../View/image/HealthKnowl/".$articleId.".".$extension)) {
+
+        $sql = $pdo->prepare("SELECT id FROM tbl_healthknowledge ORDER BY id DESC LIMIT 1");
+        $sql->execute();
+        $articleInfo = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        if (move_uploaded_file($location, "../View/image/HealthKnowl/" . ($articleId + 1) . "." . $extension)) {
             $sql = $pdo->prepare(
                 "UPDATE tbl_healthknowledge SET 
                     title = :title,
@@ -38,7 +43,7 @@ if (isset($_POST["updateArticle"])) {
                     WHERE id = :id
                 "
             );
-            $sql->bindValue(":photo", $path);
+            $sql->bindValue(":photo", ($articleId + 1) . "." . $extension);
         } else {
             echo 'There was some error moving the file to upload directory.';
         }
