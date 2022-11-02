@@ -38,7 +38,7 @@ include "../Controller/hospitalListController.php";
                 <div class="detailTitle"><?= $diseaseDetailInfo[0]["disease_title"] ?></div>
                 <div class="detailbody"><?= $diseaseDetailInfo[0]["disease_detail"] ?></div>
                 <div class="CSimg">
-                    <img src="./storages/image - SymbolicLink/C&S/<?= $diseaseDetailInfo[0]["cs_photo"] ?>" alt="" class="CSdetailimg">
+                    <img src="./storages/C&S/<?= $diseaseDetailInfo[0]["cs_photo"] ?>" alt="" class="CSdetailimg">
                 </div>
                 <div class="treatmentTitle">You Can Make Treatment At</div>
 

@@ -54,7 +54,7 @@ include "../Controller/articleListC.php";
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4 col-4  mt-3">
-                            <img src="./storages/healthKnowl/<?= $article["photo"] ?>" class="rounded float-end articlePhoto" alt="DetailPhoto">
+                            <img src="./storages/HealthKnowl - SymbolicLink/<?= $article["photo"] ?>" class="rounded float-end articlePhoto" alt="DetailPhoto">
                         </div>
                         <input type="hidden" name="id" value="">
                     </div>
