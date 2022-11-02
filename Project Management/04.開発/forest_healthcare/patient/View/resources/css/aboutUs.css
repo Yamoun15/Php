@@ -1,24 +1,33 @@
-.aboutUs{
-   background-image: linear-gradient(to right,#188067 ,#56b18b ,#60b18f,#cbebdd )
+
+
+.aboutUs {
+    background-image: linear-gradient(to right, #02a07b, #56b18b, #60b18f, #cbebdd) !important;
+    min-height: 100% !important;
 }
 
-.aboutUstitle{
+.aboutUstitle {
     font-family: var(--fontfamily-poppins);
     font-size: 2em;
 }
-.description{
+
+.description {
     font-family: var(--fontfamily-poppins);
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
-.larnmorebtn{
+.larnmorebtn {
     width: 8pc;
     height: 36px;
     background-color: #43A391;
     font-family: var(--fontfamily-poppins);
-    
-    font-weight: 1em;     
+
+    font-weight: 1em;
     border-radius: 12px;
-    border: none;   
-    
+    border: none;
+
+}
+
+img{
+    width:100%;
+    background-repeat: no-repeat;
 }

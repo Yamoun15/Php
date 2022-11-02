@@ -74,7 +74,7 @@ include "../Controller/dashboardNameController.php";
                             <textarea rows="3" type="text" class="form-control adminContactTextarea" id="usernaem" placeholder="Welcome Text" name="description"></textarea>
                         </div>
                     </div>
-                    <div class="subtitleAboutus">Change Photo or Picture</div>
+                    <!-- <div class="subtitleAboutus">Change Photo or Picture</div>
                     <div class="form-group">
                         <div class=" col-md-12 selectBoxAboutus">
                             <label for="Aboutfile-upload" class="Aboutcustom-file-upload">
@@ -84,7 +84,7 @@ include "../Controller/dashboardNameController.php";
                             <input id="Aboutfile-upload" type="file" name="photo"/>
                             <div id="Aboutfile-chosen">No file chosen</div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-9"></div>
