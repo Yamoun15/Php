@@ -22,9 +22,9 @@ if (isset($_POST["diseaseUpdateBtn"])) {
         $file = $_FILES['photo']['name'];
         $location = $_FILES['photo']['tmp_name'];
         $extension = pathinfo($file)['extension'];
-        $path = $id . "." . $extension;
+        // $path = $id . "." . $extension;
 
-        if (move_uploaded_file($location, "../View/image/" . $id . "." . $extension)) {
+        if (move_uploaded_file($location, "../View/image/C&S/". ($diseaseInfo[0]['id']+1).".".$extension)) {
             $sql = $pdo->prepare(
                 "UPDATE tbl_conditionservices SET 
             disease_title   = :title,
@@ -34,7 +34,7 @@ if (isset($_POST["diseaseUpdateBtn"])) {
             WHERE id = :id
             "
             );
-            $sql->bindValue(":photo", $path);
+            $sql->bindValue(":photo", ($diseaseInfo[0]['id']+1).".".$extension);
         } else {
             echo 'There was some error moving the file to upload directory.';
         }
