@@ -2,6 +2,12 @@
 .textAboutUs{
     margin-left: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .textAboutUs{
+        margin-left: 0px;
+    }
+}
 .aboutUs {
     background-image: linear-gradient(to right, #02a07b, #56b18b, #60b18f, #cbebdd) !important;
     min-height: 65vh !important;
