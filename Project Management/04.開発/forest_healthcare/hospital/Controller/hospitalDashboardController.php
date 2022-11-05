@@ -43,7 +43,11 @@ foreach($pieChart as $key => $value){
 // $totalVisitor= $sql->fetchAll(PDO::FETCH_ASSOC);
 
 //get total appt
-$sql = $pdo->prepare("SELECT COUNT(id) AS totalAppt FROM tbl_appointment WHERE del_flg=0");
+$sql = $pdo->prepare("SELECT COUNT(id) AS totalApptGraph, created_date FROM tbl_appointment WHERE del_flg=0 GROUP BY YEAR(created_date), MONTH(created_date) ");
+$sql->execute();
+$totalApptGraph= $sql->fetchAll(PDO::FETCH_ASSOC);
+
+$sql = $pdo->prepare("SELECT COUNT(id) AS totalAppt FROM tbl_appointment");
 $sql->execute();
 $totalAppt= $sql->fetchAll(PDO::FETCH_ASSOC);
 

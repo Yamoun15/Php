@@ -33,7 +33,7 @@ include "../Controller/articleListC.php";
     <?php include("./common/top.php"); ?>
 
     <!-- search box -->
-    <div class="container-fluid aa">
+    <div class="container-fluid hList">
         <div class="row mt-4 ms-5">
             <div class="col-12 col-md-12 col-sm-12 mx-sm-auto">
                 <input type="text" placeholder="Search.." name="searchText" class="searchBox" id="searchBox">

@@ -28,9 +28,9 @@
     <!-- <img src="./storages/mentalTestBg.png"/> -->
     <div class="container-fluid bgimage">
         <!-- <div class="col-1"></div> -->
-        <div class="row quizBox">
+        <div class="row quizBox justify-content-center align-item-center">
 
-            <div class="quiz col-lg-5 col-md-5 col-sm-5 " id="quiz">
+            <div class="quiz col-lg-5 col-md-5 col-sm-5" id="quiz">
                 <div class="box">
                     <div class=" mt-5 ms-5">
                         <p class="question"><b>1.Not being control or stop worrying.</b></p>
@@ -74,10 +74,10 @@
                         <label for="Often"><input type="radio" name="answer6" id="q6a3" value="Often" required>Often&nbsp;&nbsp;&nbsp;</label>
                         <label for="Very Often"><input type="radio" name="answer6" id="q6a4" value="Very Often" required>Very Often</label>
                     </div>
-                    <button class="" id="submit" onclick="submit()">Submit</button>
+                    <button class="ms-3 mt-4" id="submit" onclick="submit()">Submit</button>
                 </div>
             </div>
-            <div id="result" class=" col-lg-5 col-md-5 col-sm-5  ">
+            <div id="result" class=" col-lg-4 col-md-4 col-sm-4  ">
                 <div class="box">
                     <div class=" mt-5 ms-3 text1">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make healthy choices.</div>
                     <div class="mt-5 ms-3 text2">Take your mentl health test and see the result.</div>

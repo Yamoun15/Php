@@ -19,7 +19,7 @@ include "../Controller/dashboardNameController.php";
     <title>Hospital Appointment List</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="./resources/css/hospitalAddDoctor.css?v=" <?= time() ?>>
+    <!-- <link rel="stylesheet" href="./resources/css/hospitalAddDoctor.css?"> -->
     <link rel="stylesheet" href="./resources/css/main.css?v=" <?= time() ?>>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -141,23 +141,23 @@ include "../Controller/dashboardNameController.php";
         // };
 
 
-        let gender = <?= json_encode($gender) ?>;
-        let pieData1 = [0, 0, 0];
+        // let gender = <?= json_encode($gender) ?>;
+        // let pieData1 = [0, 0, 0];
 
-        for (let index = 0; index < gender.length; index++) {
-            if (gender[index] == 0) {
-                pieData1[0] += 1;
-            } else if (gender[index] == 1) {
-                pieData1[1] += 1;
-            } else if (gender[index] == 2) {
-                pieData1[2] += 1;
-            }
-        };
+        // for (let index = 0; index < gender.length; index++) {
+        //     if (gender[index] == 0) {
+        //         pieData1[0] += 1;
+        //     } else if (gender[index] == 1) {
+        //         pieData1[1] += 1;
+        //     } else if (gender[index] == 2) {
+        //         pieData1[2] += 1;
+        //     }
+        // };
 
-        let totalAppt = <?= json_encode($totalAppt) ?>;
+        let totalApptGraph = <?= json_encode($totalApptGraph) ?>;
         let apptDataList = [];
-        for (let index = 0; index < totalAppt.length; index++) {
-            datalist.push(totalAppt[index].totalAppt);
+        for (let index = 0; index < totalApptGraph.length; index++) {
+            apptDataList.push(totalApptGraph[index].totalApptGraph);
         }
         console.log(apptDataList);
     </script>
