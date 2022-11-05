@@ -1,5 +1,5 @@
 .bgimage{
-    background: url("../../storages/mentalTestBg.png");
+    background: url("../../storages/2.jpeg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -20,7 +20,7 @@
 
 .quiz {
     background-color: rgba(2, 64, 2, 0.399);
-    border-left: 10px solid #81dfb0d2;
+    /* border-left: 10px solid #81dfb0d2; */
 
 }
 
@@ -36,7 +36,7 @@ input {
 }
 
 #submit {
-    margin-left: 25em;
+    /* margin-left: 25em; */
     width: 88px;
     height: 36px;
     background: #188067 !important;
@@ -68,7 +68,7 @@ input {
 }
 
 #restart {
-    margin-left: 22em;
+    /* margin-left: 22em; */
     width: 88px;
     height: 36px;
     background: #188067 !important;

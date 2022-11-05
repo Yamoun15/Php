@@ -29,18 +29,8 @@
     <div class="container-fluid bgimage">
         <!-- <div class="col-1"></div> -->
         <div class="row quizBox">
-            <div id="result" class=" col-lg-5 col-md-5 col-sm-5  offset-1">
-                <div class="box">
-                    <div class=" mt-5 ms-3 text1">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make healthy choices.</div>
-                    <div class="mt-5 ms-3 text2">Take your mentl health test and see the result.</div>
-                    <h5 class="mt-4 ms-3">Your Results</h5>
-                    <h3 class="mt-4 ms-3" id="resultCondition">....</h3>
-                    <div class="mt-3 ms-3" id="resultConditionAnswer"></div>
-                    <button class="me-0 mt-5 mb-1" id="restart" onclick="restart()">Restart</button>
-                </div>
-            </div>
 
-            <div class="quiz col-lg-5 col-md-5 col-sm-5" id="quiz">
+            <div class="quiz col-lg-5 col-md-5 col-sm-5 " id="quiz">
                 <div class="box">
                     <div class=" mt-5 ms-5">
                         <p class="question"><b>1.Not being control or stop worrying.</b></p>
@@ -84,9 +74,20 @@
                         <label for="Often"><input type="radio" name="answer6" id="q6a3" value="Often" required>Often&nbsp;&nbsp;&nbsp;</label>
                         <label for="Very Often"><input type="radio" name="answer6" id="q6a4" value="Very Often" required>Very Often</label>
                     </div>
-                    <button class="me-0 mt-4 mb-1" id="submit" onclick="submit()">Submit</button>
+                    <button class="" id="submit" onclick="submit()">Submit</button>
                 </div>
             </div>
+            <div id="result" class=" col-lg-5 col-md-5 col-sm-5  ">
+                <div class="box">
+                    <div class=" mt-5 ms-3 text1">Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make healthy choices.</div>
+                    <div class="mt-5 ms-3 text2">Take your mentl health test and see the result.</div>
+                    <h5 class="mt-4 ms-3">Your Results</h5>
+                    <h3 class="mt-4 ms-3" id="resultCondition">....</h3>
+                    <div class="mt-3 ms-3" id="resultConditionAnswer"></div>
+                    <button class="me-0 mt-5 mb-1" id="restart" onclick="restart()">Restart</button>
+                </div>
+            </div>
+
         </div>
 
     </div>
