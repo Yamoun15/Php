@@ -9,16 +9,10 @@ const data = {
         'March',
     ],
     datasets: [{
-        label: 'Visitors',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: datalist,
-    },
-    {
-        label: 'Users',
-        backgroundColor: 'blue',
-        borderColor: 'blue',
-        data: [10, 0, 5, 2, 10, 15],
+        label: 'Booking Range',
+        backgroundColor: 'rgb(54, 162, 235)',
+        borderColor: 'rgb(54, 162, 235)',
+        data: apptDataList,
     }]
 
 };
