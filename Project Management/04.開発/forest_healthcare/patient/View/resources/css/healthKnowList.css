@@ -36,6 +36,12 @@
 
 .articlePhoto{
     width: 10rem ;
+    float: right;
+}
+@media screen and (max-width: 600px) {
+    .articlePhoto{
+        float: none !important;
+    } 
 }
 
 .btn-readmore{
