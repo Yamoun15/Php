@@ -10,9 +10,10 @@
   font-family: var(--fontfamily-poppins);
   font-size: 2vw;
 }
+
 /* backbutton */
 .back {
-  font-size: 2em;
+  font-size: 25%;
   font-weight: 10em;
   color: #188067 !important;
   display: inline;
@@ -39,7 +40,7 @@ p {
   color: #64d3a5;
 }
 .articledetail ~ p , .articledetail ~ ul{
-  font-size: 22px !important;
+  font-size: 1.5vw !important;
   --fontfamily-poly: 'Poly', serif !important;
 }
 
@@ -51,4 +52,11 @@ p {
 .articlephoto{
   width: 60vw !important;
   height: 40vw !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .healthKtitle{
+font-size: large !important;
+color: red;
+  }
 }

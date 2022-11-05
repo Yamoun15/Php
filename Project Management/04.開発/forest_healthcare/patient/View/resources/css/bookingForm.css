@@ -1,12 +1,18 @@
 body {
-    height: 100vh;
+    height: auto;
+    width: 100%;
     background-image: url('../../storages/doctor_kw5l.png');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow: scroll;
     background-attachment: fixed;
 }
-
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: #d8f1e7;
+      background-image: none;
+    }
+  }
 .btnBook {
     background-color: #43A391;
     max-width: 200px;

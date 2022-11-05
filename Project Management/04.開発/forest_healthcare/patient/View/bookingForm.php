@@ -35,7 +35,7 @@ $patientInfo = $_SESSION["patientInfo"];
                 <h1 class="modal-title mx-auto " id="exampleModalLabel">Appointment Request</h1>
 
             </div>
-            <h6 class="modal-dialog ms-5">Please fill in our online form and we will contact you within 2 working
+            <h6 class="modal-dialog ms-5 text-center text-left">Please fill in our online form and we will contact you within 2 working
                 days, with the nearest available appointment slot.
             </h6>
 
@@ -78,7 +78,7 @@ $patientInfo = $_SESSION["patientInfo"];
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-4 mt-4 mx-sm-auto mx-md-auto mx-auto ms-sm-5 ms-sm-5 ms-md-5">
+                        <div class="col-12 col-sm-12 col-md-4 mt-4 ms-sm-5 ms-sm-5 ms-md-5 d-flex justify-content-center">
                             <div class="card text-center p-2" style="width: 18rem;">
                                 <div class="card-body">
                                     <h5 class="card-title booking-summary">Booking Summary</h5>
@@ -99,7 +99,7 @@ $patientInfo = $_SESSION["patientInfo"];
                                 I have read and accept <a href="#"><u>the terms and conditions.</u></a>
                             </label>
                         </div> -->
-                        <div class="col-12 col-sm-12 col-md-4 mt-4 ms-sm-5 ms-md-5 ms-5">
+                        <div class="col-12 col-sm-12 col-md-4 mt-4 ms-sm-5 ms-md-5 ms-5  d-flex justify-content-center">
                             <button class=" btnBook text-white mb-3" name="bookingBtn" type="submit">Submit</button>
                             <a class="btnCancel ms-5 text-white mb-3" href="./doctorList.php" role="button" type="submit">Cancel</a>
                         </div>

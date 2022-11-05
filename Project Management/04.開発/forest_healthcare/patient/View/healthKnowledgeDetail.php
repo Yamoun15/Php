@@ -31,14 +31,14 @@ $articleInfo =  $_SESSION["articleInfo"];
     <!-- Header -->
     <?php include("./common/top.php"); ?>
     <div class="container-fluid body">
+        <div class="">
+            <a href="../View/healthKnowledgeList.php" class="back"><i class="fa-regular fa-circle-left"></i>Go back to list</a>
+        </div>
         <div class="row">
-            <div class="col-0 col-md-1 col-sm-0"></div>
-            <div class="col-9 col-md-9 col-sm-7 mt-5 text-center">
+            <div class="col-12 col-md-12 col-sm-12 mt-5 text-center">
                 <strong for="" class="healthKtitle"><?= $articleInfo[0]["title"] ?></strong>
             </div>
-            <div class="col-3 col-md-2 col-sm-5 mt-3">
-                <a href="../View/healthKnowledgeList.php" class="back"><i class="fa-regular fa-circle-left"></i>Go back to list</a>
-            </div>
+
         </div>
         <div class="row">
             <div class="col-6 col-md-6 col-sm-6 mx-auto text-center mt-3 articlephoto">
@@ -47,7 +47,7 @@ $articleInfo =  $_SESSION["articleInfo"];
         </div>
         <div class="row">
             <div class="col-8 col-sm-8 col-md-8 mx-auto">
-            <p class="articledetail"><?= $articleInfo[0]["description"] ?></p>
+                <p class="articledetail"><?= $articleInfo[0]["description"] ?></p>
             </div>
         </div>
     </div>
