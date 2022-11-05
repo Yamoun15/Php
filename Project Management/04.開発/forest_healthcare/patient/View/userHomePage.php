@@ -75,7 +75,7 @@ include "../Controller/homeController.php";
               </div>
             </div>
             <div class="col-md-4 col-sm-4 col-4">
-              <img src="./storages/image - SymbolicLink/HealthKnowl/<?= $article["photo"] ?>" class="img-fluid rounded-start" alt="...">
+              <img src="./storages/HealthKnowl/<?= $article["photo"] ?>" class="img-fluid rounded-start" alt="...">
             </div>
           </div>
         </div>
