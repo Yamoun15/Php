@@ -17,6 +17,8 @@ body {
   background-color: #063551;
   justify-content: center;
   align-items: center;
+  margin-top: 2em;
+  margin-left: 10%;
 }
 
 /* Mental Health Cards */
@@ -37,14 +39,25 @@ body {
     display: flex;
     flex-wrap: wrap;
 }
+.card-body{
+  padding-right: 10% !important;
+}
+
 .card1,.card2, .card3,.card4{
   cursor: pointer;
   margin: auto;
   color: white;
   border: none;
   border-radius: 20px;
-  width: 18rem;
-  height: 10rem;
+  width: 23rem;
+  height: 12rem;
+}
+
+@media screen and (max-width: 600px) {
+  .card1,.card2, .card3,.card4{
+    margin-left: 20%;
+  }
+  
 }
 .cards .text{
     text-align: left;
@@ -89,5 +102,14 @@ body {
   margin-bottom: 2rem;
 }
 .mental-health h3 {
-  font-size: 2.5vw;
+  font-size: 2.5em;
+  margin-top: 5%;
+
+}
+
+@media screen and (max-width: 600px) {
+  .mental-health h3 {
+    font-size: 1em;
+  }
+  
 }

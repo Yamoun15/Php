@@ -1,6 +1,5 @@
 /* Nandar */
 
-
 /* C&S css  Nandar*/
 
 * {
@@ -49,7 +48,7 @@
     line-height: 2.5em;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width: 600px) {
     .diseaseli li {
         width: 100%;
     }
@@ -83,9 +82,8 @@
 
 .detailbg {
     height: 100%;
-    background-image: linear-gradient(to top right, #A6E1F3, #64d3a5db, #188068);
+    background-image: linear-gradient(to top right, #a6e1f3, #64d3a5db, #188068);
 }
-
 
 .detailTitle {
     text-align: center;
@@ -140,7 +138,6 @@ i {
 
 .detailbg2 {
     background-color: var(--ice-blue);
-
 }
 
 .anxeity {
@@ -177,7 +174,6 @@ i {
 }
 
 /* C&S detail end */
-
 
 /* contact us start */
 
@@ -220,11 +216,10 @@ i {
     opacity: 0.5;
     font-size: 15px;
     margin-left: 15%;
-
 }
 
 .contactboxStyle {
-    border: 1px solid #2535A1;
+    border: 1px solid #2535a1;
     border-radius: 5px;
     outline: none;
     box-sizing: border-box;
@@ -248,17 +243,22 @@ i {
     font-size: 1.2em !important;
     transition: all 0.1s;
     font-weight: bold;
-  }
+}
+
+@media screen and (max-width: 600px) {
+    .rowBody {
+        margin-left: 10%;
+    }
+
+    #rowBody {
+        padding-left: 20% !important;
+    }
+}
 
 /* contact us end */
 
 /* adminContact Us start */
 
-
-
 /* adminContact Us end */
 
 /* Nandar end */
-
-
-
