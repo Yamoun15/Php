@@ -50,7 +50,7 @@ include "../Controller/articleListC.php";
                         <div class="col-md-8 col-sm-12 col-12">
                             <div class="card-body">
                                 <strong for="" class="healthKtitle"><?= $article["title"] ?></strong>
-                                <p class="articaldetail"><?php echo substr($article["description"], 0, 500) ?>...</p>
+                                <p class="articaldetail"><?php echo substr($article["description"], 0, 350) ?>...</p>
                                 <a href="../Controller/articleDetailC.php?articleId=<?= $article["id"] ?>"><button class="btn-readmore">Read More> </button></a>
                             </div>
                         </div>

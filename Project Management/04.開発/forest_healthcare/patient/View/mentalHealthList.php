@@ -40,24 +40,16 @@ $videoList = $sql->fetchAll(PDO::FETCH_ASSOC);
     <div>
         <img src="./storages/mentalHealthPhoto.png" alt="mental health phpto" class="mhdiv" srcset="">
     </div>
-    <div class="container-fluid">
-<<<<<<< HEAD
-        <div class="d-flex justify-content-center">
-                <div class="plusebtn text-center text-white">PAUSE ||</div>
-=======
-        <div class="row pluse-parent">
-            <div class="col-3 col-md-5 col-sm-3"></div>
-            <div class="col-2 col-md-3 col-sm-2">
-                <label for="" class="plusebtn text-center text-white">PAUSE ||</label>
-            </div>
->>>>>>> 26d9fd561832df86e7d59b62e42eec0cd855d8a8
+    <div class="container-fluid ">
+        <div class="d-flex justify-content-center text-center">
+                <div class="plusebtn mx-auto text-white mt-0">PAUSE ||</div>
         </div>
 
-        <div class="container-fluid mt-5 mx-auto text-center">
-            <h3 class="mb-5 fs-1 healthT">You Deserve To Take A Break</h3>
+        <div class="container-fluid mt-5 text-center">
+            <h3 class="mb-5">You Deserve To Take A Break</h3>
 
-            <div class="cards row">
-                <div class="card-body col-md-12 offset-md-2 col-sm-9">
+            <div class="cards mx-sm-auto">
+                <div class="card-body   ">
                     <a href="<?= $videoList[0]["youtube_link"] ?>" class=" card1 mb-sm-5 mb-5 mb-md-0 ">
                         <div class="text"><?= $videoList[0]["mentalhealth_title"] ?></div>
                     </a>
@@ -67,7 +59,7 @@ $videoList = $sql->fetchAll(PDO::FETCH_ASSOC);
                         </a>
                 </div>
 
-                <div class="card-body col-md-12 col-sm-9 offset-md-2">
+                <div class="card-body   ">
                         <a href="<?= $videoList[2]["youtube_link"] ?>" class=" card3 mb-sm-5 mb-5 mb-md-0">
                             <div class="text"><?= $videoList[2]["mentalhealth_title"] ?></div>
                         </a>
@@ -79,7 +71,7 @@ $videoList = $sql->fetchAll(PDO::FETCH_ASSOC);
             </div>
         </div>
 
-        <div class="mental-health text-center">
+        <div class="mental-health text-center mt-lg-5">
             <h3>Your Mental Health is more than important your grades</h3>
             <div>
                 <a href="userMentalTest.php"><img src="./storages/mentalhealthtest.png" alt="" class="testImg"></a>

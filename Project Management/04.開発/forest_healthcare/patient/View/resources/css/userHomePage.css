@@ -274,16 +274,6 @@ a.articleImg {
   border: 3px solid #188067;
   font-family: "Poppins", sans-serif;
 }
-/* .readMore {
-  background-color: #f9c56b;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 500;
-  padding: 5px;
-  cursor: pointer;
-  min-width: fit-content;
-  font-size: 0.5rem;
-} */
 
 .btn-readmore{
   background-color: #f9c56b;
@@ -295,6 +285,16 @@ a.articleImg {
   min-width: fit-content;
   font-size: 1rem;
   border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .card{
+    font-size: 60%;
+    margin: 10%;
+  }
+  .btn-readmore{
+    font-size: smaller;
+  }
 }
 
 .home{
