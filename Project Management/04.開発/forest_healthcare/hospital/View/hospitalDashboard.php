@@ -19,7 +19,7 @@ include "../Controller/dashboardNameController.php";
     <title>Hospital Appointment List</title>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="./resources/css/hAddDoctor.css?v=" <?= time() ?>>
+    <link rel="stylesheet" href="./resources/css/hospitalAddDoctor.css?v=" <?= time() ?>>
     <link rel="stylesheet" href="./resources/css/main.css?v=" <?= time() ?>>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,47 +76,11 @@ include "../Controller/dashboardNameController.php";
             <div class="col-lg-2 col-xs-6">
                 <div class="small-box">
                     <div class="inner">
-                        <h3><?= $totalUser[0]["totalUser"] ?></h3>
-                        <p>Users</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-users" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-xs-6">
-                <div class="small-box">
-                    <div class="inner">
-                        <h3><?= $totalVisitor[0]["totalVisitor"] ?></h3>
-                        <p>Visitors</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-users" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-xs-6">
-                <div class="small-box">
-                    <div class="inner">
                         <h3><?= $totalAppt[0]["totalAppt"] ?></sup></h3>
                         <p>Appointments</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-2 col-xs-6">
-                <div class="small-box">
-                    <div class="inner">
-                        <h3><?= $totalHospital[0]["totalHospital"] ?></h3>
-                        <p>Hospitals</p>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-hospital-o" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
@@ -163,18 +127,18 @@ include "../Controller/dashboardNameController.php";
     <!-- Footer -->
     <?php include("common/footer.php"); ?>
     <script>
-        let ages = <?= json_encode($ages) ?>;
-        let pieData = [0, 0, 0];
+        // let ages = <?= json_encode($ages) ?>;
+        // let pieData = [0, 0, 0];
 
-        for (let index = 0; index < ages.length; index++) {
-            if (ages[index] < 18) {
-                pieData[0] += 1;
-            } else if (18 < ages[index] && ages[index] < 65) {
-                pieData[1] += 1;
-            } else if (ages[index] > 65) {
-                pieData[2] += 1;
-            }
-        };
+        // for (let index = 0; index < ages.length; index++) {
+        //     if (ages[index] < 18) {
+        //         pieData[0] += 1;
+        //     } else if (18 < ages[index] && ages[index] < 65) {
+        //         pieData[1] += 1;
+        //     } else if (ages[index] > 65) {
+        //         pieData[2] += 1;
+        //     }
+        // };
 
 
         let gender = <?= json_encode($gender) ?>;
@@ -190,12 +154,12 @@ include "../Controller/dashboardNameController.php";
             }
         };
 
-        let chartUser = <?= json_encode($totalUser) ?>;
-        let datalist = [];
-        for (let index = 0; index < chartUser.length; index++) {
-            datalist.push(chartUser[index].totalUser);
+        let totalAppt = <?= json_encode($totalAppt) ?>;
+        let apptDataList = [];
+        for (let index = 0; index < totalAppt.length; index++) {
+            datalist.push(totalAppt[index].totalAppt);
         }
-        console.log(datalist);
+        console.log(apptDataList);
     </script>
 </body>
 <script>
