@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
-<body class="body">
-    <div class="container-fluid mt-5 p-0">
+<body class="body container-fluid">
+    <div class=" mt-5 p-0">
         <div class="row  g-0 ">
             <div class="col-12 col-md-8">
                 <div class="row  g-0 mt-5">
@@ -56,9 +56,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-0 col-md-4  login_image text-end">
+        <!-- <div class="col-0 col-md-4  login_image text-end">
                 <img class="loginimg" src="./image/loginPhoto.png" alt="Login Photo" srcset="">
-        </div>
+        </div> -->
     </div>
 </body>
 

@@ -19,8 +19,8 @@ unset($_SESSION["hospital_email"]);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
-<body class="body">
-    <div class="container-fluid mt-5 p-0">
+<body class="body container-fluid">
+    <div class=" mt-5 p-0">
         <div class="row  g-0 ">
             <div class="col-12 col-md-8">
                 <div class="row  g-0 mt-5">
