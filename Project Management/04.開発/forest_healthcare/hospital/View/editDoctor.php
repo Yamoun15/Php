@@ -78,14 +78,14 @@ $doctorInfo =  $_SESSION["doctorInfo"];
                         </div>
                     </div>
                     <div class="form-group">
-                        <div class="row">
-                            <div class="col-6 col-md-7 col-sm7"></div>
-                            <div class="col-2 col-md-2 col-sm2">
+                        <div class="row editdoctor justify-content-center align-item-center">
+                            <div class="col-6 col-md-7 col-sm5"></div>
+                            <span class="col-2 col-md-2 col-sm2">
                                 <a href="./hospitalDoctorList.php" class="cancleBtn"><button class="btnEditD" name="">Cancel</button></a>
-                            </div>
-                            <div class="col-3 col-md-3 col-sm-3">
+                            </span>
+                            <span class="col-3 col-md-3 col-sm-3">
                                 <button class="btnEditD" name="updateDoctor" type="submit">Edit Doctor</button>
-                            </div>
+                            </span>
                         </div>
                     </div>
                 </form>
