@@ -3,7 +3,7 @@ body {
     background-image: url('../../storages/doctor_kw5l.png');
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: scroll;
+    overflow: hidden;
     background-attachment: fixed;
 }
 
@@ -24,9 +24,13 @@ body {
 }
 
 .btnCancel {
+    background-color: #FC4D36;
     max-width: 200px;
+    border: none;
+    padding: 8px 15px 8px 15px;
+    border-radius: 5px;
     transition: all 0.5s;
-    padding: 7px 15px 7px 15px;
+    text-decoration: none;
 }
 
 .modal-header,

@@ -40,9 +40,9 @@ $patientInfo = $_SESSION["patientInfo"];
             </h6>
 
 
-            <div class="modal-body">
+            <div >
                 <form action="../Controller/addBookingController.php" enctype="multipart/form-data" method="POST">
-                    <div class="row mx-auto ">
+                    <div class="row mx-auto mt-5">
                         <div class="col-12  col-sm-12 col-md-7 mx-auto mx-sm-auto mx-md-auto">
                             <div class="row ">
                                 <div class="col-md-6 mb-3 col-sm-12">
@@ -100,8 +100,8 @@ $patientInfo = $_SESSION["patientInfo"];
                             </label>
                         </div> -->
                         <div class="col-12 col-sm-12 col-md-4 mt-4 ms-sm-5 ms-md-5 ms-5">
-                            <button class=" btnBook text-white" name="bookingBtn" type="submit">Submit</button>
-                            <a class="btn btn-danger btnCancel  ms-5  text-white" href="./doctorList.php" role="button" type="submit">Cancel</a>
+                            <button class=" btnBook text-white mb-3" name="bookingBtn" type="submit">Submit</button>
+                            <a class="btnCancel ms-5 text-white mb-3" href="./doctorList.php" role="button" type="submit">Cancel</a>
                         </div>
                     </div>
                 </form>

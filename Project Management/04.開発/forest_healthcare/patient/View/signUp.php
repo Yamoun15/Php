@@ -19,13 +19,13 @@ unset($_SESSION["email_address"]);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
-<body class="small">
-    <div class="container-fluid mt-5 p-0">
+<body class="small container-fluid">
+    <div class=" mt-5 p-0">
         <div class="row  g-0 ">
             <div class="col-12 col-md-8">
                 <div class="row">
                     <div class="login_logo me-3">
-                        <img src="./storages/loginLogo.png" alt="" srcset="">
+                        <img src="./storages/loginLogo.png" alt="" srcset="" class="loginLogo">
                         <label for="" class="mx-3"><a href="./userHomePage.php" class="acolor">Home</a></label>
                         <label for="" class="mx-3"><a href="./aboutUs.php" class="acolor">About Us</a></label>
                         <label for="" class=""><a href="./contactUs.php" class="acolor">Contact Us</a></label>

@@ -22,8 +22,8 @@ unset($_SESSION["user_email"]);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 
-<body class="small">
-    <div class="container-fluid mt-5 p-0">
+<body class="small container-fluid">
+    <div class=" mt-5 p-0">
         <div class="row  g-0 ">
             <div class="col-12 col-md-8">
                 <div class="row">
