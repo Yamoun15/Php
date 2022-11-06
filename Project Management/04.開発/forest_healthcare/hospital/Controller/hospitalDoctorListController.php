@@ -10,9 +10,7 @@ $startPage = ($page-1)*$rowLimit;
 
 
 include "../Model/dbConnection.php";
-$sql = $pdo->prepare("
-        SELECT * FROM tbl_hospital WHERE email_address =:email       
-        ");
+$sql = $pdo->prepare("SELECT * FROM tbl_hospital WHERE email_address =:email");
         $sql->bindValue(":email",$email);
         $sql->execute();
 
@@ -21,15 +19,15 @@ $hospitalId = $hospitalInfo[0]["id"];
 $_SESSION["hospitalInfo"]=$hospitalInfo;
 $hosId = $_SESSION["hospitalInfo"];
 
-$sql = $pdo->prepare("
-        SELECT doc.*,dep.name AS depname FROM tbl_doctor AS doc
+$sql = $pdo->prepare(
+        "SELECT doc.*,dep.name AS depname FROM tbl_doctor AS doc
         INNER JOIN tbl_department AS dep        
         ON doc.department_id = dep.id
         INNER JOIN tbl_hospital AS hos
         ON doc.hospital_id = hos.id 
         WHERE doc.hospital_id =:hospitalId   
-        AND doc.del_flg = 0 LIMIT $startPage, $rowLimit
-");
+        AND doc.del_flg = 0 LIMIT $startPage, $rowLimit"
+);
 $sql->bindValue(":hospitalId",$hospitalId);
 $sql->execute();
 
